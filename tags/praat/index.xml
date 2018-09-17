@@ -17,13 +17,16 @@
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2018/09/17/skills/</guid>
-      <description>Speech Analysis: Praat, Wavesurfer
+      <description>Speech Analysis: Praat (sample script below), Wavesurfer
 Speech Manipulation: Praat, iZotope, Audacity
 ERP/EEG: Matlab, ERPlab/EEGlab
 Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown
+Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
 Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word</description>
+Text typesetting: TeX, Microsoft Word
+Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
+F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
+Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
     </item>
     
   </channel>
