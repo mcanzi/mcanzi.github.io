@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/tags/research/</link>
+    <description>Recent content in Research on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mcanzi.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>awards</title>
+      <link>https://mcanzi.github.io/2018/09/14/awards/</link>
+      <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
+      <description>Awards 2018 Stefano Coretta, Massimiliano Canzi (joint winners) of
+Best Student Abstract submitted to the LAGB (Linguistic Association of Great Britain) 2018 conference with the abstract titled: ‘The effect of lexical frequency on vowel phonation as a correlate of /t/- glottaling’</description>
+    </item>
+    
+  </channel>
+</rss>

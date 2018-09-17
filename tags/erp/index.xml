@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erp on Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/tags/erp/</link>
+    <description>Recent content in Erp on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mcanzi.github.io/tags/erp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>information flow order in speech perception</title>
+      <link>https://mcanzi.github.io/project/erp/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/erp/</guid>
+      <description>Overview Aims and Objectives
+• To explore how different levels of speech processing interact with each other to facilitate the understanding of speech.
+• To test experimentally the relative timing of different levels in speech processing.
+• To collect EEG (electroencephalography) data from a relevant sample size on brain re- sponses to auditory stimuli.
+Background: Two main currents of thought in psycholinguistics have categorised speech per- ception to be either unidirectional or interactive.</description>
+    </item>
+    
+    <item>
+      <title>skills</title>
+      <link>https://mcanzi.github.io/2018/09/17/skills/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/17/skills/</guid>
+      <description>Speech Analysis: Praat, Wavesurfer
+Speech Manipulation: Praat, iZotope, Audacity
+ERP/EEG: Matlab, ERPlab/EEGlab
+Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
+Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown
+Other programming languages known: Python
+Text typesetting: TeX, Microsoft Word</description>
+    </item>
+    
+  </channel>
+</rss>

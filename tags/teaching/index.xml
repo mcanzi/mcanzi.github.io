@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teaching on Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/tags/teaching/</link>
+    <description>Recent content in Teaching on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mcanzi.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>teaching and work experience</title>
+      <link>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</guid>
+      <description>Teaching experience (January 2018 - May 2018): Teaching Assistant in Forensic Linguistics. The University of Manchester. Course code: LELA3162. Course convenor: Dr Andrea Nini.
+(September 2018 - January 2019): Teaching Assistant in Psycholinguistics. The University of Manchester. Course convenor: Dr Thea Cameron-Faulkner.
+Work experience (April 2018 - Present): Research Assistant. Research assistant for the Northern Englishes Project. The University of Manchester.
+(January 2018 - Present): Psycholinguistics Laboratory Assistant. The University of Manchester.</description>
+    </item>
+    
+  </channel>
+</rss>

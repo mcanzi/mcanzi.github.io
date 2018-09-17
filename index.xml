@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/</link>
+    <description>Recent content on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>information flow order in speech perception</title>
+      <link>https://mcanzi.github.io/project/erp/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/erp/</guid>
+      <description>Overview Aims and Objectives
+• To explore how different levels of speech processing interact with each other to facilitate the understanding of speech.
+• To test experimentally the relative timing of different levels in speech processing.
+• To collect EEG (electroencephalography) data from a relevant sample size on brain re- sponses to auditory stimuli.
+Background: Two main currents of thought in psycholinguistics have categorised speech per- ception to be either unidirectional or interactive.</description>
+    </item>
+    
+    <item>
+      <title>the effect of lexical frequency on vowel phonation as a correlate of t glottaling.</title>
+      <link>https://mcanzi.github.io/project/glottaling/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/glottaling/</guid>
+      <description>Presentations 2018 Stefano Coretta, Massimiliano Canzi The effect of lexical frequency on vowel phonation as a correlate of /t/- glottaling. Talk presented at the Linguistic Association of Great Britain (LAGB) conference in Sheffield, UK. 11-14th September, 2018.
+Resources You can find the research compendium (including data, analysis, code and slides/poster) for this project at the following link:
+LAGB 2018
+Abstract Introduction. Lexical frequency is known to modulate the effects of a phonetic bias on speech production, such that high-frequency words show a stronger effect for a particular bias since they are exposed more often to that bias (Bybee 2004).</description>
+    </item>
+    
+    <item>
+      <title>the forensic implications of comparing soft, neutral and loud speech.</title>
+      <link>https://mcanzi.github.io/project/forensic/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/forensic/</guid>
+      <description>Presentations 2018 Massimiliano Canzi The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) in Manchester, UK. 26-27th April, 2018.
+2018 Massimiliano Canzi A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the Colloquium of the British Association of Academic Phoneticians (BAAP) in Canterbury, UK.</description>
+    </item>
+    
+    <item>
+      <title>education</title>
+      <link>https://mcanzi.github.io/2018/09/17/education/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
+      <description>University (2017 - Present) PhD in Linguistics The University of Manchester Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk
+(2016 - 2017) MSc in Forensic Speech Science University of York Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice? Supervised by: Dr Dom Watt
+(2015 - 2016) MA in Linguistics The University of Manchester Dissertation: A study on the variation of fundamental frequency, f-patter, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
+    </item>
+    
+    <item>
+      <title>skills</title>
+      <link>https://mcanzi.github.io/2018/09/17/skills/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/17/skills/</guid>
+      <description>Speech Analysis: Praat, Wavesurfer
+Speech Manipulation: Praat, iZotope, Audacity
+ERP/EEG: Matlab, ERPlab/EEGlab
+Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
+Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown
+Other programming languages known: Python
+Text typesetting: TeX, Microsoft Word</description>
+    </item>
+    
+    <item>
+      <title>teaching and work experience</title>
+      <link>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</link>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</guid>
+      <description>Teaching experience (January 2018 - May 2018): Teaching Assistant in Forensic Linguistics. The University of Manchester. Course code: LELA3162. Course convenor: Dr Andrea Nini.
+(September 2018 - January 2019): Teaching Assistant in Psycholinguistics. The University of Manchester. Course convenor: Dr Thea Cameron-Faulkner.
+Work experience (April 2018 - Present): Research Assistant. Research assistant for the Northern Englishes Project. The University of Manchester.
+(January 2018 - Present): Psycholinguistics Laboratory Assistant. The University of Manchester.</description>
+    </item>
+    
+    <item>
+      <title>awards</title>
+      <link>https://mcanzi.github.io/2018/09/14/awards/</link>
+      <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
+      <description>Awards 2018 Stefano Coretta, Massimiliano Canzi (joint winners) of
+Best Student Abstract submitted to the LAGB (Linguistic Association of Great Britain) 2018 conference with the abstract titled: ‘The effect of lexical frequency on vowel phonation as a correlate of /t/- glottaling’</description>
+    </item>
+    
+  </channel>
+</rss>
