@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>updated psycholinguistics lab website</title>
+        <style>
+
+    html body {
+        font-family: 'Lora', sans-serif;
+        background-color: #E8E8E8;
+    }
+
+    :root {
+        --accent: #252525;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/lakeside-light.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+
+<script>
+$(document).ready(function(){
+    
+  var input = $('#night-mode-toggle');
+  var container = $('#bigbody');
+  var stat = $('#button-status');
+  
+  container.toggleClass(localStorage.toggled);
+  stat.bootstrapToggle(localStorage.button).change();
+  
+  input.on('click', function() {
+      if (localStorage.toggled != "-nightmode" ) {
+          container.toggleClass("-nightmode", true );
+          localStorage.toggled = "-nightmode";
+          localStorage.button = "on";
+       } else {
+          container.toggleClass("-nightmode", false );
+          localStorage.toggled = "";
+          localStorage.button = "off"
+       }
+  })
+});
+</script>
+ <meta name="generator" content="Hugo 0.48" />
+        
+        
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    
+    <meta property="og:title" content="updated psycholinguistics lab website">
+    <meta property="og:type" content="article">
+      
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="/favicon/mcanzi.png" >
+      
+    <meta property="description" content="">
+    <meta property="og:description" content="">
+    
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:site" content="">
+    
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body id = "bigbody">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">updated psycholinguistics lab website</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">home</a></li>
+                            
+                                <li><a href="/news/">news</a></li>
+                            
+                                <li><a href="/post/">about me</a></li>
+                            
+                                <li><a href="/project/">selected presentations and research</a></li>
+                            
+                                <li><a href="/music/">music</a></li>
+                            
+                                <li><a href="/tags/">tags</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:massimiliano.canzi@postgrad.manchester.ac.uk"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mcanzi"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/mc_anzi/"><i class="fa fa-twitter"></i></a></li>
+                            
+                            <li id="night-mode-toggle">
+    <input type="checkbox" id = "button-status"
+        data-toggle="toggle"
+        data-width = "10"
+        data-height = "1"
+        data-on="<i class='fa fa-moon-o fa-lg' style='vertical-align:25%'></i>"
+        data-off= "<i class='fa fa-sun-o fa-lg' style='vertical-align:25%'></i>"
+        data-style="ios"
+        data-onstyle = "default">
+</li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+      
+    
+
+    <h4><a href="/2018/09/18/updated-psycholinguistics-lab-website/">updated psycholinguistics lab website</a></h4>
+    <h5>September 18, 2018 - 9 minutes</h5>
+    <h5></h5>
+
+    
+    
+    <a href="/tags/web">
+        <kbd class="item-tag"> web </kbd>
+    </a>
+    
+    <a href="/tags/news">
+        <kbd class="item-tag"> news </kbd>
+    </a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p><strong>Speech Analysis:</strong>        Praat (<em>sample script below</em>), Wavesurfer</p>
+
+<p><strong>Speech Manipulation:</strong>        Praat, iZotope, Audacity</p>
+
+<p><strong>ERP/EEG:</strong>        Matlab, ERPlab/EEGlab</p>
+
+<p><strong>Experimental Design:</strong>    E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)</p>
+
+<p><strong>Statistical Analysis &amp; Data Visualisation:</strong>  RStudio, R markdown (<em>sample script below</em>)</p>
+
+<p><strong>Other programming languages known:</strong>  Python</p>
+
+<p><strong>Text typesetting:</strong>   TeX, Microsoft Word</p>
+
+<h2 id="data-visualisation">Data visualisation</h2>
+
+<p>Hi, here&rsquo;s some random plots I made in ggplot!</p>
+
+<p><strong>F1-F2 vowel plots for male Italian speakers in neutral and loud speech.</strong></p>
+
+<p><img src="/img/plot1.png" alt="plot1" /></p>
+
+<p><img src="/img/plot2.png" alt="plot2" /></p>
+
+<p><img src="/img/plot3.png" alt="plot3" /></p>
+
+<h2 id="sample-of-r-script">Sample of R script</h2>
+
+<p>The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot. The sample needs the dataset to work. The whole reproducible project is found <a href="www.github.com/mcanzi/mfil"><strong>here</strong></a></p>
+
+<pre><code class="language-r">knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+theme_set(theme_minimal())
+library(lmerTest)
+library(effects)
+
+source(&quot;https://gist.githubusercontent.com/benmarwick/2a1bb0133ff568cbe28d/raw/fb53bd97121f7f9ce947837ef1a4c65a73bffb3f/geom_flat_violin.R&quot;)
+
+cbPalette &lt;- c(&quot;salmon&quot;, 'steelblue', 'goldenrod1')
+cbPaletteCol &lt;- c(&quot;salmon&quot;, 'steelblue', 'goldenrod2')
+cbbPalette &lt;- c(&quot;#000000&quot;, &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F0E442&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;)
+</code></pre>
+
+<!-- Data is filtered and 'cleaned up'. -->
+
+<pre><code class="language-r">data &lt;- read_csv('MAdata.csv') %&gt;%
+  filter(F1 &lt; 1500, Vowel != 'u') %&gt;%
+  mutate_if(is.character, as.factor) %&gt;%
+  mutate(Speaker = as.factor(Speaker)) %&gt;%
+  group_by(Speaker) %&gt;%
+  mutate(F0_z = scale(F0)) %&gt;%
+  ungroup() %&gt;%
+  filter(F0_z &gt; -2)
+
+durData &lt;- read_csv('MAdata.csv') %&gt;%
+  mutate_if(is.character, as.factor)
+</code></pre>
+
+<!-- Here's lmer tests for F0, F1, F2 and Duration throughout speech modes. Speaker is regarded as random effect. The 'Long' veriable for the duration model represents phonological length. -->
+
+<pre><code class="language-r">F0_lmer &lt;- lmer(
+  F0 ~ Vowel * Mode + (1+Mode|Speaker),
+  data
+)
+summary(F0_lmer)
+
+</code></pre>
+
+<pre><code class="language-r">F1_lmer &lt;- lmer(
+  F1 ~ Mode + (1+Mode|Speaker),
+  data
+)
+summary(F1_lmer)
+</code></pre>
+
+<pre><code class="language-r">F2_lmer &lt;- lmer(
+  F2 ~ Mode * Vowel + (1+Mode|Speaker),
+  data
+)
+summary(F2_lmer)
+</code></pre>
+
+<!-- Duration lmer contains information for 'u' as well, which was omitted in the previous models for formant tracking issues. -->
+
+<pre><code class="language-r">Dur_lmer &lt;- lmer(
+  Duration ~ Long * Mode + (1+Mode|Speaker),
+  durData
+)
+summary(Dur_lmer)
+</code></pre>
+
+<!-- Sample effects plot for F1 -->
+
+<pre><code class="language-r">plot(allEffects(F2_lmer))
+</code></pre>
+
+<pre><code class="language-r">raincloud_theme = theme(
+text = element_text(size = 10),
+axis.title.x = element_text(size = 16),
+axis.title.y = element_text(size = 16),
+axis.text = element_text(size = 14),
+axis.text.x = element_text(angle = 45, vjust = 0.5),
+legend.title=element_text(size=16),
+legend.text=element_text(size=16),
+legend.position = &quot;right&quot;,
+plot.title = element_text(lineheight=.8, face=&quot;bold&quot;, size = 16),
+panel.border = element_blank(),
+panel.grid.minor = element_blank(),
+panel.grid.major = element_blank(),
+axis.line.x = element_line(colour = 'black', size=0.5, linetype='solid'),
+axis.line.y = element_line(colour = 'black', size=0.5, linetype='solid'))
+</code></pre>
+
+<!-- Sample box/violin plots with jitter for F0 and Duration, faceted by gender and phonological lenth respectively -->
+
+<pre><code class="language-r">F0z_den &lt;- ggplot(data, aes(x = F0_z, fill = Mode, alpha = 0.5)) + 
+  geom_density(bw = 0.30, trim = FALSE) +
+  scale_fill_manual(values = paletteFill)
+F0z_den
+</code></pre>
+
+<pre><code class="language-r">F0z_plot &lt;- ggplot(data, aes(y = F0_z, x = Mode, fill = Mode)) +
+  geom_flat_violin(position = position_nudge(x = .2, y = 0), alpha = .8) +
+  geom_point(aes(y = F0_z, color = Mode), position = position_jitter(width = .15), size = .2, alpha = 0.5) +
+  geom_boxplot(width = .1, outlier.shape = NA, alpha = 0.5) +
+  expand_limits(x = 4) +
+  #guides(fill = FALSE) +
+  guides(color = FALSE) +
+  coord_flip() +
+  theme_bw() + scale_fill_manual(values = cbPalette) + 
+  labs(title = &quot;Scaled F0 in soft, neutral and loud speech&quot;) +
+  scale_colour_manual(values = cbPaletteCol)
+
+F0z_plot
+
+ggsave('plots/F0zplot.png', F0z_plot)
+</code></pre>
+
+<pre><code class="language-r">Dur_plot &lt;- ggplot(durData, aes(y = Duration, x = Mode, fill = Mode)) +
+  geom_flat_violin(position = position_nudge(x = .2, y = 0), alpha = .8) +
+  geom_point(aes(y = Duration, color = Mode), position = position_jitter(width = .15), size = .5, alpha = 0.5) +
+  geom_boxplot(width = .1, outlier.shape = NA, alpha = 0.5) +
+  expand_limits(x = 4) +
+  #guides(fill = FALSE) +
+  guides(color = FALSE) +
+  coord_flip() +
+  theme_bw() + scale_fill_manual(values = cbPalette) + 
+  facet_grid(~Long) +
+  labs(title = 'Vowel Duration in soft, neutral and loud speech in Seconds') +
+  scale_colour_manual(values = cbPalette)
+
+Dur_plot
+
+ggsave('plots/durPlot.png', Dur_plot)
+</code></pre>
+
+<!-- F1-F2 vowel plots for M and F speakers faceted by vowel, coloured by mode -->
+
+<pre><code class="language-r">FM_plot &lt;- filter(data, Gen == &quot;M&quot;) %&gt;% filter(Mode != 'Soft') %&gt;% filter(F2 &lt; 2400) %&gt;%
+ggplot(aes(F2, F1, colour = Mode)) +
+  #geom_point(alpha = 1.0) +
+  stat_ellipse(geom = &quot;polygon&quot;, alpha = 0.8, aes(fill = Mode)) +
+  scale_x_reverse() +
+  scale_y_reverse() + 
+  facet_wrap(~Vowel, scales = 'free') + 
+  scale_colour_manual(values = cbPalette) +
+  scale_fill_manual(values = cbPalette)
+  # + labs(title = &quot;F1-F2 vowel plots for male speakers in neutral and and loud speech&quot;) 
+ 
+FM_plot
+ggsave('plots/vowelPlotMale.png', FM_plot)
+</code></pre>
+
+<pre><code class="language-r">FF_plot &lt;- filter(data, Gen == &quot;F&quot;) %&gt;% filter(Mode != 'Soft') %&gt;% filter(F2 &lt; 2500) %&gt;%
+ggplot(aes(F2, F1, colour = Mode)) +
+  #geom_point(alpha = 1) +
+  stat_ellipse(geom = &quot;polygon&quot;, alpha = 1/2, aes(fill = Mode)) +
+  scale_x_reverse() +
+  scale_y_reverse() + 
+  facet_wrap(~Vowel, scales = 'free') +
+  # labs(title = &quot;F1-F2 vowel plots for female speakers in neutral and loud speech&quot;) +
+  scale_colour_manual(values = paletteFill)
+  
+FF_plot
+ggsave('plots/VowelPlotFemale.png', FF_plot)
+</code></pre>
+
+<pre><code class="language-r">
+sample_F1 &lt;- filter(data, Gen == 'M') %&gt;% filter(Vowel %in% c('i', 'a')) %&gt;% 
+  ggplot(aes(y = F1, x = Mode, fill = Mode)) +
+  geom_flat_violin(position = position_nudge(x = .2, y = 0), alpha = 0.8) +
+  geom_point(aes(y = F1, color = Mode), position = position_jitter(width = .15), size = .5, alpha = 0.5) + stat_ellipse() +
+  geom_boxplot(width = .1, outlier.shape = NA, alpha = 0.5) +
+  expand_limits(x = 4) +
+  guides(fill = FALSE) +
+  guides(color = FALSE) +
+  coord_flip() +
+  facet_grid(~Vowel) +
+  theme_bw() + scale_fill_manual(values = cbPalette) +
+  # labs(title = 'F1 for /a/ and /i/ by male speakers in soft, neutral and loud speech') +
+  scale_colour_manual(values = cbPaletteCol)
+
+sample_F1
+ggsave('plots/sampleF1ai.png', sample_F1)
+</code></pre>
+
+<pre><code class="language-r">
+sample_F2 &lt;- filter(data, Gen == 'M') %&gt;% filter(Vowel %in% c('e')) %&gt;% filter(Speaker %in% c('1', '2', '3')) %&gt;% filter(F2 &gt; 1750) %&gt;%
+  ggplot(aes(y = F2, x = Mode, fill = Mode)) +
+  #geom_flat_violin(position = position_nudge(x = .2, y = 0), alpha = .8) +
+  geom_point(aes(y = F2, color = Mode), position = position_jitter(width = .15), size = .5, alpha = 1) +
+  geom_boxplot(width = .9, outlier.shape = NA, alpha = 0.8) +
+  #expand_limits(x = 4) +
+  guides(colour = FALSE) +
+  #guides(fill = FALSE) +
+  guides(color = FALSE) +
+  #coord_flip() +
+  facet_grid(~Speaker) +
+  theme_bw() + scale_fill_manual(values = cbPalette) +
+  # labs(title = 'F2 for /e/ by male speakers 1, 2 and 3 in soft, neutral and loud speech') +
+  scale_colour_manual(values = cbPaletteCol)
+
+sample_F2
+ggsave('plots/sampleF2ai.png', sample_F2)
+</code></pre>
+
+<pre><code class="language-r">betweenNeutral &lt;- filter(data, Vowel == 'e') %&gt;% 
+  filter(Speaker %in% c('1', '2', '3')) %&gt;%
+  filter(Mode == 'Neutral') %&gt;% 
+  ggplot(aes(x = F2, fill = Speaker, alpha = 0.5)) +
+  geom_density(trim = FALSE) +
+  scale_fill_manual(values = cbPalette)
+
+betweenNeutral
+ggsave('plots/f2e123Neutral.png', betweenNeutral)
+  
+</code></pre>
+
+<pre><code class="language-r">betweenLoud &lt;- filter(data, Vowel == 'e') %&gt;% 
+  filter(Speaker %in% c('1', '2', '3')) %&gt;%
+  filter(Mode == 'Loud') %&gt;% 
+  ggplot(aes(x = F2, fill = Speaker, alpha = 0.5)) +
+  geom_density() + 
+  scale_fill_manual(values = cbPalette)
+
+betweenLoud
+ggsave('plots/f2e123Loud.png', betweenLoud)
+  
+</code></pre>
+
+<pre><code class="language-r">interNeutral &lt;- filter(data, Mode =='Neutral') %&gt;% filter(Speaker %in% c('1', '2', '3')) %&gt;%
+  filter(Vowel %in% c('i', 'e')) %&gt;%
+                    ggplot(aes(F2, F1, colour = Speaker)) +
+                    geom_point(alpha = 1) + 
+                    stat_ellipse(geom = &quot;polygon&quot;, alpha = 1/2, aes(fill = Speaker)) +
+                    scale_x_reverse() +
+                    scale_y_reverse() + 
+                    facet_wrap(~Vowel, scales = 'free') +
+                    scale_fill_manual(values = cbPalette) +
+                    scale_colour_manual(values = cbPaletteCol)
+
+interNeutral
+ggsave('plots/interNeutralF1F2123ei.png', interNeutral)
+
+</code></pre>
+
+<pre><code class="language-r">interLoud &lt;- filter(data, Mode =='Loud') %&gt;% filter(Speaker %in% c('1', '2', '3')) %&gt;%
+  filter(Vowel %in% c('i', 'e')) %&gt;%
+                    ggplot(aes(F2, F1, colour = Speaker)) +
+                    geom_point(alpha = 1) + 
+                    stat_ellipse(geom = 'polygon', alpha = 1/2, aes(fill = Speaker)) +
+                    scale_x_reverse() +
+                    scale_y_reverse() + 
+                    facet_wrap(~Vowel, scales = 'free') +
+                    scale_colour_manual(values = cbPalette) +
+                    scale_fill_manual(values = cbPalette)
+
+interLoud
+ggsave('plots/interLoudF1F2123ei.png', interLoud)
+
+</code></pre>
+
+<h2 id="sample-of-praat-script">Sample of Praat script</h2>
+
+<p>The script loops through participant folders (derived data). It creates random chunks of speech of 6, 11 and 16 seconds for each .wav file. Fade-in and fade-out are applied at 0.5s and 0.5s to the end respectively. Clear speech for each chunk is then considered of 5, 10 or 15 seconds. A ../data/pilot/ folder is created. Manipulated files are saved in new participant subfolders of the pilot folder e.g. /data/pilot/m001/m001_wolf_5s.wav or /data/pilot/f002/f002_mary_10s.wav.</p>
+
+<pre><code>clearinfo
+createDirectory(&quot;../data/pilot/&quot;)
+
+wd$ = &quot;../data/derived/&quot;
+inDir$ = wd$
+part$ = &quot;_part&quot;
+
+writeFileLine: &quot;../data/pilot/phonemes_pilot_alt.csv&quot;, &quot;sample,index,intervalStart,intervalEnd,phoneme&quot;
+csvAlt$ = &quot;../data/pilot/phonemes_pilot_alt.csv&quot;
+
+writeFileLine: &quot;../data/pilot/phonemes_pilot.csv&quot;, &quot;sampleID,sampleStart,sampleEnd,phonemes&quot;
+csvFile$ = &quot;../data/pilot/phonemes_pilot.csv&quot;
+
+speakList = Create Strings as directory list: &quot;speakList&quot;, inDir$
+selectObject: speakList
+
+numDirectories = Get number of strings
+for dirNum from 1 to numDirectories
+	dirName$ = Get string: dirNum
+
+	createDirectory(&quot;../data/pilot/&quot; + dirName$ + &quot;/&quot;)
+	endDir$ = &quot;..data/pilot/&quot; + dirName$ + &quot;/&quot;
+
+	inDirWavs$ = inDir$ + dirName$ + &quot;/&quot; + &quot;*_mary.wav&quot;
+	wavList = Create Strings as file list: &quot;wavList&quot;, inDirWavs$
+	selectObject: wavList
+	fileNum = Get number of strings
+
+	fileName$ = Get string: fileNum
+
+	woExtension = length(fileName$) - 4
+	soundName$ = left$(fileName$, woExtension)
+
+	Read from file: inDir$ + dirName$ + &quot;/&quot; + fileName$
+
+# 1st sample
+
+	start = randomInteger(1, 5)
+	five = start + 6
+
+	appendInfoLine: &quot;...&quot;
+
+	selectObject: &quot;Sound &quot; + soundName$
+	ending = Get end time
+	if ending - 2 &gt; five
+		Extract part: start, five, &quot;rectangular&quot;, 1, &quot;no&quot;
+	else
+		Extract part: ending - 2 - five, ending - 2, &quot;rectangular&quot;, 1, &quot;no&quot;
+	endif
+
+	selectObject: &quot;Sound &quot; + soundName$ + part$
+	Rename: soundName$ + &quot;_sample1&quot;
+
+	soundStart = Get start time
+	soundEnd = Get end time
+	Fade in:  0, soundStart, soundStart + 0.5, &quot;yes&quot;
+	Fade out: 0, soundEnd - 0.5, 0.5, &quot;yes&quot;
+
+	nameToSave$ = soundName$ + &quot;_sample1&quot;
+	selectObject: &quot;Sound &quot; + nameToSave$
+	Save as WAV file: &quot;../data/pilot/&quot; + dirName$ + &quot;/&quot; + nameToSave$ + &quot;.wav&quot;
+
+	participantCode$ = left$(nameToSave$, 4)
+
+# 1st sample phoneme list
+
+	currentTextGrid = Read from file: inDir$ + dirName$ + &quot;/&quot; + participantCode$ + &quot;_mary.TextGrid&quot;
+	intNum = Get number of intervals: 3
+
+	startInt = Get interval at time: 3, start
+	endInt = Get interval at time: 3, five
+	content$ = &quot;&quot;
+	index = 0
+
+	for interval from startInt to endInt
+		label$ = Get label of interval: 3, interval
+		timeIntStart = Get starting point: 3, interval
+		timeIntEnd = Get end point: 3, interval
+		if label$ != &quot;&lt;p:&gt;&quot;
+			content$ = content$ + label$
+
+		index = index + 1
+		appendFileLine: csvAlt$, &quot;'nameToSave$','index','timeIntStart','timeIntEnd','label$'&quot;
+
+		endif
+	endfor
+
+	appendFileLine: csvFile$, &quot;'nameToSave$','start','five','content$'&quot;
+
+	removeObject: &quot;Sound &quot; + nameToSave$
+
+# 2nd sample
+
+	start = randomInteger(7, 11)
+	five = start + 6
+
+	selectObject: &quot;Sound &quot; + soundName$
+	ending = Get end time
+
+	if ending - 2 &gt; five
+		Extract part: start, five, &quot;rectangular&quot;, 1, &quot;no&quot;
+	else
+		Extract part: ending - 2 - five, ending - 2, &quot;rectangular&quot;, 1, &quot;no&quot;
+	endif
+
+	selectObject: &quot;Sound &quot; + soundName$ + part$
+	Rename: soundName$ + &quot;_sample2&quot;
+
+	soundStart = Get start time
+	soundEnd = Get end time
+	Fade in:  0, soundStart, soundStart + 0.5, &quot;yes&quot;
+	Fade out: 0, soundEnd - 0.5, 0.5, &quot;yes&quot;
+
+	nameToSave$ = soundName$ + &quot;_sample2&quot;
+	selectObject: &quot;Sound &quot; + nameToSave$
+	Save as WAV file: &quot;../data/pilot/&quot; + dirName$ + &quot;/&quot; + nameToSave$ + &quot;.wav&quot;
+
+# 2nd sample phoneme list
+
+	selectObject: currentTextGrid
+	intNum = Get number of intervals: 3
+
+	startInt = Get interval at time: 3, start
+	endInt = Get interval at time: 3, five
+
+	content$ = &quot;&quot;
+  index = 0
+
+	for interval from startInt to endInt
+		label$ = Get label of interval: 3, interval
+		timeIntStart = Get starting point: 3, interval
+		timeIntEnd = Get end point: 3, interval
+		if label$ != &quot;&lt;p:&gt;&quot;
+			content$ = content$ + label$
+
+			index = index + 1
+			appendFileLine: csvAlt$, &quot;'nameToSave$','index','timeIntStart','timeIntEnd','label$'&quot;
+
+		endif
+	endfor
+
+	appendFileLine: csvFile$, &quot;'nameToSave$','start','five','content$'&quot;
+
+	removeObject: &quot;Sound &quot; + nameToSave$
+
+# 3rd sample
+
+	start = randomInteger(1, 11)
+	five = start + 6
+
+	selectObject: &quot;Sound &quot; + soundName$
+
+	ending = Get end time
+	if ending - 2 &gt; five
+		Extract part: start, five, &quot;rectangular&quot;, 1, &quot;no&quot;
+	else
+		Extract part: ending - 2 - five, ending - 2, &quot;rectangular&quot;, 1, &quot;no&quot;
+	endif
+
+	selectObject: &quot;Sound &quot; + soundName$ + part$
+	Rename: soundName$ + &quot;_sample3&quot;
+
+	soundStart = Get start time
+	soundEnd = Get end time
+	Fade in:  0, soundStart, soundStart + 0.5, &quot;yes&quot;
+	Fade out: 0, soundEnd - 0.5, 0.5, &quot;yes&quot;
+
+	nameToSave$ = soundName$ + &quot;_sample3&quot;
+	selectObject: &quot;Sound &quot; + nameToSave$
+	Save as WAV file: &quot;../data/pilot/&quot; + dirName$ + &quot;/&quot; + nameToSave$ + &quot;.wav&quot;
+
+# 3rd sample phoneme list
+
+		selectObject: currentTextGrid
+	intNum = Get number of intervals: 3
+
+	startInt = Get interval at time: 3, start
+	endInt = Get interval at time: 3, five
+
+	content$ = &quot;&quot;
+	index = 0
+
+	for interval from startInt to endInt
+		label$ = Get label of interval: 3, interval
+		timeIntStart = Get starting point: 3, interval
+		timeIntEnd = Get end point: 3, interval
+		if label$ != &quot;&lt;p:&gt;&quot;
+			content$ = content$ + label$
+
+			index = index + 1
+			appendFileLine: csvAlt$, &quot;'nameToSave$','index','timeIntStart','timeIntEnd','label$'&quot;
+		endif
+	endfor
+
+	appendFileLine: csvFile$, &quot;'nameToSave$','start','five','content$'&quot;
+	removeObject: currentTextGrid
+	removeObject: &quot;Sound &quot; + nameToSave$
+	removeObject: &quot;Sound &quot; + soundName$
+	removeObject: wavList
+	selectObject: speakList
+endfor
+
+removeObject: speakList
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer id = "bigfooter">
+            <div style = "padding:15px;">
+                <p>Powered by <a href="https://gohugo.io">Hugo</a>. Themed by <a href="https://github.com/nathancday/min_night">min_night</a>.
+                </p>
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+                title="Creative Commons Attribution 4.0 International license">
+                <i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution 4.0 International license
+                </a>
+            </div>
+        </footer>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', '');
+        </script>
+       
+    </body>
+
+</html>
+

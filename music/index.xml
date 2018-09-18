@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Musics on Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/music/</link>
+    <description>Recent content in Musics on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mcanzi.github.io/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Goldfish (LP) by Asami Yamazaki</title>
+      <link>https://mcanzi.github.io/music/asami/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/asami/</guid>
+      <description>Overview tags: lo-fi, ambient, post-rock, noise
+The first LP by the solo project Asami Yamazaki (Massimiliano Canzi) features tracks written between 2013 and 2015. The entire LP was written, played, recorded, mixed and mastered by Massimiliano Canzi with the exception of these tracks:
+Okinawa:
+Massimiliano Canzi: beats, synths, samples, recording, mixing, mastering. Marco Bergamaschi: samples, recording, mixing, mastering.
+Superstereo:
+Massimiliano Canzi: writing, beats, synths, bass, mixing, mastering. Mario Blaconà: guitars</description>
+    </item>
+    
+    <item>
+      <title>Continental (EP) by Fukushima Sushi</title>
+      <link>https://mcanzi.github.io/music/fukushima/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/fukushima/</guid>
+      <description> Overview tags: post rock, instrumental rock, stoner, lo-fi, electronic
+Massimiliano Canzi: guitar, vocals (in &amp;lsquo;Nothing&amp;rsquo;) and production
+Mario Blaconà: guitar, vocals
+Giorgio Mussi: bass
+Jacopo Invernizzi: drums
+Tracklist  Concrete
+ DUI
+ Post-colonian rock
+ Nothing
+  </description>
+    </item>
+    
+    <item>
+      <title>Clouds in a Bundle (EP) by mymindasacircuit</title>
+      <link>https://mcanzi.github.io/music/mmaac/</link>
+      <pubDate>Fri, 10 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/mmaac/</guid>
+      <description> Overview tags: chillout, ambient, instrumental, loops
+Massimiliano Canzi: guitars, bass, production, keyboard
+Roland Erulo: guitars, production, keyboard, drums
+Tracklist  Intro
+ Rain
+ Afternoon
+ Choices
+ Immersion
+ Soundtrack of a movie never made
+ Absent Sun
+  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,27 +17,9 @@
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
-      <description>University (2017 - Present) PhD in Linguistics The University of Manchester Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk
-(2016 - 2017) MSc in Forensic Speech Science University of York Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice? Supervised by: Dr Dom Watt
-(2015 - 2016) MA in Linguistics The University of Manchester Dissertation: A study on the variation of fundamental frequency, f-patter, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
-    </item>
-    
-    <item>
-      <title>skills</title>
-      <link>https://mcanzi.github.io/2018/09/17/skills/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/2018/09/17/skills/</guid>
-      <description>Speech Analysis: Praat (sample script below), Wavesurfer
-Speech Manipulation: Praat, iZotope, Audacity
-ERP/EEG: Matlab, ERPlab/EEGlab
-Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
-Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word
-Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
-F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
-Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
+      <description>University (2017 - Present) PhD in Linguistics. The University of Manchester. Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
+(2016 - 2017) MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
+(2015 - 2016) MA in Linguistics.</description>
     </item>
     
     <item>
@@ -60,6 +42,24 @@ Work experience (April 2018 - Present): Research Assistant. Research assistant f
       <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
       <description>Awards 2018 Stefano Coretta, Massimiliano Canzi (joint winners) of
 Best Student Abstract submitted to the LAGB (Linguistic Association of Great Britain) 2018 conference with the abstract titled: ‘The effect of lexical frequency on vowel phonation as a correlate of /t/- glottaling’</description>
+    </item>
+    
+    <item>
+      <title>academic skills</title>
+      <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
+      <description>Speech Analysis: Praat (sample script below), Wavesurfer
+Speech Manipulation: Praat, iZotope, Audacity
+ERP/EEG: Matlab, ERPlab/EEGlab
+Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
+Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
+Other programming languages known: Python
+Text typesetting: TeX, Microsoft Word
+Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
+F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
+Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
     </item>
     
   </channel>

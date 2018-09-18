@@ -25,7 +25,21 @@ Background: Two main currents of thought in psycholinguistics have categorised s
     </item>
     
     <item>
-      <title>the effect of lexical frequency on vowel phonation as a correlate of t glottaling.</title>
+      <title>Goldfish (LP) by Asami Yamazaki</title>
+      <link>https://mcanzi.github.io/music/asami/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/asami/</guid>
+      <description>Overview tags: lo-fi, ambient, post-rock, noise
+The first LP by the solo project Asami Yamazaki (Massimiliano Canzi) features tracks written between 2013 and 2015. The entire LP was written, played, recorded, mixed and mastered by Massimiliano Canzi with the exception of these tracks:
+Okinawa:
+Massimiliano Canzi: beats, synths, samples, recording, mixing, mastering. Marco Bergamaschi: samples, recording, mixing, mastering.
+Superstereo:
+Massimiliano Canzi: writing, beats, synths, bass, mixing, mastering. Mario Blaconà: guitars</description>
+    </item>
+    
+    <item>
+      <title>the effect of lexical frequency on vowel phonation as a correlate of t glottaling</title>
       <link>https://mcanzi.github.io/project/glottaling/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -37,7 +51,25 @@ Abstract Introduction. Lexical frequency is known to modulate the effects of a p
     </item>
     
     <item>
-      <title>the forensic implications of comparing soft, neutral and loud speech.</title>
+      <title>Continental (EP) by Fukushima Sushi</title>
+      <link>https://mcanzi.github.io/music/fukushima/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/fukushima/</guid>
+      <description> Overview tags: post rock, instrumental rock, stoner, lo-fi, electronic
+Massimiliano Canzi: guitar, vocals (in &amp;lsquo;Nothing&amp;rsquo;) and production
+Mario Blaconà: guitar, vocals
+Giorgio Mussi: bass
+Jacopo Invernizzi: drums
+Tracklist  Concrete
+ DUI
+ Post-colonian rock
+ Nothing
+  </description>
+    </item>
+    
+    <item>
+      <title>the forensic implications of comparing soft, neutral and loud speech</title>
       <link>https://mcanzi.github.io/project/forensic/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -47,32 +79,43 @@ Abstract Introduction. Lexical frequency is known to modulate the effects of a p
     </item>
     
     <item>
+      <title>Clouds in a Bundle (EP) by mymindasacircuit</title>
+      <link>https://mcanzi.github.io/music/mmaac/</link>
+      <pubDate>Fri, 10 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/music/mmaac/</guid>
+      <description> Overview tags: chillout, ambient, instrumental, loops
+Massimiliano Canzi: guitars, bass, production, keyboard
+Roland Erulo: guitars, production, keyboard, drums
+Tracklist  Intro
+ Rain
+ Afternoon
+ Choices
+ Immersion
+ Soundtrack of a movie never made
+ Absent Sun
+  </description>
+    </item>
+    
+    <item>
+      <title>new psycholinguistics lab website</title>
+      <link>https://mcanzi.github.io/news/education/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/news/education/</guid>
+      <description>Finally, Manchester&amp;rsquo;s psycholinguistics laboratory gets a revamped website. Use it to check the lab&amp;rsquo;s schedule and to book the lab for yourself. Alternatively, you can always e-mail me directly for any queries or booking of the lab.
+You can find the lab&amp;rsquo;s website &amp;gt;&amp;gt;&amp;gt; here.</description>
+    </item>
+    
+    <item>
       <title>education</title>
       <link>https://mcanzi.github.io/2018/09/17/education/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
-      <description>University (2017 - Present) PhD in Linguistics The University of Manchester Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk
-(2016 - 2017) MSc in Forensic Speech Science University of York Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice? Supervised by: Dr Dom Watt
-(2015 - 2016) MA in Linguistics The University of Manchester Dissertation: A study on the variation of fundamental frequency, f-patter, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
-    </item>
-    
-    <item>
-      <title>skills</title>
-      <link>https://mcanzi.github.io/2018/09/17/skills/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/2018/09/17/skills/</guid>
-      <description>Speech Analysis: Praat (sample script below), Wavesurfer
-Speech Manipulation: Praat, iZotope, Audacity
-ERP/EEG: Matlab, ERPlab/EEGlab
-Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
-Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word
-Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
-F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
-Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
+      <description>University (2017 - Present) PhD in Linguistics. The University of Manchester. Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
+(2016 - 2017) MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
+(2015 - 2016) MA in Linguistics.</description>
     </item>
     
     <item>
@@ -95,6 +138,24 @@ Work experience (April 2018 - Present): Research Assistant. Research assistant f
       <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
       <description>Awards 2018 Stefano Coretta, Massimiliano Canzi (joint winners) of
 Best Student Abstract submitted to the LAGB (Linguistic Association of Great Britain) 2018 conference with the abstract titled: ‘The effect of lexical frequency on vowel phonation as a correlate of /t/- glottaling’</description>
+    </item>
+    
+    <item>
+      <title>academic skills</title>
+      <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
+      <description>Speech Analysis: Praat (sample script below), Wavesurfer
+Speech Manipulation: Praat, iZotope, Audacity
+ERP/EEG: Matlab, ERPlab/EEGlab
+Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
+Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
+Other programming languages known: Python
+Text typesetting: TeX, Microsoft Word
+Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
+F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
+Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
     </item>
     
   </channel>
