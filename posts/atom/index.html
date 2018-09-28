@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Teaching</title>
+        <title>my Atom packages setup</title>
         <style>
 
     html body {
@@ -96,9 +96,6 @@ $(document).ready(function(){
 </script>
  <meta name="generator" content="Hugo 0.49" />
         
-        <link href="https://mcanzi.github.io/tags/teaching/index.xml" rel="alternate" type="application/rss+xml" title="Massimiliano Canzi" />
-        <link href="https://mcanzi.github.io/tags/teaching/index.xml" rel="feed" type="application/rss+xml" title="Massimiliano Canzi" />
-        
         
 
     
@@ -114,7 +111,7 @@ $(document).ready(function(){
     
     
     
-    <meta property="og:title" content="Teaching">
+    <meta property="og:title" content="my Atom packages setup">
     <meta property="og:type" content="article">
       
       <meta name="twitter:card" content="summary">
@@ -139,7 +136,7 @@ $(document).ready(function(){
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Teaching</a>
+                    <a class="navbar-brand visible-xs" href="#">my Atom packages setup</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -191,44 +188,145 @@ $(document).ready(function(){
 
 
 <main>
-    <h2>Teaching</h2>
+
+    <div class="item">
 
     
-        
-            <div class="item">
+    
     
 
+    
+    
+      
+    
 
-
-
-
-
-  
-
-
-<h4><a href="/2018/09/17/teaching-and-work-experience/">teaching and work experience</a></h4>
-    <h5>September 17, 2018</h5>
+    <h4><a href="/posts/atom/">my Atom packages setup</a></h4>
+    <h5>September 28, 2018 - 3 minutes</h5>
     <h5></h5>
+
     
     
-    <a href="/tags/education">
-        <kbd class="item-tag"> education </kbd>
-            </a>
-            
-    <a href="/tags/teaching">
-        <kbd class="item-tag"> teaching </kbd>
-            </a>
-            
-        
-        </div>
-            
-        
+    <a href="/tags/atom">
+        <kbd class="item-tag"> atom </kbd>
+    </a>
+    
+    <a href="/tags/r">
+        <kbd class="item-tag"> R </kbd>
+    </a>
+    
+    <a href="/tags/praat">
+        <kbd class="item-tag"> Praat </kbd>
+    </a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p><center><img src="/img/atom-logo.png" alt="Atom-logo" /></center></p>
+
+<p><strong><a href="https://atom.io">Atom</a></strong> is a powerful open-source text editor with embedded Git control. Atom is unique because of its 7000+ plugins (packages) which are usually license-free and community-built. Atom supports syntax highlighting natively for more than 30 programming languages. The number is esponentially increased when external packages are installed.</p>
+
+<p>If you have Atom installed, you can search packages simply by opening up a new terminal window and typing <strong>apm search keyword</strong></p>
+
+<pre><code>massimiliano@Massimilianos-MacBook-Pro ~&gt; apm search language-r
+Search Results For 'language-r' (29)
+├── language-r A language description and snippets for R (67671 downloads, 83 stars)
+├── atom-language-r A language description and snippets for R (2487 downloads, 8 stars)
+├── language-cup A short description of your language package (621 downloads, 0 stars)
+├── language-hcl Syntax support for the HashiCorp Configuration Language (9578 downloads, 25 stars)
+├── language-jcm JaCaMo Project Language (114 downloads, 0 stars)
+├── language-v0 Language package for Imparato internal v0 source files. (26 downloads, 0 stars)
+├── language-rid RID language support in ATOM (180 downloads, 1 star)
+├── language-bel BEL language support in Atom (44 downloads, 2 stars)
+├── language-tjs TJS language support in Atom (230 downloads, 0 stars)
+├── language-jai JAI language support for Atom (112 downloads, 0 stars)
+├── language-ohm Ohm language support in Atom (198 downloads, 0 stars)
+...
+</code></pre>
+
+<p>You can then install the packages you want by typing</p>
+
+<pre><code>apm install package-name-one package-name-two
+</code></pre>
+
+<p>In this post, I included a brief list a and description of packages I use on a daily basis. Depending on the type of work you do, some might not be relevant to you.</p>
+
+<ul>
+<li><strong>LaTeX, R</strong> and <strong>Praat</strong> syntax highlighting:</li>
+</ul>
+
+<pre><code>apm install language-latex language-r language-praat
+</code></pre>
+
+<ul>
+<li><p><strong>Hydrogen</strong> can be used to run (not just edit) code in R and Python through Atom. A guide to set up R and Python kernels can be found <strong><a href="https://jstaf.github.io/2018/03/25/atom-ide.html">here</a></strong></p></li>
+
+<li><p><strong><a href="https://atom.io/packages/minimap">Minimap</a></strong> allows the user to visualise a smaller version of the entire code on the side of the editor, allowing fast movements between blocks of code. Really useful while editing or commenting.</p></li>
+</ul>
+
+<pre><code>apm install minimap
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/packages/multi-cursor">Multi cursor</a></strong> is used to expand the cursor over more than one line in order to type the same thing across multiple lines. Really useful for defining arrays in some languages (e.g. Presentation&rsquo;s SDL/PCL).</li>
+</ul>
+
+<pre><code>apm install multi-cursor
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/packages/teletype">Teletype</a></strong> allows more people to share a workspace and edit the same code in real time.</li>
+</ul>
+
+<pre><code>apm install teletype
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/packages/file-icons">File icons</a></strong> provides custom file icons depending on file type.</li>
+</ul>
+
+<pre><code>apm install file-icons
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/packages/auto-update-packages">Auto update packages</a></strong> automatically updates all your other Atom packages.</li>
+</ul>
+
+<pre><code>apm install auto-update-packages
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/packages/atom-beautify">Atom beaitufy</a></strong> auto-indents your code, although indentation is something that should always be present from the start.</li>
+</ul>
+
+<pre><code>apm install atom-beautify
+</code></pre>
+
+<p>Some themes too..</p>
+
+<ul>
+<li><strong><a href="https://atom.io/themes/atom-material-ui">Material UI</a></strong> is a dark theme based on Google&rsquo;s material design principles.</li>
+</ul>
+
+<pre><code>apm install atom-material-ui
+</code></pre>
+
+<ul>
+<li><strong><a href="https://atom.io/themes/monokai">Monokai</a></strong> is a synthax theme characterised by bright colours. It works best with dark UI themes.</li>
+</ul>
+
+<pre><code>apm install monokai
+</code></pre>
+</div>
+
     
     
+
+    
+
+    
+
 </main>
-
-
-
 
         <footer id = "bigfooter">
             <div style = "padding:15px;">

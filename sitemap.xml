@@ -33,7 +33,12 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/news/education/</loc>
+    <loc>https://mcanzi.github.io/posts/atom/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/posts/education/</loc>
     <lastmod>2018-09-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -60,6 +65,12 @@
   <url>
     <loc>https://mcanzi.github.io/tags/acoustics/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/atom/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -135,12 +146,6 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/news/</loc>
-    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mcanzi.github.io/tags/perception/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -153,6 +158,12 @@
   </url>
   
   <url>
+    <loc>https://mcanzi.github.io/posts/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mcanzi.github.io/post/</loc>
     <lastmod>2018-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -160,7 +171,7 @@
   
   <url>
     <loc>https://mcanzi.github.io/tags/praat/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -172,7 +183,7 @@
   
   <url>
     <loc>https://mcanzi.github.io/tags/r/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
