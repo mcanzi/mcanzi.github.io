@@ -8,18 +8,8 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/music/asami/</loc>
-    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mcanzi.github.io/project/glottaling/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/music/fukushima/</loc>
-    <lastmod>2015-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,43 +18,25 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/music/mmaac/</loc>
-    <lastmod>2011-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mcanzi.github.io/posts/atom/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/posts/education/</loc>
-    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/2018/09/17/education/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/posts/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/2018/09/14/awards/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/2017/09/22/academic-skills/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/acoustics/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -75,13 +47,31 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/awards/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/praat/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/categories/</loc>
+    <loc>https://mcanzi.github.io/tags/r/</loc>
+    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/posts/education/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/web/</loc>
+    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/post/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,20 +82,47 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/egg/</loc>
+    <loc>https://mcanzi.github.io/2018/09/17/education/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/teaching/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/2018/09/17/teaching-and-work-experience/</loc>
+    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/awards/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/2018/09/14/awards/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/research/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/project/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/erp/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/forensics/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/egg/</loc>
+    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,13 +133,36 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/ggplot/</loc>
+    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
+    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/acoustics/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/forensics/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/2017/09/22/academic-skills/</loc>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/erp/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/</loc>
+    <loc>https://mcanzi.github.io/tags/ggplot/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -134,80 +174,13 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/music/</loc>
-    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/music/</loc>
-    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mcanzi.github.io/tags/perception/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
-    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/posts/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/post/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/praat/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/project/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/r/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/research/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/teaching/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/web/</loc>
-    <lastmod>2018-09-18T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   

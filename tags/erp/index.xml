@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Erp on Massimiliano Canzi</title>
+    <title>erp on Massimiliano Canzi</title>
     <link>https://mcanzi.github.io/tags/erp/</link>
-    <description>Recent content in Erp on Massimiliano Canzi</description>
+    <description>Recent content in erp on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mcanzi.github.io/tags/erp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>information flow order in speech perception</title>
+      <link>https://mcanzi.github.io/project/erp/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/erp/</guid>
+      <description>Overview Aims and Objectives
+• To explore how different levels of speech processing interact with each other to facilitate the understanding of speech.
+• To test experimentally the relative timing of different levels in speech processing.
+• To collect EEG (electroencephalography) data from a relevant sample size on brain re- sponses to auditory stimuli.
+Background: Two main currents of thought in psycholinguistics have categorised speech per- ception to be either unidirectional or interactive.</description>
+    </item>
     
     <item>
       <title>academic skills</title>
@@ -27,19 +40,6 @@ Text typesetting: TeX, Microsoft Word
 Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
 F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
 Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
-    </item>
-    
-    <item>
-      <title>information flow order in speech perception</title>
-      <link>https://mcanzi.github.io/project/erp/</link>
-      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/project/erp/</guid>
-      <description>Overview Aims and Objectives
-• To explore how different levels of speech processing interact with each other to facilitate the understanding of speech.
-• To test experimentally the relative timing of different levels in speech processing.
-• To collect EEG (electroencephalography) data from a relevant sample size on brain re- sponses to auditory stimuli.
-Background: Two main currents of thought in psycholinguistics have categorised speech per- ception to be either unidirectional or interactive.</description>
     </item>
     
   </channel>
