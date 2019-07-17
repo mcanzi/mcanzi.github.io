@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>r on Massimiliano Canzi</title>
+    <title>R on Massimiliano Canzi</title>
     <link>https://mcanzi.github.io/tags/r/</link>
-    <description>Recent content in r on Massimiliano Canzi</description>
+    <description>Recent content in R on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
