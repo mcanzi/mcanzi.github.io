@@ -6,10 +6,19 @@
     <description>Recent content in erp on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mcanzi.github.io/tags/erp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Processing speech sounds in speech(-like) perception: an ERP study.</title>
+      <link>https://mcanzi.github.io/project/erp2/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/erp2/</guid>
+      <description>The aim of our study is to investigate whether phonetic and phonological information are processed earlier in the brain compared to semantic information in speech perception. ERP components found at different times following the presentation of a speech or speech-like stimulus have been linked to the processing of different components of the speech signal (e.g. phonetic, semantic or syntactic information). Understanding the nature of ERP components involved in the processing of speech and, in particular, understanding their timing can be extremely useful in defining the structure of an architecture of speech perception and, in more general terms, of grammar.</description>
+    </item>
     
     <item>
       <title>Don&#39;t let me be misunderstood. Exploring early speech perception</title>
