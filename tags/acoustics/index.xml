@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>acoustics on Massimiliano Canzi</title>
@@ -6,19 +6,15 @@
     <description>Recent content in acoustics on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mcanzi.github.io/tags/acoustics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/acoustics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>the forensic implications of comparing soft, neutral and loud speech</title>
       <link>https://mcanzi.github.io/project/forensic/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/project/forensic/</guid>
-      <description>Presentations 2018 Massimiliano Canzi The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) in Manchester, UK. 26-27th April, 2018.
-2018 Massimiliano Canzi A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the Colloquium of the British Association of Academic Phoneticians (BAAP) in Canterbury, UK.</description>
+      <description>Presentations 2018	Massimiliano Canzi The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) in Manchester, UK. 26-27th April, 2018.
+2018	Massimiliano Canzi A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the Colloquium of the British Association of Academic Phoneticians (BAAP) in Canterbury, UK.</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ggplot on Massimiliano Canzi</title>
@@ -6,27 +6,22 @@
     <description>Recent content in ggplot on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mcanzi.github.io/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>academic skills</title>
       <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
-      <description>Speech Analysis: Praat (sample script below), Wavesurfer
-Speech Manipulation: Praat, iZotope, Audacity
-ERP/EEG: Matlab, ERPlab/EEGlab
-Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
-Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word
-Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
-F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
-Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
+      <description>Speech Analysis:	Praat, Wavesurfer
+Speech Manipulation:	Praat, iZotope, Audacity
+ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems
+Experimental Design:	Presentation (Neurobehavioral Systems), PsychoPy, E-Prime
+Statistical Analysis &amp;amp; Data Visualisation:	R (w/ tidyverse), Python
+Image and video manipulation Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pro
+Languages Italian (Native), English (C2), Portuguese (B2), German (A1)
+Other programming languages known:	Python
+Text typesetting:	TeX, Microsoft Word</description>
     </item>
     
   </channel>

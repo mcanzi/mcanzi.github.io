@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Massimiliano Canzi</title>
@@ -6,20 +6,16 @@
     <description>Recent content in Posts on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mcanzi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>education</title>
       <link>https://mcanzi.github.io/2018/09/17/education/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
-      <description>University (2017 - Present) PhD in Linguistics. The University of Manchester. Information flow order in speech perception: An electro-physiological approach to the architecture of perception and grammar. Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
-(2016 - 2017) MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
-(2015 - 2016) MA in Linguistics.</description>
+      <description>University (2017 - Present)	PhD in Linguistics. The University of Manchester. What PMN? Phonological mapping in speech-like perception Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
+(2016 - 2017)	MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
+(2015 - 2016)	MA in Linguistics. The University of Manchester. Dissertation: A study on the variation of fundamental frequency, f-patter, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
     </item>
     
     <item>
@@ -40,7 +36,8 @@ The University of Manchester.
 TA in Sounds of Language .
 Course convenor: Dr Patrycja Strycharczuk.
 The University of Manchester.
-(January 2018 - May 2018):</description>
+(January 2018 - May 2018):
+(January 2019 - May 2019):</description>
     </item>
     
     <item>
@@ -63,16 +60,15 @@ as a correlate of /t/-glottaling’.</description>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
-      <description>Speech Analysis: Praat (sample script below), Wavesurfer
-Speech Manipulation: Praat, iZotope, Audacity
-ERP/EEG: Matlab, ERPlab/EEGlab
-Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
-Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word
-Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
-F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
-Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
+      <description>Speech Analysis:	Praat, Wavesurfer
+Speech Manipulation:	Praat, iZotope, Audacity
+ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems
+Experimental Design:	Presentation (Neurobehavioral Systems), PsychoPy, E-Prime
+Statistical Analysis &amp;amp; Data Visualisation:	R (w/ tidyverse), Python
+Image and video manipulation Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pro
+Languages Italian (Native), English (C2), Portuguese (B2), German (A1)
+Other programming languages known:	Python
+Text typesetting:	TeX, Microsoft Word</description>
     </item>
     
   </channel>

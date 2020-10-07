@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>r on Massimiliano Canzi</title>
@@ -6,11 +6,7 @@
     <description>Recent content in r on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mcanzi.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Atom: useful packages</title>
       <link>https://mcanzi.github.io/posts/atom/</link>
@@ -18,7 +14,8 @@
       
       <guid>https://mcanzi.github.io/posts/atom/</guid>
       <description>Atom is a powerful open-source text editor with embedded Git control. Atom is unique because of its 7000+ plugins (packages) which are usually license-free and community-built. Atom supports syntax highlighting natively for more than 30 programming languages. The number is esponentially increased when external packages are installed.
-If you have Atom installed, you can search packages simply by opening up a new terminal window and typing apm search keyword</description>
+If you have Atom installed, you can search packages simply by opening up a new terminal window and typing apm search keyword
+massimiliano@Massimilianos-MacBook-Pro ~&amp;gt; apm search language-r Search Results For &#39;language-r&#39; (29) ├── language-r A language description and snippets for R (67671 downloads, 83 stars) ├── atom-language-r A language description and snippets for R (2487 downloads, 8 stars) ├── language-cup A short description of your language package (621 downloads, 0 stars) ├── language-hcl Syntax support for the HashiCorp Configuration Language (9578 downloads, 25 stars) ├── language-jcm JaCaMo Project Language (114 downloads, 0 stars) ├── language-v0 Language package for Imparato internal v0 source files.</description>
     </item>
     
     <item>
@@ -27,16 +24,15 @@ If you have Atom installed, you can search packages simply by opening up a new t
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
-      <description>Speech Analysis: Praat (sample script below), Wavesurfer
-Speech Manipulation: Praat, iZotope, Audacity
-ERP/EEG: Matlab, ERPlab/EEGlab
-Experimental Design: E-Prime, PsychoPy, Presentation (Neurobehavioral Systems)
-Statistical Analysis &amp;amp; Data Visualisation: RStudio, R markdown (sample script below)
-Other programming languages known: Python
-Text typesetting: TeX, Microsoft Word
-Data visualisation Hi, here&amp;rsquo;s some random plots I made in ggplot!
-F1-F2 vowel plots for male Italian speakers in neutral and loud speech.
-Sample of R script The following sample of an R project is meant to read data, clean it, run mixed effect models and create visual representation of results with ggplot.</description>
+      <description>Speech Analysis:	Praat, Wavesurfer
+Speech Manipulation:	Praat, iZotope, Audacity
+ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems
+Experimental Design:	Presentation (Neurobehavioral Systems), PsychoPy, E-Prime
+Statistical Analysis &amp;amp; Data Visualisation:	R (w/ tidyverse), Python
+Image and video manipulation Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pro
+Languages Italian (Native), English (C2), Portuguese (B2), German (A1)
+Other programming languages known:	Python
+Text typesetting:	TeX, Microsoft Word</description>
     </item>
     
   </channel>
