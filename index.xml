@@ -116,5 +116,15 @@ Other programming languages known:	Python
 Text typesetting:	TeX, Microsoft Word</description>
     </item>
     
+    <item>
+      <title>Introduction to data visualisation with R and ggplot</title>
+      <link>https://mcanzi.github.io/posts/ggplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/posts/ggplot/</guid>
+      <description>Setup &amp;amp; packages Packages The focus of this introductory, code-along workshop is to get you acquainted with the basic syntax of the ggplot() package, as well as to provide sample code that you can later on expand for the analysis of your own data.
+The tidyverse packages include ggplot2, the package focus of this workshop, as well as other useful additions. The packages of the tidyverse universe have been created to work seamlessly together, often times replacing basic R functions with more elegant, efficient solutions.</description>
+    </item>
+    
   </channel>
 </rss>
