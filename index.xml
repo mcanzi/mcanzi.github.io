@@ -6,7 +6,7 @@
     <description>Recent content on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What PMN? Exploring phonological mapping in speech(-like) processing</title>
       <link>https://mcanzi.github.io/project/erp/</link>
@@ -38,6 +38,16 @@ Abstract Introduction. Lexical frequency is known to modulate the effects of a p
       <guid>https://mcanzi.github.io/project/forensic/</guid>
       <description>Conferences 2018	Massimiliano Canzi The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) in Manchester, UK. 26-27th April, 2018.
 2018	Massimiliano Canzi A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the Colloquium of the British Association of Academic Phoneticians (BAAP) in Canterbury, UK.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to data visualisation with R and ggplot</title>
+      <link>https://mcanzi.github.io/posts/ggplot/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/posts/ggplot/</guid>
+      <description>Setup &amp;amp; packages Packages The focus of this introductory, code-along workshop is to get you acquainted with the basic syntax of the ggplot() package, as well as to provide sample code that you can later on expand for the analysis of your own data.
+The tidyverse packages include ggplot2, the package focus of this workshop, as well as other useful additions. The packages of the tidyverse universe have been created to work seamlessly together, often times replacing basic R functions with more elegant, efficient solutions.</description>
     </item>
     
     <item>
@@ -114,16 +124,6 @@ Image and video manipulation Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pr
 Languages Italian (Native), English (C2), Portuguese (B2), German (A1)
 Other programming languages known:	Python
 Text typesetting:	TeX, Microsoft Word</description>
-    </item>
-    
-    <item>
-      <title>Introduction to data visualisation with R and ggplot</title>
-      <link>https://mcanzi.github.io/posts/ggplot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/posts/ggplot/</guid>
-      <description>Setup &amp;amp; packages Packages The focus of this introductory, code-along workshop is to get you acquainted with the basic syntax of the ggplot() package, as well as to provide sample code that you can later on expand for the analysis of your own data.
-The tidyverse packages include ggplot2, the package focus of this workshop, as well as other useful additions. The packages of the tidyverse universe have been created to work seamlessly together, often times replacing basic R functions with more elegant, efficient solutions.</description>
     </item>
     
   </channel>
