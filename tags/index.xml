@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>r</title>
+      <title>R</title>
       <link>https://mcanzi.github.io/tags/r/</link>
       <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -44,6 +44,24 @@
     </item>
     
     <item>
+      <title>education</title>
+      <link>https://mcanzi.github.io/tags/education/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/tags/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>https://mcanzi.github.io/tags/teaching/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/tags/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>atom</title>
       <link>https://mcanzi.github.io/tags/atom/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
@@ -53,29 +71,11 @@
     </item>
     
     <item>
-      <title>praat</title>
+      <title>Praat</title>
       <link>https://mcanzi.github.io/tags/praat/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/tags/praat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>education</title>
-      <link>https://mcanzi.github.io/tags/education/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/education/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>teaching</title>
-      <link>https://mcanzi.github.io/tags/teaching/</link>
-      <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/teaching/</guid>
       <description></description>
     </item>
     
