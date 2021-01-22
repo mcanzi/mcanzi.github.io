@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Massimiliano Canzi</title>
-    <link>/post/</link>
+    <link>https://mcanzi.github.io/post/</link>
     <description>Recent content in Posts on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>education</title>
-      <link>/2018/09/17/education/</link>
+      <link>https://mcanzi.github.io/2018/09/17/education/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/17/education/</guid>
+      <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
       <description>University (2017 - Present)	PhD in Linguistics. The University of Manchester. What PMN? Phonological mapping in speech-like perception Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
 (2016 - 2017)	MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
 (2015 - 2016)	MA in Linguistics. The University of Manchester. Dissertation: A study on the variation of fundamental frequency, f-pattern, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>work experience</title>
-      <link>/2018/09/17/work-experience/</link>
+      <link>https://mcanzi.github.io/2018/09/17/work-experience/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/17/work-experience/</guid>
+      <guid>https://mcanzi.github.io/2018/09/17/work-experience/</guid>
       <description>Work experience (January 2021 - ) (full-time):
 Lab Manager at LingLab.
 Room G114, Universität Konstanz
@@ -43,10 +43,10 @@ the beholder: the role of accent in mate choice.</description>
     
     <item>
       <title>awards</title>
-      <link>/2018/09/14/awards/</link>
+      <link>https://mcanzi.github.io/2018/09/14/awards/</link>
       <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/14/awards/</guid>
+      <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
       <description>Awards September 2018
 Stefano Coretta, Massimiliano Canzi (joint winners)
 Best Student Abstract submitted to the LAGB 2018
@@ -57,10 +57,10 @@ as a correlate of /t/-glottaling’.</description>
     
     <item>
       <title>academic skills</title>
-      <link>/2017/09/22/academic-skills/</link>
+      <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/09/22/academic-skills/</guid>
+      <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
       <description>Speech Analysis:	Praat, Wavesurfer
 Speech Manipulation:	Praat, iZotope, Audacity
 ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems
