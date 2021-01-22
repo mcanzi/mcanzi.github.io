@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Massimiliano Canzi</title>
-    <link>https://mcanzi.github.io/</link>
+    <link>/</link>
     <description>Recent content on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What PMN? Exploring phonological mapping in speech(-like) processing</title>
-      <link>https://mcanzi.github.io/project/erp/</link>
+      <link>/project/erp/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/project/erp/</guid>
+      <guid>/project/erp/</guid>
       <description>May 2019. Massimiliano Canzi. Don&amp;rsquo;t let me be misunderstood: Exploring early phonological and lexical processing in speech perception. Talk presented at Manchester Forum in Linguistics (mFiL) 2019.	The University of Manchester
 March 2019. Massimiliano Canzi. Understanding phonological and lexical mismatch in auditory perception. Invited talk presented at the Phonetics Laboratory of the University of Glasgow.
 Abstract Evidence from event-related potential (ERP) research indicates that phonological and semantic incongruities in online language processing and perception are solved indipendently during language processing (D’Arcy et al.</description>
@@ -20,10 +20,10 @@ Abstract Evidence from event-related potential (ERP) research indicates that pho
     
     <item>
       <title>the effect of lexical frequency on vowel phonation as a correlate of t glottaling</title>
-      <link>https://mcanzi.github.io/project/glottaling/</link>
+      <link>/project/glottaling/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/project/glottaling/</guid>
+      <guid>/project/glottaling/</guid>
       <description>Presentations 2018	Stefano Coretta, Massimiliano Canzi The effect of lexical frequency on vowel phonation as a correlate of /t/-	glottaling. Talk presented at the Linguistic Association of Great Britain (LAGB) conference in Sheffield, UK. 11-14th September, 2018.
 Resources You can find the research compendium (including data, analysis, code and slides/poster) for this project at the following link:
 LAGB 2018
@@ -32,30 +32,40 @@ Abstract Introduction. Lexical frequency is known to modulate the effects of a p
     
     <item>
       <title>the forensic implications of comparing soft, neutral and loud speech</title>
-      <link>https://mcanzi.github.io/project/forensic/</link>
+      <link>/project/forensic/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/project/forensic/</guid>
+      <guid>/project/forensic/</guid>
       <description>Conferences 2018	Massimiliano Canzi The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) in Manchester, UK. 26-27th April, 2018.
 2018	Massimiliano Canzi A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the Colloquium of the British Association of Academic Phoneticians (BAAP) in Canterbury, UK.</description>
     </item>
     
     <item>
+      <title>Twitter data and sentiment scores in R and Python</title>
+      <link>/posts/twitter/tweets_extract/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/twitter/tweets_extract/</guid>
+      <description>Getting started Turn on dark mode in the right hand corner of this website for the best experience
+ Introduction The aim of this brief post is to present an introduction to the collection and analysis of Twitter data with R and Python. Tweets are extracted in R. Sentiment analysis is carried out in Python with nltk and VADER. The sentiment scores, combined with the previously acquired twitter data, aree then brought back into R for a visual exploration using ggplot() and tidyverse.</description>
+    </item>
+    
+    <item>
       <title>Introduction to data visualisation with R and ggplot</title>
-      <link>https://mcanzi.github.io/posts/ggplot/</link>
+      <link>/posts/ggplot/ggplot/</link>
       <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/posts/ggplot/</guid>
+      <guid>/posts/ggplot/ggplot/</guid>
       <description>Setup &amp;amp; packages Packages The focus of this introductory, code-along workshop is to get you acquainted with the basic syntax of the ggplot() package, as well as to provide sample code that you can later on expand for the analysis of your own data.
 The tidyverse packages include ggplot2, the package focus of this workshop, as well as other useful additions. The packages of the tidyverse universe have been created to work seamlessly together, often times replacing basic R functions with more elegant, efficient solutions.</description>
     </item>
     
     <item>
       <title>Atom: useful packages</title>
-      <link>https://mcanzi.github.io/posts/atom/</link>
+      <link>/posts/atom/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/posts/atom/</guid>
+      <guid>/posts/atom/</guid>
       <description>Atom is a powerful open-source text editor with embedded Git control. Atom is unique because of its 7000+ plugins (packages) which are usually license-free and community-built. Atom supports syntax highlighting natively for more than 30 programming languages. The number is esponentially increased when external packages are installed.
 If you have Atom installed, you can search packages simply by opening up a new terminal window and typing apm search keyword
 massimiliano@Massimilianos-MacBook-Pro ~&amp;gt; apm search language-r Search Results For &#39;language-r&#39; (29) ├── language-r A language description and snippets for R (67671 downloads, 83 stars) ├── atom-language-r A language description and snippets for R (2487 downloads, 8 stars) ├── language-cup A short description of your language package (621 downloads, 0 stars) ├── language-hcl Syntax support for the HashiCorp Configuration Language (9578 downloads, 25 stars) ├── language-jcm JaCaMo Project Language (114 downloads, 0 stars) ├── language-v0 Language package for Imparato internal v0 source files.</description>
@@ -63,10 +73,10 @@ massimiliano@Massimilianos-MacBook-Pro ~&amp;gt; apm search language-r Search Re
     
     <item>
       <title>education</title>
-      <link>https://mcanzi.github.io/2018/09/17/education/</link>
+      <link>/2018/09/17/education/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/2018/09/17/education/</guid>
+      <guid>/2018/09/17/education/</guid>
       <description>University (2017 - Present)	PhD in Linguistics. The University of Manchester. What PMN? Phonological mapping in speech-like perception Supervised by: Dr Wendell Kimper, Dr Patrycja Strycharczuk.
 (2016 - 2017)	MSc in Forensic Speech Science. University of York. Dissertation: Do expectations elicited by a speaker’s somatic features mediate the perception of the speaker’s voice?. Supervised by: Dr Dom Watt.
 (2015 - 2016)	MA in Linguistics. The University of Manchester. Dissertation: A study on the variation of fundamental frequency, f-pattern, speaking rate and vowel length in soft, neutral and loud speech in Italian.</description>
@@ -74,10 +84,10 @@ massimiliano@Massimilianos-MacBook-Pro ~&amp;gt; apm search language-r Search Re
     
     <item>
       <title>work experience</title>
-      <link>https://mcanzi.github.io/2018/09/17/work-experience/</link>
+      <link>/2018/09/17/work-experience/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/2018/09/17/work-experience/</guid>
+      <guid>/2018/09/17/work-experience/</guid>
       <description>Work experience (January 2021 - ) (full-time):
 Lab Manager at LingLab.
 Room G114, Universität Konstanz
@@ -97,10 +107,10 @@ the beholder: the role of accent in mate choice.</description>
     
     <item>
       <title>awards</title>
-      <link>https://mcanzi.github.io/2018/09/14/awards/</link>
+      <link>/2018/09/14/awards/</link>
       <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/2018/09/14/awards/</guid>
+      <guid>/2018/09/14/awards/</guid>
       <description>Awards September 2018
 Stefano Coretta, Massimiliano Canzi (joint winners)
 Best Student Abstract submitted to the LAGB 2018
@@ -111,10 +121,10 @@ as a correlate of /t/-glottaling’.</description>
     
     <item>
       <title>academic skills</title>
-      <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
+      <link>/2017/09/22/academic-skills/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
+      <guid>/2017/09/22/academic-skills/</guid>
       <description>Speech Analysis:	Praat, Wavesurfer
 Speech Manipulation:	Praat, iZotope, Audacity
 ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems

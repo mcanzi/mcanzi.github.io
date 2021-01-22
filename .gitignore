@@ -4,3 +4,5 @@ img/.DS_Store
 img/favicon/.DS_Store
 posts/ERP.csv
 posts/vowels.csv
+*.csv
+posts/twitteR/twitter authentication.Rdata

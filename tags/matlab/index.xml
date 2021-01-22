@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>matlab on Massimiliano Canzi</title>
-    <link>https://mcanzi.github.io/tags/matlab/</link>
+    <link>/tags/matlab/</link>
     <description>Recent content in matlab on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>academic skills</title>
-      <link>https://mcanzi.github.io/2017/09/22/academic-skills/</link>
+      <link>/2017/09/22/academic-skills/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/2017/09/22/academic-skills/</guid>
+      <guid>/2017/09/22/academic-skills/</guid>
       <description>Speech Analysis:	Praat, Wavesurfer
 Speech Manipulation:	Praat, iZotope, Audacity
 ERP/EEG:	Matlab, ERPlab/EEGlab, ActiView, Biosemi EEG systems
