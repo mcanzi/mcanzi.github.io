@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mcanzi.github.io/project/intonational-alignment/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/project/icgl15/gre-models/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mcanzi.github.io/project/erp/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,153 +28,63 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/ggplot/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/acoustics/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcanzi.github.io/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/posts/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/python/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/r/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/project/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcanzi.github.io/tags/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/posts/iii/twittr/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/erp/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/data/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/posts/ii/ggplot/</loc>
-    <lastmod>2021-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/education/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/skills/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/teaching/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/skills/teaching/</loc>
-    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/atom/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/posts/i/atom/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/praat/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/tags/perception/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcanzi.github.io/skills/education/</loc>
-    <lastmod>2018-09-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/awards/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/skills/</loc>
+    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/skills/awards/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/teaching/teaching/</loc>
+    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/research/</loc>
-    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+    <loc>https://mcanzi.github.io/teaching/</loc>
+    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcanzi.github.io/tags/egg/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/frequency/</loc>
-    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
-    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/project/</loc>
-    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/acoustics/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/forensics/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/skills/skills/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/erp/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/matlab/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcanzi.github.io/tags/perception/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>

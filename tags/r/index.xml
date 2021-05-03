@@ -1,43 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Massimiliano Canzi</title>
+    <title>r on Massimiliano Canzi</title>
     <link>https://mcanzi.github.io/tags/r/</link>
-    <description>Recent content in R on Massimiliano Canzi</description>
+    <description>Recent content in r on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Twitter data and sentiment scores in R and Python</title>
-      <link>https://mcanzi.github.io/posts/iii/twittr/</link>
-      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/posts/iii/twittr/</guid>
-      <description>Getting started Turn on dark mode in the right hand corner of this website for the best experience
- Introduction The aim of this brief post is to present an introduction to the collection and analysis of Twitter data with R and Python. Tweets are extracted in R. Sentiment analysis is carried out in Python with nltk and VADER. The sentiment scores, combined with the previously acquired twitter data, aree then brought back into R for a visual exploration using ggplot() and tidyverse.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to data visualisation with R and ggplot</title>
-      <link>https://mcanzi.github.io/posts/ii/ggplot/</link>
-      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/posts/ii/ggplot/</guid>
-      <description>Setup &amp;amp; packages Packages The focus of this introductory, code-along workshop is to get you acquainted with the basic syntax of the ggplot() package, as well as to provide sample code that you can later on expand for the analysis of your own data.
-The tidyverse packages include ggplot2, the package focus of this workshop, as well as other useful additions. The packages of the tidyverse universe have been created to work seamlessly together, often times replacing basic R functions with more elegant, efficient solutions.</description>
-    </item>
-    
-    <item>
-      <title>Atom: useful packages</title>
-      <link>https://mcanzi.github.io/posts/i/atom/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/posts/i/atom/</guid>
-      <description>Atom is a powerful open-source text editor with embedded Git control. Atom is unique because of its 7000+ plugins (packages) which are usually license-free and community-built. Atom supports syntax highlighting natively for more than 30 programming languages. The number is esponentially increased when external packages are installed.
-If you have Atom installed, you can search packages simply by opening up a new terminal window and typing apm search keyword
-massimiliano@Massimilianos-MacBook-Pro ~&amp;gt; apm search language-r Search Results For &#39;language-r&#39; (29) ├── language-r A language description and snippets for R (67671 downloads, 83 stars) ├── atom-language-r A language description and snippets for R (2487 downloads, 8 stars) ├── language-cup A short description of your language package (621 downloads, 0 stars) ├── language-hcl Syntax support for the HashiCorp Configuration Language (9578 downloads, 25 stars) ├── language-jcm JaCaMo Project Language (114 downloads, 0 stars) ├── language-v0 Language package for Imparato internal v0 source files.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>academic skills</title>
       <link>https://mcanzi.github.io/skills/skills/</link>

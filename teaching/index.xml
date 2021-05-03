@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teachings on Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/teaching/</link>
+    <description>Recent content in Teachings on Massimiliano Canzi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>teaching</title>
+      <link>https://mcanzi.github.io/teaching/teaching/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/teaching/teaching/</guid>
+      <description>Hi
+In the summer term of 2021 (Apil-July), I&amp;rsquo;m teaching a Statistics course for MA students in Multilingualism at Universität Konstanz. The course is taught online. You can find all of the video lecture material on Vimeo here.
+You can access lecture slides, source code and practice material from my github repo at mcanzi/statistics-course
+If you are interested in further tutorial and exercise material (or extra resources), please do not hesitate to get in touch with me via e-mail</description>
+    </item>
+    
+  </channel>
+</rss>
