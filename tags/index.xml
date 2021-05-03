@@ -1,56 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Massimiliano Canzi</title>
-    <link>https://mcanzi.github.io/tags/</link>
-    <description>Recent content in Tags on Massimiliano Canzi</description>
+    <title>Tags on psycholinguisticslab</title>
+    <link>https://uompsylinglab.github.io/tags/</link>
+    <description>Recent content in Tags on psycholinguisticslab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>acoustics</title>
-      <link>https://mcanzi.github.io/tags/acoustics/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/acoustics/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>phonetics</title>
-      <link>https://mcanzi.github.io/tags/phonetics/</link>
-      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/phonetics/</guid>
-      <description></description>
-    </item>
+	<atom:link href="https://uompsylinglab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>erp</title>
-      <link>https://mcanzi.github.io/tags/erp/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/erp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>perception</title>
-      <link>https://mcanzi.github.io/tags/perception/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/perception/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>egg</title>
-      <link>https://mcanzi.github.io/tags/egg/</link>
-      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/tags/egg/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
