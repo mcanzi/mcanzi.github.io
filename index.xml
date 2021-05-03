@@ -1,53 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>psycholinguisticslab</title>
-    <link>https://uompsylinglab.github.io/</link>
-    <description>Recent content on psycholinguisticslab</description>
+    <title>Massimiliano Canzi</title>
+    <link>https://mcanzi.github.io/</link>
+    <description>Recent content on Massimiliano Canzi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-	<atom:link href="https://uompsylinglab.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://uompsylinglab.github.io/equipment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>[Ulbrich, C. &amp; Canzi, M.] Intonational alignment in second language acquisition</title>
+      <link>https://mcanzi.github.io/project/intonational-alignment/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://uompsylinglab.github.io/equipment/</guid>
-      <description> Equipment The Lab has a sound-attenuated booth for running experiments, which can accommodate up to three people at a time. It is also equipped with the following:
- Serial response pads E-Prime software Eye tracker EEG Ohmmeter  </description>
+      <guid>https://mcanzi.github.io/project/intonational-alignment/</guid>
+      <description>Publications &amp;hellip;
+Abstract This study examines how proficient second language speakers of Belfast English and Northern Standard German realize cross-linguistic differences in intonational phonological categories and their gradient phonetic implementation. Belfast English and Northern Standard German select two different intonation patterns for nuclear pitch accents in declarative utterances. Northern Standard German features a falling pitch accent pattern. In Belfast English, a rising intonation contour is realised.
+The experiment compared the production of phonologically different pitch accents in declarative utterances and gradient acoustic characteristics of pitch range in utterancefinal position and peak alignment in nuclear pitch accents produced by native Belfast English learners of Northern Standard German with that of native Northern Standard German learners of Belfast English.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://uompsylinglab.github.io/timetable/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>[Tsaroucha, A., Rathcke. T. &amp; Canzi. M.] Effects of a face mask on the perception of English fricatives by native speakers of Greek</title>
+      <link>https://mcanzi.github.io/project/icgl15/gre-models/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://uompsylinglab.github.io/timetable/</guid>
-      <description> Timetable  </description>
+      <guid>https://mcanzi.github.io/project/icgl15/gre-models/</guid>
+      <description>Presentations …
+ Abstract Background. The ongoing COVID-19 pandemic has made a daily use of face masks mandatory. This has greatly influenced the everyday communication since face masks interfere with both acoustic and visual cues that would otherwise be available to interlocutors in spoken interaction. The present study focuses on the effect of this interference for the perception of 4 voiceless English fricatives: dental /θ/, labiodental /f/, alveolar /s/, and postalveolar /ʃ/.</description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>https://uompsylinglab.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>[Canzi, M. &amp; Kimper, W.] What PMN? Investigating phonological processing in semantics-free speech perception with ERP</title>
+      <link>https://mcanzi.github.io/project/erp/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://uompsylinglab.github.io/contact/</guid>
-      <description> Get in touch If you need to use the lab, please check the timetable first in order to save time. If the lab is available, just send an email to the lab assistant Massimiliano at massimiliano.canzi@postgrad.manchester.ac.uk including your desired date/s and time slot/s.
-Make a booking Or, you can fill in the following form:
-Loading... </description>
+      <guid>https://mcanzi.github.io/project/erp/</guid>
+      <description>Presentations Canzi, M., &amp;amp; Kimper, W. (2020). Processing speech sounds in speech(-like) perception: an ERP study. Posters accepted at the British Association of Academics in Phonetics at the University of York / PhonolEEGy at Université Côte d&amp;rsquo;Azur.
+Canzi, M. (2019). Don&amp;rsquo;t let me be misunderstood: Exploring early phonological and lexical processing in speech perception. Talk presented at the Manchester Forum in Linguistics (mFiL) at The University of Manchester
+Canzi, M. (2019).</description>
     </item>
     
     <item>
-      <title>People</title>
-      <link>https://uompsylinglab.github.io/people/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>[Coretta, S. &amp; Canzi, M.] The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling</title>
+      <link>https://mcanzi.github.io/project/glottaling/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://uompsylinglab.github.io/people/</guid>
-      <description>The lab The Psycholinguistics Lab is the newest facility for the study of language from an experimental approach. The Lab is the place to carry out speech perception, language processing and psycholinguistic experiments, and it welcomes all students and staff who are interested in research on how the human brain perceives, produces and elaborates speech.
-As the lab is still being set up, some of the equipment will not be available immediately; however, it is already open for staff, PGR students, and undergrad/PGT students under supervision.</description>
+      <guid>https://mcanzi.github.io/project/glottaling/</guid>
+      <description>Presentations Coretta, S. &amp;amp; Canzi, M. The effect of lexical frequency on vowel phonation as a correlate of /t/-	glottaling. Talk presented at the Linguistic Association of Great Britain (LAGB) conference at the University of Sheffield.
+Abstract Introduction. Lexical frequency is known to modulate the effects of a phonetic bias on speech production, such that high-frequency words show a stronger effect for a particular bias since they are exposed more often to that bias (Bybee 2004).</description>
+    </item>
+    
+    <item>
+      <title>[Canzi, M.] Inter- and intra- speaker variation of F(0, 1, 2) &amp; vowel duration in soft, neutral and loud speech in Italian.</title>
+      <link>https://mcanzi.github.io/project/forensic/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/forensic/</guid>
+      <description>Conferences Canzi, M. (2018) The Forensic implications of comparing soft, neutral and loud speech. Talk presented at the Manchester Forum in Linguistics (mFiL) at	The University of Manchester
+Canzi, M (2018) A quantitative analysis of inter- and intra- speaker variation of F0, F1, F2 and vowel duration in soft, neutral and loud speech in Italian. Poster presented at the British Association of Academics in Phonetics (BAAP) at the University of Kent.</description>
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>https://mcanzi.github.io/skills/education/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/skills/education/</guid>
+      <description>You can download a .pdf version of my updated CV here
+Employment   (1/2021-X/20XX) Laboratory Manager at LingLab, Universität Konstanz
+  (2/2018-9/2019) Psycholinguistics Laboratory Manager at The University of Manchester
+  (2/2018-2/2020) Graduate Teaching Assistant at The University of Manchester
+ Forensic Linguistics (Dr Andrea Nini) Handling Data (Dr Patrycja Strycharczuk) Language, Mind &amp;amp; Brain (Dr Wendell Kimper) Psycholinguistics (Dr Thea-Cameron Faulkner) Sounds of Language (Dr Patrycja Strycharczuk)    Education  (2017-2021) PhD in Linguistics (nearing submission) at The University of Manchester.</description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>https://mcanzi.github.io/teaching/teaching/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/teaching/teaching/</guid>
+      <description>Hi
+In the summer term of 2021 (Apil-July), I&amp;rsquo;m teaching a Statistics course for MA students in Multilingualism at Universität Konstanz. The course is taught online. You can find all of the video lecture material on Vimeo here.
+You can access lecture slides, source code and practice material from my github repo at mcanzi/statistics-course
+If you are interested in further tutorial and exercise material (or extra resources), please do not hesitate to get in touch with me via e-mail</description>
     </item>
     
   </channel>
