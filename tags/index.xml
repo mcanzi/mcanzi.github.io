@@ -17,11 +17,20 @@
     </item>
     
     <item>
-      <title>phonetics</title>
-      <link>https://mcanzi.github.io/tags/phonetics/</link>
+      <title>production</title>
+      <link>https://mcanzi.github.io/tags/production/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/tags/phonetics/</guid>
+      <guid>https://mcanzi.github.io/tags/production/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prosody</title>
+      <link>https://mcanzi.github.io/tags/prosody/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/tags/prosody/</guid>
       <description></description>
     </item>
     
@@ -44,11 +53,20 @@
     </item>
     
     <item>
-      <title>egg</title>
-      <link>https://mcanzi.github.io/tags/egg/</link>
+      <title>phonetics</title>
+      <link>https://mcanzi.github.io/tags/phonetics/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/tags/phonetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eeg</title>
+      <link>https://mcanzi.github.io/tags/eeg/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mcanzi.github.io/tags/egg/</guid>
+      <guid>https://mcanzi.github.io/tags/eeg/</guid>
       <description></description>
     </item>
     

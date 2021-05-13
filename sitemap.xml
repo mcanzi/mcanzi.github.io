@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://mcanzi.github.io/project/urdu/</loc>
+    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mcanzi.github.io/project/erp/</loc>
     <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
@@ -38,12 +43,17 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
+    <loc>https://mcanzi.github.io/tags/production/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcanzi.github.io/project/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/prosody/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,7 +93,12 @@
   </url>
   
   <url>
-    <loc>https://mcanzi.github.io/tags/egg/</loc>
+    <loc>https://mcanzi.github.io/tags/phonetics/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcanzi.github.io/tags/eeg/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
   </url>
   
