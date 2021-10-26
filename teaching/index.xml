@@ -14,9 +14,8 @@
       
       <guid>https://mcanzi.github.io/teaching/teaching/</guid>
       <description>Hello!
-In the winter term of 2021 (October-February), I&amp;rsquo;m teaching a Statistics course for MA students in Linguistics at Universität Konstanz. The course is taugh fully online. You can find all of the video lecture material on Vimeo here.
-You can access lecture slides, source code and practice material from my github repo at mcanzi/statistics-course
-If you are interested in further tutorial and exercise material (or extra resources), please do not hesitate to get in touch with me via e-mail</description>
+In the winter term of 2021 (October-February), I&amp;rsquo;m teaching a Statistics course for MA students in Linguistics at Universität Konstanz. The course is taught fully online. You can watch all of the video lecture material on Vimeo here. Some quick links..
+ Introduction to R Markdown R building blocks Swirl dplyr and %&amp;gt;% More dplyr Simple linear regression Transformations Multiple regression Box plots (ggplot2) Inferential statistics Interactions Linear Mixed Models Visualisation of model estimates Generalised Linear Models  Soon, you will be able to access lecture slides, source code and practice material from my github repo at mcanzi/statistics-course</description>
     </item>
     
   </channel>
