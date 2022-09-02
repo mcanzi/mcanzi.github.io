@@ -6,16 +6,18 @@
     <description>Recent content in Teachings on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>teaching</title>
       <link>https://mcanzi.github.io/teaching/teaching/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/teaching/teaching/</guid>
       <description>Hello!
-In the winter term of 2021 (October-February), I&amp;rsquo;m teaching a Statistics course for MA students in Linguistics at Universität Konstanz. The course is taught fully online. You can watch all of the video lecture material on Vimeo here. Some quick links..
- Introduction to R Markdown R building blocks Swirl dplyr and %&amp;gt;% More dplyr Simple linear regression Transformations Multiple regression Box plots (ggplot2) Inferential statistics Interactions Linear Mixed Models Visualisation of model estimates Generalised Linear Models  Soon, you will be able to access lecture slides, source code and practice material from my github repo at mcanzi/statistics-course</description>
+Check out my YouTube channel, where I often post lecture videos and workshop recordings. You can also find updated resources on my GitHub page.
+New in 2022: Breaking Bad Habits in Experimental and Quantitative Linguistics Research (YouTube)
+Thanks
+Max</description>
     </item>
     
   </channel>
