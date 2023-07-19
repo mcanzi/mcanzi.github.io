@@ -8,16 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>teaching</title>
+      <title>workshops</title>
       <link>https://mcanzi.github.io/teaching/teaching/</link>
       <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mcanzi.github.io/teaching/teaching/</guid>
       <description>Hello!
-Check out my YouTube channel, where I often post lecture videos and workshop recordings. You can also find updated resources on my GitHub page.
-New in 2022: Breaking Bad Habits in Experimental and Quantitative Linguistics Research (YouTube)
-Thanks
-Max</description>
+I&amp;rsquo;m now offering a wide range of workshops both online and in-person, tailored specifically to your learning needs. With my background as a data scientist in a linguistics department, I&amp;rsquo;ve had the chance to collaborate with dozens of research projects, and support over 50 students in achieving their research goals, in addition to teaching hundreds more.
+My workshops delve into the fascinating world of quantitative methods, from introductory short courses on linear regression and linear mixed effect models to the more intricate generalized additive mixed models (GAMMs).</description>
     </item>
     
   </channel>
