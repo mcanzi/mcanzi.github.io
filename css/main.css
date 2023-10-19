@@ -42,7 +42,7 @@ main {
 .intro > .profile {
     width: 10vh;
     height: 10vh;
-    border-radius: 25%;
+    border-radius: 50%;
 }
 
 /*apply accent colour to links*/
