@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unmasking the truf: impact of community masks on the perception of voiceless fricatives in English {M Canzi, T Rathcke}</title>
       <link>https://mcanzi.github.io/project/icphs/</link>
@@ -78,6 +78,29 @@ Canzi, M. (2019).</description>
     </item>
     
     <item>
+      <title>Japan</title>
+      <link>https://mcanzi.github.io/photos/japan/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/photos/japan/</guid>
+      <description>Between 26.09.23 and 17.10.23, I journeyed through Japan, capturing its architecture and street life. All images were taken with the Sony A7IV mirrorless camera, paired with a 14 mm GM lens.
+Tokyo I (29.09.23)
+Tokyo II (01.10.23)
+Tokyo III (01.10.23)
+Hakone (04.10.23)
+Hakone II (04.10.23)
+Hakone III (04.10.23)
+Nikko I (05.10.23)
+Nikko II (06.10.23)
+Nikko III (06.10.23)
+Nikko IV (06.10.23)
+Nikko IV (07.10.23)
+Takayama I (08.10.23)
+Takayama II (09.10.23)
+Takayama III (09.</description>
+    </item>
+    
+    <item>
       <title>Curriculum Vitae</title>
       <link>https://mcanzi.github.io/skills/education/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
@@ -98,28 +121,6 @@ Forensic Linguistics (Dr Andrea Nini) Handling Data (Dr Patrycja Strycharczuk) L
       <description>Hello!
 I&amp;rsquo;m now offering a wide range of workshops both online and in-person, tailored specifically to your learning needs. With my background as a data scientist in a linguistics department, I&amp;rsquo;ve had the chance to collaborate with dozens of research projects, and support over 50 students in achieving their research goals, in addition to teaching hundreds more.
 My workshops delve into the fascinating world of quantitative methods, from introductory short courses on linear regression and linear mixed effect models to the more intricate generalized additive mixed models (GAMMs).</description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://mcanzi.github.io/photos/japan/</link>
-      <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mcanzi.github.io/photos/japan/</guid>
-      <description>Photography Between 26.09.23 and 17.10.23, I journeyed through Japan, capturing its architecture and street life. All images were taken with the Sony A7IV mirrorless camera, paired with a 14 mm GM lens.
-Tokyo I (29.09.23)
-Tokyo II (01.10.23)
-Tokyo III (01.10.23)
-Hakone (04.10.23)
-Hakone II (04.10.23)
-Nikko I (05.10.23)
-Nikko II (06.10.23)
-Nikko III (06.10.23)
-Nikko IV (06.10.23)
-Nikko IV (07.10.23)
-Takayama I (08.10.23)
-Takayama II (09.10.23)
-Takayama III (09.10.23)</description>
     </item>
     
   </channel>
