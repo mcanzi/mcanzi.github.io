@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on </title>
+    <link>https://mcanzi.github.io/project/</link>
+    <description>Recent content in Projects on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>research</title>
+      <link>https://mcanzi.github.io/project/research/</link>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/project/research/</guid>
+      <description>Synchronised movement and individual rhythmic skill influence the perception of temporal structure in spoken language Tamara Rathcke, Eline Smit, Rachel Yue &amp;amp; Massimiliano Canzi (2024)
+Attention, Perception &amp;amp; Psychophysics, 1-17 | doi: 10.3758/s13414-024-02893-8
+The subjective experience of time flow in speech deviates from the sound acoustics in substantial ways. The present study focuses on the perceptual tendency to regularize time intervals found in speech but not in other types of sounds with a similar temporal structure.</description>
+    </item>
+    
+  </channel>
+</rss>

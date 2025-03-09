@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skills on </title>
+    <link>https://mcanzi.github.io/skills/</link>
+    <description>Recent content in Skills on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mcanzi.github.io/skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>curriculum vitae</title>
+      <link>https://mcanzi.github.io/skills/education/</link>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcanzi.github.io/skills/education/</guid>
+      <description>Summary: Formally trained in quantitative research in phonetics and speech sciences. Since 2021, I am a data scientist and laboratory manager in the linguistics department at Universität Konstanz, where I teach MA-level courses in &amp;ldquo;Statistics&amp;rdquo;, &amp;ldquo;Advanced Statistics&amp;rdquo;, &amp;ldquo;Forensic Speech Science&amp;rdquo; and &amp;ldquo;Eye Tracking &amp;amp; Pupillometry&amp;rdquo; for linguistics students. I am an avid R coder. I also advocate for sensible experimental designs, clear and reproducible data science and honest scientific communication.</description>
+    </item>
+    
+  </channel>
+</rss>
