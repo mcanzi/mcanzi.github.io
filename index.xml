@@ -10,24 +10,24 @@
     <atom:link href="https://mcanzi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>curriculum vitae</title>
-      <link>https://mcanzi.github.io/skills/education/</link>
+      <link>https://mcanzi.github.io/cv/</link>
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcanzi.github.io/skills/education/</guid>
+      <guid>https://mcanzi.github.io/cv/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Formally trained in quantitative research in phonetics and speech sciences. Since 2021, I am a data scientist and laboratory manager in the linguistics department at Universität Konstanz, where I teach MA-level courses in &amp;ldquo;Statistics&amp;rdquo;, &amp;ldquo;Advanced Statistics&amp;rdquo;, &amp;ldquo;Forensic Speech Science&amp;rdquo; and &amp;ldquo;Eye Tracking &amp;amp; Pupillometry&amp;rdquo; for linguistics students. I am an avid R coder. I also advocate for sensible experimental designs, clear and reproducible data science and honest scientific communication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>research</title>
-      <link>https://mcanzi.github.io/project/research/</link>
+      <link>https://mcanzi.github.io/research/</link>
       <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcanzi.github.io/project/research/</guid>
+      <guid>https://mcanzi.github.io/research/</guid>
       <description>&lt;h2 id=&#34;individual-differences-in-musical-melody-perception-moderate-the-speech-to-song-illusion-in-mandarin-chinese-listeners&#34;&gt;Individual differences in musical melody perception moderate the speech-to-song illusion in Mandarin Chinese listeners&lt;/h2&gt;&#xA;&lt;p&gt;Tamara Rathcke &amp;amp; Massimiliano Canzi (2026). &lt;em&gt;Scientific Reports&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Repeated exposure to a spoken phrase can give rise to the perception of the speech-to-song illusion (STS), whereby speech gains musical qualities and begins to sound like singing. STS is known to rely on acoustic cues and may depend on an individual’s ability to extract musical qualities (such as melody and rhythm) from speech acoustics.&lt;/p&gt;</description>
     </item>
     <item>
       <title>workshops</title>
-      <link>https://mcanzi.github.io/teaching/teaching/</link>
+      <link>https://mcanzi.github.io/workshops/</link>
       <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://mcanzi.github.io/teaching/teaching/</guid>
-      <description>&lt;p&gt;Hello!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m now offering a wide range of workshops both online and in-person, tailored specifically to your learning needs. With my background as a data scientist in a linguistics department, I&amp;rsquo;ve had the chance to collaborate with dozens of research projects, and support over 50 students in achieving their research goals, in addition to teaching hundreds more.&lt;/p&gt;&#xA;&lt;p&gt;My workshops delve into the fascinating world of quantitative methods, from introductory short courses on linear regression and linear mixed effect models to the more intricate generalized additive mixed models (GAMMs). Additionally, I enjoy teaching best practices in experimental design, quantitative analyses, reproducibility, and data visualisation and manipulation in R—a field I am deeply passionate about. I am happy to teach R and &lt;strong&gt;tidyverse&lt;/strong&gt; basics, too,&lt;/p&gt;</description>
+      <guid>https://mcanzi.github.io/workshops/</guid>
+      <description>&lt;p&gt;My workshops can be tailored to different levels of expertise (from first encounters with R to advanced visualisation and modelling), different durations (from a single afternoon to a full week), and different disciplinary backgrounds. If you are interested in arranging a workshop for your department, research group, or institution, feel free to get in touch.&lt;/p&gt;&#xA;&lt;p&gt;Since 2022, I have designed and delivered workshops on quantitative methods, data manipulation, and data visualisation across a range of institutions and audiences.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
