@@ -554,9 +554,6 @@ h1, h2, h3, h4 {
 .pangolinsay .say-bubble { color: var(--mist); }
 .pangolinsay .say-art { color: var(--pandan); }
 .say-next { position: absolute; right: 16px; bottom: 16px; font-size: 0.78rem; padding: 6px 12px; cursor: pointer; }
-.say-link { position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; color: var(--muted); text-decoration: none; }
-.say-link:hover { color: var(--mist); }
-.say-link[hidden] { display: none; }
 
 /* ---- 404 ------------------------------------------------------------- */
 
