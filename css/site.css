@@ -734,3 +734,37 @@ body::before {
 main, .site-footer { position: relative; z-index: 1; }
 @media (max-width: 700px) { body::before { opacity: 0.11; right: 0; bottom: -20px; } }
 @media print { body::before { display: none; } }
+
+/* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
+.term .term-log { height: 25rem; overflow-y: auto; overscroll-behavior: contain; }
+.term .term-log .say { padding: 14px 20px 6px; overflow-x: visible; }
+.term .term-cmd { color: var(--muted); }
+.term-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--vine);
+  font-family: var(--f-mono);
+  font-size: 0.86rem;
+}
+.term-input[hidden] { display: none; }
+.term-prompt { color: var(--pandan); flex: none; }
+.term-input input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--mist);
+  font: inherit;
+  caret-color: var(--pandan);
+}
+.term-input input::placeholder { color: var(--muted); opacity: 0.8; }
+.term .say-next { position: static; flex: none; }
+@media (max-width: 760px) {
+  .term .term-log { height: 21rem; }
+  .term .term-log .say { padding: 12px 12px 6px; }
+  .term-input input { font-size: 16px; }
+}
+.term .term-out { white-space: pre-wrap; overflow-wrap: anywhere; display: inline-block; max-width: 100%; }
