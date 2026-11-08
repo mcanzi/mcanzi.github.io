@@ -911,3 +911,35 @@ main, .site-footer { position: relative; z-index: 1; }
 .trip-year svg { width: 12px; height: 12px; }
 .lb-trip { display: block; margin-top: 6px; font-size: 0.8rem; color: var(--kingfisher); }
 .lb-trip[hidden] { display: none; }
+
+/* CRediT roles as coloured tags (output page; data/credit.yaml) */
+.credit {
+  --c: var(--muted);
+  display: inline-block; margin: 0 0 0 4px; padding: 1px 6px; border-radius: 5px;
+  font-family: var(--f-mono); font-size: 0.68rem; font-weight: 600; line-height: 1.5; letter-spacing: 0.02em;
+  text-decoration: none; vertical-align: 1px; cursor: help;
+  color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+  background: color-mix(in srgb, var(--c) 12%, transparent);
+}
+.credits { white-space: nowrap; }
+/* one colour per role: dark theme, then light theme (muted Japanese tones) */
+.credit[data-r="C"]  { --c: #e8a33d; }
+.credit[data-r="DC"] { --c: #45b4c8; }
+.credit[data-r="FA"] { --c: #a8cf78; }
+.credit[data-r="I"]  { --c: #e39ac0; }
+.credit[data-r="M"]  { --c: #b39ddb; }
+.credit[data-r="S"]  { --c: #7fc8a9; }
+.credit[data-r="SU"] { --c: #a3abb3; }
+.credit[data-r="V"]  { --c: #e0675f; }
+.credit[data-r="W"]  { --c: #e4e7d8; }
+:root[data-theme="light"] .credit[data-r="C"]  { --c: #a8701c; }
+:root[data-theme="light"] .credit[data-r="DC"] { --c: #3f7470; }
+:root[data-theme="light"] .credit[data-r="FA"] { --c: #5c7a37; }
+:root[data-theme="light"] .credit[data-r="I"]  { --c: #a3506a; }
+:root[data-theme="light"] .credit[data-r="M"]  { --c: #6b5b95; }
+:root[data-theme="light"] .credit[data-r="S"]  { --c: #2f7d6d; }
+:root[data-theme="light"] .credit[data-r="SU"] { --c: #6e675e; }
+:root[data-theme="light"] .credit[data-r="V"]  { --c: #b3443d; }
+:root[data-theme="light"] .credit[data-r="W"]  { --c: #2b2723; }
+.credit-legend { list-style: none; margin: 8px 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; color: var(--muted); }
+.credit-legend .credit { margin: 0 4px 0 0; }
