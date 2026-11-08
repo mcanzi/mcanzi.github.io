@@ -267,11 +267,7 @@ h1, h2, h3, h4 {
 .c-prompt { color: var(--pandan); }
 .c-fn { color: var(--pandan); }
 .c-str { color: var(--orchid); }
-.c-num { color: var(--kingfisher); }
-.c-out { color: var(--muted); }
-.c-com { color: var(--moss); font-style: italic; }
 .c-err { color: #e0675f; }
-.c-op { color: var(--hornbill); }
 
 .cards {
   max-width: var(--w-wide);
@@ -403,14 +399,6 @@ h1, h2, h3, h4 {
 .prose table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
 .prose th, .prose td { border-bottom: 1px solid var(--vine); padding: 8px 10px; text-align: left; }
 .prose th { color: var(--pandan); }
-
-/* research page: one card per paper */
-.page-research .prose h2 {
-  margin-top: 1.6em;
-  font-size: 1.3rem;
-  color: var(--mist);
-}
-.page-research .prose h2::before { content: ""; }
 
 /* ---- teaching -------------------------------------------------------- */
 
@@ -560,7 +548,7 @@ h1, h2, h3, h4 {
 .console-404 { max-width: 34rem; margin: 40px auto 28px; }
 
 /* course evaluation chart on the CV (shortcode: evaluations) */
-.evals { margin: 28px 0 32px; padding: 18px 18px 14px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); }
+.evals { max-width: 760px; margin: 28px 0 32px; padding: 18px 18px 14px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); }
 .evals-head { margin-bottom: 10px; }
 .evals-title { font-family: var(--f-head); color: var(--mist); font-weight: 600; }
 .evals-scroll { position: relative; overflow-x: auto; }
@@ -600,43 +588,8 @@ h1, h2, h3, h4 {
   .gallery-count { margin-left: 0; }
 }
 
-/* workshop request form (shortcode: workshop-form) */
-.wform { margin: 32px 0 8px; padding: 24px 24px 20px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); scroll-margin-top: 90px; }
-.wform-title { margin: 0; font-family: var(--f-head); font-size: 1.3rem; color: var(--pandan); }
-.wform-intro { margin: 4px 0 20px; color: var(--muted); font-size: 0.95rem; }
-.wform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
-.wform-wide { grid-column: 1 / -1; }
-.wform label, .wform fieldset { display: flex; flex-direction: column; gap: 4px; min-width: 0; margin: 0; padding: 0; border: 0; }
-.wform label > span, .wform legend { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); padding: 0; }
-.wform legend { margin-bottom: 8px; }
-.wform input, .wform textarea {
-  font: inherit; font-size: 0.98rem; color: var(--mist); background: transparent;
-  border: 0; border-bottom: 1px solid var(--vine); border-radius: 0; padding: 6px 0; width: 100%;
-  -webkit-appearance: none; appearance: none;
-}
-.wform textarea { border: 1px solid var(--vine); border-radius: 8px; padding: 10px 12px; resize: vertical; min-height: 6.5rem; }
-.wform input:focus, .wform textarea:focus { outline: none; border-color: var(--pandan); }
-.wform ::placeholder { color: var(--muted); opacity: 0.55; }
-.wform-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.wform .chip { position: relative; display: inline-flex; cursor: pointer; }
-.wform .chip input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
-.wform .chip span { font-family: var(--f-body); font-size: 0.85rem; color: var(--muted); padding: 6px 12px; border: 1px solid var(--vine); border-radius: 999px; transition: color 0.15s, border-color 0.15s, background 0.15s; }
-.wform .chip:hover span { color: var(--mist); border-color: var(--muted); }
-.wform .chip input:checked + span { color: var(--floor); background: var(--pandan); border-color: var(--pandan); }
-.wform .chip input:focus-visible + span { outline: 2px solid var(--pandan); outline-offset: 2px; }
-.wform-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 22px; }
-.wform-actions .btn { cursor: pointer; }
-.wform-hint { margin: 0; font-size: 0.8rem; color: var(--muted); flex: 1 1 14rem; }
-@media (max-width: 640px) {
-  .wform { padding: 18px 16px; }
-  .wform-grid { grid-template-columns: 1fr; }
-}
-
-/* interactive regression demo (shortcode: regression-toy) */
+/* interactive regression demo (shortcode: media-toy) */
 .rtoy { max-width: 52rem; margin: 28px 0 36px; padding: 22px 22px 18px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); }
-.rtoy-title { margin: 0; font-family: var(--f-head); font-size: 1.3rem; color: var(--pandan); }
-.rtoy-intro { margin: 6px 0 16px; font-size: 0.95rem; color: var(--muted); }
-.rtoy-intro strong { color: var(--mist); font-weight: 400; }
 .rtoy-controls { display: grid; gap: 8px; margin-bottom: 12px; }
 .rtoy-reset { margin-left: auto; }
 .rtoy-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.75rem; color: var(--muted); margin-bottom: 4px; }
@@ -736,7 +689,7 @@ main, .site-footer { position: relative; z-index: 1; }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
-.term .term-log { height: 25rem; overflow-y: auto; overscroll-behavior: contain; }
+.term .term-log { height: 28rem; overflow-y: auto; overscroll-behavior: contain; }
 .term .term-log .say { padding: 14px 20px 6px; overflow-x: visible; }
 .term .term-cmd { color: var(--muted); }
 .term-input {
@@ -768,3 +721,49 @@ main, .site-footer { position: relative; z-index: 1; }
   .term-input input { font-size: 16px; }
 }
 .term .term-out { white-space: pre-wrap; overflow-wrap: anywhere; display: inline-block; max-width: 100%; }
+
+/* CV download: amber so it stands apart from the green primary button */
+.btn-cv { display: inline-flex; align-items: center; gap: 8px; background: var(--hornbill); border-color: var(--hornbill); color: var(--floor); font-weight: 600; }
+.btn-cv:hover { background: #f0b65c; border-color: #f0b65c; color: var(--floor); }
+.btn-cv svg { flex: none; }
+.cv-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  margin: 18px 0 8px;
+  padding: 16px 18px;
+  background: var(--understory);
+  border: 1px solid var(--vine);
+  border-left: 3px solid var(--hornbill);
+  border-radius: var(--radius);
+}
+.cv-box p { margin: 0; flex: 1 1 18rem; }
+.prose .cv-box a.btn-cv { color: var(--floor); text-decoration: none; }
+
+/* example workshop (Rwanda-themed ggplot2 slides) and lectures not yet online */
+.theme-ibirunga { --lec: #7cc6d8; --lec-bg: #0f1a1e; }
+.lecture-planned { cursor: default; }
+.lecture-planned:hover { transform: none; border-color: var(--vine); border-left-color: var(--lec); }
+.lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
+.lecture-soon { margin-top: 4px; font-size: 0.72rem; color: var(--lec); letter-spacing: 0.02em; }
+.theme-ibirunga .lecture-motif { width: 88px; height: 88px; right: -8px; bottom: -10px; opacity: 0.18; }
+
+/* coloured ASCII portrait (whoami): sized so all columns fit the terminal */
+.term .term-log { container-type: inline-size; position: relative; }
+.term .term-portrait {
+  display: block;
+  white-space: pre;
+  font-size: min(7px, calc((100cqw - 40px) / var(--pcols, 45.6)));
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+@media (max-width: 760px) { .term .term-portrait { font-size: min(7px, calc((100cqw - 24px) / var(--pcols, 45.6))); } }
+
+/* terminal text scales so the pangolin (51 columns) and its bubble fill the width */
+.term .term-log .say { font-size: clamp(8px, calc((100cqw - 40px) / 30.6), 16px); }
+@media (max-width: 760px) { .term .term-log .say { font-size: clamp(7px, calc((100cqw - 24px) / 30.6), 15px); } }
+.hero-suffix { font-size: 0.42em; font-weight: 600; color: var(--muted); letter-spacing: 0; white-space: nowrap; }

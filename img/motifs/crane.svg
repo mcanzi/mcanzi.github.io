@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 680" color="#7cc6d8">
+  <!-- grass -->
+  <path d="M-20,660 C150,648 400,646 660,656" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round"/>
+  <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round">
+    <path d="M90,654 C84,620 70,596 52,580"/><path d="M104,654 C104,612 112,586 126,566"/><path d="M118,654 C124,628 140,612 158,604"/>
+    <path d="M540,654 C534,622 522,604 506,592"/><path d="M556,654 C558,616 570,592 588,578"/><path d="M570,654 C580,632 598,622 616,618"/>
+  </g>
+  <!-- legs -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M392,430 L384,540 L376,646" stroke-width="10"/>
+    <path d="M424,428 L446,538 L430,646" stroke-width="10"/>
+    <path d="M376,646 l-34,4 M376,646 l-20,10 M376,646 l14,4" stroke-width="6"/>
+    <path d="M430,646 l-34,4 M430,646 l-20,10 M430,646 l14,4" stroke-width="6"/>
+  </g>
+  <!-- tail plumes -->
+  <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round">
+    <path d="M500,372 C540,392 566,420 582,462"/>
+    <path d="M490,384 C524,410 544,440 552,480"/>
+    <path d="M478,394 C504,424 516,452 520,490"/>
+  </g>
+  <!-- body -->
+  <path fill="currentColor" d="M300,336 C318,300 352,280 392,278 C440,276 486,300 512,340 C528,366 526,392 504,410 C478,430 440,440 404,438 C364,436 330,420 312,396 C298,378 292,356 300,336 Z"/>
+  <!-- neck and head -->
+  <path fill="currentColor" d="M300,342 C290,300 276,262 262,224 C254,204 248,192 240,186 C226,182 214,176 210,168 L170,174 L212,156 C218,140 232,132 250,132 C270,132 282,146 284,166 C286,188 290,214 300,240 C312,272 326,300 336,324 Z"/>
+  <!-- folded wing with the white and golden coverts -->
+  <path fill="#ffffff" fill-opacity="0.3" d="M350,300 C392,286 444,296 480,326 C496,340 502,356 498,370 C470,350 430,338 392,334 C366,332 350,322 350,300 Z"/>
+  <g fill="none" stroke="#000" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round">
+    <path d="M372,350 C410,356 450,370 486,392"/>
+    <path d="M380,372 C414,380 446,392 474,410"/>
+  </g>
+  <!-- crown -->
+  <g fill="currentColor" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+    <path d="M252,142 Q223.2,131.2 198.2,126.6"/>
+    <circle cx="198.2" cy="126.6" r="3.4"/>
+    <path d="M252,142 Q223.5,126.3 198.1,117.8"/>
+    <circle cx="198.1" cy="117.8" r="3.4"/>
+    <path d="M252,142 Q224.7,121.4 199.5,108.7"/>
+    <circle cx="199.5" cy="108.7" r="3.4"/>
+    <path d="M252,142 Q226.8,116.6 202.6,99.7"/>
+    <circle cx="202.6" cy="99.7" r="3.4"/>
+    <path d="M252,142 Q229.8,112.2 207.5,91.2"/>
+    <circle cx="207.5" cy="91.2" r="3.4"/>
+    <path d="M252,142 Q233.7,108.2 214.0,83.5"/>
+    <circle cx="214.0" cy="83.5" r="3.4"/>
+    <path d="M252,142 Q238.4,105.1 222.0,77.0"/>
+    <circle cx="222.0" cy="77.0" r="3.4"/>
+    <path d="M252,142 Q243.7,102.8 231.2,72.1"/>
+    <circle cx="231.2" cy="72.1" r="3.4"/>
+    <path d="M252,142 Q249.3,101.5 241.2,69.1"/>
+    <circle cx="241.2" cy="69.1" r="3.4"/>
+    <path d="M252,142 Q255.1,101.4 251.7,68.0"/>
+    <circle cx="251.7" cy="68.0" r="3.4"/>
+    <path d="M252,142 Q260.8,102.4 262.3,69.0"/>
+    <circle cx="262.3" cy="69.0" r="3.4"/>
+    <path d="M252,142 Q266.2,104.5 272.3,72.0"/>
+    <circle cx="272.3" cy="72.0" r="3.4"/>
+    <path d="M252,142 Q271.1,107.6 281.6,76.8"/>
+    <circle cx="281.6" cy="76.8" r="3.4"/>
+    <path d="M252,142 Q275.2,111.4 289.6,83.2"/>
+    <circle cx="289.6" cy="83.2" r="3.4"/>
+    <path d="M252,142 Q278.5,115.9 296.2,90.8"/>
+    <circle cx="296.2" cy="90.8" r="3.4"/>
+    <path d="M252,142 Q280.8,120.8 301.1,99.4"/>
+    <circle cx="301.1" cy="99.4" r="3.4"/>
+    <path d="M252,142 Q282.1,125.8 304.2,108.3"/>
+    <circle cx="304.2" cy="108.3" r="3.4"/>
+    <path d="M252,142 Q282.6,130.9 305.8,117.4"/>
+    <circle cx="305.8" cy="117.4" r="3.4"/>
+    <path d="M252,142 Q282.1,135.7 305.7,126.2"/>
+    <circle cx="305.7" cy="126.2" r="3.4"/>
+  </g>
+  <!-- face: white cheek, black forehead, eye, wattle -->
+  <ellipse cx="256" cy="166" rx="18" ry="13" fill="#ffffff" fill-opacity="0.55"/>
+  <path d="M214,156 C222,142 236,136 250,136 C244,144 236,150 224,156 Z" fill="#000" fill-opacity="0.5"/>
+  <circle cx="238" cy="160" r="4" fill="#000" fill-opacity="0.6"/>
+  <path d="M236,186 C232,198 236,210 246,212 C254,206 252,194 246,186 Z" fill="#000" fill-opacity="0.35"/>
+</svg>

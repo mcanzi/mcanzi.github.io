@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
-  <link rel="stylesheet" href="/css/site.css?v=0a62ce60">
+  <link rel="stylesheet" href="/css/site.css?v=58232e7d">
 </head>
 
 <body class="page-workshops">
@@ -42,7 +42,6 @@
     <nav aria-label="main">
       <ul class="nav-links">
         <li><a href="/it/">home</a></li>
-        <li><a href="/it/cv/">cv</a></li>
         <li><a href="/it/output/">pubblicazioni</a></li>
         <li><a href="/it/demo/">demo</a></li>
         <li><a href="/it/teaching/">didattica</a></li>
@@ -53,6 +52,8 @@
     <ul class="nav-icons">
       <li><a href="mailto:massimiliano.canzi@uni-konstanz.de" aria-label="email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
       <li><a href="https://github.com/mcanzi" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
+      <li><a href="https://orcid.org/0000-0001-6124-0321" aria-label="ORCID"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24ZM7.37 17.48H5.92V7.4h1.45v10.08ZM6.65 6.5a.95.95 0 1 1 0-1.9.95.95 0 0 1 0 1.9Zm4.3 10.98V7.4h3.92c3.73 0 5.37 2.66 5.37 5.04 0 2.59-2.02 5.04-5.35 5.04h-3.94Zm1.45-1.3h2.3c3.28 0 4.03-2.49 4.03-3.74 0-2.04-1.3-3.74-4.13-3.74h-2.2v7.48Z"/></svg></a></li>
+      <li><a href="https://scholar.google.com/citations?hl=en&amp;user=w03Fq8oAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2Zm-6.5 11.2V17c0 1.66 2.91 3.5 6.5 3.5s6.5-1.84 6.5-3.5v-3.8L12 17.4l-6.5-4.2Z"/></svg></a></li>
       <li class="lang-switch" aria-label="Lingua">
         <a href="/workshops/" hreflang="en" lang="en" title="English">EN</a>
         <span class="lang-current" aria-current="true" title="Italiano">IT</span>
@@ -63,70 +64,92 @@
 
   <main id="main">
     
-<article class="page">
+<article class="page page-wide">
   <header class="page-header">
     <p class="kicker mono">~/workshops</p>
     <h1>workshop</h1>
-    
+    <p class="lead">Workshop su R, statistica e visualizzazione dei dati per dipartimenti, gruppi di ricerca e istituti.</p>
   </header>
-  <div class="prose">
-    <p>I miei workshop si possono adattare al livello dei partecipanti (dai primi passi con R fino alla visualizzazione e alla modellizzazione avanzate), alla durata desiderata (da un solo pomeriggio a un&rsquo;intera settimana) e a diversi ambiti disciplinari. Se ti interessa organizzare un workshop per il tuo dipartimento, gruppo di ricerca o istituto, scrivimi.</p>
-<form class="wform" id="request"  data-mailto="massimiliano.canzi@uni-konstanz.de">
-  <p class="wform-title">Richiedi un workshop</p>
-  <p class="wform-intro">Descrivi brevemente il tuo gruppo e cosa hai in mente: ti ricontatterò io.</p>
-  <div class="wform-grid">
-    <label><span>nome</span><input name="name" required autocomplete="name"></label>
-    <label><span>email</span><input name="email" type="email" required autocomplete="email"></label>
-    <label class="wform-wide"><span>istituzione o gruppo</span><input name="institution" required autocomplete="organization"></label>
-    <fieldset class="wform-wide">
-      <legend>argomenti</legend>
-      <div class="wform-chips">
-        <label class="chip"><input type="checkbox" name="topics" value="Introduzione a R"><span>Introduzione a R</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Manipolazione dei dati"><span>Manipolazione dei dati</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Visualizzazione dei dati"><span>Visualizzazione dei dati</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Statistica"><span>Statistica</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Modelli misti"><span>Modelli misti</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="GAMM"><span>GAMM</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Disegno sperimentale"><span>Disegno sperimentale</span></label>
-        <label class="chip"><input type="checkbox" name="topics" value="Altro"><span>Altro</span></label>
-      </div>
-    </fieldset>
-    <label><span>numero di partecipanti</span><input name="group_size" inputmode="numeric" placeholder="circa 15"></label>
-    <label><span>quando</span><input name="dates" placeholder="ad es. maggio 2027, oppure date flessibili"></label>
-    <label class="wform-wide"><span>dettagli</span><textarea name="message" rows="4" placeholder="Formazione del gruppo ed esperienza con R, in presenza o online, durata..."></textarea></label>
-  </div>
-  <div class="wform-actions">
-    <button type="submit" class="btn btn-primary">Invia la richiesta</button>
-    <p class="wform-hint">Apre la tua app di posta con la richiesta già compilata.</p>
-  </div>
-</form>
-<script>
-(() => {
-  const T = {"email":"Email","group":"Numero di partecipanti","institution":"Istituzione","name":"Nome","none":"non specificato","subject":"Richiesta di workshop","topics":"Argomenti","when":"Quando"};
-  const f = document.getElementById("request");
-  f.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const v = (k) => (f.elements[k].value || "").trim();
-    const topics = [...f.querySelectorAll('input[name="topics"]:checked')].map(x => x.value);
-    const body = [
-      `${T.name}: ${v("name")}`,
-      `${T.email}: ${v("email")}`,
-      `${T.institution}: ${v("institution")}`,
-      `${T.topics}: ${topics.length ? topics.join(", ") : T.none}`,
-      `${T.group}: ${v("group_size") || T.none}`,
-      `${T.when}: ${v("dates") || T.none}`,
-      ``,
-      v("message")
-    ].join("\n").trim();
-    const subject = `${T.subject}: ${v("institution")}`;
-    location.href = `mailto:${f.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-})();
-</script>
 
-<p>Dal 2022 progetto e tengo workshop su metodi quantitativi, manipolazione e visualizzazione dei dati per istituzioni e pubblici di vario tipo.</p>
-<p>Ho tenuto workshop di più giorni presso il Dipartimento di Culture e Civiltà dell&rsquo;Università di Verona, su temi che vanno dalla statistica di base alla manipolazione e visualizzazione avanzata dei dati in R, per studenti di laurea magistrale e dottorandi. Insegno regolarmente ai Konstanz Methods Excellence Workshops (KOMEX), un programma di formazione metodologica di rilievo internazionale organizzato dal Dipartimento di Scienze Politiche e Amministrazione Pubblica dell&rsquo;Università di Costanza, dove insegno visualizzazione dei dati con ggplot2 insieme a una collega, a un pubblico composto soprattutto da scienziati sociali. Nel 2025 ho tenuto un workshop di visualizzazione dei dati in R presso il Peace Research Institute Frankfurt (PRIF), uno dei principali istituti europei di ricerca sulla pace e sui conflitti e membro della Leibniz-Gemeinschaft; il pubblico era composto soprattutto da politologi e studiosi dei conflitti, più che da linguisti. Nel maggio 2026 ho tenuto una relazione su invito sulla pupillometria al Manchester Forum in Linguistics, convegno annuale per ricercatori a inizio carriera che si tiene alla University of Manchester. Tengo inoltre regolarmente relazioni e workshop all&rsquo;interno del Dipartimento di Linguistica di Costanza, tra cui incontri sulle buone pratiche nella ricerca quantitativa e sperimentale.</p>
-<p>L&rsquo;elenco completo dei workshop che ho tenuto si trova nel mio <a href="/it/cv/#invited-talks-and-workshops">CV</a>.</p>
+  
+  
+  
+  
+  <section class="course">
+    <div class="course-head">
+      <div>
+        <p class="card-label mono">workshop di esempio</p>
+        <h2 class="course-title">Data visualisation with ggplot2</h2>
+        <p>Un&rsquo;introduzione in tre parti a ggplot2, dalla grammatica dei grafici alle figure pronte per la pubblicazione, con dati simulati di ambito sociale. Le slide sono un campione: il workshop comprende anche programmazione dal vivo, esercizi e soluzioni. Clicca su una parte per aprirne le slide (in inglese).</p>
+      </div>
+      <p class="course-links">
+        <a class="btn" href="https://github.com/mcanzi/ggplot2_workshop"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> codice sorgente su GitHub</a>
+      </p>
+    </div>
+
+    
+    <h3 class="part-title"><span class="mono">01–03</span> Slide</h3>
+    <ol class="lectures theme-ibirunga">
+      
+      <li>
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ggplot2_workshop/01_grammar_of_graphics.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
+<span class="lecture-text">
+  <span class="lecture-title">The grammar of graphics</span>
+  <span class="lecture-sub">Data, aesthetics, geometries and layers</span>
+  
+</span>
+<img class="lecture-motif" src="/img/motifs/gorilla.svg" alt="" loading="lazy">
+</a>
+        
+      </li>
+      
+      <li>
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">02</span>
+<span class="lecture-text">
+  <span class="lecture-title">Colour, shape and size</span>
+  <span class="lecture-sub">Mapping and setting, scales and palettes</span>
+  <span class="lecture-soon mono">in preparazione</span>
+</span>
+<img class="lecture-motif" src="/img/motifs/crane.svg" alt="" loading="lazy">
+</div>
+        
+      </li>
+      
+      <li>
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">03</span>
+<span class="lecture-text">
+  <span class="lecture-title">Good practice</span>
+  <span class="lecture-sub">Honest figures, annotation and publication-ready output</span>
+  <span class="lecture-soon mono">in preparazione</span>
+</span>
+<img class="lecture-motif" src="/img/motifs/giraffe.svg" alt="" loading="lazy">
+</div>
+        
+      </li>
+      
+    </ol>
+    
+  </section>
+  
+
+  <div class="prose">
+    <h2 id="workshop-tenuti">Workshop tenuti</h2>
+<p>Dal 2022 tengo workshop su metodi quantitativi, manipolazione e visualizzazione dei dati in R per studenti di laurea magistrale e dottorandi e per ricercatori in linguistica, scienze sociali e ricerca sulla pace e sui conflitti. Durano da un solo pomeriggio a un&rsquo;intera settimana e si possono adattare al livello del gruppo, dai primi passi con R fino alla modellizzazione avanzata.</p>
+<ul>
+<li><strong>Università di Verona</strong>, Dipartimento di Culture e Civiltà (2023, 2024): statistica, manipolazione e visualizzazione dei dati in R, per studenti di laurea magistrale e dottorandi.</li>
+<li><strong>Konstanz Methods Excellence Workshops (KOMEX)</strong>, Università di Costanza (2024, 2025): visualizzazione dei dati con ggplot2, in co-docenza.</li>
+<li><strong>Peace Research Institute Frankfurt (PRIF)</strong> (2025): introduzione alla visualizzazione dei dati in R con ggplot2.</li>
+<li><strong>Dipartimento di Linguistica</strong>, Università di Costanza: incontri regolari su metodi quantitativi e sperimentali.</li>
+</ul>
+<p>L&rsquo;elenco completo si trova nel mio <a href="/files/Canzi_CV_it.pdf">CV</a> (PDF).</p>
+<h2 id="organizzare-un-workshop">Organizzare un workshop</h2>
+<p>Per organizzare un workshop per il tuo gruppo, scrivimi a <a href="mailto:massimiliano.canzi@uni-konstanz.de?subject=Workshop">massimiliano.canzi@uni-konstanz.de</a> indicando l&rsquo;argomento, il numero e il profilo dei partecipanti e le date possibili.</p>
 
   </div>
 </article>
