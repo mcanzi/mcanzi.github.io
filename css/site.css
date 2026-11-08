@@ -17,6 +17,18 @@
   --moss:       #7f9b78;
   --leaf:       #6f9a4c;
 
+  /* colours that depend on the theme but are not part of the palette */
+  --nav-bg:      rgba(20, 22, 25, 0.88);
+  --glow-1:      rgba(170, 190, 210, 0.09);
+  --glow-2:      rgba(168, 207, 120, 0.045);
+  --strong:      #fff;
+  --shadow:      0 18px 50px rgba(0, 0, 0, 0.35);
+  --primary-hi:  #b9dc8d;
+  --cv-hi:       #f0b65c;
+  --dot-red:     #e0675f;
+  --hit:         rgba(228, 231, 216, 0.05);
+  color-scheme: dark;
+
   --f-head: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -37,8 +49,8 @@ body {
   flex-direction: column;
   background-color: var(--floor);
   background-image:
-    radial-gradient(1100px 600px at 85% -120px, rgba(170, 190, 210, 0.09), transparent 70%),
-    radial-gradient(900px 500px at 0% 420px, rgba(168, 207, 120, 0.045), transparent 70%);
+    radial-gradient(1100px 600px at 85% -120px, var(--glow-1), transparent 70%),
+    radial-gradient(900px 500px at 0% 420px, var(--glow-2), transparent 70%);
   background-repeat: no-repeat;
   color: var(--mist);
   font-family: var(--f-body);
@@ -70,7 +82,7 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(20, 22, 25, 0.88);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--vine);
@@ -135,6 +147,7 @@ h1, h2, h3, h4 {
 .nav-links a.active { color: var(--pandan); background: var(--raised); }
 
 .nav-icons { gap: 4px; }
+.nav-icons > li { display: flex; align-items: center; }
 .nav-icons a {
   display: grid;
   place-items: center;
@@ -190,7 +203,7 @@ h1, h2, h3, h4 {
 }
 .btn:hover { color: var(--pandan); border-color: var(--pandan); }
 .btn-primary { background: var(--pandan); border-color: var(--pandan); color: var(--floor); font-weight: 600; }
-.btn-primary:hover { background: #b9dc8d; color: var(--floor); }
+.btn-primary:hover { background: var(--primary-hi); border-color: var(--primary-hi); color: var(--floor); }
 
 /* ---- home ------------------------------------------------------------ */
 
@@ -231,7 +244,7 @@ h1, h2, h3, h4 {
   background: var(--understory);
   border: 1px solid var(--vine);
   border-radius: var(--radius);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow);
   overflow: hidden;
   min-width: 0;
 }
@@ -244,7 +257,7 @@ h1, h2, h3, h4 {
   background: var(--raised);
 }
 .console-bar span { width: 11px; height: 11px; border-radius: 50%; background: var(--vine); }
-.console-bar span:nth-child(1) { background: #e0675f; }
+.console-bar span:nth-child(1) { background: var(--dot-red); }
 .console-bar span:nth-child(2) { background: var(--hornbill); }
 .console-bar span:nth-child(3) { background: var(--pandan); }
 .console-bar em {
@@ -267,7 +280,7 @@ h1, h2, h3, h4 {
 .c-prompt { color: var(--pandan); }
 .c-fn { color: var(--pandan); }
 .c-str { color: var(--orchid); }
-.c-err { color: #e0675f; }
+.c-err { color: var(--dot-red); }
 
 .cards {
   max-width: var(--w-wide);
@@ -312,6 +325,14 @@ h1, h2, h3, h4 {
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .section-head h2 { margin: 0 0 16px; font-size: 1.5rem; }
 .section-head a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; text-decoration: none; }
+.section-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+.strip-shuffle {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--kingfisher); font-size: 0.85rem;
+}
+.strip-shuffle:hover { color: var(--pandan); }
+.strip-shuffle[hidden] { display: none; }
 .strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .strip a { display: block; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; border: 1px solid var(--vine); }
 .strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
@@ -350,7 +371,7 @@ h1, h2, h3, h4 {
 }
 .prose h3 { margin: 1.8em 0 0.5em; font-size: 1.2rem; color: var(--mist); }
 .prose p, .prose li { color: var(--mist); }
-.prose strong { color: #fff; }
+.prose strong { color: var(--strong); }
 .prose ul, .prose ol { padding-left: 1.3em; }
 .prose li { margin: 0 0 0.65em; }
 .prose li::marker { color: var(--moss); }
@@ -415,39 +436,38 @@ h1, h2, h3, h4 {
 .course-title { margin: 0; font-size: 1.9rem; }
 .course-links { margin: 0; }
 
-.part-title {
-  margin: 34px 0 12px;
-  font-size: 1.05rem;
-  color: var(--mist);
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 2px 10px;
-}
-.part-title .mono { color: var(--muted); font-weight: 400; font-size: 0.82rem; white-space: nowrap; }
+/* key to the parts above the lecture grid */
+.parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.88rem; color: var(--mist); }
+.parts-key li { display: inline-flex; align-items: baseline; gap: 8px; }
+.parts-key li::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--lec); align-self: center; }
+.parts-key .mono { color: var(--muted); font-size: 0.78rem; }
 
+/* one grid of equal cards: every row as tall as the tallest */
 .lectures {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(12.5rem, 100%), 1fr));
+  grid-auto-rows: 1fr;
+  gap: 10px;
 }
+.lectures > li { display: flex; min-width: 0; }
 .theme-rimba { --lec: var(--pandan);     --lec-bg: #0d1a14; }
 .theme-laut  { --lec: var(--kingfisher); --lec-bg: #0a1626; }
 .theme-arang { --lec: #c9ced4;           --lec-bg: #141619; }
 
 .lecture {
   position: relative;
+  flex: 1;
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: flex-start;
-  min-height: 108px;
-  padding: 16px 16px 16px 16px;
+  min-width: 0;
+  padding: 11px 12px;
   border: 1px solid var(--vine);
   border-left: 3px solid var(--lec);
-  border-radius: 8px;
+  border-radius: 7px;
   background: var(--lec-bg);
   color: var(--mist);
   text-decoration: none;
@@ -455,18 +475,18 @@ h1, h2, h3, h4 {
   transition: transform 0.15s, border-color 0.15s;
 }
 .lecture:hover { transform: translateY(-2px); border-color: var(--lec); color: var(--mist); }
-.lecture-n { color: var(--lec); font-size: 0.85rem; padding-top: 3px; }
-.lecture-text { display: flex; flex-direction: column; gap: 4px; position: relative; z-index: 1; padding-right: 48px; }
-.lecture-title { font-family: var(--f-head); font-weight: 800; font-size: 1.12rem; line-height: 1.2; }
+.lecture-n { color: var(--lec); font-size: 0.75rem; padding-top: 2px; }
+.lecture-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; position: relative; z-index: 1; padding-right: 14px; }
+.lecture-title { font-family: var(--f-head); font-weight: 800; font-size: 0.98rem; line-height: 1.2; }
 .lecture-title p, .lecture-sub p { margin: 0; }
 .lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--hornbill); }
-.lecture-sub { color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
+.lecture-sub { color: var(--muted); font-size: 0.78rem; line-height: 1.35; }
 .lecture-motif {
   position: absolute;
-  right: -14px;
-  bottom: -14px;
-  width: 104px;
-  height: 104px;
+  right: -10px;
+  bottom: -10px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   opacity: 0.22;
   transition: opacity 0.2s;
@@ -559,7 +579,7 @@ h1, h2, h3, h4 {
 .evals-n { fill: var(--muted); font-size: 11px; opacity: 0.75; }
 .evals-mark { stroke: var(--understory); stroke-width: 2; }
 .evals-hit { cursor: default; }
-.evals-hit.on { fill: rgba(228, 231, 216, 0.05); }
+.evals-hit.on { fill: var(--hit); }
 .evals-tip { position: absolute; top: 4px; z-index: 2; padding: 8px 10px; background: var(--raised); border: 1px solid var(--vine); border-radius: 8px; font-size: 0.75rem; line-height: 1.5; color: var(--mist); pointer-events: none; white-space: nowrap; }
 .evals-tip span { color: var(--muted); }
 .evals-tip em { font-style: normal; color: var(--hornbill); }
@@ -724,7 +744,7 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* CV download: amber so it stands apart from the green primary button */
 .btn-cv { display: inline-flex; align-items: center; gap: 8px; background: var(--hornbill); border-color: var(--hornbill); color: var(--floor); font-weight: 600; }
-.btn-cv:hover { background: #f0b65c; border-color: #f0b65c; color: var(--floor); }
+.btn-cv:hover { background: var(--cv-hi); border-color: var(--cv-hi); color: var(--floor); }
 .btn-cv svg { flex: none; }
 .cv-box {
   display: flex;
@@ -747,8 +767,8 @@ main, .site-footer { position: relative; z-index: 1; }
 .lecture-planned { cursor: default; }
 .lecture-planned:hover { transform: none; border-color: var(--vine); border-left-color: var(--lec); }
 .lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
-.lecture-soon { margin-top: 4px; font-size: 0.72rem; color: var(--lec); letter-spacing: 0.02em; }
-.theme-ibirunga .lecture-motif { width: 88px; height: 88px; right: -8px; bottom: -10px; opacity: 0.18; }
+.lecture-soon { margin-top: 2px; font-size: 0.68rem; color: var(--lec); letter-spacing: 0.02em; }
+.theme-ibirunga .lecture-motif { width: 60px; height: 60px; right: -6px; bottom: -8px; opacity: 0.18; }
 
 /* coloured ASCII portrait (whoami): sized so all columns fit the terminal */
 .term .term-log { container-type: inline-size; position: relative; }
@@ -794,3 +814,81 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 /* compact list of taught modules (teaching page) */
 .prose-teaching > ul > li { margin-bottom: 0.15em; }
+
+/* ---- light theme ----------------------------------------------------- */
+/* Japanese-inspired: washi beige and paper white, sumi-ink text, indian reds for headings and
+   accents, a muted teal for links and charts; the drawings turn into ink (img/motifs/ink/). Switched with the sun/moon button in the navigation bar; the
+   choice is remembered in the browser (partials/head.html). The lightbox stays dark. */
+
+:root[data-theme="light"] {
+  --floor:      #f3eee5;   /* washi */
+  --understory: #fbf9f5;   /* paper */
+  --raised:     #ffffff;
+  --vine:       #e0d8cb;   /* lines and borders */
+  --mist:       #2b2723;   /* sumi ink */
+  --muted:      #6e675e;
+  --pandan:     #b3443d;   /* deep indian red: headings, primary */
+  --hornbill:   #cd5c5c;   /* indian red: accents */
+  --kingfisher: #3f7470;   /* muted teal (sabi-asagi): links, second colour in charts */
+  --orchid:     #a8586f;
+  --moss:       #8a8c74;
+  --leaf:       #7b875b;
+
+  --nav-bg:      rgba(243, 238, 229, 0.9);
+  --glow-1:      rgba(255, 255, 255, 0.7);
+  --glow-2:      rgba(205, 92, 92, 0.05);
+  --strong:      #1a1715;
+  --shadow:      0 14px 36px rgba(70, 50, 30, 0.10);
+  --primary-hi:  #9c3a34;
+  --cv-hi:       #b84f4f;
+  --dot-red:     #cd5c5c;
+  --hit:         rgba(43, 39, 35, 0.05);
+  color-scheme: light;
+}
+/* the photo viewer stays dark on the light theme, so it keeps the dark theme's colours */
+:root[data-theme="light"] .lightbox {
+  --mist: #e4e7d8; --muted: #a3abb3; --pandan: #a8cf78; --kingfisher: #45b4c8;
+  --vine: #343a42; --raised: #23282d; --understory: #1d2125; --floor: #141619;
+  color: var(--mist);
+  color-scheme: dark;
+}
+:root[data-theme="light"] .btn-primary,
+:root[data-theme="light"] .btn-cv,
+:root[data-theme="light"] .btn-primary:hover,
+:root[data-theme="light"] .btn-cv:hover { color: #fff; }
+:root[data-theme="light"] ::selection { color: #fff; }
+:root[data-theme="light"] .theme-rimba,
+:root[data-theme="light"] .theme-laut,
+:root[data-theme="light"] .theme-arang,
+:root[data-theme="light"] .theme-ibirunga { --lec-bg: var(--understory); }
+:root[data-theme="light"] .theme-arang { --lec: var(--muted); }
+:root[data-theme="light"] .theme-ibirunga { --lec: var(--kingfisher); }
+/* charts drawn with fixed colours in the templates */
+:root[data-theme="light"] svg [fill="#a3abb3"] { fill: var(--muted); }
+:root[data-theme="light"] svg [fill="#e4e7d8"] { fill: var(--mist); }
+:root[data-theme="light"] svg [stroke="#343a42"] { stroke: var(--vine); }
+
+/* theme switch in the navigation bar */
+/* the background lizard: a faint ink drawing on the light theme */
+:root[data-theme="light"] body::before { background-image: url("../img/motifs/ink/lizard-page.svg"); opacity: 0.08; }
+@media (max-width: 700px) { :root[data-theme="light"] body::before { opacity: 0.06; } }
+/* lecture drawings: colour on the dark theme, ink on the light theme */
+.motif-ink { display: none; }
+:root[data-theme="light"] .motif-colour { display: none; }
+:root[data-theme="light"] .motif-ink { display: block; opacity: 0.16; }
+:root[data-theme="light"] .lecture:hover .motif-ink { opacity: 0.32; }
+
+/* shows the theme it switches to: sun + "light mode" on the dark theme, moon + "dark mode" on the light one */
+.theme-toggle {
+  display: inline-flex; align-items: center; height: 36px; padding: 0 8px;
+  border: 0; border-radius: 6px; background: none; cursor: pointer;
+  color: var(--muted); font-family: var(--f-mono); font-size: 0.78rem; line-height: 1;
+}
+.theme-toggle:hover { color: var(--mist); background: var(--raised); }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle .to-light, .theme-toggle .to-dark { display: inline-flex; align-items: center; gap: 7px; }
+.theme-toggle svg { display: block; flex: none; }
+.theme-toggle .to-dark { display: none; }
+:root[data-theme="light"] .theme-toggle .to-light { display: none; }
+:root[data-theme="light"] .theme-toggle .to-dark { display: inline-flex; }
+@media (max-width: 560px) { .theme-toggle .theme-label { display: none; } }
