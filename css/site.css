@@ -767,3 +767,30 @@ main, .site-footer { position: relative; z-index: 1; }
 .term .term-log .say { font-size: clamp(8px, calc((100cqw - 40px) / 30.6), 16px); }
 @media (max-width: 760px) { .term .term-log .say { font-size: clamp(7px, calc((100cqw - 24px) / 30.6), 15px); } }
 .hero-suffix { font-size: 0.42em; font-weight: 600; color: var(--muted); letter-spacing: 0; white-space: nowrap; }
+
+/* teaching page: evaluation chart and student comments (partials/student-comments.html) side by side */
+.teach-evals { margin-top: 8px; }
+.teach-duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: stretch; margin-top: 18px; }
+.teach-duo .evals { margin: 0; max-width: none; }
+.comments-box { margin: 0; position: relative; display: flex; flex-direction: column; min-height: 18rem; }
+.comments-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 28px 32px 68px;
+  font-family: var(--f-mono);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+.comment-text { margin: 0; max-width: 46ch; color: var(--mist); }
+.comment-tr { margin: 14px 0 0; max-width: 46ch; color: var(--muted); }
+.comment-by { margin: 16px 0 0; color: var(--kingfisher); font-size: 0.78rem; }
+.comment-tr[hidden] { display: none; }
+@media (max-width: 900px) {
+  .teach-duo { grid-template-columns: minmax(0, 1fr); }
+}
+/* compact list of taught modules (teaching page) */
+.prose-teaching > ul > li { margin-bottom: 0.15em; }

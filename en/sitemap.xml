@@ -11,6 +11,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/demo/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en-US"
                 href="https://mcanzi.github.io/demo/"
                 />
@@ -21,6 +26,11 @@
                 rel="alternate"
                 hreflang="it-IT"
                 href="https://mcanzi.github.io/it/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -37,6 +47,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/output/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en-US"
                 href="https://mcanzi.github.io/output/"
                 />
@@ -47,6 +62,11 @@
                 rel="alternate"
                 hreflang="it-IT"
                 href="https://mcanzi.github.io/it/workshops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/workshops/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -63,6 +83,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/teaching/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en-US"
                 href="https://mcanzi.github.io/teaching/"
                 />
@@ -73,6 +98,11 @@
                 rel="alternate"
                 hreflang="it-IT"
                 href="https://mcanzi.github.io/it/photo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/photo/"
                 />
     <xhtml:link
                 rel="alternate"
