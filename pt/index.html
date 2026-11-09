@@ -36,7 +36,7 @@
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/site.css?v=b1c044311ca1">
-  <link rel="stylesheet" href="/css/theme-doglord.css?v=d7ee55c95002">
+  <link rel="stylesheet" href="/css/theme-doglord.css?v=1b4a7c4832d6">
 </head>
 
 <body class="is-home">
@@ -89,7 +89,7 @@
 <section class="hero">
   <div class="hero-text">
     <p class="kicker mono">hello, world</p>
-    <h1 class="hero-name">Massimiliano Canzi <span class="hero-suffix">PhD</span></h1>
+    <h1 class="hero-name"><span class="hero-name-real">Massimiliano Canzi</span><span class="hero-name-doglord" hidden>Doglord</span> <span class="hero-suffix">PhD</span></h1>
     <p class="hero-role mono">cientista de dados e gestor de laboratório · linguística · universität konstanz</p>
     <div class="hero-intro"><p>Sou cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança, onde trabalho desde 2021. Tenho formação em investigação quantitativa em fonética e ciências da fala, e dedico-me ao estudo da perceção da fala com métodos fisiológicos como ERP, pupilometria e eye tracking.</p>
 <p>Ensino sobretudo estatística em R ao nível do mestrado, mas também leciono ocasionalmente unidades curriculares de fonética forense, pupilometria e eye tracking, fonética inglesa e outros temas.</p>
@@ -386,11 +386,12 @@
     },
     banish: (args, p) => {
       if ((args[0] || "").toLowerCase() !== "doglord") return fill(T.t.notFound, { cmd: "banish" });
-      unpraise();
       if (document.documentElement.dataset.theme === "doglord") setTheme("dark");
       log.textContent = "";
       pangolinSays(pre(), T.t.doglordOff); return null;
     },
+    
+    
     
     praise: (args, p) => {
       if ((args[0] || "").toLowerCase() !== "doglord" || !doglord()) return fill(T.t.notFound, { cmd: "praise" });
@@ -402,6 +403,7 @@
     dogsay: (args) => args.join(" "),
   };
 
+  
   
   
   
@@ -460,7 +462,7 @@
     if (!order.length) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) { order.forEach(([, w]) => flip(w)); return; }
     
-    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 4500;
+    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 9000;
     let i = 0;
     const step = (t) => {
       if (praised !== run) return;
@@ -473,6 +475,7 @@
   
   new MutationObserver(() => { if (!doglord()) unpraise(); })
     .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  
 
   const run = (line) => {
     line = line.trim();
