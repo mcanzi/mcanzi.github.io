@@ -40,7 +40,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 76px; }  /* jump links land below the sticky navigation bar */
 
 body {
   margin: 0;
@@ -659,6 +659,7 @@ h1, h2, h3, h4 {
 
 /* output page: jump links, abstracts, co-author network */
 .jump { font-size: 0.82rem; color: var(--muted); margin: 0 0 8px; }
+.page > .jump { margin-bottom: 20px; }  /* teaching page: the bar sits right above the course box */
 .pub-abstract { margin: -4px 0 6px; }
 .pub-abstract summary { font-size: 0.75rem; color: var(--kingfisher); cursor: pointer; width: max-content; }
 .pub-abstract summary:hover { color: var(--pandan); }
