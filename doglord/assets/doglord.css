@@ -109,7 +109,6 @@
 }
 .credits dt { color: var(--muted); }
 .credits dd { margin: 0; text-align: right; }
-.rights { margin: 12px 0 0; font-size: 0.75rem; color: var(--muted); }
 
 @media (max-width: 760px) {
   .album { grid-template-columns: 1fr; grid-template-areas: "cover" "body" "credits"; grid-template-rows: auto; row-gap: 26px; }
