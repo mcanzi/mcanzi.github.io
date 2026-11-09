@@ -48,7 +48,7 @@
 }
 @media print { :root[data-theme="doglord"] body::after { display: none; } }
 
-/* instead of the lizard, violet flames all over the background (img/motifs/doglord-flames.svg);
+/* instead of the rafflesias, orange flames all over the background (img/motifs/doglord-flames.svg);
    the lecture drawings turn violet */
 :root[data-theme="doglord"] body::before {
   inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
@@ -87,13 +87,17 @@
 :root[data-theme="doglord"] .hero-name-real { display: none; }
 :root[data-theme="doglord"] .hero-name-doglord { display: inline; }
 /* the teaching paragraph of the home page bio makes way for a note on Doglord (doglord_note in
-   content/_index*.md), in the dark theme's red so it stands out */
+   content/_index*.md), in amp orange (like the amplifiers on the album cover) so it stands out */
 :root[data-theme="doglord"] .bio-teaching { display: none; }
-:root[data-theme="doglord"] .hero-doglord { display: block; color: #cb6d67; }
+:root[data-theme="doglord"] .hero-doglord { display: block; color: #e2772f; }
 .hero-doglord a { color: inherit; }
 
 /* praise doglord (removable, see layouts/index.html): each word glows briefly as it turns into
-   "doglord", then stays violet */
+   "doglord", then stays violet or amp orange */
 .doglorded { color: var(--pandan); animation: doglorded 0.9s ease-out; }
 @keyframes doglorded { from { color: #e7d6ff; text-shadow: 0 0 12px rgba(198, 163, 255, 0.9); } }
+.doglorded-orange { color: #e2772f; animation-name: doglorded-orange; }
+@keyframes doglorded-orange { from { color: #ffd9b0; text-shadow: 0 0 12px rgba(242, 176, 74, 0.9); } }
 @media (prefers-reduced-motion: reduce) { .doglorded { animation: none; } }
+/* the highlighted language keeps its own text colour, which is readable on its pill */
+.lang-current .doglorded { color: inherit; animation: none; }

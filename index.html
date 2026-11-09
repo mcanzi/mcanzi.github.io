@@ -36,7 +36,7 @@
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/site.css?v=b1c044311ca1">
-  <link rel="stylesheet" href="/css/theme-doglord.css?v=0c89f5dc6889">
+  <link rel="stylesheet" href="/css/theme-doglord.css?v=7076ddd945f3">
 </head>
 
 <body class="is-home">
@@ -448,7 +448,8 @@
     const dog = () => "doglord";
     const flip = (w) => {
       if (w.nodeType === 3) { w.nodeValue = dog(w.nodeValue); return; }
-      w.textContent = dog(w.textContent); w.className = "doglorded";
+      
+      w.textContent = dog(w.textContent); w.className = Math.random() < 0.5 ? "doglorded" : "doglorded doglorded-orange";
     };
     const box = (w) => {
       if (w.nodeType !== 3) return w.getBoundingClientRect();
