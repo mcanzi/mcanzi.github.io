@@ -70,3 +70,6 @@
 :root[data-theme="doglord"] .theme-ibirunga { --lec-bg: var(--understory); }
 :root[data-theme="doglord"] .theme-arang { --lec: var(--muted); }
 :root[data-theme="doglord"] .theme-ibirunga { --lec: var(--orchid); }
+
+/* the wizard dog is two lines taller than the pangolin, so the terminal grows a little */
+:root[data-theme="doglord"] .term .term-log { height: 30rem; }
