@@ -790,6 +790,8 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* teaching page: evaluation chart and student comments (partials/student-comments.html) side by side */
 .teach-evals { margin-top: 8px; }
+.teach-workshop { margin-top: 48px; }
+.teach-workshop .course { margin-top: 18px; }
 .teach-duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: stretch; margin-top: 18px; }
 .teach-duo .evals { margin: 0; max-width: none; }
 .comments-box { margin: 0; position: relative; display: flex; flex-direction: column; min-height: 18rem; }
