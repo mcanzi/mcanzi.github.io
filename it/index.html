@@ -472,7 +472,7 @@
     if (!order.length) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) { order.forEach(([, w]) => flip(w)); run.count = order.length; return; }
     
-    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 13500;
+    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 8000;
     let i = 0;
     const step = (t) => {
       if (praised !== run || run.leaving) return;
@@ -504,7 +504,7 @@
     
     const order = (run.order || []).slice(0, run.count);
     if (!order.length || matchMedia("(prefers-reduced-motion: reduce)").matches) { done(); return; }
-    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 6000;
+    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 8000;
     let i = order.length - 1;
     const step = (t) => {
       if (praised !== run) return;
