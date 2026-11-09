@@ -77,20 +77,22 @@
 :root[data-theme="doglord"] .theme-arang { --lec: var(--muted); }
 :root[data-theme="doglord"] .theme-ibirunga { --lec: var(--orchid); }
 
-/* the wizard dog is two lines taller than the pangolin, so the terminal grows a little */
-:root[data-theme="doglord"] .term .term-log { height: 30rem; }
 
 /* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */
 :root[data-theme="doglord"] .brand-name { display: none; }
 :root[data-theme="doglord"] .brand-doglord { display: inline; }
-/* and the name on the home page reads doglord */
-:root[data-theme="doglord"] .hero-name-real { display: none; }
-:root[data-theme="doglord"] .hero-name-doglord { display: inline; }
-/* the teaching paragraph of the home page bio makes way for a note on Doglord (doglord_note in
-   content/_index*.md), in amp orange (like the amplifiers on the album cover) so it stands out */
-:root[data-theme="doglord"] .bio-teaching { display: none; }
-:root[data-theme="doglord"] .hero-doglord { display: block; color: #e2772f; }
-.hero-doglord a { color: inherit; }
+/* the teaching paragraph of the home page bio makes way for a shorter one that ends with a note on
+   Doglord (doglord_note in content/_index*.md), about as long so the page does not move; the
+   Doglord sentence is amp orange (like the amplifiers on the album cover) so it stands out */
+/* both paragraphs share one grid cell, so the bio keeps the same height in every theme and the page
+   does not move (the Doglord version is a little shorter); only the theme decides which one shows */
+.hero-intro { display: grid; }
+.hero-intro > * { grid-column: 1; }
+.hero-intro > .bio-teaching, .hero-intro > .hero-doglord { grid-row: 2; }
+.hero-intro > .hero-doglord { display: block; visibility: hidden; }
+:root[data-theme="doglord"] .hero-intro > .bio-teaching { visibility: hidden; }
+:root[data-theme="doglord"] .hero-intro > .hero-doglord { visibility: visible; }
+.doglord-new { color: #e2772f; }
 
 /* praise doglord (removable, see layouts/index.html): each word glows briefly as it turns into
    "doglord", then stays violet or amp orange */

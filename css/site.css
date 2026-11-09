@@ -715,7 +715,7 @@ main, .site-footer { position: relative; z-index: 1; }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
-.term .term-log { height: 28rem; overflow-y: auto; overscroll-behavior: contain; }
+.term .term-log { height: 30rem; overflow-y: auto; overscroll-behavior: contain; }  /* room for the wizard dog too (Doglord theme), so the terminal is the same size in every theme */
 .term .term-log .say { padding: 14px 20px 6px; overflow-x: visible; }
 .term .term-cmd { color: var(--muted); }
 .term-input {
@@ -742,7 +742,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .term-input input::placeholder { color: var(--muted); opacity: 0.8; }
 .term .say-next { position: static; flex: none; }
 @media (max-width: 760px) {
-  .term .term-log { height: 21rem; }
+  .term .term-log { height: 22rem; }
   .term .term-log .say { padding: 12px 12px 6px; }
   .term-input input { font-size: 16px; }
 }
