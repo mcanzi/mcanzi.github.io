@@ -28,13 +28,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
   <link rel="manifest" href="/img/favicon/site.webmanifest">
   <meta name="theme-color" content="#141619">
-  <script>try { if (localStorage.getItem("theme") === "light") document.documentElement.dataset.theme = "light"; } catch (e) {}</script>
+  <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "doglord") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/site.css?v=5429fe184e12">
+  <link rel="stylesheet" href="/css/theme-doglord.css?v=29a78822204b">
 </head>
 
 <body class="page-workshops">
@@ -71,7 +72,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = root.dataset.theme === "light" ? "#f3eee5" : "#141619"; };
+  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", doglord: "#0c0911" })[root.dataset.theme] || "#141619"; };
   sync();
   btn.hidden = false;
   btn.addEventListener("click", () => {
@@ -89,7 +90,7 @@
   <header class="page-header">
     <p class="kicker mono">~/workshops</p>
     <h1>workshops</h1>
-    <p class="lead">Workshops de R, estatística e visualização de dados para departamentos, grupos de investigação e institutos.</p>
+    <p class="lead">Workshops de R, estatística e visualização de dados que lecionei para universidades e institutos de investigação.</p>
   </header>
 
   
@@ -173,8 +174,6 @@
 <li><strong>Introdução à visualização de dados em R com ggplot2</strong> (2025): Peace Research Institute Frankfurt (PRIF).</li>
 <li><strong>Métodos quantitativos e experimentais</strong> (sessões regulares): Departamento de Linguística, Universidade de Constança.</li>
 </ul>
-<h2 id="organizar-um-workshop">Organizar um workshop</h2>
-<p>Os workshops têm uma duração que vai de uma única tarde a uma semana inteira e podem ser adaptados ao nível do grupo, desde os primeiros passos em R até à modelação avançada. Para organizar um, escreva-me através do ícone de e-mail no topo da página, indicando o tema, a dimensão e o perfil do grupo e as datas possíveis.</p>
 
   </div>
   

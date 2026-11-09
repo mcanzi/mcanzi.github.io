@@ -1,0 +1,34 @@
+/* The site's three typefaces, served from this site rather than from Google Fonts, so a visit
+   sends nothing to third parties. Used by the main site (partials/head.html) and by the music
+   and Doglord pages (tools/music, tools/doglord). Licences: OFL-*.txt in this folder. */
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("atkinson-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("atkinson-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("atkinson-bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("bricolage-grotesque.woff2") format("woff2-variations"), url("bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800; font-stretch: 75% 100%; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("jetbrains-mono-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("jetbrains-mono-semibold.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}

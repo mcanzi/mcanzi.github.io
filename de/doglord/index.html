@@ -21,10 +21,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/doglord/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/doglord/assets/favicon-16x16.png">
   <meta name="theme-color" content="#141619">
-  <script>try { if (localStorage.getItem("theme") === "light") document.documentElement.dataset.theme = "light"; } catch (e) {}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+  <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "doglord") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/css/theme-doglord.css">
   <link rel="stylesheet" href="/doglord/assets/site.css?v=dda5873e">
   <link rel="stylesheet" href="/doglord/assets/doglord.css?v=1cc42fe1">
 </head>
@@ -132,7 +131,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = root.dataset.theme === "light" ? "#f3eee5" : "#141619"; };
+  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", doglord: "#0c0911" })[root.dataset.theme] || "#141619"; };
   sync();
   btn.hidden = false;
   btn.addEventListener("click", () => {
