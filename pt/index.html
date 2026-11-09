@@ -343,7 +343,9 @@
       if (!a || a === "~" || a === "/" || a === "home") { go(T.home, p); return null; }
       if (a === "." ) return "";
       if (a.replace(/\/$/, "") === "cv") { go(T.cv, p); return null; }
-      const h = hidden[a.replace(/\/$/, "").toLowerCase()];
+      const key = a.replace(/\/$/, "").toLowerCase();
+      
+      const h = key === "doglord" && !doglord() ? null : hidden[key];
       if (h) { go(h, p); return null; }
       const pg = findPage(a);
       if (!pg) return fill(T.t.noPage, { page: a });
@@ -359,6 +361,7 @@
     pangolinsay: (args) => args.join(" "),
     clear: () => { log.textContent = ""; return null; },
   };
+  
   
   
   
