@@ -348,6 +348,11 @@ h1, h2, h3, h4 {
 
 .page { max-width: var(--w-text); margin: 0 auto; padding-top: 56px; }
 .page-wide { max-width: var(--w-wide); }
+/* every page uses the wide column, aligned with the navigation bar; running text keeps the reading
+   width, while charts, fact cards and the co-author network can use the whole column */
+.page-wide .prose > :is(p, ul, ol, h2, h3, h4, blockquote, pre, table, details, hr, .jump, .pubs, .cv-box) { max-width: var(--w-text); }
+/* demo charts and fact cards: wider than the text, as wide as the interactive plot (.rtoy), so chart labels keep their size */
+.facts, .mchange { max-width: 52rem; }
 
 .page-header { margin-bottom: 30px; }
 .page-header h1 {
