@@ -1,6 +1,7 @@
 /* Snapshot of the main site's stylesheet (mcanzi.github.io, themes/arang/static/css/site.css),
    copied so this page works on its own. If the main site's look changes, copy the file again
-   and point the two background images at lizard.svg and lizard-page.svg. */
+   and point the background image at lizard.svg (the light theme's cherry blossoms load from
+   /img/motifs/sakura.svg on the main site). */
 
 /* arang: the charcoal theme for mcanzi.github.io
    Same type and colours as the Statistics for Linguists slides
@@ -874,8 +875,13 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* theme switch in the navigation bar */
 /* the background lizard: a faint ink drawing on the light theme */
-:root[data-theme="light"] body::before { background-image: url("lizard-page.svg"); opacity: 0.08; }
-@media (max-width: 700px) { :root[data-theme="light"] body::before { opacity: 0.06; } }
+/* instead of the lizard, cherry blossoms and falling petals all over the background (img/motifs/sakura.svg) */
+:root[data-theme="light"] body::before {
+  inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
+  background: url("/img/motifs/sakura.svg") repeat 0 0 / 600px 600px;
+  opacity: 0.2;
+}
+@media (max-width: 700px) { :root[data-theme="light"] body::before { background-size: 400px 400px; opacity: 0.18; } }
 /* lecture drawings: colour on the dark theme, ink on the light theme */
 .motif-ink { display: none; }
 :root[data-theme="light"] .motif-colour { display: none; }
