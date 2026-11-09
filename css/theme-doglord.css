@@ -83,3 +83,8 @@
 /* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */
 :root[data-theme="doglord"] .brand-name { display: none; }
 :root[data-theme="doglord"] .brand-doglord { display: inline; }
+
+/* "praise doglord": each word glows briefly as it turns into "doglord" */
+.doglorded { animation: doglorded 0.9s ease-out; }
+@keyframes doglorded { from { color: #e7d6ff; text-shadow: 0 0 12px rgba(198, 163, 255, 0.9); } }
+@media (prefers-reduced-motion: reduce) { .doglorded { animation: none; } }
