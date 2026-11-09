@@ -36,7 +36,7 @@
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/site.css?v=b1c044311ca1">
-  <link rel="stylesheet" href="/css/theme-doglord.css?v=1b4a7c4832d6">
+  <link rel="stylesheet" href="/css/theme-doglord.css?v=a9a0435e0fa0">
 </head>
 
 <body class="is-home">
@@ -89,7 +89,7 @@
 <section class="hero">
   <div class="hero-text">
     <p class="kicker mono">hello, world</p>
-    <h1 class="hero-name"><span class="hero-name-real">Massimiliano Canzi</span><span class="hero-name-doglord" hidden>Doglord</span> <span class="hero-suffix">PhD</span></h1>
+    <h1 class="hero-name"><span class="hero-name-real">Massimiliano Canzi</span><span class="hero-name-doglord" hidden>doglord</span> <span class="hero-suffix">PhD</span></h1>
     <p class="hero-role mono">cientista de dados e gestor de laboratório · linguística · universität konstanz</p>
     <div class="hero-intro"><p>Sou cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança, onde trabalho desde 2021. Tenho formação em investigação quantitativa em fonética e ciências da fala, e dedico-me ao estudo da perceção da fala com métodos fisiológicos como ERP, pupilometria e eye tracking.</p>
 <p>Ensino sobretudo estatística em R ao nível do mestrado, mas também leciono ocasionalmente unidades curriculares de fonética forense, pupilometria e eye tracking, fonética inglesa e outros temas.</p>
@@ -445,7 +445,7 @@
       run.push({ orig: n, parts });
     }
     
-    const dog = (w) => (w.length > 1 && w === w.toUpperCase() && /\p{Lu}/u.test(w) ? "DOGLORD" : /^\p{Lu}/u.test(w) ? "Doglord" : "doglord");
+    const dog = () => "doglord";
     const flip = (w) => {
       if (w.nodeType === 3) { w.nodeValue = dog(w.nodeValue); return; }
       w.textContent = dog(w.textContent); w.className = "doglorded";
@@ -462,7 +462,7 @@
     if (!order.length) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) { order.forEach(([, w]) => flip(w)); return; }
     
-    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 9000;
+    const near = order[0][0], far = order[order.length - 1][0], t0 = performance.now(), total = 13500;
     let i = 0;
     const step = (t) => {
       if (praised !== run) return;

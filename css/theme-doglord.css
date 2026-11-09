@@ -83,7 +83,7 @@
 /* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */
 :root[data-theme="doglord"] .brand-name { display: none; }
 :root[data-theme="doglord"] .brand-doglord { display: inline; }
-/* and the name on the home page reads Doglord */
+/* and the name on the home page reads doglord */
 :root[data-theme="doglord"] .hero-name-real { display: none; }
 :root[data-theme="doglord"] .hero-name-doglord { display: inline; }
 
