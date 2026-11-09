@@ -73,3 +73,7 @@
 
 /* the wizard dog is two lines taller than the pangolin, so the terminal grows a little */
 :root[data-theme="doglord"] .term .term-log { height: 30rem; }
+
+/* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */
+:root[data-theme="doglord"] .brand-name { display: none; }
+:root[data-theme="doglord"] .brand-doglord { display: inline; }
