@@ -48,8 +48,14 @@
 }
 @media print { :root[data-theme="doglord"] body::after { display: none; } }
 
-/* the background lizard and the lecture drawings turn violet */
-:root[data-theme="doglord"] body::before { filter: invert(1) sepia(1) saturate(5) hue-rotate(225deg); opacity: 0.1; }
+/* instead of the lizard, violet flames all over the background (img/motifs/doglord-flames.svg);
+   the lecture drawings turn violet */
+:root[data-theme="doglord"] body::before {
+  inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
+  background: url("../img/motifs/doglord-flames.svg") repeat 0 0 / 560px 560px;
+  filter: none; opacity: 0.07;
+}
+@media (max-width: 700px) { :root[data-theme="doglord"] body::before { background-size: 380px 380px; opacity: 0.06; } }
 :root[data-theme="doglord"] .motif-colour { filter: sepia(1) saturate(3) hue-rotate(215deg); }
 
 /* headings glow faintly */
