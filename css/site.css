@@ -703,15 +703,15 @@ h1, h2, h3, h4 {
 .lang-switch a:hover { color: var(--pandan); background: var(--raised); }
 .lang-current { color: var(--floor); background: var(--pandan); }
 
-/* background motif: one of the lecture drawings, very faint, fixed in the bottom-right corner */
+/* background motif: rafflesias and their buds all over the page, very faint (img/motifs/rafflesia.svg);
+   the light theme has cherry blossoms instead, the Doglord theme flames */
 body::before {
-  content: ""; position: fixed; right: 40px; bottom: -40px; z-index: 0; pointer-events: none;
-  width: min(860px, 85vw); aspect-ratio: 640 / 680;
-  background: url("../img/motifs/lizard.svg") no-repeat center / contain;
-  opacity: 0.16;
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
+  opacity: 0.11;
 }
 main, .site-footer { position: relative; z-index: 1; }
-@media (max-width: 700px) { body::before { opacity: 0.11; right: 0; bottom: -20px; } }
+@media (max-width: 700px) { body::before { background-size: 420px 420px; opacity: 0.09; } }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
