@@ -387,7 +387,8 @@
     banish: (args, p) => {
       if ((args[0] || "").toLowerCase() !== "doglord") return fill(T.t.notFound, { cmd: "banish" });
       if (document.documentElement.dataset.theme === "doglord") setTheme("dark");
-      pangolinSays(p, T.t.doglordOff); return null;
+      log.textContent = "";
+      pangolinSays(pre(), T.t.doglordOff); return null;
     },
     dogsay: (args) => args.join(" "),
   };
@@ -930,6 +931,7 @@
       <span class="sep">·</span> erstellt mit R, blogdown und <a href="https://gohugo.io">Hugo</a>
       <span class="sep">·</span> ORCID 0000-0001-6124-0321
       <span class="sep">·</span> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br>Fachbereich Linguistik, Universität Konstanz, Universitätsstraße 10, 78464 Konstanz
       <br>private, nicht kommerzielle Website, keine offizielle Seite der Universität Konstanz
     </p>
   </div>
