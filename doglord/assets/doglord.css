@@ -1,0 +1,122 @@
+/* Album and player for the Doglord page. Colours, fonts and page layout come from site.css.
+   The player and track list sit in a .console window (the main site's terminal frame). */
+
+.album {
+  display: grid; column-gap: 44px; row-gap: 28px; align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "cover body" "credits body";
+  grid-template-rows: auto 1fr;
+  margin-top: 28px;
+}
+.album-cover { grid-area: cover; margin: 0; }
+.album-body { grid-area: body; min-width: 0; }
+.album-credits { grid-area: credits; min-width: 0; }
+
+.album-cover img {
+  display: block; width: 100%; height: auto; aspect-ratio: 1;
+  border-radius: var(--radius); border: 1px solid var(--vine);
+  box-shadow: var(--shadow);
+}
+
+.album-kind { margin: 0; font-size: 0.8rem; color: var(--muted); text-transform: lowercase; }
+.album-body h2 { margin: 2px 0 20px; font-size: clamp(1.9rem, 4vw, 2.6rem); }
+
+/* ---- window ---------------------------------------------------------------------------- */
+.deck { position: relative; }
+.deck::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 2px; z-index: 1;
+  background: linear-gradient(90deg, var(--dot-red), var(--hornbill), var(--pandan));
+  opacity: 0.85;
+}
+.deck .console-bar em { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+
+/* ---- player ---------------------------------------------------------------------------- */
+.player {
+  padding: 20px 22px 18px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--pandan) 9%, transparent), transparent 70%),
+    var(--understory);
+}
+.now-row { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; min-width: 0; }
+.now { margin: 0; min-width: 0; font-size: 0.95rem; color: var(--strong); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.now-n { color: var(--pandan); margin-right: 4px; }
+
+.eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; flex: none; }
+.eq i { width: 3px; height: 30%; border-radius: 1px; background: var(--muted); opacity: 0.6; }
+.playing .eq i { background: var(--pandan); opacity: 1; animation: eq 0.9s ease-in-out infinite alternate; }
+.playing .eq i:nth-child(2) { animation-delay: -0.3s; animation-duration: 0.7s; }
+.playing .eq i:nth-child(3) { animation-delay: -0.6s; animation-duration: 1.1s; }
+.playing .eq i:nth-child(4) { animation-delay: -0.15s; animation-duration: 0.8s; }
+@keyframes eq { from { height: 20%; } to { height: 100%; } }
+@media (prefers-reduced-motion: reduce) { .playing .eq i { animation: none; height: 70%; } }
+
+.seek-row { display: flex; align-items: center; gap: 10px; font-size: 0.72rem; color: var(--muted); }
+.seek-row span { flex: none; min-width: 2.6rem; }
+.seek-row .t-dur { text-align: right; }
+.seek { flex: 1; min-width: 0; margin: 0; accent-color: var(--pandan); cursor: pointer; }
+.seek:disabled { cursor: default; opacity: 0.5; }
+
+.controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 14px; }
+.ctl {
+  display: grid; place-items: center;
+  width: 40px; height: 40px; padding: 0;
+  border: 1px solid var(--vine); border-radius: 50%;
+  background: var(--raised); color: var(--mist); cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.ctl:hover:not(:disabled) { color: var(--pandan); border-color: var(--pandan); }
+.ctl:active:not(:disabled) { transform: scale(0.95); }
+.ctl:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
+.ctl.play {
+  width: 54px; height: 54px; background: var(--pandan); border-color: var(--pandan); color: var(--floor);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--pandan) 18%, transparent);
+}
+.ctl.play:hover:not(:disabled) { background: var(--primary-hi); border-color: var(--primary-hi); color: var(--floor); }
+.ctl:disabled { opacity: 0.45; cursor: default; }
+.ctl.play:disabled { box-shadow: none; }
+.ctl .i-pause, .playing .ctl .i-play { display: none; }
+.playing .ctl .i-pause { display: block; }
+:root[data-theme="light"] .ctl.play { color: #fff; }
+
+/* ---- track list (inside the window) ---------------------------------------------------- */
+.tracks-wrap { border-top: 1px solid var(--vine); padding: 12px 10px 10px; }
+.tracks-head { margin: 0 0 6px; padding: 0 8px; font-size: 0.78rem; font-weight: 400; color: var(--muted); }
+.tracks { list-style: none; margin: 0; padding: 0; }
+.tracks li + li { border-top: 1px dashed var(--vine); }
+.track {
+  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) auto; align-items: baseline; gap: 10px;
+  width: 100%; padding: 10px 8px; border: 0; border-radius: 6px; background: none;
+  font: inherit; font-size: 0.98rem; color: var(--mist); text-align: left; cursor: pointer;
+  transition: background 0.15s;
+}
+.track:hover:not(:disabled) { background: var(--hit); }
+.track:hover:not(:disabled) .tr-title, .track[aria-current] .tr-title { color: var(--pandan); }
+.track[aria-current] { background: var(--hit); }
+.track:focus-visible { outline: 2px solid var(--pandan); outline-offset: -2px; }
+.track:disabled { cursor: default; color: var(--muted); }
+.tr-n, .tr-time { font-size: 0.75rem; color: var(--muted); }
+.tr-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track.playing .tr-n { color: var(--pandan); }
+.track:disabled .tr-time { font-style: italic; opacity: 0.8; }
+.album-note { margin: 14px 0 0; font-size: 0.92rem; color: var(--muted); }
+
+/* ---- credits (left, under the cover) --------------------------------------------------- */
+.credits-head { margin: 0 0 8px; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.credits { margin: 0; border-top: 1px solid var(--vine); }
+.credits div {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px;
+  padding: 9px 4px; border-bottom: 1px solid var(--vine); font-size: 0.92rem;
+}
+.credits dt { color: var(--muted); }
+.credits dd { margin: 0; text-align: right; }
+.rights { margin: 12px 0 0; font-size: 0.75rem; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .album { grid-template-columns: 1fr; grid-template-areas: "cover" "body" "credits"; grid-template-rows: auto; row-gap: 26px; }
+  .album-cover { max-width: 30rem; }
+  .player { padding: 18px 16px 16px; }
+}
+@media (max-width: 480px) {
+  .credits div { grid-template-columns: 1fr; }
+  .credits dd { text-align: left; }
+}
