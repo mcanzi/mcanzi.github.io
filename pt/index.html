@@ -428,7 +428,8 @@
     });
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
-    const re = /[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu;
+    
+    const re = /[(\[“«"]*[\p{L}\p{N}][\p{L}\p{N}'’-]*[.,;:!?…)\]”»"]*/gu;
     const words = [];
     for (const n of nodes) {
       const text = n.nodeValue, parts = [];
@@ -436,13 +437,23 @@
       
       const plain = /flex|grid/.test(getComputedStyle(n.parentElement).display);
       let last = 0, m;
-      re.lastIndex = 0;
+      
+      const lead = plain ? null : text.match(/^[.,;:!?…)\]”»"]+/);
+      if (lead) {
+        const w = document.createElement("doglord-word");
+        w.textContent = w.realWord = w.punct = lead[0]; w.pre = ""; w.lead = true;
+        parts.push(w); words.push(w);
+        last = lead[0].length;
+      }
+      re.lastIndex = last;
       while ((m = re.exec(text))) {
         if (m.index > last) parts.push(document.createTextNode(text.slice(last, m.index)));
         let w;
         if (plain) w = document.createTextNode(m[0]);
         else { w = document.createElement("doglord-word"); w.textContent = m[0]; }
         w.realWord = m[0];
+        w.pre = m[0].match(/^[(\[“«"]*/)[0];
+        w.punct = m[0].match(/[.,;:!?…)\]”»"]*$/)[0];
         parts.push(w); words.push(w);
         last = m.index + m[0].length;
       }
@@ -452,11 +463,11 @@
       run.push({ orig: n, parts });
     }
     
-    const dog = () => "doglord";
+    const dog = (w) => w.pre + (w.lead ? "" : "doglord") + w.punct;
     const flip = (w) => {
-      if (w.nodeType === 3) { w.nodeValue = dog(w.nodeValue); return; }
+      if (w.nodeType === 3) { w.nodeValue = dog(w); return; }
       
-      w.textContent = dog(w.textContent); w.className = Math.random() < 0.5 ? "doglorded" : "doglorded doglorded-orange";
+      w.textContent = dog(w); w.className = Math.random() < 0.5 ? "doglorded" : "doglorded doglorded-orange";
     };
     const box = (w) => {
       if (w.nodeType !== 3) return w.getBoundingClientRect();
