@@ -87,7 +87,8 @@
 :root[data-theme="doglord"] .hero-name-real { display: none; }
 :root[data-theme="doglord"] .hero-name-doglord { display: inline; }
 
-/* praise doglord (removable, see layouts/index.html): each word glows briefly as it turns into "doglord" */
-.doglorded { animation: doglorded 0.9s ease-out; }
+/* praise doglord (removable, see layouts/index.html): each word glows briefly as it turns into
+   "doglord", then stays violet */
+.doglorded { color: var(--pandan); animation: doglorded 0.9s ease-out; }
 @keyframes doglorded { from { color: #e7d6ff; text-shadow: 0 0 12px rgba(198, 163, 255, 0.9); } }
 @media (prefers-reduced-motion: reduce) { .doglorded { animation: none; } }
