@@ -582,7 +582,6 @@ h1, h2, h3, h4 {
 
 .console-404 { max-width: 36rem; margin: 40px auto 28px; }
 .console-404 .say { padding-bottom: 20px; }
-.console-404 .term-cmd { color: var(--muted); }
 
 /* course evaluation chart on the CV (shortcode: evaluations) */
 .evals { max-width: 760px; margin: 28px 0 32px; padding: 18px 18px 14px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); }
