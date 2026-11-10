@@ -29,14 +29,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
   <link rel="manifest" href="/img/favicon/site.webmanifest">
   <meta name="theme-color" content="#141619">
-  <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "doglord") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=7b66051ff5a9">
-  <link rel="stylesheet" href="/css/theme-doglord.css?v=aebcbff120f7">
+  <link rel="stylesheet" href="/css/site.css?v=b7f6aaed34fe">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
 
 <body class="is-home">
@@ -72,7 +73,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", doglord: "#0c0911" })[root.dataset.theme] || "#141619"; };
+  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", purple: "#0c0911" })[root.dataset.theme] || "#141619"; };
   sync();
   btn.hidden = false;
   btn.addEventListener("click", () => {
@@ -305,8 +306,8 @@
   const input = fig.querySelector("#term-line");
   const pangolinArt = fig.querySelector(".say-art").textContent;
   
-  const doglord = () => document.documentElement.dataset.theme === "doglord";
-  const sayer = () => (doglord() ? "dogsay" : "pangolinsay");
+  const summoned = () => document.documentElement.dataset.theme === "purple";
+  const sayer = () => (summoned() ? "dogsay" : "pangolinsay");
   const W = 47;   
 
   const wrap = (s, width = W) => {
@@ -403,7 +404,7 @@
       if (a.replace(/\/$/, "") === "cv") { go(T.cv, p); return null; }
       const key = a.replace(/\/$/, "").toLowerCase();
       
-      const h = key === "doglord" && !doglord() ? null : hidden[key];
+      const h = key === "doglord" && !summoned() ? null : hidden[key];
       if (h) { go(h, p); return null; }
       const pg = findPage(a);
       if (!pg) return fill(T.t.noPage, { page: a });
@@ -434,22 +435,22 @@
     if (name === "dark") delete root.dataset.theme; else root.dataset.theme = name;
     try { localStorage.setItem("theme", name); } catch (e) {}
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = name === "doglord" ? "#0c0911" : "#141619";
+    if (meta) meta.content = name === "purple" ? "#0c0911" : "#141619";
   };
-  const art = () => (doglord() ? T.dogArt : pangolinArt);
+  const art = () => (summoned() ? T.dogArt : pangolinArt);
   const pangolinSays = (p, text) => { add(p, bubble(wrap(text)), "say-bubble"); add(p, art(), "say-art"); };
   const secret = {
     summon: (args, p) => {
       if ((args[0] || "").toLowerCase() !== "doglord") return fill(T.t.notFound, { cmd: "summon" });
-      setTheme("doglord");
+      setTheme("purple");
       log.textContent = "";
       pangolinSays(pre(), T.t.doglordOn); return null;
     },
     banish: (args, p) => {
       if ((args[0] || "").toLowerCase() !== "doglord") return fill(T.t.notFound, { cmd: "banish" });
       
-      if (praised && doglord()) { leaveSlowly(); return null; }
-      if (document.documentElement.dataset.theme === "doglord") setTheme("dark");
+      if (praised && summoned()) { leaveSlowly(); return null; }
+      if (document.documentElement.dataset.theme === "purple") setTheme("dark");
       log.textContent = "";
       pangolinSays(pre(), T.t.doglordOff); return null;
     },
@@ -457,7 +458,7 @@
     
     
     praise: (args, p) => {
-      if ((args[0] || "").toLowerCase() !== "doglord" || !doglord()) return fill(T.t.notFound, { cmd: "praise" });
+      if ((args[0] || "").toLowerCase() !== "doglord" || !summoned()) return fill(T.t.notFound, { cmd: "praise" });
       log.textContent = "";
       pangolinSays(pre(), T.t.doglordPraise);
       praise();
@@ -584,7 +585,7 @@
     requestAnimationFrame(step);
   };
   
-  new MutationObserver(() => { if (!doglord()) unpraise(); })
+  new MutationObserver(() => { if (!summoned()) unpraise(); })
     .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   
 

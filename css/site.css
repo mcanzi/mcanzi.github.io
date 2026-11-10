@@ -1,6 +1,6 @@
 /* arang: the charcoal theme for mcanzi.github.io
    Same type and colours as the Statistics for Linguists slides
-   (theme-dark.css, theme-light.css, theme-doglord.css in
+   (theme-dark.css, theme-light.css, theme-purple.css in
    ws26_statistics): Bricolage Grotesque, Atkinson Hyperlegible,
    JetBrains Mono on charcoal. */
 
@@ -444,7 +444,9 @@ h1, h2, h3, h4 {
 .course-links { margin: 0; }
 
 /* key to the parts above the lecture grid */
-.parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.78rem; color: var(--muted); }
+.parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.88rem; color: var(--mist); }
+.parts-key li { display: inline-flex; align-items: baseline; gap: 8px; }
+.parts-key .mono { color: var(--muted); font-size: 0.78rem; }
 /* without a key (one part), the cards still keep a line's distance from the text */
 .course-head + .lectures { margin-top: 24px; }
 
@@ -460,11 +462,11 @@ h1, h2, h3, h4 {
 }
 .lectures > li { display: flex; min-width: 0; }
 /* course and workshop lectures: each card looks like its slides (theme-dark.css, theme-light.css and
-   theme-doglord.css in ws26_statistics and ggplot2_workshop), in every theme of the site: its own background,
+   theme-purple.css in ws26_statistics and ggplot2_workshop), in every theme of the site: its own background,
    text colours, accent and faint background drawings (rafflesias, cherry blossoms, flames) */
 .theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; }
 .theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; }
-.theme-doglord { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; }
+.theme-purple { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; }
 
 .lecture {
   position: relative;
@@ -491,14 +493,14 @@ h1, h2, h3, h4 {
 .lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--lec-code, var(--hornbill)); }
 .lecture-sub { color: var(--lec-muted, var(--muted)); font-size: 0.78rem; line-height: 1.35; }
 /* the slide theme's background drawings, faint, behind the text */
-:is(.theme-dark, .theme-light, .theme-doglord) .lecture { isolation: isolate; }
-:is(.theme-dark, .theme-light, .theme-doglord) .lecture::before {
+:is(.theme-dark, .theme-light, .theme-purple) .lecture { isolation: isolate; }
+:is(.theme-dark, .theme-light, .theme-purple) .lecture::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-repeat: repeat; background-position: 0 0;
 }
 .theme-dark .lecture::before    { background-image: url("../img/motifs/rafflesia.svg"); background-size: 200px 200px; opacity: 0.08; }
 .theme-light .lecture::before   { background-image: url("../img/motifs/sakura.svg"); background-size: 190px 190px; opacity: 0.2; }
-.theme-doglord .lecture::before { background-image: url("../img/motifs/doglord-flames.svg"); background-size: 180px 180px; opacity: 0.08; }
+.theme-purple .lecture::before { background-image: url("../img/motifs/flames.svg"); background-size: 180px 180px; opacity: 0.08; }
 /* parts of the course have no colour of their own: the key just lists them */
 
 /* ---- photography ----------------------------------------------------- */
@@ -708,7 +710,7 @@ h1, h2, h3, h4 {
 .lang-current { color: var(--floor); background: var(--pandan); }
 
 /* background motif: rafflesias and their buds all over the page, very faint (img/motifs/rafflesia.svg);
-   the light theme has cherry blossoms instead, the Doglord theme flames */
+   the light theme has cherry blossoms instead, the purple theme flames */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
@@ -719,7 +721,7 @@ main, .site-footer { position: relative; z-index: 1; }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
-.term .term-log { height: 30rem; overflow-y: auto; overscroll-behavior: contain; }  /* room for the wizard dog too (Doglord theme), so the terminal is the same size in every theme */
+.term .term-log { height: 30rem; overflow-y: auto; overscroll-behavior: contain; }  /* room for the wizard dog too (purple theme), so the terminal is the same size in every theme */
 .term .term-log .say { padding: 14px 20px 6px; overflow-x: visible; }
 .term .term-cmd { color: var(--muted); }
 .term-input {

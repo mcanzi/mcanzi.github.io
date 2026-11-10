@@ -1,0 +1,68 @@
+/* Purple theme: black and violet, with candle gold for accents, a faint film grain and a purple
+   glow, after early-seventies heavy metal sleeves. Hidden: only switched on from the terminal on the
+   home page (layouts/index.html; the theme button switches it off). Remembered in the browser like
+   the light theme (localStorage "theme"). Loaded by the main site (partials/head.html) and by the
+   pages in tools/ (their scripts/build.mjs). What the terminal's easter egg adds on top of this
+   theme is in css/easter-egg.css. */
+
+:root[data-theme="purple"] {
+  --floor:      #0c0911;   /* black, with a little violet */
+  --understory: #140f1c;
+  --raised:     #1c1527;
+  --vine:       #2f2541;
+  --mist:       #e7e0f2;   /* pale lavender text */
+  --muted:      #9b8fb0;
+  --pandan:     #9d6bf0;   /* violet: headings, primary */
+  --hornbill:   #c9a23f;   /* candle gold: accents, cv button, cursor */
+  --kingfisher: #c6a3ff;   /* lavender: links */
+  --orchid:     #d16fb8;
+  --moss:       #6e5a8a;
+  --leaf:       #7d5fa8;
+
+  --nav-bg:      rgba(12, 9, 17, 0.9);
+  --glow-1:      rgba(140, 80, 230, 0.16);
+  --glow-2:      rgba(170, 30, 60, 0.07);
+  --strong:      #fff;
+  --shadow:      0 18px 50px rgba(0, 0, 0, 0.55), 0 0 40px rgba(120, 60, 200, 0.08);
+  --primary-hi:  #b58cf7;
+  --cv-hi:       #dcb658;
+  --dot-red:     #b3263a;
+  --hit:         rgba(231, 224, 242, 0.05);
+  color-scheme: dark;
+}
+
+/* a dark vignette around the edges, over the usual glows */
+:root[data-theme="purple"] body {
+  background-image:
+    radial-gradient(1100px 600px at 85% -120px, var(--glow-1), transparent 70%),
+    radial-gradient(900px 500px at 0% 420px, var(--glow-2), transparent 70%),
+    radial-gradient(140% 120% at 50% 40%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  background-attachment: fixed;
+}
+
+/* film grain over the whole page */
+:root[data-theme="purple"] body::after {
+  content: ""; position: fixed; inset: 0; z-index: 50; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+}
+@media print { :root[data-theme="purple"] body::after { display: none; } }
+
+/* instead of the rafflesias, orange flames all over the background (img/motifs/flames.svg) */
+:root[data-theme="purple"] body::before {
+  inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
+  background: url("../img/motifs/flames.svg") repeat 0 0 / 560px 560px;
+  filter: none; opacity: 0.07;
+}
+@media (max-width: 700px) { :root[data-theme="purple"] body::before { background-size: 380px 380px; opacity: 0.06; } }
+
+/* headings glow faintly */
+:root[data-theme="purple"] h1,
+:root[data-theme="purple"] h2 { text-shadow: 0 0 22px rgba(157, 107, 240, 0.35); }
+:root[data-theme="purple"] .hero-name { letter-spacing: 0.01em; text-shadow: 0 0 28px rgba(157, 107, 240, 0.5), 0 2px 0 #000; }
+
+/* the pangolin, in candlelight */
+:root[data-theme="purple"] .pangolinsay .say-art { color: var(--pandan); text-shadow: 0 0 10px rgba(157, 107, 240, 0.45); }
+:root[data-theme="purple"] .cursor { box-shadow: 0 0 8px rgba(201, 162, 63, 0.7); }
+
+:root[data-theme="purple"] ::selection { background: var(--pandan); color: #fff; }

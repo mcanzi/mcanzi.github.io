@@ -28,14 +28,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
   <link rel="manifest" href="/img/favicon/site.webmanifest">
   <meta name="theme-color" content="#141619">
-  <script>try { const t = localStorage.getItem("theme"); if (t === "light" || t === "doglord") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=7b66051ff5a9">
-  <link rel="stylesheet" href="/css/theme-doglord.css?v=aebcbff120f7">
+  <link rel="stylesheet" href="/css/site.css?v=b7f6aaed34fe">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
 
 <body class="page-output">
@@ -71,7 +72,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", doglord: "#0c0911" })[root.dataset.theme] || "#141619"; };
+  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", purple: "#0c0911" })[root.dataset.theme] || "#141619"; };
   sync();
   btn.hidden = false;
   btn.addEventListener("click", () => {
