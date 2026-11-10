@@ -460,9 +460,9 @@ h1, h2, h3, h4 {
   gap: 10px;
 }
 .lectures > li { display: flex; min-width: 0; }
-/* course lectures: each card looks like its slides (theme-dark.css, theme-light.css and theme-doglord.css in
-   ws26_statistics), in every theme of the site: its own background, text colours, accent and faint background
-   drawings (rafflesias, cherry blossoms, flames); no lecture drawing, like the slides */
+/* course and workshop lectures: each card looks like its slides (theme-dark.css, theme-light.css and
+   theme-doglord.css in ws26_statistics and ggplot2_workshop), in every theme of the site: its own background,
+   text colours, accent and faint background drawings (rafflesias, cherry blossoms, flames) */
 .theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; }
 .theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; }
 .theme-doglord { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; }
@@ -491,18 +491,7 @@ h1, h2, h3, h4 {
 .lecture-title p, .lecture-sub p { margin: 0; }
 .lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--lec-code, var(--hornbill)); }
 .lecture-sub { color: var(--lec-muted, var(--muted)); font-size: 0.78rem; line-height: 1.35; }
-.lecture-motif {
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  opacity: 0.22;
-  transition: opacity 0.2s;
-}
-.lecture:hover .lecture-motif { opacity: 0.45; }
-/* the slide theme's background drawings, faint, behind the text and the lecture drawing */
+/* the slide theme's background drawings, faint, behind the text */
 :is(.theme-dark, .theme-light, .theme-doglord) .lecture { isolation: isolate; }
 :is(.theme-dark, .theme-light, .theme-doglord) .lecture::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
@@ -785,13 +774,11 @@ main, .site-footer { position: relative; z-index: 1; }
 .cv-box p { margin: 0; flex: 1 1 18rem; }
 .prose .cv-box a.btn-cv { color: var(--floor); text-decoration: none; }
 
-/* example workshop (Rwanda-themed ggplot2 slides) and lectures not yet online */
-.theme-ibirunga { --lec: #7cc6d8; --lec-bg: #0f1a1e; }
+/* lectures not yet online */
 .lecture-planned { cursor: default; }
 .lecture-planned:hover { transform: none; border-color: var(--lec-line, var(--vine)); border-left-color: var(--lec); }
 .lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
 .lecture-soon { margin-top: 2px; font-size: 0.68rem; color: var(--lec); letter-spacing: 0.02em; }
-.theme-ibirunga .lecture-motif { width: 60px; height: 60px; right: -6px; bottom: -8px; opacity: 0.18; }
 
 /* coloured ASCII portrait (whoami): sized so all columns fit the terminal */
 .term .term-log { container-type: inline-size; position: relative; }
@@ -842,7 +829,7 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* ---- light theme ----------------------------------------------------- */
 /* Japanese-inspired: washi beige and paper white, sumi-ink text, indian reds for headings and
-   accents, a muted teal for links and charts; the drawings turn into ink (img/motifs/ink/). Switched with the sun/moon button in the navigation bar; the
+   accents, a muted teal for links and charts. Switched with the sun/moon button in the navigation bar; the
    choice is remembered in the browser (partials/head.html). The lightbox stays dark. */
 
 :root[data-theme="light"] {
@@ -882,8 +869,6 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] .btn-primary:hover,
 :root[data-theme="light"] .btn-cv:hover { color: #fff; }
 :root[data-theme="light"] ::selection { color: #fff; }
-:root[data-theme="light"] .theme-ibirunga { --lec-bg: var(--understory); }
-:root[data-theme="light"] .theme-ibirunga { --lec: var(--kingfisher); }
 /* charts drawn with fixed colours in the templates */
 :root[data-theme="light"] svg [fill="#a3abb3"] { fill: var(--muted); }
 :root[data-theme="light"] svg [fill="#e4e7d8"] { fill: var(--mist); }
@@ -895,11 +880,6 @@ main, .site-footer { position: relative; z-index: 1; }
   opacity: 0.2;
 }
 @media (max-width: 700px) { :root[data-theme="light"] body::before { background-size: 400px 400px; opacity: 0.18; } }
-/* lecture drawings: colour on the dark theme, ink on the light theme */
-.motif-ink { display: none; }
-:root[data-theme="light"] .motif-colour { display: none; }
-:root[data-theme="light"] .motif-ink { display: block; opacity: 0.16; }
-:root[data-theme="light"] .lecture:hover .motif-ink { opacity: 0.32; }
 
 /* theme switch in the navigation bar: shows the theme it switches to (sun + "light mode" on the dark theme,
    moon + "dark mode" on the light one) */

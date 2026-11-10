@@ -56,7 +56,6 @@
   filter: none; opacity: 0.07;
 }
 @media (max-width: 700px) { :root[data-theme="doglord"] body::before { background-size: 380px 380px; opacity: 0.06; } }
-:root[data-theme="doglord"] .motif-colour { filter: sepia(1) saturate(3) hue-rotate(215deg); }
 
 /* headings glow faintly */
 :root[data-theme="doglord"] h1,
@@ -69,8 +68,6 @@
 
 :root[data-theme="doglord"] ::selection { background: var(--pandan); color: #fff; }
 
-/* workshop cards: violet black (the course cards keep the look of their slides) */
-:root[data-theme="doglord"] .theme-ibirunga { --lec-bg: var(--understory); --lec: var(--orchid); }
 
 
 /* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */
