@@ -1,6 +1,7 @@
 /* arang: the charcoal theme for mcanzi.github.io
    Same type and colours as the Statistics for Linguists slides
-   (theme-arang.css): Bricolage Grotesque, Atkinson Hyperlegible,
+   (theme-dark.css, theme-light.css, theme-doglord.css in
+   ws26_statistics): Bricolage Grotesque, Atkinson Hyperlegible,
    JetBrains Mono on charcoal. */
 
 :root {
@@ -458,9 +459,12 @@ h1, h2, h3, h4 {
   gap: 10px;
 }
 .lectures > li { display: flex; min-width: 0; }
-.theme-rimba { --lec: var(--pandan);     --lec-bg: #0d1a14; }
-.theme-laut  { --lec: var(--kingfisher); --lec-bg: #0a1626; }
-.theme-arang { --lec: #c9ced4;           --lec-bg: #141619; }
+/* course lectures: each card looks like its slides (theme-dark.css, theme-light.css and theme-doglord.css in
+   ws26_statistics), in every theme of the site: its own background, text colours, accent, faint background
+   drawings (rafflesias, cherry blossoms, flames) and lecture drawing (img/motifs/dark/, ink/, doglord/) */
+.theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; --lec-motif-op: 0.3; }
+.theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; --lec-motif-op: 0.2; }
+.theme-doglord { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; --lec-motif-op: 0.38; }
 
 .lecture {
   position: relative;
@@ -470,22 +474,22 @@ h1, h2, h3, h4 {
   align-items: flex-start;
   min-width: 0;
   padding: 11px 12px;
-  border: 1px solid var(--vine);
+  border: 1px solid var(--lec-line, var(--vine));
   border-left: 3px solid var(--lec);
   border-radius: 7px;
   background: var(--lec-bg);
-  color: var(--mist);
+  color: var(--lec-fg, var(--mist));
   text-decoration: none;
   overflow: hidden;
   transition: transform 0.15s, border-color 0.15s;
 }
-.lecture:hover { transform: translateY(-2px); border-color: var(--lec); color: var(--mist); }
+.lecture:hover { transform: translateY(-2px); border-color: var(--lec); color: var(--lec-fg, var(--mist)); }
 .lecture-n { color: var(--lec); font-size: 0.75rem; padding-top: 2px; }
 .lecture-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; position: relative; z-index: 1; padding-right: 14px; }
 .lecture-title { font-family: var(--f-head); font-weight: 800; font-size: 0.98rem; line-height: 1.2; }
 .lecture-title p, .lecture-sub p { margin: 0; }
-.lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--hornbill); }
-.lecture-sub { color: var(--muted); font-size: 0.78rem; line-height: 1.35; }
+.lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--lec-code, var(--hornbill)); }
+.lecture-sub { color: var(--lec-muted, var(--muted)); font-size: 0.78rem; line-height: 1.35; }
 .lecture-motif {
   position: absolute;
   right: -10px;
@@ -497,6 +501,19 @@ h1, h2, h3, h4 {
   transition: opacity 0.2s;
 }
 .lecture:hover .lecture-motif { opacity: 0.45; }
+/* the slide theme's background drawings, faint, behind the text and the lecture drawing */
+:is(.theme-dark, .theme-light, .theme-doglord) .lecture { isolation: isolate; }
+:is(.theme-dark, .theme-light, .theme-doglord) .lecture::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-repeat: repeat; background-position: 0 0;
+}
+.theme-dark .lecture::before    { background-image: url("../img/motifs/rafflesia.svg"); background-size: 200px 200px; opacity: 0.08; }
+.theme-light .lecture::before   { background-image: url("../img/motifs/sakura.svg"); background-size: 190px 190px; opacity: 0.2; }
+.theme-doglord .lecture::before { background-image: url("../img/motifs/doglord-flames.svg"); background-size: 180px 180px; opacity: 0.08; }
+.lecture .motif-own { opacity: var(--lec-motif-op); }
+.lecture:hover .motif-own { opacity: calc(var(--lec-motif-op) * 1.8); }
+/* parts of the course have no colour of their own: the key just lists them */
+.parts-key li.part-plain::before { display: none; }
 
 /* ---- photography ----------------------------------------------------- */
 
@@ -771,7 +788,7 @@ main, .site-footer { position: relative; z-index: 1; }
 /* example workshop (Rwanda-themed ggplot2 slides) and lectures not yet online */
 .theme-ibirunga { --lec: #7cc6d8; --lec-bg: #0f1a1e; }
 .lecture-planned { cursor: default; }
-.lecture-planned:hover { transform: none; border-color: var(--vine); border-left-color: var(--lec); }
+.lecture-planned:hover { transform: none; border-color: var(--lec-line, var(--vine)); border-left-color: var(--lec); }
 .lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
 .lecture-soon { margin-top: 2px; font-size: 0.68rem; color: var(--lec); letter-spacing: 0.02em; }
 .theme-ibirunga .lecture-motif { width: 60px; height: 60px; right: -6px; bottom: -8px; opacity: 0.18; }
@@ -865,11 +882,7 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] .btn-primary:hover,
 :root[data-theme="light"] .btn-cv:hover { color: #fff; }
 :root[data-theme="light"] ::selection { color: #fff; }
-:root[data-theme="light"] .theme-rimba,
-:root[data-theme="light"] .theme-laut,
-:root[data-theme="light"] .theme-arang,
 :root[data-theme="light"] .theme-ibirunga { --lec-bg: var(--understory); }
-:root[data-theme="light"] .theme-arang { --lec: var(--muted); }
 :root[data-theme="light"] .theme-ibirunga { --lec: var(--kingfisher); }
 /* charts drawn with fixed colours in the templates */
 :root[data-theme="light"] svg [fill="#a3abb3"] { fill: var(--muted); }

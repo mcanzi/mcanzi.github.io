@@ -69,13 +69,8 @@
 
 :root[data-theme="doglord"] ::selection { background: var(--pandan); color: #fff; }
 
-/* lecture and workshop cards: violet black instead of forest green and sea blue */
-:root[data-theme="doglord"] .theme-rimba,
-:root[data-theme="doglord"] .theme-laut,
-:root[data-theme="doglord"] .theme-arang,
-:root[data-theme="doglord"] .theme-ibirunga { --lec-bg: var(--understory); }
-:root[data-theme="doglord"] .theme-arang { --lec: var(--muted); }
-:root[data-theme="doglord"] .theme-ibirunga { --lec: var(--orchid); }
+/* workshop cards: violet black (the course cards keep the look of their slides) */
+:root[data-theme="doglord"] .theme-ibirunga { --lec-bg: var(--understory); --lec: var(--orchid); }
 
 
 /* the address in the top left corner reads ~/doglord (the span is in the navigation bar, hidden on other themes) */

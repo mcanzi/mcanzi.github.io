@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="640" viewBox="0 0 640 640">
+  <!-- Background tile for the dark theme (css/site.css): rafflesia flowers and buds, scattered so the
+       repeat is hard to spot. Everything sits fully inside the tile. -->
+  <defs>
+    <!-- one lobe of the flower, pointing up from the centre, with its pale warts -->
+    <g id="lobe">
+      <path fill="#cb6d67" stroke="#141619" stroke-width="2.5" d="M-12 -20C-36 -26 -36 -63 -8 -67C0 -68 0 -68 8 -67C36 -63 36 -26 12 -20Z"/>
+      <g fill="#e4e7d8">
+        <ellipse cx="0" cy="-56" rx="4.5" ry="3.3"/><ellipse cx="-14" cy="-50" rx="3.6" ry="2.8"/><ellipse cx="14" cy="-50" rx="3.6" ry="2.8"/>
+        <ellipse cx="-7" cy="-40" rx="4" ry="3"/><ellipse cx="8" cy="-40" rx="4" ry="3"/><ellipse cx="-19" cy="-36" rx="2.8" ry="2.2"/>
+        <ellipse cx="19" cy="-36" rx="2.8" ry="2.2"/><ellipse cx="0" cy="-30" rx="3.2" ry="2.4"/>
+      </g>
+    </g>
+    <g id="r">
+      <use xlink:href="#lobe" href="#lobe"/>
+      <use xlink:href="#lobe" href="#lobe" transform="rotate(72)"/>
+      <use xlink:href="#lobe" href="#lobe" transform="rotate(144)"/>
+      <use xlink:href="#lobe" href="#lobe" transform="rotate(216)"/>
+      <use xlink:href="#lobe" href="#lobe" transform="rotate(288)"/>
+      <!-- the central disc (diaphragm) with its opening -->
+      <circle r="25" fill="#9c4a45"/>
+      <circle r="25" fill="none" stroke="#e4e7d8" stroke-width="2" stroke-dasharray="3 5"/>
+      <circle r="12" fill="#141619"/>
+      <g fill="#cb6d67"><circle cx="-4" cy="-3" r="1.6"/><circle cx="4" cy="-2" r="1.6"/><circle cx="0" cy="4" r="1.6"/></g>
+    </g>
+    <!-- a closed bud -->
+    <g id="bud">
+      <circle r="16" fill="#9c4a45"/>
+      <path fill="none" stroke="#cb6d67" stroke-width="2.4" d="M-14 -4C-8 -14 8 -14 14 -4M-15 6C-8 -4 8 -4 15 6M-11 14C-5 7 5 7 11 14"/>
+    </g>
+  </defs>
+  <use xlink:href="#r" href="#r" transform="translate(120 130) rotate(12) scale(0.95)"/>
+  <use xlink:href="#r" href="#r" transform="translate(470 110) rotate(-20) scale(0.6)"/>
+  <use xlink:href="#r" href="#r" transform="translate(330 330) rotate(30) scale(1.2)"/>
+  <use xlink:href="#r" href="#r" transform="translate(110 470) rotate(-8) scale(0.7)"/>
+  <use xlink:href="#r" href="#r" transform="translate(530 520) rotate(18) scale(0.75)"/>
+  <use xlink:href="#bud" href="#bud" transform="translate(300 90) rotate(20) scale(0.9)"/>
+  <use xlink:href="#bud" href="#bud" transform="translate(560 300) rotate(-15) scale(0.75)"/>
+  <use xlink:href="#bud" href="#bud" transform="translate(240 580) rotate(5) scale(0.7)"/>
+  <use xlink:href="#bud" href="#bud" transform="translate(40 300) rotate(-30) scale(0.6)"/>
+</svg>
