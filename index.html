@@ -35,7 +35,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=f7e4991a73b9">
+  <link rel="stylesheet" href="/css/site.css?v=cbdfb3676be3">
   <link rel="stylesheet" href="/css/theme-doglord.css?v=50c6903f7414">
 </head>
 
@@ -1037,13 +1037,13 @@
   </div>
   <div class="strip">
     
-    <a href="/photo/?photo=0H2A1064.jpg"><img src="/img/photos/thumbs/0H2A1064.jpg" alt="Volcanoes National Park, Rwanda, 2026" loading="lazy"></a>
+    <a href="/photo/?photo=0H2A1064.jpg"><figure><img src="/img/photos/thumbs/0H2A1064.jpg" alt="Volcanoes National Park, Rwanda, 2026" width="800" height="531"><figcaption class="sr-only">Volcanoes National Park, Rwanda, 2026</figcaption></figure></a>
     
-    <a href="/photo/?photo=0H2A0575.jpg"><img src="/img/photos/thumbs/0H2A0575.jpg" alt="Kaindy Lake, Kazakhstan, 2026" loading="lazy"></a>
+    <a href="/photo/?photo=0H2A0575.jpg"><figure><img src="/img/photos/thumbs/0H2A0575.jpg" alt="Kaindy Lake, Kazakhstan, 2026" width="800" height="531"><figcaption class="sr-only">Kaindy Lake, Kazakhstan, 2026</figcaption></figure></a>
     
-    <a href="/photo/?photo=0H2A9277.jpg"><img src="/img/photos/thumbs/0H2A9277.jpg" alt="Nakameguro, Tokyo, Japan, 2026" loading="lazy"></a>
+    <a href="/photo/?photo=0H2A9277.jpg"><figure><img src="/img/photos/thumbs/0H2A9277.jpg" alt="Nakameguro, Tokyo, Japan, 2026" width="800" height="531"><figcaption class="sr-only">Nakameguro, Tokyo, Japan, 2026</figcaption></figure></a>
     
-    <a href="/photo/?photo=25.41_204_12345F_0125-0151-2.jpg"><img src="/img/photos/thumbs/25.41_204_12345F_0125-0151-2.jpg" alt="Taipei, Taiwan, 2025" loading="lazy"></a>
+    <a href="/photo/?photo=25.41_204_12345F_0125-0151-2.jpg"><figure><img src="/img/photos/thumbs/25.41_204_12345F_0125-0151-2.jpg" alt="Taipei, Taiwan, 2025" width="800" height="531"><figcaption class="sr-only">Taipei, Taiwan, 2025</figcaption></figure></a>
     
   </div>
   
@@ -1055,6 +1055,7 @@
     const pool = JSON.parse(document.getElementById("photo-pool").textContent);
     const imgs = document.querySelectorAll(".strip img");
     const links = document.querySelectorAll(".strip a");
+    const caps = document.querySelectorAll(".strip figcaption");
     const btn = document.querySelector(".strip-shuffle");
     const shuffle = (a) => {
       for (let i = a.length - 1; i > 0; i--) {
@@ -1065,7 +1066,7 @@
     let at = 0;
     const next = () => {
       if (at + imgs.length > pool.length) { shuffle(pool); at = 0; }
-      imgs.forEach((img, k) => { img.src = pool[at + k].src; img.alt = pool[at + k].alt; links[k].href = pool[at + k].href; });
+      imgs.forEach((img, k) => { img.src = pool[at + k].src; img.alt = pool[at + k].alt; caps[k].textContent = pool[at + k].alt; links[k].href = pool[at + k].href; });
       at += imgs.length;
     };
     shuffle(pool);
