@@ -324,7 +324,7 @@ h1, h2, h3, h4 {
   color: var(--kingfisher); font-size: 0.85rem;
 }
 .strip-shuffle:hover { color: var(--pandan); }
-.strip-shuffle[hidden] { display: none; }
+.strip-shuffle[hidden], .strip-lucky[hidden] { display: none; }
 .strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .strip a { display: block; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; border: 1px solid var(--vine); }
 .strip figure { margin: 0; width: 100%; height: 100%; }

@@ -35,7 +35,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=442d4bd1d87e">
+  <link rel="stylesheet" href="/css/site.css?v=8bfe2e9f5d3f">
   <link rel="stylesheet" href="/css/theme-doglord.css?v=50c6903f7414">
 </head>
 
@@ -1289,6 +1289,7 @@
   <div class="section-head">
     <h2>hinter der Kamera</h2>
     <div class="section-links">
+      <a class="strip-lucky mono" href="/de/photo/" hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.4" fill="currentColor" stroke="none"/></svg> Auf gut Glück</a>
       <button class="strip-shuffle mono" type="button" hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg> neu mischen</button>
       <a class="mono" href="/de/photo/">alle Fotos <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
@@ -1310,11 +1311,14 @@
   (() => {
     
     
+    
     const pool = JSON.parse(document.getElementById("photo-pool").textContent);
     const imgs = document.querySelectorAll(".strip figure > img");
     const links = document.querySelectorAll(".strip a");
     const caps = document.querySelectorAll(".strip figcaption");
     const btn = document.querySelector(".strip-shuffle");
+    const lucky = document.querySelector(".strip-lucky");
+    const roll = () => { lucky.href = pool[Math.floor(Math.random() * pool.length)].href; };
     const shuffle = (a) => {
       for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -1329,6 +1333,10 @@
     };
     shuffle(pool);
     next();
+    roll();
+    lucky.hidden = false;
+    lucky.addEventListener("click", roll);
+    window.addEventListener("pageshow", (e) => { if (e.persisted) roll(); });
     if (pool.length > imgs.length) {
       btn.hidden = false;
       btn.addEventListener("click", next);
