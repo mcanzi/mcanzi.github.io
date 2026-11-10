@@ -318,6 +318,12 @@ h1, h2, h3, h4 {
 .section-head h2 { margin: 0 0 16px; font-size: 1.5rem; }
 .section-head a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; text-decoration: none; }
 .section-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 640px) {
+  /* on phones the links go under the heading, in one row that wraps */
+  .section-head { flex-direction: column; align-items: flex-start; gap: 0; }
+  .section-head h2 { margin-bottom: 8px; }
+  .section-links { justify-content: flex-start; gap: 6px 18px; margin-bottom: 14px; }
+}
 .strip-shuffle {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 0; border: 0; background: none; cursor: pointer;
