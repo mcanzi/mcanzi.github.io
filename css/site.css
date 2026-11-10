@@ -315,7 +315,6 @@ h1, h2, h3, h4 {
 .accent-pandan     { --card-accent: var(--pandan); }
 .accent-hornbill   { --card-accent: var(--hornbill); }
 .accent-kingfisher { --card-accent: var(--kingfisher); }
-.accent-orchid     { --card-accent: var(--orchid); }
 
 .card-label { margin: 0 0 6px; font-size: 0.78rem; color: var(--card-accent, var(--hornbill)); text-transform: lowercase; }
 .card h3 { margin: 0 0 8px; font-size: 1.22rem; color: var(--mist); }
@@ -890,11 +889,8 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] svg [fill="#e4e7d8"] { fill: var(--mist); }
 :root[data-theme="light"] svg [stroke="#343a42"] { stroke: var(--vine); }
 
-/* theme switch in the navigation bar */
-/* the background lizard: a faint ink drawing on the light theme */
-/* instead of the lizard, cherry blossoms and falling petals all over the background (img/motifs/sakura.svg) */
+/* light theme background: cherry blossoms and falling petals (img/motifs/sakura.svg) */
 :root[data-theme="light"] body::before {
-  inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
   background: url("../img/motifs/sakura.svg") repeat 0 0 / 600px 600px;
   opacity: 0.2;
 }
@@ -905,7 +901,8 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] .motif-ink { display: block; opacity: 0.16; }
 :root[data-theme="light"] .lecture:hover .motif-ink { opacity: 0.32; }
 
-/* shows the theme it switches to: sun + "light mode" on the dark theme, moon + "dark mode" on the light one */
+/* theme switch in the navigation bar: shows the theme it switches to (sun + "light mode" on the dark theme,
+   moon + "dark mode" on the light one) */
 .theme-toggle {
   display: inline-flex; align-items: center; height: 36px; padding: 0 8px;
   border: 0; border-radius: 6px; background: none; cursor: pointer;
