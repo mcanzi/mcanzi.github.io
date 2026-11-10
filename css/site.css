@@ -446,7 +446,8 @@ h1, h2, h3, h4 {
 /* key to the parts above the lecture grid */
 .parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.88rem; color: var(--mist); }
 .parts-key li { display: inline-flex; align-items: baseline; gap: 8px; }
-.parts-key li::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--lec); align-self: center; }
+/* a tiny card in the part's slide theme: its background, border and accent edge */
+.parts-key li::before { content: ""; width: 16px; height: 12px; box-sizing: border-box; border-radius: 3px; background: var(--lec-bg, var(--lec)); border: 1px solid var(--lec-line, transparent); border-left: 3px solid var(--lec); align-self: center; }
 .parts-key .mono { color: var(--muted); font-size: 0.78rem; }
 
 /* one grid of equal cards: every row as tall as the tallest */
