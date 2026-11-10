@@ -460,11 +460,11 @@ h1, h2, h3, h4 {
 }
 .lectures > li { display: flex; min-width: 0; }
 /* course lectures: each card looks like its slides (theme-dark.css, theme-light.css and theme-doglord.css in
-   ws26_statistics), in every theme of the site: its own background, text colours, accent, faint background
-   drawings (rafflesias, cherry blossoms, flames) and lecture drawing (img/motifs/dark/, ink/, doglord/) */
-.theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; --lec-motif-op: 0.3; }
-.theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; --lec-motif-op: 0.2; }
-.theme-doglord { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; --lec-motif-op: 0.38; }
+   ws26_statistics), in every theme of the site: its own background, text colours, accent and faint background
+   drawings (rafflesias, cherry blossoms, flames); no lecture drawing, like the slides */
+.theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; }
+.theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; }
+.theme-doglord { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; }
 
 .lecture {
   position: relative;
@@ -510,8 +510,6 @@ h1, h2, h3, h4 {
 .theme-dark .lecture::before    { background-image: url("../img/motifs/rafflesia.svg"); background-size: 200px 200px; opacity: 0.08; }
 .theme-light .lecture::before   { background-image: url("../img/motifs/sakura.svg"); background-size: 190px 190px; opacity: 0.2; }
 .theme-doglord .lecture::before { background-image: url("../img/motifs/doglord-flames.svg"); background-size: 180px 180px; opacity: 0.08; }
-.lecture .motif-own { opacity: var(--lec-motif-op); }
-.lecture:hover .motif-own { opacity: calc(var(--lec-motif-op) * 1.8); }
 /* parts of the course have no colour of their own: the key just lists them */
 .parts-key li.part-plain::before { display: none; }
 
