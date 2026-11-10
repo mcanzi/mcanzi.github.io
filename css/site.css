@@ -444,11 +444,9 @@ h1, h2, h3, h4 {
 .course-links { margin: 0; }
 
 /* key to the parts above the lecture grid */
-.parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.88rem; color: var(--mist); }
-.parts-key li { display: inline-flex; align-items: baseline; gap: 8px; }
-/* a tiny card in the part's slide theme: its background, border and accent edge */
-.parts-key li::before { content: ""; width: 16px; height: 12px; box-sizing: border-box; border-radius: 3px; background: var(--lec-bg, var(--lec)); border: 1px solid var(--lec-line, transparent); border-left: 3px solid var(--lec); align-self: center; }
-.parts-key .mono { color: var(--muted); font-size: 0.78rem; }
+.parts-key { list-style: none; margin: 22px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.78rem; color: var(--muted); }
+/* without a key (one part), the cards still keep a line's distance from the text */
+.course-head + .lectures { margin-top: 24px; }
 
 /* one grid of equal cards: every row as tall as the tallest */
 .lectures {
@@ -502,7 +500,6 @@ h1, h2, h3, h4 {
 .theme-light .lecture::before   { background-image: url("../img/motifs/sakura.svg"); background-size: 190px 190px; opacity: 0.2; }
 .theme-doglord .lecture::before { background-image: url("../img/motifs/doglord-flames.svg"); background-size: 180px 180px; opacity: 0.08; }
 /* parts of the course have no colour of their own: the key just lists them */
-.parts-key li.part-plain::before { display: none; }
 
 /* ---- photography ----------------------------------------------------- */
 
