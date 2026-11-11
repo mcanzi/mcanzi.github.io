@@ -76,7 +76,6 @@
 .ctl.play:disabled { box-shadow: none; }
 .ctl .i-pause, .playing .ctl .i-play { display: none; }
 .playing .ctl .i-pause { display: block; }
-:root[data-theme="light"] .ctl.play { color: #fff; }
 
 /* ---- track list (inside the window) ---------------------------------------------------- */
 .tracks-wrap { border-top: 1px solid var(--vine); padding: 12px 10px 10px; }

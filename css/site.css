@@ -506,7 +506,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 }
 .lectures > li { display: flex; min-width: 0; }
 /* course and workshop lectures: the cards take the colours and background drawings of the site's current
-   theme (rafflesias, buttercups, cherry blossoms, toadstools), whatever the theme of the slides */
+   theme (rafflesias, buttercups, toadstools), whatever the theme of the slides */
 .lectures { --lec: var(--pandan); --lec-bg: var(--understory); --lec-fg: var(--mist); --lec-muted: var(--muted); --lec-line: var(--vine); --lec-code: var(--hornbill); }
 
 .lecture {
@@ -754,7 +754,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .lang-current { color: var(--floor); background: var(--pandan); }
 
 /* background motif: rafflesias and their buds all over the page, very faint (img/motifs/rafflesia.svg);
-   the light theme has cherry blossoms instead, the purple theme toadstools */
+   the glacier theme has buttercups instead, the purple theme toadstools */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
@@ -966,7 +966,7 @@ main, .site-footer { position: relative; z-index: 1; }
   background: color-mix(in srgb, var(--c) 12%, transparent);
 }
 .credits { white-space: nowrap; }
-/* one colour per role: dark theme, then light theme (muted Japanese tones) */
+/* one colour per role */
 .credit[data-r="C"]  { --c: #e8a33d; }
 .credit[data-r="DC"] { --c: #45b4c8; }
 .credit[data-r="FA"] { --c: #a8cf78; }
