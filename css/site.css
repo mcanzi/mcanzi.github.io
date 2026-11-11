@@ -21,6 +21,8 @@
   --c2:         #f2d45c;   /* moon yellow */
   --c3:         #5aa0e0;   /* moonlit blue */
   --c4:         #e08ab8;   /* night orchid */
+  --title-top:    #ece07e;   /* page titles and the name: moonlight above, leaf green below */
+  --title-bottom: #5cc48a;
 
   /* colours that depend on the theme but are not part of the palette */
   --nav-bg:      rgba(11, 17, 14, 0.9);
@@ -83,6 +85,18 @@ h1, h2, h3, h4 {
   font-weight: 800;
   letter-spacing: -0.01em;
 }
+
+/* page titles and the name on the home page: a gradient from --title-top to --title-bottom, set by each
+   theme (forest: moonlight to leaf green; glacier: ice white to ice blue; purple: the logo's pink to violet) */
+h1 {
+  background: linear-gradient(180deg, var(--title-top) 8%, var(--title-bottom) 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-suffix { -webkit-text-fill-color: var(--muted); }
+h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
+@media print { h1 { background: none; -webkit-text-fill-color: currentColor; } }
 
 ::selection { background: var(--hornbill); color: var(--floor); }
 
@@ -886,6 +900,8 @@ main, .site-footer { position: relative; z-index: 1; }
   --moss:       #5d7180;
   --leaf:       #8fb8a8;
   --c1: #a9cbe0; --c2: #f2917a; --c3: #d9b56a; --c4: #8fb8a8;   /* chart colours */
+  --title-top:    #eef6fa;   /* page titles and the name: ice white above, ice blue below */
+  --title-bottom: #8dbbd8;
 
   --nav-bg:      rgba(30, 40, 48, 0.9);
   --glow-1:      rgba(169, 203, 224, 0.10);

@@ -25,7 +25,7 @@
 .doglorded-orange { color: var(--hornbill); animation-name: doglorded-orange; }
 @keyframes doglorded-orange { from { color: #ffd9b0; text-shadow: 0 0 12px rgba(242, 176, 74, 0.9); } }
 @media (prefers-reduced-motion: reduce) { .doglorded { animation: none; } }
-/* page titles have the logo's colours as a fill (theme-purple.css); the new words take their own colour instead */
+/* page titles have a gradient as their fill (site.css); the new words take their own colour instead */
 h1 .doglorded { -webkit-text-fill-color: currentColor; }
 /* the highlighted language keeps its own text colour, which is readable on its pill */
 .lang-current .doglorded { color: inherit; animation: none; }

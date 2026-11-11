@@ -23,8 +23,8 @@
   --leaf:       #8fa24a;
   --c1: #a06ae6; --c2: #d5813f; --c3: #8db6c6; --c4: #93a84a;
 
-  --logo-pink:   #dc7286;
-  --logo-violet: #9358e0;
+  --title-top:    #dc7286;   /* page titles and the name (site.css): the logo's pink above, violet below */
+  --title-bottom: #9358e0;
 
   --nav-bg:      rgba(18, 19, 16, 0.9);
   --glow-1:      rgba(104, 128, 146, 0.12);   /* the night sky behind the trees */
@@ -64,15 +64,6 @@
 @media (max-width: 700px) { :root[data-theme="purple"] body::before { background-size: 380px 380px; opacity: 0.09; } }
 
 :root[data-theme="purple"] .hero-name { letter-spacing: 0.01em; }
-
-/* the name and the page titles in the colours of the logo, pink above and violet below */
-:root[data-theme="purple"] h1 {
-  background: linear-gradient(180deg, var(--logo-pink) 8%, var(--logo-violet) 92%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: var(--logo-violet);
-}
-:root[data-theme="purple"] .hero-suffix { -webkit-text-fill-color: var(--muted); }
-:root[data-theme="purple"] h1::selection, :root[data-theme="purple"] h1 ::selection { -webkit-text-fill-color: var(--floor); }
 
 /* the terminal and the player window: a little orange in the frame, like the amplifier cabinets */
 :root[data-theme="purple"] .console { border-color: color-mix(in srgb, var(--hornbill) 22%, var(--vine)); }
