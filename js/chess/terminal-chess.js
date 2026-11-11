@@ -8,7 +8,7 @@ import { Chess } from "./chess-lib.js";
 const DEPTH = 4;      // engine strength: search depth in half-moves (plus captures and checks)
 const TIME = 2000;    // and a time limit per move, in ms, for slow phones
 
-export function setup({ T, pre, add, fill, finish, log }) {
+export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
   const S = T.t.chess;
   let g = null;   // the game: { c, you, fens, busy }
   let worker = null;
@@ -114,7 +114,8 @@ export function setup({ T, pre, add, fill, finish, log }) {
     const cmd = text.trim().toLowerCase();
     if (g.busy) { say(p, S.wait); return true; }
     if (cmd === "board") { drawBoard(p); say(p, S.yourMove); return true; }
-    if (cmd === "resign") { g = null; say(p, S.resigned); return true; }
+    // resigning clears the terminal and the pangolin (or the wizard dog) announces it
+    if (cmd === "resign") { g = null; log.replaceChildren(); pangolinSays(pre(), S.resigned); return true; }
     if (cmd === "undo") {
       const n = g.c.history().length;
       if (n < 2 || (g.you === "b" && n < 3)) { say(p, S.undoNone); return true; }

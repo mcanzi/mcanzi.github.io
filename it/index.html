@@ -430,7 +430,7 @@
       if (chessMod) { chessMod.start(args, p); return null; }
       add(p, T.t.chess.loading, "term-out");
       import(T.chessUi)
-        .then((mod) => { chessMod = mod.setup({ T, pre, add, fill, finish, log }); chessMod.start(args, pre()); })
+        .then((mod) => { chessMod = mod.setup({ T, pre, add, fill, finish, log, pangolinSays }); chessMod.start(args, pre()); })
         .catch(() => { const q = pre(); add(q, T.t.chess.error, "term-out"); finish(q); });
       return null;
     },
