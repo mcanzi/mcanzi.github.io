@@ -1,7 +1,7 @@
 /* Purple theme: black and violet, with candle gold for accents, a faint film grain and a purple
    glow, after early-seventies heavy metal sleeves. Hidden: only switched on from the terminal on the
    home page (layouts/index.html; the theme button switches it off). Remembered in the browser like
-   the light theme (localStorage "theme"). Loaded by the main site (partials/head.html) and by the
+   the other themes (localStorage "theme"). Loaded by the main site (partials/head.html) and by the
    pages in tools/ (their scripts/build.mjs). What the terminal's easter egg adds on top of this
    theme is in css/easter-egg.css. */
 
