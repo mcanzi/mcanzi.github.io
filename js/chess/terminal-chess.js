@@ -5,7 +5,7 @@
 // cleared, so only the new board and the reply are on screen. chess-lib.js (chess.js) checks the moves.
 import { Chess } from "./chess-lib.js";
 
-const DEPTH = 4;      // engine strength: search depth in half-moves (plus captures and checks)
+const DEPTH = 3;      // engine strength: search depth in half-moves (plus captures and checks)
 const TIME = 2000;    // and a time limit per move, in ms, for slow phones
 
 export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {

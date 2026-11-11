@@ -8,7 +8,8 @@
  * Search: iterative deepening, alpha-beta with a transposition table, check extension, quiescence on
  * captures and promotions. Evaluation: material and piece-square tables (Michniewski's simplified
  * evaluation function), king tables blended by game phase, and a mop-up term for won endgames.
- * Strength is kept moderate by the depth limit and a small random bonus for each root move.
+ * Strength is kept moderate by the depth limit, a small random bonus for each root move, and a
+ * human-like choice among the best moves when they are close (within 40 centipawns).
  */
 (function () {
   "use strict";
@@ -387,6 +388,28 @@
       if (bestScore > MATE - 100) break;
       if (stopped) break;
     }
+    // a human-like choice: score every root move exactly, then pick among the moves within 40 centipawns
+    // of the best (best 55%, second 30%, third 15%); skipped when a mate is found or time is up
+    if (done >= 1 && Math.abs(bestScore) < MATE - 100 && !stopped) {
+      const scored = [];
+      path.push(posKey());
+      for (const r of root) {
+        make(r.m);
+        const s = -search(done - 1, -INF, INF, 1);
+        unmake();
+        if (stopped) break;
+        scored.push({ m: r.m, s });
+      }
+      path.pop();
+      if (!stopped && scored.length) {
+        scored.sort((a, b) => b.s - a.s);
+        const near = scored.filter((x) => x.s >= scored[0].s - 40).slice(0, 3);
+        const w = [0.55, 0.3, 0.15].slice(0, near.length);
+        let pick = Math.random() * w.reduce((a, b) => a + b, 0), i = 0;
+        while (i < near.length - 1 && (pick -= w[i]) > 0) i++;
+        bestMove = near[i].m; bestScore = near[i].s;
+      }
+    }
     const pr = mPro(bestMove);
     return { move: sqName(mFrom(bestMove)) + sqName(mTo(bestMove)) + (pr ? " nbrq"[pr - 1] : ""), depth: done, score: bestScore, nodes };
   }
@@ -396,7 +419,7 @@
   else if (typeof self !== "undefined" && typeof self.postMessage === "function") {
     self.onmessage = (e) => {
       const { fen, history, depth, time } = e.data;
-      self.postMessage(think(fen, history, depth || 4, time || 1500));
+      self.postMessage(think(fen, history, depth || 3, time || 1500));
     };
   }
 })();
