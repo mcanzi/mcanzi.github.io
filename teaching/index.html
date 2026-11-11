@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
+  <link rel="stylesheet" href="/css/site.css?v=f3cb92470bfd">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -156,11 +156,27 @@
   
   
   
+  <p class="jump mono"><a href="#statistics">statistics (for linguists)</a> · <a href="#workshops">workshops</a> · <a href="#modules">taught courses</a> · <a href="#evaluations">evaluations</a></p>
   
-  <p class="jump mono"><a href="#course">statistics (for linguists)</a> · <a href="#modules">taught modules</a> · <a href="#evaluations">evaluations</a> · <a href="#workshops">workshops</a></p>
   
-
-  <div id="course">
+  <section class="course-tabs" id="courses">
+    
+    <div class="course-tablist" role="tablist" aria-label="courses and workshops">
+      
+      <button type="button" role="tab" class="course-tab" id="tab-statistics" aria-controls="statistics" aria-selected="true">
+        <span class="course-tab-kind mono">course</span>
+        <span class="course-tab-name">Statistics (for Linguists)</span>
+      </button>
+      
+      <button type="button" role="tab" class="course-tab" id="tab-workshops" aria-controls="workshops" aria-selected="false" tabindex="-1">
+        <span class="course-tab-kind mono">workshop</span>
+        <span class="course-tab-name">Data visualisation with ggplot2</span>
+      </button>
+      
+    </div>
+    
+    
+    <div class="course-panel" id="statistics" role="tabpanel" aria-labelledby="tab-statistics">
   
   
   <section class="course">
@@ -168,6 +184,7 @@
       <div>
         <p class="card-label mono">winter semester 2026/27</p>
         <h2 class="course-title">Statistics (for Linguists)</h2>
+        
         <p>An introduction to data analysis in R, from the tidyverse and descriptive statistics to linear regression, interactions, significance testing, mixed models and mixed-effects logistic regression. The lectures follow the structure of Winter (2019), <em>Statistics for Linguists: An Introduction Using R</em>, with new examples and data sets. Each deck is a self-contained HTML file: click a lecture to open the slides.</p>
       </div>
       <p class="course-links">
@@ -370,9 +387,78 @@
     </ol>
   </section>
 </div>
+    
+    <div class="course-panel" id="workshops" role="tabpanel" aria-labelledby="tab-workshops">
+  
+  
+  <section class="course">
+    <div class="course-head">
+      <div>
+        
+        <h2 class="course-title">Data visualisation with ggplot2</h2>
+        <p>Workshops on R, statistics and data visualisation that I have taught for universities and research institutes.</p>
+        <p>A three-part introduction to ggplot2, from the grammar of graphics to publication-ready figures, with simulated social-science data. The slides are a sample: the workshop itself also includes live coding, exercises and solutions. Click a part to open its slides.</p>
+      </div>
+      <p class="course-links">
+        <a class="btn" href="https://github.com/mcanzi/ggplot2_workshop"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> source on GitHub</a>
+      </p>
+    </div>
+
+    
+    
+    <ol class="lectures">
+      
+      
+      
+      <li class="theme-light">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ggplot2_workshop/01_grammar_of_graphics.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
+<span class="lecture-text">
+  <span class="lecture-title">The grammar of graphics</span>
+  <span class="lecture-sub">Data, aesthetics, geometries and layers</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-dark">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">02</span>
+<span class="lecture-text">
+  <span class="lecture-title">Colour, shape and size</span>
+  <span class="lecture-sub">Mapping and setting, scales and palettes</span>
+  <span class="lecture-soon mono">in preparation</span>
+</span>
+</div>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">03</span>
+<span class="lecture-text">
+  <span class="lecture-title">Good practice</span>
+  <span class="lecture-sub">Honest figures, annotation and publication-ready output</span>
+  <span class="lecture-soon mono">in preparation</span>
+</span>
+</div>
+        
+      </li>
+      
+      
+    </ol>
+  </section>
+</div>
+    
+  </section>
+  
 
   <div class="prose prose-teaching">
-    <h2 id="modules">Taught modules</h2>
+    <h2 id="modules">Taught courses</h2>
 <ul>
 <li><strong>Statistics</strong> (2021+, every semester): R, linear regression, linear mixed models, logistic regression, analysis of experimental data.</li>
 <li><strong>Advanced Statistics</strong> (2021+): non-linear modelling (GAMMs), cluster analysis, factor analysis, random forests.</li>
@@ -527,79 +613,40 @@
     </div>
   </section>
   
-  
-  <section class="teach-workshop" id="workshops">
-    <div class="prose">
-      <h2>Workshops</h2>
-      <p>Workshops on R, statistics and data visualisation that I have taught for universities and research institutes.</p>
-    </div>
-    
-  
-  
-  <section class="course">
-    <div class="course-head">
-      <div>
-        
-        <h2 class="course-title">Data visualisation with ggplot2</h2>
-        <p>A three-part introduction to ggplot2, from the grammar of graphics to publication-ready figures, with simulated social-science data. The slides are a sample: the workshop itself also includes live coding, exercises and solutions. Click a part to open its slides.</p>
-      </div>
-      <p class="course-links">
-        <a class="btn" href="https://github.com/mcanzi/ggplot2_workshop"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> source on GitHub</a>
-      </p>
-    </div>
 
-    
-    
-    <ol class="lectures">
-      
-      
-      
-      <li class="theme-light">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ggplot2_workshop/01_grammar_of_graphics.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
-<span class="lecture-text">
-  <span class="lecture-title">The grammar of graphics</span>
-  <span class="lecture-sub">Data, aesthetics, geometries and layers</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-dark">
-        
-        
-        <div class="lecture lecture-planned"><span class="lecture-n mono">02</span>
-<span class="lecture-text">
-  <span class="lecture-title">Colour, shape and size</span>
-  <span class="lecture-sub">Mapping and setting, scales and palettes</span>
-  <span class="lecture-soon mono">in preparation</span>
-</span>
-</div>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <div class="lecture lecture-planned"><span class="lecture-n mono">03</span>
-<span class="lecture-text">
-  <span class="lecture-title">Good practice</span>
-  <span class="lecture-sub">Honest figures, annotation and publication-ready output</span>
-  <span class="lecture-soon mono">in preparation</span>
-</span>
-</div>
-        
-      </li>
-      
-      
-    </ol>
-  </section>
-
-  </section>
-  
 </article>
+
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll(".course-tab")];
+  const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
+  const show = (k, focus) => {
+    tabs.forEach((t, i) => {
+      const on = i === k;
+      t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1;
+      panels[i].hidden = !on;
+    });
+    if (focus) tabs[k].focus();
+  };
+  const fromHash = () => {
+    const k = panels.findIndex((p) => "#" + p.id === location.hash);
+    if (k < 0) return false;
+    show(k); document.getElementById("courses").scrollIntoView(); return true;
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => { show(i); history.replaceState(null, "", "#" + panels[i].id); });
+    t.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      e.preventDefault(); const k = (i + d + tabs.length) % tabs.length; show(k, true);
+      history.replaceState(null, "", "#" + panels[k].id);
+    });
+  });
+  if (!fromHash()) show(0);
+  window.addEventListener("hashchange", fromHash);
+})();
+</script>
+
 
   </main>
   <footer class="site-footer">
