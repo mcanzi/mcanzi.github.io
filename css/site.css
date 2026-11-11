@@ -1,8 +1,7 @@
 /* arang: the charcoal theme for mcanzi.github.io
-   Same type and colours as the Statistics for Linguists slides
-   (theme-dark.css, theme-light.css, theme-purple.css in
-   ws26_statistics): Bricolage Grotesque, Atkinson Hyperlegible,
-   JetBrains Mono on charcoal. */
+   Same type and colours as the slides (theme-dark.css in ws26_statistics,
+   theme-light.css in ggplot2_workshop, the purple theme for forensic speech
+   science): Bricolage Grotesque, Atkinson Hyperlegible, JetBrains Mono on charcoal. */
 
 :root {
   --floor:      #141619;
@@ -480,8 +479,8 @@ h1, h2, h3, h4 {
   gap: 10px;
 }
 .lectures > li { display: flex; min-width: 0; }
-/* course and workshop lectures: each card looks like its slides (theme-dark.css, theme-light.css and
-   theme-purple.css in ws26_statistics and ggplot2_workshop), in every theme of the site: its own background,
+/* course and workshop lectures: each card looks like its slides (dark: ws26_statistics, light:
+   ggplot2_workshop, purple: forensic speech science), in every theme of the site: its own background,
    text colours, accent and faint background drawings (rafflesias, cherry blossoms, flames) */
 .theme-dark    { --lec: #cb6d67; --lec-bg: #141619; --lec-fg: #e4e7d8; --lec-muted: #a3abb3; --lec-line: #343a42; --lec-code: #e8a33d; }
 .theme-light   { --lec: #b3443d; --lec-bg: #f3eee5; --lec-fg: #2b2723; --lec-muted: #6e675e; --lec-line: #e0d8cb; --lec-code: #cd5c5c; }
