@@ -466,7 +466,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .course-title { margin: 0; font-size: 1.9rem; }
 .course-links { margin: 0; }
 
-/* tabs above the course box: one course or workshop at a time (layouts/_default/teaching.html) */
+/* tabs above the course box: one course at a time (layouts/_default/teaching.html) */
 .course-tabs { scroll-margin-top: 88px; }
 .course-tablist + .course-panel { scroll-margin-top: 170px; }
 .course-tablist { display: flex; flex-wrap: wrap; gap: 6px; position: relative; z-index: 1; margin-bottom: -1px; }
@@ -505,7 +505,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
   gap: 10px;
 }
 .lectures > li { display: flex; min-width: 0; }
-/* course and workshop lectures: the cards take the colours and background drawings of the site's current
+/* course lectures: the cards take the colours and background drawings of the site's current
    theme (rafflesias, buttercups, toadstools), whatever the theme of the slides */
 .lectures { --lec: var(--pandan); --lec-bg: var(--understory); --lec-fg: var(--mist); --lec-muted: var(--muted); --lec-line: var(--vine); --lec-code: var(--hornbill); }
 
