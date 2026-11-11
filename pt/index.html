@@ -36,8 +36,8 @@
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/site.css?v=8b304077b946">
-  <link rel="stylesheet" href="/css/theme-purple.css?v=d983a356bae0">
-  <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=15b1edb909db">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=69f92eacb7bb">
 </head>
 
 <body class="is-home">
@@ -73,7 +73,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#0c0911" })[root.dataset.theme] || "#0b110e"; };
+  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[root.dataset.theme] || "#0b110e"; };
   
   const next = { dark: "glacier", glacier: "dark", purple: "glacier" };
   sync();
@@ -456,7 +456,7 @@
     if (name === "dark") delete root.dataset.theme; else root.dataset.theme = name;
     try { localStorage.setItem("theme", name); } catch (e) {}
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = ({ glacier: "#1e2830", purple: "#0c0911" })[name] || "#0b110e";
+    if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[name] || "#0b110e";
   };
   const art = () => (summoned() ? T.dogArt : pangolinArt);
   const pangolinSays = (p, text) => { add(p, bubble(wrap(text)), "say-bubble"); add(p, art(), "say-art"); };

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="560" height="560" viewBox="0 0 560 560">
-  <!-- Background tile for the purple theme (css/theme-purple.css): flames of different sizes,
+  <!-- Background tile for the purple theme (css/theme-purple.css): flames in the orange of the amplifiers on the Resonance cover, of different sizes,
        scattered so the repeat is hard to spot. Each flame sits fully inside the tile. -->
   <defs>
     <g id="f">
-      <path fill="#e2772f" d="M50 138C24 138 8 121 9 99C10 84 17 74 22 64C24 72 27 78 32 82C28 66 31 52 26 34C38 44 45 56 46 68C47 46 44 26 55 3C59 24 69 38 71 54C74 48 76 42 76 32C86 46 92 62 91 82C94 110 79 138 50 138Z"/>
-      <path fill="#f2b04a" d="M50 133C35 133 27 121 29 107C30 96 37 89 41 80C42 88 45 92 48 94C47 84 48 74 53 64C58 78 66 86 68 98C72 116 64 133 50 133Z"/>
+      <path fill="#d5813f" d="M50 138C24 138 8 121 9 99C10 84 17 74 22 64C24 72 27 78 32 82C28 66 31 52 26 34C38 44 45 56 46 68C47 46 44 26 55 3C59 24 69 38 71 54C74 48 76 42 76 32C86 46 92 62 91 82C94 110 79 138 50 138Z"/>
+      <path fill="#e6b26a" d="M50 133C35 133 27 121 29 107C30 96 37 89 41 80C42 88 45 92 48 94C47 84 48 74 53 64C58 78 66 86 68 98C72 116 64 133 50 133Z"/>
     </g>
   </defs>
   <use xlink:href="#f" href="#f" transform="translate(40 60) scale(0.9)"/>
