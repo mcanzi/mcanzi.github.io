@@ -773,6 +773,14 @@ main, .site-footer { position: relative; z-index: 1; }
   .term-input input { font-size: 16px; }
 }
 .term .term-out { white-space: pre-wrap; overflow-wrap: anywhere; display: inline-block; max-width: 100%; }
+/* chess in the terminal (js/chess/terminal-chess.js): white pieces in capitals, black in lower case */
+/* the board grows with the terminal (container units, .term-log is the container) and sits in the middle */
+.term .chess-board { display: block; width: max-content; margin: 0 auto; font-size: clamp(1em, 4.4cqi, 1.8em); line-height: 1.2; }
+.term .chess-board .cw { color: var(--strong); font-weight: 700; }
+.term .chess-board .cb { color: var(--kingfisher); font-weight: 700; }
+.term .chess-board .ce { color: var(--muted); opacity: 0.55; }
+.term .chess-board .clast { background: color-mix(in srgb, var(--hornbill) 30%, transparent); border-radius: 2px; }
+.term .chess-board .ccheck { background: color-mix(in srgb, var(--pandan) 45%, transparent); border-radius: 2px; }
 
 /* CV download: amber so it stands apart from the green primary button */
 .btn-cv { display: inline-flex; align-items: center; gap: 8px; background: var(--hornbill); border-color: var(--hornbill); color: var(--floor); font-weight: 600; }
