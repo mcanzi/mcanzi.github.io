@@ -18,6 +18,7 @@
   --orchid:     #d16fb8;
   --moss:       #6e5a8a;
   --leaf:       #7d5fa8;
+  --c1: var(--pandan); --c2: var(--hornbill); --c3: var(--kingfisher); --c4: var(--orchid);
 
   --nav-bg:      rgba(12, 9, 17, 0.9);
   --glow-1:      rgba(140, 80, 230, 0.16);

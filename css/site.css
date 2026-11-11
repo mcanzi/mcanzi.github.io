@@ -16,6 +16,11 @@
   --orchid:     #c3b6d6;
   --moss:       #6f8a7a;
   --leaf:       #88c9a8;
+  /* chart colours: stronger than the accents, so that groups in figures are easy to tell apart */
+  --c1:         #5cc48a;   /* leaf green */
+  --c2:         #f2d45c;   /* moon yellow */
+  --c3:         #5aa0e0;   /* moonlit blue */
+  --c4:         #e08ab8;   /* night orchid */
 
   /* colours that depend on the theme but are not part of the palette */
   --nav-bg:      rgba(11, 17, 14, 0.9);
@@ -706,16 +711,16 @@ h1, h2, h3, h4 {
 .coauth { margin: 18px 0 8px; padding: 18px; background: var(--understory); border: 1px solid var(--vine); border-radius: var(--radius); }
 .coauth-svg { display: block; max-width: 100%; margin-top: 10px; font-family: var(--f-mono); user-select: none; -webkit-user-select: none; }
 .coauth-link { stroke: var(--vine); transition: stroke 0.15s, opacity 0.15s; }
-.coauth-link.on { stroke: var(--pandan); }
+.coauth-link.on { stroke: var(--c1); }
 .coauth-link.dim { opacity: 0.25; }
 .coauth-node { cursor: pointer; outline: none; }
-.coauth-node circle:first-child { fill: var(--kingfisher); stroke: var(--understory); stroke-width: 2; transition: opacity 0.15s; }
-.coauth-node.me circle:first-child { fill: var(--hornbill); }
+.coauth-node circle:first-child { fill: var(--c3); stroke: var(--understory); stroke-width: 2; transition: opacity 0.15s; }
+.coauth-node.me circle:first-child { fill: var(--c2); }
 .coauth-node text { fill: var(--muted); font-size: 11px; transition: opacity 0.15s; }
 .coauth-node.me text { fill: var(--mist); font-size: 12px; }
 .coauth-node.on circle:first-child { stroke: var(--mist); }
 .coauth-node.on text { fill: var(--mist); }
-.coauth-node:focus-visible circle:first-child { stroke: var(--pandan); }
+.coauth-node:focus-visible circle:first-child { stroke: var(--c1); }
 .coauth-node.dim circle:first-child, .coauth-node.dim text { opacity: 0.3; }
 .coauth-info { margin-top: 8px; min-height: 3em; }
 .coauth-sum { margin: 0; font-size: 0.88rem; color: var(--muted); }
@@ -880,6 +885,7 @@ main, .site-footer { position: relative; z-index: 1; }
   --orchid:     #a8586f;
   --moss:       #8a8c74;
   --leaf:       #7b875b;
+  --c1: var(--pandan); --c2: var(--hornbill); --c3: var(--kingfisher); --c4: var(--orchid);
 
   --nav-bg:      rgba(227, 219, 204, 0.9);
   --glow-1:      rgba(255, 250, 240, 0.25);
@@ -930,6 +936,7 @@ main, .site-footer { position: relative; z-index: 1; }
   --orchid:     #d9b56a;   /* stamen gold */
   --moss:       #5d7180;
   --leaf:       #8fb8a8;
+  --c1: var(--pandan); --c2: var(--hornbill); --c3: var(--kingfisher); --c4: var(--orchid);
 
   --nav-bg:      rgba(30, 40, 48, 0.9);
   --glow-1:      rgba(169, 203, 224, 0.10);

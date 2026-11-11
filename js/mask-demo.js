@@ -10,7 +10,7 @@
   const FR = ["f", "t", "s", "h"], RESP = ["f", "t", "s", "h", "x"];
   const IPA = { f: "/f/", t: "/θ/", s: "/s/", h: "/ʃ/", x: TX.none };
   const EG = { f: "fie", t: "thigh", s: "sigh", h: "shy" };
-  const COL = { f: "var(--pandan)", t: "var(--hornbill)", s: "var(--kingfisher)", h: "var(--orchid)" };
+  const COL = { f: "var(--c1)", t: "var(--c2)", s: "var(--c3)", h: "var(--c4)" };
   const C = ["nm", "wm"];
   const RT_MIN = 150, RT_MAX = 5000;
   const S = { lis: "all", dev: "all" };
@@ -285,7 +285,7 @@
         RESP.forEach((r, j) => {
           const x = L + cw * j, v = val(f, r), diag = r === f;
           let colour, op;
-          if (st.view === "diff") { colour = v >= 0 ? "var(--pandan)" : "var(--kingfisher)"; op = Math.min(1, Math.abs(v) / maxAbs) * 0.85; }
+          if (st.view === "diff") { colour = v >= 0 ? "var(--c1)" : "var(--c3)"; op = Math.min(1, Math.abs(v) / maxAbs) * 0.85; }
           else { colour = COL[f]; op = diag ? 0.18 + 0.5 * v : Math.min(1, Math.sqrt(v / maxAbs)) * 0.85; }
           const g = el("g", { class: "mlab-cell" + (st.sel && st.sel[0] === f && st.sel[1] === r ? " on" : "") }, ui.svg);
           el("rect", { x: x + 2, y: y + 2, width: cw - 4, height: ch - 4, rx: 6, fill: "var(--raised)" }, g);
@@ -478,8 +478,8 @@
     ui.svg.setAttribute("aria-label", TX.l_aria);
     renders.push(() => {
       ui.legend.innerHTML =
-        `<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--pandan)"/></svg> ${esc(TX.var_th)}</span>` +
-        `<span><svg width="12" height="12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--kingfisher)"/></svg> ${esc(TX.var_other)}</span>`;
+        `<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--c1)"/></svg> ${esc(TX.var_th)}</span>` +
+        `<span><svg width="12" height="12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--c3)"/></svg> ${esc(TX.var_other)}</span>`;
       const sets = { all: FR, nonsib: ["f", "t"], sib: ["s", "h"] };
       const fs = sets[st.set] || [st.set];
       const ii = idxOf((it) => fs.includes(it.t));
@@ -504,8 +504,8 @@
         const off = n ? ((n % 2 ? 1 : -1) * Math.ceil(n / 2) * 5) : 0;
         const x = sx(o.a) + off, y = sy(o.b), pp = people[o.p];
         const g = el("g", { class: "mlab-pt" }, ui.svg);
-        if (pp.th) el("circle", { cx: x, cy: y, r: 5.5, fill: "var(--pandan)", opacity: 0.9 }, g);
-        else el("rect", { x: x - 5, y: y - 5, width: 10, height: 10, rx: 2, fill: "var(--kingfisher)", opacity: 0.9 }, g);
+        if (pp.th) el("circle", { cx: x, cy: y, r: 5.5, fill: "var(--c1)", opacity: 0.9 }, g);
+        else el("rect", { x: x - 5, y: y - 5, width: 10, height: 10, rx: 2, fill: "var(--c3)", opacity: 0.9 }, g);
         el("circle", { cx: x, cy: y, r: 11, fill: "transparent" }, g);
         hover(g, ui, () => `<strong>${pp.id}</strong> · ${esc(pp.th ? TX.var_th : TX.var_other)} · ${esc(pp.dev === "m" ? TX.dev_m : TX.dev_c)}<br>` +
           `${esc(TX.nomask)}: ${pct(o.a)} · ${esc(TX.mask)}: ${pct(o.b)}`);
