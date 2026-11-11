@@ -20,13 +20,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/music/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/music/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/music/assets/favicon-16x16.png">
-  <meta name="theme-color" content="#141619">
+  <meta name="theme-color" content="#15110e">
   <meta name="robots" content="noindex">
   <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light" || t === "glacier" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/theme-purple.css">
   <link rel="stylesheet" href="/css/easter-egg.css">
-  <link rel="stylesheet" href="/css/site.css?v=3208b5f8f545">
+  <link rel="stylesheet" href="/css/site.css?v=70238b79b9fe">
   <link rel="stylesheet" href="/music/assets/music.css?v=a4e0809c">
 </head>
 <body>
@@ -138,7 +138,7 @@
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
   const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", glacier: "#1e2830", purple: "#0c0911" })[root.dataset.theme] || "#141619"; };
+  const sync = () => { if (meta) meta.content = ({ light: "#f3eee5", glacier: "#1e2830", purple: "#0c0911" })[root.dataset.theme] || "#15110e"; };
   // the button turns dark into glacier, glacier into light and light into dark; the hidden purple theme goes to light
   const next = { dark: "glacier", glacier: "light", light: "dark", purple: "light" };
   sync();

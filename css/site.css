@@ -4,29 +4,29 @@
    science): Bricolage Grotesque, Atkinson Hyperlegible, JetBrains Mono on charcoal. */
 
 :root {
-  --floor:      #141619;
-  --understory: #1d2125;
-  --raised:     #23282d;
-  --vine:       #343a42;
-  --mist:       #e4e7d8;
-  --muted:      #a3abb3;
+  --floor:      #15110e;   /* brown charcoal, darker than the glacier theme */
+  --understory: #1d1814;
+  --raised:     #251f1a;
+  --vine:       #372e27;
+  --mist:       #ece3d4;   /* cream */
+  --muted:      #a89f92;
   --pandan:     #cb6d67;
   --hornbill:   #e8a33d;
-  --kingfisher: #45b4c8;
+  --kingfisher: #5fb3b0;
   --orchid:     #e39ac0;
   --moss:       #7f9b78;
   --leaf:       #6f9a4c;
 
   /* colours that depend on the theme but are not part of the palette */
-  --nav-bg:      rgba(20, 22, 25, 0.88);
-  --glow-1:      rgba(170, 190, 210, 0.09);
-  --glow-2:      rgba(168, 207, 120, 0.045);
+  --nav-bg:      rgba(21, 17, 14, 0.88);
+  --glow-1:      rgba(232, 163, 61, 0.09);   /* amber, like lamplight */
+  --glow-2:      rgba(203, 109, 103, 0.05);
   --strong:      #fff;
   --shadow:      0 18px 50px rgba(0, 0, 0, 0.35);
   --primary-hi:  #d4827d;
   --cv-hi:       #f0b65c;
   --dot-red:     #e0675f;
-  --hit:         rgba(228, 231, 216, 0.05);
+  --hit:         rgba(236, 227, 212, 0.05);
   color-scheme: dark;
 
   --f-head: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -39,6 +39,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+
+/* charts drawn with fixed colours in the templates follow the theme */
+svg [fill="#a3abb3"] { fill: var(--muted); }
+svg [fill="#e4e7d8"] { fill: var(--mist); }
+svg [stroke="#343a42"] { stroke: var(--vine); }
 
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 76px; }  /* jump links land below the sticky navigation bar */
 
@@ -736,10 +741,10 @@ h1, h2, h3, h4 {
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
-  opacity: 0.11;
+  opacity: 0.17;
 }
 main, .site-footer { position: relative; z-index: 1; }
-@media (max-width: 700px) { body::before { background-size: 420px 420px; opacity: 0.09; } }
+@media (max-width: 700px) { body::before { background-size: 420px 420px; opacity: 0.15; } }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
@@ -889,8 +894,8 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 /* the photo viewer stays dark on the light theme, so it keeps the dark theme's colours */
 :root[data-theme="light"] .lightbox {
-  --mist: #e4e7d8; --muted: #a3abb3; --pandan: #a8cf78; --kingfisher: #45b4c8;
-  --vine: #343a42; --raised: #23282d; --understory: #1d2125; --floor: #141619;
+  --mist: #ece3d4; --muted: #a89f92; --pandan: #a8cf78; --kingfisher: #5fb3b0;
+  --vine: #372e27; --raised: #251f1a; --understory: #1d1814; --floor: #15110e;
   color: var(--mist);
   color-scheme: dark;
 }
@@ -899,10 +904,6 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] .btn-primary:hover,
 :root[data-theme="light"] .btn-cv:hover { color: #fff; }
 :root[data-theme="light"] ::selection { color: #fff; }
-/* charts drawn with fixed colours in the templates */
-:root[data-theme="light"] svg [fill="#a3abb3"] { fill: var(--muted); }
-:root[data-theme="light"] svg [fill="#e4e7d8"] { fill: var(--mist); }
-:root[data-theme="light"] svg [stroke="#343a42"] { stroke: var(--vine); }
 
 /* light theme background: cherry blossoms and falling petals (img/motifs/sakura.svg) */
 :root[data-theme="light"] body::before {
@@ -940,9 +941,6 @@ main, .site-footer { position: relative; z-index: 1; }
   --hit:         rgba(223, 230, 234, 0.05);
   color-scheme: dark;
 }
-:root[data-theme="glacier"] svg [fill="#a3abb3"] { fill: var(--muted); }
-:root[data-theme="glacier"] svg [fill="#e4e7d8"] { fill: var(--mist); }
-:root[data-theme="glacier"] svg [stroke="#343a42"] { stroke: var(--vine); }
 :root[data-theme="glacier"] body::before {
   background: url("../img/motifs/buttercup.svg") repeat 0 0 / 600px 600px;
   opacity: 0.2;
