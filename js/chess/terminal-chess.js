@@ -14,7 +14,9 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
   let worker = null;
 
   const colourName = (col) => (col === "w" ? S.white : S.black);
-  const say = (p, text) => add(p, text, "term-out");
+  // in the purple theme (the Doglord has been summoned) you play the Doglord instead of the pangolin
+  const who = () => (document.documentElement.dataset.theme === "purple" ? S.whoDoglord : S.who);
+  const say = (p, text) => add(p, fill(text, { who: who() }), "term-out");
 
   // the board as text, from the player's side; the last move and a king in check are coloured
   const drawBoard = (p) => {
@@ -76,8 +78,13 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
     return m;
   };
 
-  // clear: wipe the terminal when the reply arrives, so only the new board and the reply are left
-  const engineMove = (clear) => {
+  // the screens after a reply and at the start hold only the board and a line or two of text,
+  // scrolled so that the text under the board is always visible
+  const bottom = () => { log.scrollTop = log.scrollHeight; };
+
+  // the engine's reply wipes the terminal, so only the new board and the reply are left;
+  // intro is the start message, shown after the engine's first move when the player has black
+  const engineMove = (intro) => {
     if (!worker) worker = new Worker(new URL("./engine.js", import.meta.url));
     g.busy = true;
     const game = g;
@@ -85,27 +92,31 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
       if (g !== game) return;   // resigned or restarted meanwhile
       g.busy = false;
       const r = e.data;
-      if (clear) log.replaceChildren();
+      log.replaceChildren();
       const p = pre();
-      if (!r.move) { say(p, result() || S.error); g = null; finish(p); return; }
+      if (!r.move) { say(p, result() || S.error); g = null; bottom(); return; }
       g.fens.push(g.c.fen());
       const m = g.c.move({ from: r.move.slice(0, 2), to: r.move.slice(2, 4), promotion: r.move[4] });
       drawBoard(p);
       const end = result();
-      say(p, fill(S.engineMove, { move: m.san }) + " " + (end || (game.c.inCheck() ? S.check + " " : "") + S.yourMove));
+      say(p, fill(S.engineMove, { move: m.san, who: who() }) + " " + (end || intro || (game.c.inCheck() ? S.check + " " : "") + S.yourMove));
       if (end) g = null;
-      finish(p);
+      bottom();
     };
     worker.onerror = () => { if (g === game) { g = null; const p = pre(); say(p, S.error); finish(p); } };
     worker.postMessage({ fen: g.c.fen(), history: g.fens, depth: DEPTH, time: TIME });
   };
 
-  const newGame = (args, p) => {
+  // a new game clears the terminal: the board, then the start message
+  const newGame = () => {
     g = { c: new Chess(), you: Math.random() < 0.5 ? "w" : "b", fens: [], busy: false };
-    say(p, fill(S.start, { colour: colourName(g.you) }));
-    if (g.you === "b") { say(p, S.thinking); engineMove(false); }
-    else { drawBoard(p); say(p, S.yourMove); }
-    finish(p);
+    const intro = fill(S.start, { colour: colourName(g.you) });
+    log.replaceChildren();
+    if (g.you === "b") { engineMove(intro); return; }
+    const p = pre();
+    drawBoard(p);
+    say(p, intro);
+    bottom();
   };
 
   // a line typed while a game is on: an in-game command or a move. Returns false if it is neither,
@@ -115,7 +126,7 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
     if (g.busy) { say(p, S.wait); return true; }
     if (cmd === "board") { drawBoard(p); say(p, S.yourMove); return true; }
     // resigning clears the terminal and the pangolin (or the wizard dog) announces it
-    if (cmd === "resign") { g = null; log.replaceChildren(); pangolinSays(pre(), S.resigned); return true; }
+    if (cmd === "resign") { g = null; log.replaceChildren(); pangolinSays(pre(), fill(S.resigned, { who: who() })); return true; }
     if (cmd === "undo") {
       const n = g.c.history().length;
       if (n < 2 || (g.you === "b" && n < 3)) { say(p, S.undoNone); return true; }
@@ -137,8 +148,7 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
     g.fens.push(before);
     const end = result();
     if (end) { drawBoard(p); say(p, end); g = null; return true; }
-    say(p, (g.c.inCheck() ? S.check + " " : "") + S.thinking);
-    engineMove(true);
+    engineMove();
     return true;
   };
 
