@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="560" height="560" viewBox="0 0 560 560">
+  <!-- Background tile for the purple theme (css/theme-purple.css): fly agarics drawn like the ones on
+       the Resonance cover, in ink: heavy black outlines, black hatching on the rust-red caps, cream
+       flecks, pale leaning stems with a shaded side. Alone and in clusters, of different sizes, scattered
+       so the repeat is hard to spot. Each toadstool sits fully inside the tile. -->
+  <defs>
+    <clipPath id="cap-clip">
+      <path d="M8 58C10 34 38 14 72 14C104 14 130 30 134 52C135 58 131 62 124 63C100 68 44 70 18 66C10 65 7 62 8 58Z"/>
+    </clipPath>
+    <clipPath id="stem-clip">
+      <path d="M60 70C59 96 56 120 49 140C61 146 79 146 89 139C82 119 80 95 80 70Z"/>
+    </clipPath>
+    <g id="t" stroke-linejoin="round" stroke-linecap="round">
+      <!-- stem: cream, shaded on the right, hatched under the cap -->
+      <path fill="#e3d6b8" d="M60 70C59 96 56 120 49 140C61 146 79 146 89 139C82 119 80 95 80 70Z"/>
+      <g clip-path="url(#stem-clip)">
+        <path fill="#a8997a" d="M73 70C74 96 76 120 80 143L92 141C84 119 82 95 82 70Z"/>
+        <path fill="none" stroke="#0b0b0a" stroke-width="2.2" d="M62 78l7 3M61 85l9 2M66 74l8 4M75 94l5 1M76 104l5 0M77 114l6 -1M78 124l6 -1M79 133l6 -1M56 128l3 7M59 112l2 5"/>
+      </g>
+      <path fill="none" stroke="#0b0b0a" stroke-width="4" d="M60 70C59 96 56 120 49 140C61 146 79 146 89 139C82 119 80 95 80 70"/>
+      <!-- underside of the cap -->
+      <path fill="#0b0b0a" d="M14 62C40 72 100 72 128 60C122 72 96 79 70 79C44 79 22 74 14 62Z"/>
+      <!-- cap: rust red, hatched in black, cream flecks -->
+      <path fill="#b9533a" d="M8 58C10 34 38 14 72 14C104 14 130 30 134 52C135 58 131 62 124 63C100 68 44 70 18 66C10 65 7 62 8 58Z"/>
+      <g clip-path="url(#cap-clip)" fill="none" stroke="#0b0b0a" stroke-width="2.4">
+        <path d="M14 56q5 -4 10 -3M22 61q6 -3 11 -2M30 52q4 -3 9 -2M38 62q5 -3 10 -2M48 56q5 -2 10 -1M58 63q6 -2 11 -1M66 55q5 -2 9 0M76 62q6 -1 11 0M86 55q5 -1 9 1M96 61q5 0 10 1M104 53q4 0 8 2M112 59q4 0 8 2M120 50q3 1 6 4M18 47q3 -3 7 -3M108 43q4 1 7 4M28 40q3 -3 7 -4M98 36q4 1 7 3"/>
+        <path stroke-width="1.8" d="M44 46l5 -1M82 46l5 1M60 49l5 0M70 42l4 0"/>
+      </g>
+      <g fill="#ebe2cd">
+        <path d="M34 34l6 -3 2 3 -6 3z"/>
+        <path d="M50 24l5 -2 1 3 -5 2z"/>
+        <path d="M66 20l6 -1 0 3 -6 1z"/>
+        <path d="M84 24l5 1 -1 3 -5 -1z"/>
+        <path d="M100 32l5 2 -2 3 -5 -2z"/>
+        <path d="M112 42l4 2 -2 3 -4 -2z"/>
+        <path d="M58 32l4 -1 1 2 -4 1z"/>
+        <path d="M76 33l4 0 0 2 -4 0z"/>
+        <path d="M44 38l3 -2 1 2 -3 2z"/>
+        <path d="M92 41l4 1 -1 2 -4 -1z"/>
+        <path d="M24 46l3 -2 1 2 -3 2z"/>
+        <path d="M66 41l3 0 0 2 -3 0z"/>
+        <circle cx="41" cy="27" r="1.4"/><circle cx="74" cy="26" r="1.3"/><circle cx="94" cy="28" r="1.2"/>
+        <circle cx="52" cy="42" r="1.2"/><circle cx="84" cy="38" r="1.3"/><circle cx="104" cy="45" r="1.1"/>
+        <circle cx="30" cy="42" r="1.1"/><circle cx="62" cy="26" r="1.1"/>
+      </g>
+      <path fill="none" stroke="#0b0b0a" stroke-width="4" d="M8 58C10 34 38 14 72 14C104 14 130 30 134 52C135 58 131 62 124 63C100 68 44 70 18 66C10 65 7 62 8 58Z"/>
+    </g>
+    <!-- a cluster of three, like the group in the bottom left corner of the cover -->
+    <g id="c">
+      <use xlink:href="#t" href="#t" transform="translate(-4 40) scale(0.6) rotate(-14 70 70)"/>
+      <use xlink:href="#t" href="#t" transform="translate(58 12) scale(0.8) rotate(5 70 70)"/>
+      <use xlink:href="#t" href="#t" transform="translate(206 58) scale(-0.5 0.5) rotate(-10 70 70)"/>
+    </g>
+  </defs>
+  <use xlink:href="#c" href="#c" transform="translate(20 24) scale(0.88)"/>
+  <use xlink:href="#t" href="#t" transform="translate(330 20) scale(0.55) rotate(-6 70 70)"/>
+  <use xlink:href="#t" href="#t" transform="translate(400 180) scale(0.95) rotate(5 70 70)"/>
+  <use xlink:href="#t" href="#t" transform="translate(150 250) scale(0.6) rotate(-8 70 70)"/>
+  <use xlink:href="#c" href="#c" transform="translate(290 370) scale(0.72)"/>
+  <use xlink:href="#t" href="#t" transform="translate(40 410) scale(-0.6 0.6) translate(-140 0) rotate(-6 70 70)"/>
+  <use xlink:href="#t" href="#t" transform="translate(488 462) scale(0.4) rotate(8 70 70)"/>
+</svg>

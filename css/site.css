@@ -492,7 +492,7 @@ h1, h2, h3, h4 {
 }
 .lectures > li { display: flex; min-width: 0; }
 /* course and workshop lectures: the cards take the colours and background drawings of the site's current
-   theme (rafflesias, buttercups, cherry blossoms, flames), whatever the theme of the slides */
+   theme (rafflesias, buttercups, cherry blossoms, toadstools), whatever the theme of the slides */
 .lectures { --lec: var(--pandan); --lec-bg: var(--understory); --lec-fg: var(--mist); --lec-muted: var(--muted); --lec-line: var(--vine); --lec-code: var(--hornbill); }
 
 .lecture {
@@ -528,7 +528,7 @@ h1, h2, h3, h4 {
   filter: saturate(0.55) brightness(0.85);
 }
 :root[data-theme="glacier"] .lecture::before { background-image: url("../img/motifs/buttercup.svg"); background-size: 200px 200px; opacity: 0.2; filter: none; }
-:root[data-theme="purple"] .lecture::before  { background-image: url("../img/motifs/flames.svg"); background-size: 180px 180px; opacity: 0.08; filter: none; }
+:root[data-theme="purple"] .lecture::before  { background-image: url("../img/motifs/toadstools.svg"); background-size: 180px 180px; opacity: 0.08; filter: none; }
 /* parts of the course have no colour of their own: the key just lists them */
 
 /* ---- photography ----------------------------------------------------- */
@@ -740,7 +740,7 @@ h1, h2, h3, h4 {
 .lang-current { color: var(--floor); background: var(--pandan); }
 
 /* background motif: rafflesias and their buds all over the page, very faint (img/motifs/rafflesia.svg);
-   the light theme has cherry blossoms instead, the purple theme flames */
+   the light theme has cherry blossoms instead, the purple theme toadstools */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;

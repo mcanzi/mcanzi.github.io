@@ -1,10 +1,12 @@
 /* Purple theme: the colours of the Resonance cover (tools/doglord/src/assets/resonance.jpg). Forest
    black, cream from the amplifier panels for the text, violet from the wizard's cloak for headings,
    amplifier orange for accents, the guitar's ice blue for links, the logo's pink and violet for the
-   name and page titles, moss green in the charts, a faint grain like the cover's stippling. Hidden: only switched on from the terminal on the home page (layouts/index.html;
-   the theme button switches it off). Remembered in the browser like the other themes (localStorage
-   "theme"). Loaded by the main site (partials/head.html) and by the pages in tools/ (their
-   scripts/build.mjs). What the terminal's easter egg adds on top of this theme is in css/easter-egg.css. */
+   name and page titles, moss green in the charts, the cover's fly agarics in the background and a
+   faint grain like its stippling. Hidden: only switched on from the terminal on the home page
+   (layouts/index.html; the theme button switches it off). Remembered in the browser like the other
+   themes (localStorage "theme"). Loaded by the main site (partials/head.html) and by the pages in
+   tools/ (their scripts/build.mjs). What the terminal's easter egg adds on top of this theme is in
+   css/easter-egg.css. */
 
 :root[data-theme="purple"] {
   --floor:      #121310;   /* forest black, as behind the amplifiers */
@@ -53,13 +55,13 @@
 }
 @media print { :root[data-theme="purple"] body::after { display: none; } }
 
-/* instead of the rafflesias, flames in amplifier orange all over the background (img/motifs/flames.svg) */
+/* instead of the rafflesias, the fly agarics of the cover all over the background (img/motifs/toadstools.svg) */
 :root[data-theme="purple"] body::before {
   inset: 0; right: 0; bottom: 0; width: auto; aspect-ratio: auto;
-  background: url("../img/motifs/flames.svg") repeat 0 0 / 560px 560px;
-  filter: none; opacity: 0.06;
+  background: url("../img/motifs/toadstools.svg") repeat 0 0 / 560px 560px;
+  filter: none; opacity: 0.1;
 }
-@media (max-width: 700px) { :root[data-theme="purple"] body::before { background-size: 380px 380px; opacity: 0.05; } }
+@media (max-width: 700px) { :root[data-theme="purple"] body::before { background-size: 380px 380px; opacity: 0.09; } }
 
 :root[data-theme="purple"] .hero-name { letter-spacing: 0.01em; }
 
