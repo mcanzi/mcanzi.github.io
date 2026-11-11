@@ -4,29 +4,29 @@
    science): Bricolage Grotesque, Atkinson Hyperlegible, JetBrains Mono on charcoal. */
 
 :root {
-  --floor:      #15110e;   /* brown charcoal, darker than the glacier theme */
-  --understory: #1d1814;
-  --raised:     #251f1a;
-  --vine:       #372e27;
-  --mist:       #ece3d4;   /* cream */
-  --muted:      #a89f92;
-  --pandan:     #cb6d67;
-  --hornbill:   #e8a33d;
-  --kingfisher: #5fb3b0;
-  --orchid:     #e39ac0;
-  --moss:       #7f9b78;
-  --leaf:       #6f9a4c;
+  --floor:      #0b110e;   /* rainforest at night: green-black, darker than the glacier theme */
+  --understory: #111a16;
+  --raised:     #17221d;
+  --vine:       #24332c;
+  --mist:       #e3e8e1;   /* moonlit text */
+  --muted:      #8e9e96;
+  --pandan:     #c9d8cf;   /* silver sage: headings, primary */
+  --hornbill:   #e8e2b0;   /* pale moon yellow: accents, cv button, cursor */
+  --kingfisher: #88c9a8;   /* leaf green: links */
+  --orchid:     #c3b6d6;
+  --moss:       #6f8a7a;
+  --leaf:       #88c9a8;
 
   /* colours that depend on the theme but are not part of the palette */
-  --nav-bg:      rgba(21, 17, 14, 0.88);
-  --glow-1:      rgba(232, 163, 61, 0.09);   /* amber, like lamplight */
-  --glow-2:      rgba(203, 109, 103, 0.05);
+  --nav-bg:      rgba(11, 17, 14, 0.9);
+  --glow-1:      rgba(220, 230, 225, 0.08);   /* moonlight */
+  --glow-2:      rgba(136, 201, 168, 0.04);
   --strong:      #fff;
   --shadow:      0 18px 50px rgba(0, 0, 0, 0.35);
-  --primary-hi:  #d4827d;
-  --cv-hi:       #f0b65c;
+  --primary-hi:  #dde8e1;
+  --cv-hi:       #f2edc6;
   --dot-red:     #e0675f;
-  --hit:         rgba(236, 227, 212, 0.05);
+  --hit:         rgba(227, 232, 225, 0.05);
   color-scheme: dark;
 
   --f-head: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -741,10 +741,11 @@ h1, h2, h3, h4 {
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
-  opacity: 0.17;
+  opacity: 0.2;
+  filter: saturate(0.55) brightness(0.85);   /* the rafflesias at night */
 }
 main, .site-footer { position: relative; z-index: 1; }
-@media (max-width: 700px) { body::before { background-size: 420px 420px; opacity: 0.15; } }
+@media (max-width: 700px) { body::before { background-size: 420px 420px; opacity: 0.18; } }
 @media print { body::before { display: none; } }
 
 /* terminal around the pangolin: the log scrolls, the input line stays at the bottom */
@@ -894,8 +895,8 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 /* the photo viewer stays dark on the light theme, so it keeps the dark theme's colours */
 :root[data-theme="light"] .lightbox {
-  --mist: #ece3d4; --muted: #a89f92; --pandan: #a8cf78; --kingfisher: #5fb3b0;
-  --vine: #372e27; --raised: #251f1a; --understory: #1d1814; --floor: #15110e;
+  --mist: #e3e8e1; --muted: #8e9e96; --pandan: #c9d8cf; --kingfisher: #88c9a8;
+  --vine: #24332c; --raised: #17221d; --understory: #111a16; --floor: #0b110e;
   color: var(--mist);
   color-scheme: dark;
 }
@@ -909,6 +910,7 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="light"] body::before {
   background: url("../img/motifs/sakura.svg") repeat 0 0 / 600px 600px;
   opacity: 0.3;
+  filter: none;
 }
 @media (max-width: 700px) { :root[data-theme="light"] body::before { background-size: 400px 400px; opacity: 0.27; } }
 
@@ -944,6 +946,7 @@ main, .site-footer { position: relative; z-index: 1; }
 :root[data-theme="glacier"] body::before {
   background: url("../img/motifs/buttercup.svg") repeat 0 0 / 600px 600px;
   opacity: 0.2;
+  filter: none;
 }
 @media (max-width: 700px) { :root[data-theme="glacier"] body::before { background-size: 400px 400px; opacity: 0.18; } }
 
