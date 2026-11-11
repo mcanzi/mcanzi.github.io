@@ -1,5 +1,5 @@
 // Search for the record grid. The cards are already in artist order; the records come from the
-// JSON block that scripts/build.mjs writes into each page.
+// JSON block that layouts/_default/music.html writes into each page.
 (() => {
   const D = JSON.parse(document.getElementById("music-data").textContent);
   const list = document.querySelector(".records");

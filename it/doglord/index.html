@@ -6,10 +6,13 @@
   <title>Doglord · Resonance</title>
   <meta name="description" content="Doglord è il mio progetto musicale.">
   <link rel="canonical" href="https://mcanzi.github.io/it/doglord/">
-  <link rel="alternate" hreflang="de" href="https://mcanzi.github.io/de/doglord/">
   <link rel="alternate" hreflang="en" href="https://mcanzi.github.io/doglord/">
   <link rel="alternate" hreflang="it" href="https://mcanzi.github.io/it/doglord/">
   <link rel="alternate" hreflang="pt" href="https://mcanzi.github.io/pt/doglord/">
+  <link rel="alternate" hreflang="de" href="https://mcanzi.github.io/de/doglord/">
+  <meta name="generator" content="Hugo 0.160.1">
+
+  
   <meta property="og:title" content="Doglord · Resonance">
   <meta property="og:description" content="Doglord è il mio progetto musicale.">
   <meta property="og:type" content="music.album">
@@ -17,30 +20,37 @@
   <meta property="og:image" content="https://mcanzi.github.io/doglord/assets/resonance.jpg">
   <meta name="twitter:image" content="https://mcanzi.github.io/doglord/assets/resonance.jpg">
   <meta name="twitter:card" content="summary_large_image">
+
+  
   <link rel="apple-touch-icon" sizes="180x180" href="/doglord/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/doglord/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/doglord/assets/favicon-16x16.png">
-  <meta name="theme-color" content="#0b110e">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b110e">
   <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light") { t = "glacier"; localStorage.setItem("theme", t); } if (t === "glacier" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+
+  
+  <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/theme-purple.css">
-  <link rel="stylesheet" href="/css/easter-egg.css">
   <link rel="stylesheet" href="/css/site.css?v=cb9be9e8d102">
-  <link rel="stylesheet" href="/doglord/assets/doglord.css?v=c77f1ad1">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=28ad7080b732">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
+  <link rel="stylesheet" href="/doglord/assets/doglord.css?v=edb3ad161e64">
 </head>
-<body>
-<header class="site-nav">
+
+<body class="page-doglord">
+  <header class="site-nav">
   <div class="nav-inner">
-    <a class="brand" href="https://mcanzi.github.io/it/" aria-label="home">
+    <a class="brand" href="/it/" aria-label="home">
       <span class="prompt">~/</span><span class="brand-name">mcanzi</span><span class="brand-doglord" hidden>doglord</span><span class="cursor" aria-hidden="true"></span>
     </a>
     <nav aria-label="main">
       <ul class="nav-links">
-        <li><a href="https://mcanzi.github.io/it/demo/">demo</a></li>
-        <li><a href="https://mcanzi.github.io/it/output/">pubblicazioni</a></li>
-        <li><a href="https://mcanzi.github.io/it/teaching/">didattica</a></li>
-        <li><a href="https://mcanzi.github.io/it/photo/">fotografia</a></li>
+        <li><a href="/it/demo/">demo</a></li>
+        <li><a href="/it/output/">pubblicazioni</a></li>
+        <li><a href="/it/teaching/">didattica</a></li>
+        <li><a href="/it/photo/">fotografia</a></li>
       </ul>
     </nav>
     <ul class="nav-icons">
@@ -57,7 +67,86 @@
     </ul>
   </div>
 </header>
+<script>
+(() => {
+  const btn = document.querySelector(".theme-toggle");
+  const root = document.documentElement;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[root.dataset.theme] || "#0b110e"; };
+  
+  const next = { dark: "glacier", glacier: "dark", purple: "glacier" };
+  sync();
+  btn.hidden = false;
+  btn.addEventListener("click", () => {
+    const t = next[root.dataset.theme || "dark"] || "dark";
+    if (t === "dark") delete root.dataset.theme; else root.dataset.theme = t;
+    try { localStorage.setItem("theme", t); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+<script>
+(() => {
+  
+  
+  
+  
+  
+  const KEY = "lang-scroll";
+  const SEL = "main :is(h1, h2, h3, h4, p, li, figure, pre, table, blockquote, dt, dd)";
+  const HEAD = "main :is(h1, h2, h3, h4)";
+  const line = () => {
+    const nav = document.querySelector(".site-nav");
+    return nav && /sticky|fixed/.test(getComputedStyle(nav).position) ? nav.getBoundingClientRect().bottom : 0;
+  };
+  document.querySelectorAll(".lang-switch a").forEach((a) => a.addEventListener("click", () => {
+    if (scrollY < 40) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    const i = blocks.findIndex((el) => { const r = el.getBoundingClientRect(); return r.height > 0 && r.bottom > top + 4; });
+    if (i < 0) return;
+    const r = blocks[i].getBoundingClientRect();
+    const h = heads.filter((el) => el.getBoundingClientRect().top <= top + 4).length - 1;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    try {
+      sessionStorage.setItem(KEY, JSON.stringify({
+        to: new URL(a.href).pathname, at: Date.now(),
+        i, n: blocks.length, off: Math.min(Math.max((top - r.top) / r.height, 0), 1),
+        h, hn: heads.length, share: max > 0 ? scrollY / max : 0
+      }));
+    } catch (e) {}
+  }));
+  let saved = null;
+  try { saved = JSON.parse(sessionStorage.getItem(KEY)); sessionStorage.removeItem(KEY); } catch (e) {}
+  if (!saved || saved.to !== location.pathname || Date.now() - saved.at > 15000 || location.hash) return;
+  let moved = false;
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach((ev) => addEventListener(ev, () => { moved = true; }, { once: true, passive: true }));
+  const go = () => {
+    if (moved) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    let y = null;
+    const el = blocks.length === saved.n ? blocks[saved.i] : null;
+    if (el && el.getBoundingClientRect().height > 0) {
+      const r = el.getBoundingClientRect();
+      y = scrollY + r.top + saved.off * r.height - top;
+    } else if (heads.length === saved.hn && saved.h >= 0) {
+      y = scrollY + heads[saved.h].getBoundingClientRect().top - top - 8;
+    } else {
+      y = saved.share * (document.documentElement.scrollHeight - innerHeight);
+    }
+    scrollTo({ top: Math.max(0, y), behavior: "instant" });
+  };
+  if (document.readyState === "loading") addEventListener("DOMContentLoaded", go, { once: true }); else go();
+  addEventListener("load", go, { once: true });
+  if (document.fonts) document.fonts.ready.then(go);
+})();
+</script>
+
   <main id="main">
+    
 <article class="page page-wide">
   <header class="page-header">
     <p class="kicker mono">~/doglord</p>
@@ -96,9 +185,9 @@
           <h3 class="tracks-head mono"><span class="c-prompt">$</span> tracce</h3>
           <ol class="tracks">
             <li><button class="track" type="button" data-i="0" disabled><span class="tr-n mono">01</span><span class="tr-title">Track 1</span><span class="tr-time mono">non ancora online</span></button></li>
-        <li><button class="track" type="button" data-i="1" disabled><span class="tr-n mono">02</span><span class="tr-title">Track 2</span><span class="tr-time mono">non ancora online</span></button></li>
-        <li><button class="track" type="button" data-i="2" disabled><span class="tr-n mono">03</span><span class="tr-title">Track 3</span><span class="tr-time mono">non ancora online</span></button></li>
-        <li><button class="track" type="button" data-i="3" disabled><span class="tr-n mono">04</span><span class="tr-title">Track 4</span><span class="tr-time mono">non ancora online</span></button></li>
+            <li><button class="track" type="button" data-i="1" disabled><span class="tr-n mono">02</span><span class="tr-title">Track 2</span><span class="tr-time mono">non ancora online</span></button></li>
+            <li><button class="track" type="button" data-i="2" disabled><span class="tr-n mono">03</span><span class="tr-title">Track 3</span><span class="tr-time mono">non ancora online</span></button></li>
+            <li><button class="track" type="button" data-i="3" disabled><span class="tr-n mono">04</span><span class="tr-title">Track 4</span><span class="tr-time mono">non ancora online</span></button></li>
           </ol>
         </div>
       </div>
@@ -115,37 +204,23 @@
       </dl>
     </aside>
   </section>
-  <script type="application/json" id="player-data">{"tracks":[{"title":"Track 1","src":null},{"title":"Track 2","src":null},{"title":"Track 3","src":null},{"title":"Track 4","src":null}],"artist":"Doglord","album":"Resonance","artwork":"https://mcanzi.github.io/doglord/assets/resonance-512.jpg","t":{"play":"riproduci","pause":"pausa"}}</script>
-  <script src="/doglord/assets/player.js?v=53347767" defer></script>
+  <script type="application/json" id="player-data">{"album":"Resonance","artist":"Doglord","artwork":"https://mcanzi.github.io/doglord/assets/resonance-512.jpg","t":{"pause":"pausa","play":"riproduci"},"tracks":[{"src":"","title":"Track 1"},{"src":"","title":"Track 2"},{"src":"","title":"Track 3"},{"src":"","title":"Track 4"}]}</script>
+  <script src="/doglord/assets/player.js?v=da9024020e79" defer></script>
 </article>
+
   </main>
-<footer class="site-footer">
+  <footer class="site-footer">
   <div class="footer-inner">
     <p class="mono">
       © 2026 Massimiliano Canzi
+      <span class="sep">·</span> realizzato con R, blogdown e <a href="https://gohugo.io">Hugo</a>
       <span class="sep">·</span> ORCID 0000-0001-6124-0321
+      <span class="sep">·</span> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
       <br>Dipartimento di Linguistica, Università di Costanza, Universitätsstraße 10, 78464 Konstanz, Germania
       <br>sito personale senza fini commerciali, non è una pagina ufficiale dell&#39;Università di Costanza
     </p>
   </div>
 </footer>
-<script>
-(() => {
-  const btn = document.querySelector(".theme-toggle");
-  const root = document.documentElement;
-  const meta = document.querySelector('meta[name="theme-color"]');
-  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[root.dataset.theme] || "#0b110e"; };
-  // the button switches between forest (stored as "dark") and glacier; the hidden purple theme goes to glacier
-  const next = { dark: "glacier", glacier: "dark", purple: "glacier" };
-  sync();
-  btn.hidden = false;
-  btn.addEventListener("click", () => {
-    const t = next[root.dataset.theme || "dark"] || "dark";
-    if (t === "dark") delete root.dataset.theme; else root.dataset.theme = t;
-    try { localStorage.setItem("theme", t); } catch (e) {}
-    sync();
-  });
-})();
-</script>
+
 </body>
 </html>

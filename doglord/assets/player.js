@@ -1,5 +1,5 @@
 // Album player for the Doglord page. Track list and labels come from #player-data (written by
-// scripts/build.mjs). Tracks without a file are shown but cannot be played.
+// layouts/_default/doglord.html). Tracks without a file are shown but cannot be played.
 (() => {
   const D = JSON.parse(document.getElementById("player-data").textContent);
   const audio = document.querySelector(".album audio");
