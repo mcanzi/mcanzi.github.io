@@ -507,7 +507,7 @@
         if (pp.th) el("circle", { cx: x, cy: y, r: 5.5, fill: "var(--pandan)", opacity: 0.9 }, g);
         else el("rect", { x: x - 5, y: y - 5, width: 10, height: 10, rx: 2, fill: "var(--kingfisher)", opacity: 0.9 }, g);
         el("circle", { cx: x, cy: y, r: 11, fill: "transparent" }, g);
-        hover(g, ui, () => `<strong>${pp.id}</strong> · ${esc(TX.countries[pp.c] || pp.c)} · ${esc(pp.dev === "m" ? TX.dev_m : TX.dev_c)}<br>` +
+        hover(g, ui, () => `<strong>${pp.id}</strong> · ${esc(pp.th ? TX.var_th : TX.var_other)} · ${esc(pp.dev === "m" ? TX.dev_m : TX.dev_c)}<br>` +
           `${esc(TX.nomask)}: ${pct(o.a)} · ${esc(TX.mask)}: ${pct(o.b)}`);
       }
       const below = pts.filter((o) => o.b < o.a).length, same = pts.filter((o) => o.b === o.a).length;
