@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=36427cafbfc8">
+  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -145,14 +145,30 @@
 
   <main id="main">
     
-<article class="page page-wide">
+<article class="page page-wide demo-page">
   <header class="page-header">
     <p class="kicker mono">~/demo/masks</p>
     <h1>Masken und die Wahrnehmung von Frikativen</h1>
     <p class="lead">Eine interaktive Darstellung von Canzi &amp; Rathcke (2023), <em>Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English</em>, auf Grundlage der Daten der Studie.</p>
   </header>
-  <div class="prose">
-    <p>Während der COVID-19-Pandemie wurden Masken in vielen Ländern Pflicht, und viele Menschen hatten den Eindruck, dass Sprache mit Maske schwerer zu verstehen sei. Eine Maske kann die Sprachwahrnehmung auf zwei Arten beeinflussen: Sie filtert den Schall, und sie verdeckt Lippen und Zähne. Diese Studie untersuchte, welcher der beiden Faktoren bei vier englischen Frikativen schwerer wiegt: bei /f/ und /θ/, deren Artikulation sichtbar ist, und bei /s/ und /ʃ/, deren Artikulation weitgehend verborgen bleibt.</p>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="Demos">
+      <p class="demo-nav-head mono">Demos</p>
+      <ul>
+        <li><a class="accent-kingfisher on" href="/de/demo/masks/" aria-current="page">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Masken und die Wahrnehmung von Frikativen</span>
+          <span class="demo-nav-card">Machen Masken Sprache schwerer verständlich, weil sie den Klang dämpfen, oder weil sie die Lippen verdecken?</span>
+        </a></li>
+        <li><a class="accent-pandan" href="/de/demo/media/">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Medien und Lautwandel</span>
+          <span class="demo-nav-card">Können zwei Wochen mit einer amerikanischen oder britischen Serie die englische Aussprache deutscher Lernender verändern?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>Während der COVID-19-Pandemie wurden Masken in vielen Ländern Pflicht, und viele Menschen hatten den Eindruck, dass Sprache mit Maske schwerer zu verstehen sei. Eine Maske kann die Sprachwahrnehmung auf zwei Arten beeinflussen: Sie filtert den Schall, und sie verdeckt Lippen und Zähne. Diese Studie untersuchte, welcher der beiden Faktoren bei vier englischen Frikativen schwerer wiegt: bei /f/ und /θ/, deren Artikulation sichtbar ist, und bei /s/ und /ʃ/, deren Artikulation weitgehend verborgen bleibt.</p>
 <div class="facts">
   <div><strong>70</strong><span>Hörende mit Englisch als Erstsprache aus neun Ländern, online getestet</span></div>
   <div><strong>80 Wörter</strong><span>mit /f/, /θ/, /s/ oder /ʃ/, dazu 20 Distraktoren, aufgenommen von einem Sprecher des südlichen britischen Englisch</span></div>
@@ -191,8 +207,10 @@
 <p><strong>Canzi, M.</strong>, &amp; Rathcke, T. (2023). Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English. In <em>Proceedings of the 20th International Congress of Phonetic Sciences</em>, Prag.</p>
 <p>Analysen in R mit gemischten Regressionsmodellen (<code>lme4</code>, <code>emmeans</code>); die im Text genannten Statistiken stammen aus den Modellen des Beitrags. Die Grafiken auf dieser Seite zeigen die Rohdaten der Studie: Die Genauigkeit ist der Anteil richtiger Antworten pro Person, gemittelt über die Hörenden; die Reaktionszeiten sind geometrische Mittel der richtigen Antworten zwischen 150 und 5000 ms.</p>
 
+    </div>
   </div>
 </article>
+
 
   </main>
   <footer class="site-footer">

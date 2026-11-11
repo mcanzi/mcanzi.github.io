@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=36427cafbfc8">
+  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -145,14 +145,30 @@
 
   <main id="main">
     
-<article class="page page-wide">
+<article class="page page-wide demo-page">
   <header class="page-header">
     <p class="kicker mono">~/demo/media</p>
     <h1>Medien und Lautwandel</h1>
     <p class="lead">Eine interaktive Darstellung von Rathcke, Castellano &amp; Canzi (2024), <em>Understanding the role of broadcast media in sound change</em>, auf Grundlage der finalen Daten der Studie.</p>
   </header>
-  <div class="prose">
-    <p>Die Rolle der Rundfunkmedien beim Lautwandel wird viel diskutiert, direkte Belege sind jedoch rar. Diese Studie untersuchte, ob Fernsehexposition die Aussprache von Sprecher:innen einer Zweitsprache verändern kann, und zwar in einem Umfeld, in dem Medien die wichtigste Quelle muttersprachlichen Inputs sind: bei deutschen Schüler:innen an weiterführenden Schulen, die Englisch lernen.</p>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="Demos">
+      <p class="demo-nav-head mono">Demos</p>
+      <ul>
+        <li><a class="accent-kingfisher" href="/de/demo/masks/">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Masken und die Wahrnehmung von Frikativen</span>
+          <span class="demo-nav-card">Machen Masken Sprache schwerer verständlich, weil sie den Klang dämpfen, oder weil sie die Lippen verdecken?</span>
+        </a></li>
+        <li><a class="accent-pandan on" href="/de/demo/media/" aria-current="page">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Medien und Lautwandel</span>
+          <span class="demo-nav-card">Können zwei Wochen mit einer amerikanischen oder britischen Serie die englische Aussprache deutscher Lernender verändern?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>Die Rolle der Rundfunkmedien beim Lautwandel wird viel diskutiert, direkte Belege sind jedoch rar. Diese Studie untersuchte, ob Fernsehexposition die Aussprache von Sprecher:innen einer Zweitsprache verändern kann, und zwar in einem Umfeld, in dem Medien die wichtigste Quelle muttersprachlichen Inputs sind: bei deutschen Schüler:innen an weiterführenden Schulen, die Englisch lernen.</p>
 <div class="facts">
   <div><strong>18</strong><span>deutsche Schüler:innen im Abschlussjahrgang, Englisch auf Niveau B2, Durchschnittsalter 17 Jahre</span></div>
   <div><strong>2 Serien</strong><span><em>Atypical</em> (amerikanisch) oder <em>The End of the F***ing World</em> (britisch), zufällig zugeteilt</span></div>
@@ -450,8 +466,10 @@
 <p>Rathcke, T., Castellano, C., &amp; <strong>Canzi, M.</strong> (2024). Understanding the role of broadcast media in sound change. In F. Kleber &amp; T. Rathcke (Hrsg.), <em>Speech Dynamics: Synchronic Variation and Diachronic Change</em>, 425–452. De Gruyter. <a href="https://doi.org/10.1515/9783110765328-015">doi:10.1515/9783110765328-015</a></p>
 <p>Analysen in R mit logistischer Regression mit gemischten Effekten (<code>lme4</code>, <code>lmerTest</code>, <code>emmeans</code>). Die Diagramme auf dieser Seite beruhen auf den finalen Daten der Studie, zusammengefasst pro teilnehmender Person.</p>
 
+    </div>
   </div>
 </article>
+
 
   </main>
   <footer class="site-footer">

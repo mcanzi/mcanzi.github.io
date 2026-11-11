@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=36427cafbfc8">
+  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -145,14 +145,30 @@
 
   <main id="main">
     
-<article class="page page-wide">
+<article class="page page-wide demo-page">
   <header class="page-header">
     <p class="kicker mono">~/demo/masks</p>
     <h1>Máscaras e perceção das fricativas</h1>
     <p class="lead">Uma apresentação interativa de Canzi &amp; Rathcke (2023), <em>Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English</em>, com base nos dados do estudo.</p>
   </header>
-  <div class="prose">
-    <p>Durante a pandemia de COVID-19, as máscaras tornaram-se obrigatórias em muitos países, e muitas pessoas tinham a impressão de que a fala com máscara era mais difícil de compreender. Uma máscara pode afetar a perceção da fala de duas formas: filtra o som e esconde os lábios e os dentes. Este estudo procurou saber qual dos dois fatores pesa mais em quatro fricativas do inglês: /f/ e /θ/, cuja articulação é visível, e /s/ e /ʃ/, cuja articulação está em grande parte escondida.</p>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="demos">
+      <p class="demo-nav-head mono">demos</p>
+      <ul>
+        <li><a class="accent-kingfisher on" href="/pt/demo/masks/" aria-current="page">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Máscaras e perceção das fricativas</span>
+          <span class="demo-nav-card">As máscaras tornam a fala mais difícil de compreender porque abafam o som ou porque escondem os lábios?</span>
+        </a></li>
+        <li><a class="accent-pandan" href="/pt/demo/media/">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Os media e a mudança fonética</span>
+          <span class="demo-nav-card">Duas semanas a ver uma série americana ou britânica podem mudar a pronúncia inglesa de estudantes alemães?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>Durante a pandemia de COVID-19, as máscaras tornaram-se obrigatórias em muitos países, e muitas pessoas tinham a impressão de que a fala com máscara era mais difícil de compreender. Uma máscara pode afetar a perceção da fala de duas formas: filtra o som e esconde os lábios e os dentes. Este estudo procurou saber qual dos dois fatores pesa mais em quatro fricativas do inglês: /f/ e /θ/, cuja articulação é visível, e /s/ e /ʃ/, cuja articulação está em grande parte escondida.</p>
 <div class="facts">
   <div><strong>70</strong><span>ouvintes nativos de inglês de nove países, experiência online</span></div>
   <div><strong>80 palavras</strong><span>com /f/, /θ/, /s/ ou /ʃ/, mais 20 distratores, gravadas por um falante de inglês britânico do sul</span></div>
@@ -191,8 +207,10 @@
 <p><strong>Canzi, M.</strong>, &amp; Rathcke, T. (2023). Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English. In <em>Proceedings of the 20th International Congress of Phonetic Sciences</em>, Praga.</p>
 <p>Análises em R com modelos de regressão de efeitos mistos (<code>lme4</code>, <code>emmeans</code>); as estatísticas citadas no texto provêm dos modelos do artigo. Os gráficos desta página mostram os dados em bruto do estudo: a precisão é a proporção de respostas corretas por ouvinte, em média entre ouvintes; os tempos de reação são médias geométricas das respostas corretas entre 150 e 5000 ms.</p>
 
+    </div>
   </div>
 </article>
+
 
   </main>
   <footer class="site-footer">

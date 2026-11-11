@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=36427cafbfc8">
+  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -145,14 +145,30 @@
 
   <main id="main">
     
-<article class="page page-wide">
+<article class="page page-wide demo-page">
   <header class="page-header">
     <p class="kicker mono">~/demo/media</p>
     <h1>Media e mutamento fonetico</h1>
     <p class="lead">Una presentazione interattiva di Rathcke, Castellano &amp; Canzi (2024), <em>Understanding the role of broadcast media in sound change</em>, basata sui dati finali dello studio.</p>
   </header>
-  <div class="prose">
-    <p>Il ruolo dei mezzi di comunicazione di massa nei mutamenti fonetici è molto dibattuto e le prove dirette sono scarse. Questo studio ha verificato se l&rsquo;esposizione alla televisione possa modificare la pronuncia di parlanti di una seconda lingua in un contesto in cui i media costituiscono la principale fonte di input da parte di parlanti nativi: studenti tedeschi di scuola superiore che studiano l&rsquo;inglese.</p>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="demo">
+      <p class="demo-nav-head mono">demo</p>
+      <ul>
+        <li><a class="accent-kingfisher" href="/it/demo/masks/">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Mascherine e percezione delle fricative</span>
+          <span class="demo-nav-card">Le mascherine rendono il parlato più difficile da capire perché attutiscono il suono o perché nascondono le labbra?</span>
+        </a></li>
+        <li><a class="accent-pandan on" href="/it/demo/media/" aria-current="page">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Media e mutamento fonetico</span>
+          <span class="demo-nav-card">Due settimane di una serie TV americana o britannica possono cambiare la pronuncia inglese di studenti tedeschi?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>Il ruolo dei mezzi di comunicazione di massa nei mutamenti fonetici è molto dibattuto e le prove dirette sono scarse. Questo studio ha verificato se l&rsquo;esposizione alla televisione possa modificare la pronuncia di parlanti di una seconda lingua in un contesto in cui i media costituiscono la principale fonte di input da parte di parlanti nativi: studenti tedeschi di scuola superiore che studiano l&rsquo;inglese.</p>
 <div class="facts">
   <div><strong>18</strong><span>studenti tedeschi all'ultimo anno di scuola superiore, inglese di livello B2, età media 17 anni</span></div>
   <div><strong>2 serie</strong><span><em>Atypical</em> (americana) o <em>The End of the F***ing World</em> (britannica), assegnate in modo casuale</span></div>
@@ -450,8 +466,10 @@
 <p>Rathcke, T., Castellano, C., &amp; <strong>Canzi, M.</strong> (2024). Understanding the role of broadcast media in sound change. In F. Kleber &amp; T. Rathcke (eds.), <em>Speech Dynamics: Synchronic Variation and Diachronic Change</em>, 425–452. De Gruyter. <a href="https://doi.org/10.1515/9783110765328-015">doi:10.1515/9783110765328-015</a></p>
 <p>Analisi svolte in R con modelli di regressione logistica a effetti misti (<code>lme4</code>, <code>lmerTest</code>, <code>emmeans</code>). I grafici di questa pagina si basano sui dati finali dello studio, aggregati per partecipante.</p>
 
+    </div>
   </div>
 </article>
+
 
   </main>
   <footer class="site-footer">

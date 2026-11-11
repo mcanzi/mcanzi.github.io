@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=36427cafbfc8">
+  <link rel="stylesheet" href="/css/site.css?v=0d0db543a854">
   <link rel="stylesheet" href="/css/theme-purple.css?v=d8f12dca2593">
   <link rel="stylesheet" href="/css/easter-egg.css?v=21baca79c0c1">
 </head>
@@ -145,14 +145,30 @@
 
   <main id="main">
     
-<article class="page page-wide">
+<article class="page page-wide demo-page">
   <header class="page-header">
     <p class="kicker mono">~/demo/masks</p>
     <h1>Face masks and the perception of fricatives</h1>
     <p class="lead">An interactive presentation of Canzi &amp; Rathcke (2023), <em>Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English</em>, using the study&rsquo;s data.</p>
   </header>
-  <div class="prose">
-    <p>During the COVID-19 pandemic, face masks became compulsory in many countries, and many people felt that masked speech was harder to understand. A mask can affect speech perception in two ways: it filters the sound, and it hides the lips and teeth. This study asked which of the two matters more for four English fricatives: /f/ and /θ/, whose articulation is visible, and /s/ and /ʃ/, whose articulation is largely hidden.</p>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="demos">
+      <p class="demo-nav-head mono">demos</p>
+      <ul>
+        <li><a class="accent-kingfisher on" href="/demo/masks/" aria-current="page">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Face masks and the perception of fricatives</span>
+          <span class="demo-nav-card">Do face masks make speech harder to understand because they muffle the sound, or because they hide the lips?</span>
+        </a></li>
+        <li><a class="accent-pandan" href="/demo/media/">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Broadcast media and sound change</span>
+          <span class="demo-nav-card">Can two weeks of watching an American or a British TV series change how German learners pronounce English?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>During the COVID-19 pandemic, face masks became compulsory in many countries, and many people felt that masked speech was harder to understand. A mask can affect speech perception in two ways: it filters the sound, and it hides the lips and teeth. This study asked which of the two matters more for four English fricatives: /f/ and /θ/, whose articulation is visible, and /s/ and /ʃ/, whose articulation is largely hidden.</p>
 <div class="facts">
   <div><strong>70</strong><span>native listeners of English from nine countries, tested online</span></div>
   <div><strong>80 words</strong><span>with /f/, /θ/, /s/ or /ʃ/, plus 20 distractors, recorded by one speaker of Southern British English</span></div>
@@ -191,8 +207,10 @@
 <p><strong>Canzi, M.</strong>, &amp; Rathcke, T. (2023). Unmasking the truf: Impact of community masks on the perception of voiceless fricatives in English. In <em>Proceedings of the 20th International Congress of Phonetic Sciences</em>, Prague.</p>
 <p>Analyses in R with mixed-effects regression (<code>lme4</code>, <code>emmeans</code>); the statistics quoted in the text come from the paper&rsquo;s models. The figures on this page show the study&rsquo;s raw data: accuracy is the proportion of correct responses per listener, averaged over listeners; reaction times are geometric means of correct responses between 150 and 5000 ms.</p>
 
+    </div>
   </div>
 </article>
+
 
   </main>
   <footer class="site-footer">
