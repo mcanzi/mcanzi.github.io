@@ -868,10 +868,10 @@ main, .site-footer { position: relative; z-index: 1; }
    choice is remembered in the browser (partials/head.html). The lightbox stays dark. */
 
 :root[data-theme="light"] {
-  --floor:      #f3eee5;   /* washi */
-  --understory: #fbf9f5;   /* paper */
-  --raised:     #ffffff;
-  --vine:       #e0d8cb;   /* lines and borders */
+  --floor:      #e3dbcc;   /* old washi */
+  --understory: #ece6da;   /* paper */
+  --raised:     #f1ece2;
+  --vine:       #d0c6b5;   /* lines and borders */
   --mist:       #2b2723;   /* sumi ink */
   --muted:      #6e675e;
   --pandan:     #b3443d;   /* deep indian red: headings, primary */
@@ -881,8 +881,8 @@ main, .site-footer { position: relative; z-index: 1; }
   --moss:       #8a8c74;
   --leaf:       #7b875b;
 
-  --nav-bg:      rgba(243, 238, 229, 0.9);
-  --glow-1:      rgba(255, 255, 255, 0.7);
+  --nav-bg:      rgba(227, 219, 204, 0.9);
+  --glow-1:      rgba(255, 250, 240, 0.25);
   --glow-2:      rgba(205, 92, 92, 0.05);
   --strong:      #1a1715;
   --shadow:      0 14px 36px rgba(70, 50, 30, 0.10);
@@ -908,9 +908,9 @@ main, .site-footer { position: relative; z-index: 1; }
 /* light theme background: cherry blossoms and falling petals (img/motifs/sakura.svg) */
 :root[data-theme="light"] body::before {
   background: url("../img/motifs/sakura.svg") repeat 0 0 / 600px 600px;
-  opacity: 0.2;
+  opacity: 0.3;
 }
-@media (max-width: 700px) { :root[data-theme="light"] body::before { background-size: 400px 400px; opacity: 0.18; } }
+@media (max-width: 700px) { :root[data-theme="light"] body::before { background-size: 400px 400px; opacity: 0.27; } }
 
 /* ---- glacier theme ---------------------------------------------------- */
 /* Between dark and light: slate blue and ice, salmon for accents, glacier buttercups in the background
