@@ -693,7 +693,9 @@ h1, h2, h3, h4 {
 .page > .jump { margin-bottom: 20px; }  /* teaching page: the bar sits right above the course box */
 .pub-abstract { margin: -4px 0 6px; }
 .pub-abstract summary { font-size: 0.75rem; color: var(--kingfisher); cursor: pointer; width: max-content; }
-.pub-abstract summary:hover { color: var(--pandan); }
+.pub-abstract summary:hover .pub-toggle, .pub-demo:hover { color: var(--pandan); }
+.pub-demo { color: var(--kingfisher); text-decoration: none; }
+.pub-links { font-size: 0.75rem; }
 .pub-abstract[open] { padding: 10px 14px 4px; background: var(--understory); border: 1px solid var(--vine); border-radius: 8px; }
 .pub-abstract[open] summary { margin-bottom: 8px; }
 .pub-abstract p { font-size: 0.9rem; color: var(--muted); }
