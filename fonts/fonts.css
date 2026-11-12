@@ -33,3 +33,11 @@
   src: url("jetbrains-mono-semibold.woff2") format("woff2");
   font-weight: 600; font-style: normal; font-display: swap;
 }
+/* chess pieces for the terminal chess game: a 5 KB subset of DejaVu Sans Mono (Bitstream Vera licence,
+   LICENSE-chess-pieces.txt), only for U+2654-265F, so no other text on the site uses it */
+@font-face {
+  font-family: "Chess Pieces";
+  src: url("chess-pieces.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+2654-265F;
+}

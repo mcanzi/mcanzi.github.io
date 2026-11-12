@@ -21,6 +21,12 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
   const who = () => (document.documentElement.dataset.theme === "purple" ? S.whoDoglord : S.who);
   const say = (p, text) => add(p, fill(text, { who: who() }), "term-out");
 
+  // the solid chess symbols for both sides, told apart by colour (fonts.css: the Chess Pieces font);
+  // U+FE0E asks for the text form, so phones do not turn the pawn into an emoji
+  const GLYPH = { k: "\u265A", q: "\u265B", r: "\u265C", b: "\u265D", n: "\u265E", p: "\u265F" };
+  // the outline symbols, drawn over the solid ones in the other side's colour
+  const OUTLINE = { k: "\u2654", q: "\u2655", r: "\u2656", b: "\u2657", n: "\u2658", p: "\u2659" };
+
   // the board as text, from the player's side; the last move and a king in check are coloured
   const drawBoard = (p) => {
     const code = document.createElement("code");
@@ -40,8 +46,9 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
         const sq = "abcdefgh"[col] + (8 - r);
         const pc = rows[r][col];
         const span = document.createElement("span");
-        span.textContent = pc ? (pc.color === "w" ? pc.type.toUpperCase() : pc.type) : ".";
-        const cls = [pc ? (pc.color === "w" ? "cw" : "cb") : "ce"];
+        span.textContent = pc ? GLYPH[pc.type] + "\uFE0E" : ".";
+        if (pc) span.dataset.o = OUTLINE[pc.type] + "\uFE0E";
+        const cls = pc ? ["pc", pc.color === "w" ? "cw" : "cb"] : ["ce"];
         if (last && (sq === last.from || sq === last.to)) cls.push("clast");
         if (sq === checkSq) cls.push("ccheck");
         span.className = cls.join(" ");
