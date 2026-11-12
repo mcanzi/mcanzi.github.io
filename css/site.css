@@ -508,9 +508,9 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 /* each lecture card looks like its slides, in every theme of the site ("theme" in data/course.yaml,
    fss.yaml, advanced.yaml): dark is ws26_statistics (moonlight), purple ws27_fss, glacier
    ss27_advanced_statistics; colours copied from each repository's theme CSS */
-.theme-dark    { --lec: #72c699; --lec-bg: #0b110e; --lec-fg: #e3e8e1; --lec-muted: #8e9e96; --lec-line: #24332c; --lec-code: #f2d45c; }
-.theme-purple  { --lec: #a06ae6; --lec-bg: #121310; --lec-fg: #ebe2cd; --lec-muted: #a69d89; --lec-line: #343a2e; --lec-code: #d5813f; }
-.theme-glacier { --lec: #a9cbe0; --lec-bg: #1e2830; --lec-fg: #dfe6ea; --lec-muted: #8a9aa6; --lec-line: #34444f; --lec-code: #f2917a; }
+.theme-dark    { --lec-top: #ece07e; --lec-bottom: #5cc48a; --lec: #72c699; --lec-bg: #0b110e; --lec-fg: #e3e8e1; --lec-muted: #8e9e96; --lec-line: #24332c; --lec-code: #f2d45c; }
+.theme-purple  { --lec-top: #dc7286; --lec-bottom: #9358e0; --lec: #a06ae6; --lec-bg: #121310; --lec-fg: #ebe2cd; --lec-muted: #a69d89; --lec-line: #343a2e; --lec-code: #d5813f; }
+.theme-glacier { --lec-top: #eef6fa; --lec-bottom: #8dbbd8; --lec: #a9cbe0; --lec-bg: #1e2830; --lec-fg: #dfe6ea; --lec-muted: #8a9aa6; --lec-line: #34444f; --lec-code: #f2917a; }
 
 .lecture {
   position: relative;
@@ -520,8 +520,8 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
   align-items: flex-start;
   min-width: 0;
   padding: 11px 12px;
+  padding-left: 14px;
   border: 1px solid var(--lec-line, var(--vine));
-  border-left: 3px solid var(--lec);
   border-radius: 7px;
   background: var(--lec-bg);
   color: var(--lec-fg, var(--mist));
@@ -546,6 +546,11 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .theme-dark .lecture::before    { background-image: url("../img/motifs/slides-rafflesia.svg"); background-size: 300px 300px; }
 .theme-purple .lecture::before  { background-image: url("../img/motifs/slides-toadstools.svg"); background-size: 280px 280px; }
 .theme-glacier .lecture::before { background-image: url("../img/motifs/slides-buttercup.svg"); background-size: 260px 260px; }
+/* the accent bar on the left: the same top-to-bottom gradient as the titles of each slide theme */
+.lecture::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 3px; pointer-events: none;
+  background: linear-gradient(180deg, var(--lec-top, var(--lec)) 8%, var(--lec-bottom, var(--lec)) 92%);
+}
 /* parts of the course have no colour of their own: the key just lists them */
 
 /* ---- photography ----------------------------------------------------- */
@@ -834,7 +839,7 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* lectures not yet online */
 .lecture-planned { cursor: default; }
-.lecture-planned:hover { transform: none; border-color: var(--lec-line, var(--vine)); border-left-color: var(--lec); }
+.lecture-planned:hover { transform: none; border-color: var(--lec-line, var(--vine)); }
 .lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
 .lecture-soon { margin-top: 2px; font-size: 0.68rem; color: var(--lec); letter-spacing: 0.02em; }
 
