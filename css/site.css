@@ -827,8 +827,9 @@ main, .site-footer { position: relative; z-index: 1; }
 .term .chess-board .ce { color: var(--muted); opacity: 0.55; }
 /* pieces: one character wide like the letters around them, drawn a little larger so they read as well as the coordinates */
 .term .chess-board .pc { position: relative; display: inline-block; width: 0.6em; text-align: center; font-family: "Chess Pieces", var(--f-mono); font-weight: 400; font-synthesis: none; transform: scale(1.35); transform-origin: 50% 62%; }
-/* each piece is the solid symbol in its side's colour with the outline symbol on top in the other side's colour */
-.term .chess-board .pc::after { content: attr(data-o); position: absolute; left: 0; top: 0; width: 100%; text-align: center; color: var(--o); }
+/* each piece is the solid symbol in its side's colour, stroked in the other side's colour; the font's outline
+   symbols are drawn at other sizes and positions, so they cannot be laid over the solid ones */
+.term .chess-board .pc { -webkit-text-stroke: 0.08em var(--o); paint-order: stroke fill; }
 .term .chess-board .pc.cw { color: var(--strong); --o: var(--kingfisher); }
 .term .chess-board .pc.cb { color: color-mix(in srgb, var(--kingfisher) 50%, var(--floor)); --o: var(--strong); }   /* black: a dark inside, so the light outline gives the shape */
 .term .chess-board .clast { background: color-mix(in srgb, var(--hornbill) 30%, transparent); border-radius: 2px; }
