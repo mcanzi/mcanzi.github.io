@@ -509,7 +509,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
    fss.yaml, advanced.yaml): dark is ws26_statistics (moonlight), purple ws27_fss, glacier
    ss27_advanced_statistics; colours copied from each repository's theme CSS */
 .theme-dark    { --lec: #72c699; --lec-bg: #0b110e; --lec-fg: #e3e8e1; --lec-muted: #8e9e96; --lec-line: #24332c; --lec-code: #f2d45c; }
-.theme-purple  { --lec: #9d6bf0; --lec-bg: #0c0911; --lec-fg: #e7e0f2; --lec-muted: #9b8fb0; --lec-line: #2f2541; --lec-code: #c9a23f; }
+.theme-purple  { --lec: #a06ae6; --lec-bg: #121310; --lec-fg: #ebe2cd; --lec-muted: #a69d89; --lec-line: #343a2e; --lec-code: #d5813f; }
 .theme-glacier { --lec: #a9cbe0; --lec-bg: #1e2830; --lec-fg: #dfe6ea; --lec-muted: #8a9aa6; --lec-line: #34444f; --lec-code: #f2917a; }
 
 .lecture {
@@ -537,14 +537,14 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .lecture-title code { font-family: var(--f-mono); font-size: 0.9em; color: var(--lec-code, var(--hornbill)); }
 .lecture-sub { color: var(--lec-muted, var(--muted)); font-size: 0.78rem; line-height: 1.35; }
 /* the slides' own background drawings behind the text (img/motifs/slides-*.svg, copied from each
-   repository's theme CSS, with their opacity built in): rafflesias, flames, buttercups */
+   repository's theme CSS, with their opacity built in): rafflesias, fly agarics, buttercups */
 .lecture { isolation: isolate; }
 .lecture::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-repeat: repeat; background-position: 0 0;
 }
 .theme-dark .lecture::before    { background-image: url("../img/motifs/slides-rafflesia.svg"); background-size: 300px 300px; }
-.theme-purple .lecture::before  { background-image: url("../img/motifs/slides-flames.svg"); background-size: 280px 280px; }
+.theme-purple .lecture::before  { background-image: url("../img/motifs/slides-toadstools.svg"); background-size: 280px 280px; }
 .theme-glacier .lecture::before { background-image: url("../img/motifs/slides-buttercup.svg"); background-size: 260px 260px; }
 /* parts of the course have no colour of their own: the key just lists them */
 

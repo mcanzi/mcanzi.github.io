@@ -34,7 +34,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=7b65ebe1f861">
+  <link rel="stylesheet" href="/css/site.css?v=c95c5797c7fb">
   <link rel="stylesheet" href="/css/theme-purple.css?v=28ad7080b732">
   <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
 </head>
@@ -160,18 +160,13 @@
   <p class="jump mono"><a href="#modules">unidades curriculares</a> · <a href="#evaluations">avaliações</a></p>
   
   
-  <section class="course-tabs" id="courses">
+  <section class="course-tabs" id="courses" data-open="2">
     
     <div class="course-tablist" role="tablist" aria-label="cursos">
       
-      <button type="button" role="tab" class="course-tab" id="tab-statistics" aria-controls="statistics" aria-selected="true">
-        <span class="course-tab-kind mono">curso</span>
-        <span class="course-tab-name">Statistics (for Linguists)</span>
-      </button>
-      
       <button type="button" role="tab" class="course-tab" id="tab-advanced" aria-controls="advanced" aria-selected="false" tabindex="-1">
         <span class="course-tab-kind mono">curso</span>
-        <span class="course-tab-name">Advanced Statistics (for Linguists)</span>
+        <span class="course-tab-name">Advanced Statistics</span>
       </button>
       
       <button type="button" role="tab" class="course-tab" id="tab-forensic" aria-controls="forensic" aria-selected="false" tabindex="-1">
@@ -179,8 +174,335 @@
         <span class="course-tab-name">Introduction to Forensic Speech Science</span>
       </button>
       
+      <button type="button" role="tab" class="course-tab" id="tab-statistics" aria-controls="statistics" aria-selected="true">
+        <span class="course-tab-kind mono">curso</span>
+        <span class="course-tab-name">Statistics</span>
+      </button>
+      
     </div>
     
+    
+    <div class="course-panel" id="advanced" role="tabpanel" aria-labelledby="tab-advanced">
+  
+  
+  <section class="course">
+    <div class="course-head">
+      <div>
+        <p class="card-label mono">semestre de verão 2027</p>
+        <h2 class="course-title">Advanced Statistics</h2>
+        
+        <p>A continuação de Statistics. Começa com uma revisão dos modelos lineares e mistos, passa aos gráficos com ggplot2, dos fundamentos às figuras prontas para publicação, e chega aos modelos aditivos generalizados (mistos) para curvas como as trajetórias de formantes, com dados simulados. As aulas seguintes vão tratar de análise fatorial, random forests, análise de clusters, análise de potência e simulações em R. Os diapositivos (em inglês) são ficheiros HTML autónomos: clique numa aula para os abrir.</p>
+      </div>
+      <p class="course-links">
+        <a class="btn" href="https://github.com/mcanzi/ss27_advanced_statistics"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> código-fonte no GitHub</a>
+      </p>
+    </div>
+
+    
+    
+    <ul class="parts-key">
+      
+      <li><span class="mono">01–05</span> Modelos, gráficos e curvas</li>
+      
+      <li><span class="mono">06–10</span> Métodos multivariados, potência e simulação</li>
+      
+    </ul>
+    
+    <ol class="lectures">
+      
+      
+      <li class="theme-glacier">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/01_refresher.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
+<span class="lecture-text">
+  <span class="lecture-title">Statistics refresher</span>
+  <span class="lecture-sub">Linear models, interactions and mixed models</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/02_figures.html" target="_blank" rel="noopener"><span class="lecture-n mono">02</span>
+<span class="lecture-text">
+  <span class="lecture-title">Figures with ggplot2</span>
+  <span class="lecture-sub">The grammar of graphics and customisation</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/03_honest_figures.html" target="_blank" rel="noopener"><span class="lecture-n mono">03</span>
+<span class="lecture-text">
+  <span class="lecture-title">Honest figures</span>
+  <span class="lecture-sub">Showing data, models and uncertainty</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/04_gams.html" target="_blank" rel="noopener"><span class="lecture-n mono">04</span>
+<span class="lecture-text">
+  <span class="lecture-title">Generalised additive models</span>
+  <span class="lecture-sub">Modelling curves with smooth terms</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/05_gamms.html" target="_blank" rel="noopener"><span class="lecture-n mono">05</span>
+<span class="lecture-text">
+  <span class="lecture-title">Generalised additive mixed models</span>
+  <span class="lecture-sub">Random smooths, autocorrelation and non-linear interactions</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      
+      
+      <li class="theme-glacier">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">06</span>
+<span class="lecture-text">
+  <span class="lecture-title">Factor analysis</span>
+  <span class="lecture-sub">Latent variables behind many measures</span>
+  <span class="lecture-soon mono">em preparação</span>
+</span>
+</div>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">07</span>
+<span class="lecture-text">
+  <span class="lecture-title">Random forests</span>
+  <span class="lecture-sub">Classification and variable importance</span>
+  <span class="lecture-soon mono">em preparação</span>
+</span>
+</div>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">08</span>
+<span class="lecture-text">
+  <span class="lecture-title">Cluster analysis</span>
+  <span class="lecture-sub">Finding groups in data</span>
+  <span class="lecture-soon mono">em preparação</span>
+</span>
+</div>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">09</span>
+<span class="lecture-text">
+  <span class="lecture-title">Power analysis</span>
+  <span class="lecture-sub">How many participants and items?</span>
+  <span class="lecture-soon mono">em preparação</span>
+</span>
+</div>
+        
+      </li>
+      
+      <li class="theme-glacier">
+        
+        
+        <div class="lecture lecture-planned"><span class="lecture-n mono">10</span>
+<span class="lecture-text">
+  <span class="lecture-title">Simulations in R</span>
+  <span class="lecture-sub">Simulating data to plan studies and check models</span>
+  <span class="lecture-soon mono">em preparação</span>
+</span>
+</div>
+        
+      </li>
+      
+      
+    </ol>
+  </section>
+</div>
+    
+    <div class="course-panel" id="forensic" role="tabpanel" aria-labelledby="tab-forensic">
+  
+  
+  <section class="course">
+    <div class="course-head">
+      <div>
+        <p class="card-label mono">semestre de inverno 2027/28</p>
+        <h2 class="course-title">Introduction to Forensic Speech Science</h2>
+        
+        <p>Uma introdução à fonética forense: perfil e comparação de falantes, testemunho auditivo, autenticação e melhoria de gravações, transcrição, análise linguística no procedimento de asilo e o trabalho dos peritos. Cada aula segue um capítulo de Leemann, Perkins, Sullivan Buker &amp; Foulkes (2024), <em>An Introduction to Forensic Phonetics and Forensic Linguistics</em>, com casos do livro e dados simulados. As duas últimas aulas são práticas de Praat com gravações dos próprios estudantes. Os diapositivos estão em inglês: clique numa aula para os abrir.</p>
+      </div>
+      <p class="course-links">
+        <a class="btn" href="https://github.com/mcanzi/ws27_fss"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> código-fonte no GitHub</a>
+      </p>
+    </div>
+
+    
+    
+    <ol class="lectures">
+      
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/01_course_introduction.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
+<span class="lecture-text">
+  <span class="lecture-title">Course introduction</span>
+  <span class="lecture-sub">Forensic phonetics, forensic linguistics, and this course</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/02_phonetic_analysis.html" target="_blank" rel="noopener"><span class="lecture-n mono">02</span>
+<span class="lecture-text">
+  <span class="lecture-title">Phonetic analysis</span>
+  <span class="lecture-sub">Segments, prosody and acoustic measurement</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/03_speaker_profiling.html" target="_blank" rel="noopener"><span class="lecture-n mono">03</span>
+<span class="lecture-text">
+  <span class="lecture-title">Speaker profiling</span>
+  <span class="lecture-sub">What a voice can and cannot tell us</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/04_speaker_comparison.html" target="_blank" rel="noopener"><span class="lecture-n mono">04</span>
+<span class="lecture-text">
+  <span class="lecture-title">Speaker comparison</span>
+  <span class="lecture-sub">Methods, evidence and conclusions</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/05_earwitness_evidence.html" target="_blank" rel="noopener"><span class="lecture-n mono">05</span>
+<span class="lecture-text">
+  <span class="lecture-title">Earwitness evidence</span>
+  <span class="lecture-sub">Voice recognition and voice parades</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/06_authentication_enhancement.html" target="_blank" rel="noopener"><span class="lecture-n mono">06</span>
+<span class="lecture-text">
+  <span class="lecture-title">Authentication, enhancement and speech content</span>
+  <span class="lecture-sub">Is the recording genuine, and what was said?</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/07_laap.html" target="_blank" rel="noopener"><span class="lecture-n mono">07</span>
+<span class="lecture-text">
+  <span class="lecture-title">Linguistic analysis in the asylum procedure</span>
+  <span class="lecture-sub">Where did this speaker grow up?</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/08_expert_witnesses.html" target="_blank" rel="noopener"><span class="lecture-n mono">08</span>
+<span class="lecture-text">
+  <span class="lecture-title">Expert witnesses</span>
+  <span class="lecture-sub">Reports, courts and legal systems</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/09_praat_measuring.html" target="_blank" rel="noopener"><span class="lecture-n mono">09</span>
+<span class="lecture-text">
+  <span class="lecture-title">Praat practical 1</span>
+  <span class="lecture-sub">Measuring your own voice</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      <li class="theme-purple">
+        
+        
+        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/10_praat_casework.html" target="_blank" rel="noopener"><span class="lecture-n mono">10</span>
+<span class="lecture-text">
+  <span class="lecture-title">Praat practical 2</span>
+  <span class="lecture-sub">Casework with the class recordings</span>
+  
+</span>
+</a>
+        
+      </li>
+      
+      
+    </ol>
+  </section>
+</div>
     
     <div class="course-panel" id="statistics" role="tabpanel" aria-labelledby="tab-statistics">
   
@@ -189,7 +511,7 @@
     <div class="course-head">
       <div>
         <p class="card-label mono">semestre de inverno 2026/27</p>
-        <h2 class="course-title">Statistics (for Linguists)</h2>
+        <h2 class="course-title">Statistics</h2>
         
         <p>Uma introdução à análise de dados em R: do tidyverse e da estatística descritiva à regressão linear, às interações, aos testes de significância, aos modelos mistos e à regressão logística de efeitos mistos. As aulas seguem a estrutura de Winter (2019), <em>Statistics for Linguists: An Introduction Using R</em>, com novos exemplos e conjuntos de dados. Os diapositivos de cada aula (em inglês) são um ficheiro HTML autónomo: clique numa aula para os abrir.</p>
       </div>
@@ -391,253 +713,6 @@
   </section>
 </div>
     
-    <div class="course-panel" id="advanced" role="tabpanel" aria-labelledby="tab-advanced">
-  
-  
-  <section class="course">
-    <div class="course-head">
-      <div>
-        <p class="card-label mono">semestre de verão 2027</p>
-        <h2 class="course-title">Advanced Statistics (for Linguists)</h2>
-        
-        <p>A continuação de Statistics (for Linguists). Começa com uma revisão dos modelos lineares e mistos, passa aos gráficos com ggplot2, dos fundamentos às figuras prontas para publicação, e chega aos modelos aditivos generalizados (mistos) para curvas como as trajetórias de formantes, com dados simulados. As aulas seguintes vão tratar de análise fatorial, random forests, análise de clusters, análise de potência e simulações em R. Os diapositivos (em inglês) são ficheiros HTML autónomos: clique numa aula para os abrir.</p>
-      </div>
-      <p class="course-links">
-        <a class="btn" href="https://github.com/mcanzi/ss27_advanced_statistics"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> código-fonte no GitHub</a>
-      </p>
-    </div>
-
-    
-    
-    <ol class="lectures">
-      
-      
-      <li class="theme-glacier">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/01_refresher.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
-<span class="lecture-text">
-  <span class="lecture-title">Statistics refresher</span>
-  <span class="lecture-sub">Linear models, interactions and mixed models</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-glacier">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/02_figures.html" target="_blank" rel="noopener"><span class="lecture-n mono">02</span>
-<span class="lecture-text">
-  <span class="lecture-title">Figures with ggplot2</span>
-  <span class="lecture-sub">The grammar of graphics and customisation</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-glacier">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/03_honest_figures.html" target="_blank" rel="noopener"><span class="lecture-n mono">03</span>
-<span class="lecture-text">
-  <span class="lecture-title">Honest figures</span>
-  <span class="lecture-sub">Showing data, models and uncertainty</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-glacier">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/04_gams.html" target="_blank" rel="noopener"><span class="lecture-n mono">04</span>
-<span class="lecture-text">
-  <span class="lecture-title">Generalised additive models</span>
-  <span class="lecture-sub">Modelling curves with smooth terms</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-glacier">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ss27_advanced_statistics/05_gamms.html" target="_blank" rel="noopener"><span class="lecture-n mono">05</span>
-<span class="lecture-text">
-  <span class="lecture-title">Generalised additive mixed models</span>
-  <span class="lecture-sub">Random smooths, autocorrelation and non-linear interactions</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      
-    </ol>
-  </section>
-</div>
-    
-    <div class="course-panel" id="forensic" role="tabpanel" aria-labelledby="tab-forensic">
-  
-  
-  <section class="course">
-    <div class="course-head">
-      <div>
-        <p class="card-label mono">semestre de inverno 2027/28</p>
-        <h2 class="course-title">Introduction to Forensic Speech Science</h2>
-        
-        <p>Uma introdução à fonética forense: perfil e comparação de falantes, testemunho auditivo, autenticação e melhoria de gravações, transcrição, análise linguística no procedimento de asilo e o trabalho dos peritos. Cada aula segue um capítulo de Leemann, Perkins, Sullivan Buker &amp; Foulkes (2024), <em>An Introduction to Forensic Phonetics and Forensic Linguistics</em>, com casos do livro e dados simulados. As duas últimas aulas são práticas de Praat com gravações dos próprios estudantes. Os diapositivos estão em inglês: clique numa aula para os abrir.</p>
-      </div>
-      <p class="course-links">
-        <a class="btn" href="https://github.com/mcanzi/ws27_fss"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> código-fonte no GitHub</a>
-      </p>
-    </div>
-
-    
-    
-    <ol class="lectures">
-      
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/01_course_introduction.html" target="_blank" rel="noopener"><span class="lecture-n mono">01</span>
-<span class="lecture-text">
-  <span class="lecture-title">Course introduction</span>
-  <span class="lecture-sub">Forensic phonetics, forensic linguistics, and this course</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/02_phonetic_analysis.html" target="_blank" rel="noopener"><span class="lecture-n mono">02</span>
-<span class="lecture-text">
-  <span class="lecture-title">Phonetic analysis</span>
-  <span class="lecture-sub">Segments, prosody and acoustic measurement</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/03_speaker_profiling.html" target="_blank" rel="noopener"><span class="lecture-n mono">03</span>
-<span class="lecture-text">
-  <span class="lecture-title">Speaker profiling</span>
-  <span class="lecture-sub">What a voice can and cannot tell us</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/04_speaker_comparison.html" target="_blank" rel="noopener"><span class="lecture-n mono">04</span>
-<span class="lecture-text">
-  <span class="lecture-title">Speaker comparison</span>
-  <span class="lecture-sub">Methods, evidence and conclusions</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/05_earwitness_evidence.html" target="_blank" rel="noopener"><span class="lecture-n mono">05</span>
-<span class="lecture-text">
-  <span class="lecture-title">Earwitness evidence</span>
-  <span class="lecture-sub">Voice recognition and voice parades</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/06_authentication_enhancement.html" target="_blank" rel="noopener"><span class="lecture-n mono">06</span>
-<span class="lecture-text">
-  <span class="lecture-title">Authentication, enhancement and speech content</span>
-  <span class="lecture-sub">Is the recording genuine, and what was said?</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/07_laap.html" target="_blank" rel="noopener"><span class="lecture-n mono">07</span>
-<span class="lecture-text">
-  <span class="lecture-title">Linguistic analysis in the asylum procedure</span>
-  <span class="lecture-sub">Where did this speaker grow up?</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/08_expert_witnesses.html" target="_blank" rel="noopener"><span class="lecture-n mono">08</span>
-<span class="lecture-text">
-  <span class="lecture-title">Expert witnesses</span>
-  <span class="lecture-sub">Reports, courts and legal systems</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/09_praat_measuring.html" target="_blank" rel="noopener"><span class="lecture-n mono">09</span>
-<span class="lecture-text">
-  <span class="lecture-title">Praat practical 1</span>
-  <span class="lecture-sub">Measuring your own voice</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      <li class="theme-purple">
-        
-        
-        <a class="lecture" href="https://mcanzi.github.io/ws27_fss/10_praat_casework.html" target="_blank" rel="noopener"><span class="lecture-n mono">10</span>
-<span class="lecture-text">
-  <span class="lecture-title">Praat practical 2</span>
-  <span class="lecture-sub">Casework with the class recordings</span>
-  
-</span>
-</a>
-        
-      </li>
-      
-      
-    </ol>
-  </section>
-</div>
-    
   </section>
   
 
@@ -826,7 +901,7 @@
       history.replaceState(null, "", "#" + panels[k].id);
     });
   });
-  if (!fromHash()) show(0);
+  if (!fromHash()) show(Number(document.getElementById("courses").dataset.open) || 0);
   window.addEventListener("hashchange", fromHash);
 })();
 </script>
