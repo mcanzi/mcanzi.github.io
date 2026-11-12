@@ -178,7 +178,7 @@
       <p>Statistical power is the probability that a study detects an effect of a given size, if that effect is real. It depends on the size of the effect, on how noisy the data are, on the number of participants and items, and on the significance level. Once the design and the effect of interest are fixed, only the sample size is still up to us. Green and MacLeod (2016) point out that the usual target of 80% is a convention, with no deeper justification.</p>
 <p>For a simple design, a formula gives the power. For the designs common in linguistics and psychology, with participants and items as crossed random effects, there is no simple formula, and power is estimated by simulation (Brysbaert &amp; Stevens, 2018): make up a world in which the effect exists, simulate a study in it, analyse the data as planned, and repeat many times. Since the effect is real in every simulated data set, the proportion of significant results is the power.</p>
 <div class="facts">
-  <div><strong>80%</strong><span>the usual target power, a convention rather than a rule</span></div>
+  <div><strong>80%</strong><span>the usual target power, set by convention</span></div>
   <div><strong>64 per group</strong><span>for 80% power to detect a difference of half a standard deviation (d = 0.5) with a t-test</span></div>
   <div><strong>about 50%</strong><span>the post hoc power of any study with p = .05, whatever its true power</span></div>
   <div><strong>1,000+</strong><span>simulations for a power analysis you report; a few hundred are enough to explore designs</span></div>
@@ -198,10 +198,10 @@
 <p>Halving the effect roughly quadruples the sample size needed: 64 per group for d = 0.5, but 394 for d = 0.2.</p>
 <h2 id="more-participants-or-more-items">More participants or more items?</h2>
 <p>In the lecture, we plan a replication of a lexical decision study in which L1 and L2 speakers respond to words of different frequencies. The question is the interaction: is the frequency effect larger for L2 speakers? Participants differ in how strongly frequency affects them (the SD of the slopes), and each response adds trial-level noise (an SD of 70 ms). In R, the <code>{simr}</code> package (Green &amp; MacLeod, 2016) answers the question by simulating from a mixed model, refitting it many times, and adding participants or words with <code>extend()</code> and <code>powerCurve()</code>.</p>
-<p>A browser cannot refit a mixed model a thousand times while you move a slider. This figure uses a simpler analysis of the same design instead: a regression slope for each participant, then a t-test comparing the slopes of the two groups (Lorch &amp; Myers, 1990). The numbers differ somewhat from the mixed model&rsquo;s, but the pattern is the same.</p>
+<p>A browser cannot refit a mixed model a thousand times while you move a slider. This figure uses a simpler analysis of the same design instead: a regression slope for each participant, then a t-test comparing the slopes of the two groups (Lorch &amp; Myers, 1990). Its numbers differ somewhat from those of the mixed model, while the curves have the same shape.</p>
 <figure class="mlab plab plab-design" data-part="design"><noscript><p>This figure needs JavaScript.</p></noscript></figure>
 
-<p>Adding participants raises the power steadily. Adding words helps at first and then levels off, because more words only make each participant&rsquo;s slope more precise: they do nothing about the real differences between participants. The ceiling shows the power with infinitely many words. Set the SD of the slopes to zero and the words become as useful as the participants. What to add depends on which source of variation limits the comparison you care about.</p>
+<p>Adding participants raises the power steadily. Adding words helps at first and then levels off, because more words only make each participant&rsquo;s slope more precise, while the real differences between participants stay as they are. The ceiling shows the power with infinitely many words. Set the SD of the slopes to zero and the words become as useful as the participants.</p>
 <h2 id="post-hoc-power">Post hoc power</h2>
 <p>Post hoc power, also called observed or retrospective power, is computed after a study, with the effect size estimated from the study&rsquo;s own data. Reviewers sometimes ask for it to show whether a non-significant study was &ldquo;underpowered&rdquo;. Heinsberg and Weeks (2022) simulated the same mouse experiment at two universities, with 100 animals each, and different true effects:</p>
 <table>
@@ -234,13 +234,13 @@
       </tr>
   </tbody>
 </table>
-<p>The two studies look almost the same, and so does their post hoc power. Their true power differs by a factor of more than two, and nothing in the data shows it.</p>
+<p>The two studies look almost the same, and so does their post hoc power. Their true power, 84% against 32%, cannot be read from either data set.</p>
 <p>The figure below repeats this on a larger scale. Each point is one simulated study, all with the same design and the same true power.</p>
 <figure class="mlab plab plab-posthoc" data-part="posthoc"><noscript><p>This figure needs JavaScript.</p></noscript></figure>
 
-<p>The points do not scatter around the true power. They fall on a single curve of the p-value: post hoc power is about 50% at p = .05, lower whenever p is larger, and higher whenever p is smaller (Hoenig &amp; Heisey, 2001). Change the true effect and the points slide along the same curve. Post hoc power is the p-value on another scale, so a non-significant result always comes with low post hoc power, whether the study missed a real effect or the effect does not exist.</p>
+<p>Wherever the true power lies, the points fall on a single curve of the p-value: post hoc power is about 50% at p = .05, lower whenever p is larger, and higher whenever p is smaller (Hoenig &amp; Heisey, 2001). Change the true effect and the points slide along the same curve. Because post hoc power is a transformation of the p-value, a non-significant result always comes with low post hoc power, whether the study missed a real effect or the effect does not exist.</p>
 <h2 id="what-to-report-instead">What to report instead</h2>
-<p>To help readers judge a non-significant result, report the estimate with its confidence interval, which shows the effect sizes the data are compatible with. Report the power analysis you ran before the study, with the effect size you chose and the reason for it. If there was none, a sensitivity analysis gives the smallest effect the design had 80% power to detect, from the design and assumed variances rather than the observed effect.</p>
+<p>To help readers judge a non-significant result, report the estimate with its confidence interval, which shows the effect sizes the data are compatible with. Report the power analysis you ran before the study, with the effect size you chose and the reason for it. If there was none, a sensitivity analysis gives the smallest effect the design had 80% power to detect, computed from the design and the assumed variances, without using the observed effect.</p>
 <h2 id="references">References</h2>
 <p>Brysbaert, M., &amp; Stevens, M. (2018). Power analysis and effect size in mixed effects models: A tutorial. <em>Journal of Cognition</em>, 1(1), 9. <a href="https://doi.org/10.5334/joc.10">https://doi.org/10.5334/joc.10</a></p>
 <p>Gelman, A., &amp; Carlin, J. (2014). Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. <em>Perspectives on Psychological Science</em>, 9(6), 641–651. <a href="https://doi.org/10.1177/1745691614551642">https://doi.org/10.1177/1745691614551642</a></p>
