@@ -830,7 +830,7 @@ main, .site-footer { position: relative; z-index: 1; }
 /* each piece is the solid symbol in its side's colour with the outline symbol on top in the other side's colour */
 .term .chess-board .pc::after { content: attr(data-o); position: absolute; left: 0; top: 0; width: 100%; text-align: center; color: var(--o); }
 .term .chess-board .pc.cw { color: var(--strong); --o: var(--kingfisher); }
-.term .chess-board .pc.cb { color: var(--kingfisher); --o: var(--strong); }
+.term .chess-board .pc.cb { color: color-mix(in srgb, var(--kingfisher) 50%, var(--floor)); --o: var(--strong); }   /* black: a dark inside, so the light outline gives the shape */
 .term .chess-board .clast { background: color-mix(in srgb, var(--hornbill) 30%, transparent); border-radius: 2px; }
 .term .chess-board .ccheck { background: color-mix(in srgb, var(--pandan) 45%, transparent); border-radius: 2px; }
 
