@@ -1,7 +1,7 @@
-/* arang: the theme of mcanzi.github.io. Two themes, switched with the button in the navigation bar:
-   forest (the default, a rainforest at night, as theme-dark.css in ws26_statistics) and glacier (slate
-   blue with buttercups, as theme-buttercup.css in ss27_advanced_statistics); plus the hidden purple theme
-   (css/theme-purple.css). Bricolage Grotesque, Atkinson Hyperlegible, JetBrains Mono. */
+/* arang: the theme of mcanzi.github.io. Three themes, switched in turn with the button in the navigation bar:
+   forest (the default, a rainforest at night, as theme-dark.css in ws26_statistics), glacier (slate
+   blue with buttercups, as theme-buttercup.css in ss27_advanced_statistics) and sunset (the colours of a
+   sunset over Almaty, with oranges); plus the hidden purple theme (css/theme-purple.css). Bricolage Grotesque, Atkinson Hyperlegible, JetBrains Mono. */
 
 :root {
   --floor:      #0b110e;   /* rainforest at night: green-black, darker than the glacier theme */
@@ -145,6 +145,13 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 /* keyboard focus: the same ring everywhere (links, buttons, cards, chart elements) */
 :focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
+/* "skip to content": the first thing the Tab key reaches, shown only then */
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  padding: 8px 14px; border-radius: 8px;
+  background: var(--pandan); color: var(--floor); font-family: var(--f-mono); font-size: 0.9rem; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: 12px; color: var(--floor); }
 /* visitors who ask their system for less motion get no zooms, fades or slides */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
@@ -771,7 +778,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .lang-current { color: var(--floor); background: var(--pandan); }
 
 /* background motif: rafflesias and their buds all over the page, very faint (img/motifs/rafflesia.svg);
-   the glacier theme has buttercups instead, the purple theme toadstools */
+   the glacier theme has buttercups instead, the sunset theme oranges, the purple theme toadstools */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background: url("../img/motifs/rafflesia.svg") repeat 0 0 / 640px 640px;
@@ -923,7 +930,7 @@ main, .site-footer { position: relative; z-index: 1; }
   --hornbill:   #f2917a;   /* salmon: accents, cv button, cursor */
   --kingfisher: #f6b8a4;   /* pale salmon: links */
   --orchid:     #d9b56a;   /* stamen gold */
-  --moss:       #5d7180;
+  --moss:       #7a90a1;   /* 4.5:1 on the background, like the other themes */
   --leaf:       #8fb8a8;
   --c1: #a9cbe0; --c2: #f2917a; --c3: #d9b56a; --c4: #8fb8a8;   /* chart colours */
   --title-top:    #eef6fa;   /* page titles and the name: ice white above, ice blue below */
@@ -947,8 +954,50 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 @media (max-width: 700px) { :root[data-theme="glacier"] body::before { background-size: 400px 400px; opacity: 0.18; } }
 
+/* ---- sunset theme ----------------------------------------------------- */
+/* The colours of a sunset over Almaty (photography page, 0H2A0442.jpg): the city in shadow for the
+   background, the plum haze for borders, warm haze for the text, the orange sky for headings, the sun for
+   accents and the light around it for the name. Oranges in the background, drawn in ink like the
+   toadstools of the purple theme (img/motifs/oranges.svg). Comes after glacier with the button in the
+   navigation bar and is remembered in the browser like the other themes. */
+
+:root[data-theme="sunset"] {
+  --floor:      #13151c;   /* the city in shadow */
+  --understory: #191b24;
+  --raised:     #20222d;
+  --vine:       #3a3240;   /* plum haze: borders */
+  --mist:       #f3e7da;   /* warm haze: text */
+  --muted:      #a9978f;   /* 5.6:1 on the raised panels */
+  --pandan:     #f28a1e;   /* the orange sky: headings, primary */
+  --hornbill:   #f6c445;   /* the sun: accents, cv button, cursor */
+  --kingfisher: #f6ad7b;   /* apricot: links */
+  --orchid:     #c98da4;   /* mauve haze */
+  --moss:       #97807a;
+  --leaf:       #e39abd;
+  --c1: #f28a1e; --c2: #f6c445; --c3: #5f86d6; --c4: #e39abd;   /* chart colours: orange, sun, dusk blue, pink haze */
+  --title-top:    #fdf0c4;   /* page titles and the name: the pale light next to the sun above, the horizon below */
+  --title-bottom: #ec6a0f;
+
+  --nav-bg:      rgba(19, 21, 28, 0.9);
+  --glow-1:      rgba(242, 138, 30, 0.14);   /* the sun, top right */
+  --glow-2:      rgba(181, 75, 51, 0.07);
+  --strong:      #fff;
+  --shadow:      0 18px 50px rgba(0, 0, 0, 0.4);
+  --primary-hi:  #f6a54d;
+  --cv-hi:       #f8d26e;
+  --dot-red:     #e0675f;
+  --hit:         rgba(243, 231, 218, 0.05);
+  color-scheme: dark;
+}
+:root[data-theme="sunset"] body::before {
+  background: url("../img/motifs/oranges.svg") repeat 0 0 / 600px 600px;
+  opacity: 0.2;
+  filter: none;
+}
+@media (max-width: 700px) { :root[data-theme="sunset"] body::before { background-size: 400px 400px; opacity: 0.18; } }
+
 /* theme switch in the navigation bar: shows the theme it switches to (snowflake + "glacier mode" on the forest
-   and purple themes, tree + "forest mode" on the glacier one) */
+   and purple themes, sun + "sunset mode" on the glacier one, tree + "forest mode" on the sunset one) */
 .theme-toggle {
   display: inline-flex; align-items: center; height: 36px; padding: 0 8px;
   border: 0; border-radius: 6px; background: none; cursor: pointer;
@@ -956,12 +1005,16 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 .theme-toggle:hover { color: var(--mist); background: var(--raised); }
 .theme-toggle[hidden] { display: none; }
-.theme-toggle .to-dark, .theme-toggle .to-glacier { display: none; align-items: center; gap: 7px; }
+.theme-toggle .to-dark, .theme-toggle .to-glacier, .theme-toggle .to-sunset { display: none; align-items: center; gap: 7px; }
 .theme-toggle svg { display: block; flex: none; }
 .theme-toggle .to-glacier { display: inline-flex; }
-:root[data-theme="glacier"] .theme-toggle .to-glacier { display: none; }
-:root[data-theme="glacier"] .theme-toggle .to-dark { display: inline-flex; }
-@media (max-width: 560px) { .theme-toggle .theme-label { display: none; } }
+:root[data-theme="glacier"] .theme-toggle .to-glacier,
+:root[data-theme="sunset"] .theme-toggle .to-glacier { display: none; }
+:root[data-theme="glacier"] .theme-toggle .to-sunset { display: inline-flex; }
+:root[data-theme="sunset"] .theme-toggle .to-dark { display: inline-flex; }
+/* the label is the button's name for screen readers (it says which theme comes next), so on small screens it is
+   hidden only from sight */
+@media (max-width: 560px) { .theme-toggle .theme-label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
 
 /* trips on TravelMap (photography page, data/trips.yaml) */
 .trips-jump { margin: 10px 0 0; font-size: 0.85rem; }
