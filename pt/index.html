@@ -33,7 +33,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
   <link rel="manifest" href="/img/favicon/site.webmanifest">
   <meta name="theme-color" content="#0b110e">
-  <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light") { t = "glacier"; localStorage.setItem("theme", t); } if (t === "glacier" || t === "sunset" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script>try { const t = localStorage.getItem("theme"); if (t === "glacier" || t === "sunset" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
   
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
