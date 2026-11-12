@@ -1,8 +1,6 @@
-/* Two interactive figures for the media study (content/demo/media.*.md), from data/mediastudy.json (participants).
+/* Interactive figures for the media study (content/demo/media.*.md), from data/mediastudy.json (participants).
    Each is a <figure class="mlab mdlab" data-part="..."> filled in here:
-   - people: one before/after line per participant, one panel per group
-   - perm:   an exact permutation test of the group difference in change, over all 48,620 ways to split
-             the 18 participants into two groups of nine */
+   - people: one before/after line per participant, one panel per group */
 (() => {
   const I = JSON.parse(document.getElementById("mdlab-i18n").textContent);
   const TX = I.t, LOC = I.locale || "en-US";
@@ -118,96 +116,7 @@
     renders.push(draw);
   };
 
-  // ---------- could it be chance: exact permutation test ----------
-  const SPLITS = (() => {
-    const out = [], idx = [];
-    const rec = (start) => {
-      if (idx.length === 9) { let m = 0; for (const i of idx) m |= 1 << i; out.push(m); return; }
-      for (let i = start; i <= 18 - (9 - idx.length); i++) { idx.push(i); rec(i + 1); idx.pop(); }
-    };
-    rec(0); return Int32Array.from(out);
-  })();
-  const perm = (fig) => {
-    let feat = "flapping", done = 0, order = null, diffs = null, last = null;
-    const ui = scaffold(fig, TX.perm_aria);
-    pills(ui.ctl, TX.feature, FEATS, TX.feats, () => feat, (v) => { feat = v; reset(); });
-    const bar = h("div", "filter-row"); ui.ctl.appendChild(bar);
-    const btn = (label, k) => {
-      const b = h("button", "pill", esc(label)); b.type = "button";
-      b.addEventListener("click", () => add(k)); bar.appendChild(b);
-    };
-    btn(TX.shuffle1, 1); btn(fill(TX.shuffleK, { k: nf(100) }), 100); btn(fill(TX.all, { k: nf(SPLITS.length) }), SPLITS.length);
-    ui.legend.innerHTML = `<span><svg width="12" height="12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--c4)"/></svg> ${esc(TX.one_split)}</span>` +
-      `<span><svg width="12" height="12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--c2)"/></svg> ${esc(TX.as_extreme)}</span>` +
-      `<span><svg width="16" height="12" aria-hidden="true"><line x1="0" y1="6" x2="16" y2="6" stroke="var(--mist)" stroke-width="2.5"/></svg> ${esc(TX.observed)}</span>`;
-    const changes = () => PEOPLE.map((p) => p.f[feat].change);
-    const diffOf = (mask, ch) => { let a = 0, b = 0; for (let i = 0; i < 18; i++) (mask >> i) & 1 ? (a += ch[i]) : (b += ch[i]); return a / 9 - b / 9; };
-    const realMask = PEOPLE.reduce((m, p, i) => (p.group === "AE" ? m | (1 << i) : m), 0);
-    let obs = 0, ch = [], sd = 1, lim = 30;
-    const reset = () => {
-      ch = changes(); obs = diffOf(realMask, ch);
-      diffs = new Float64Array(SPLITS.length); let ss = 0, mx = 0;
-      for (let i = 0; i < SPLITS.length; i++) { diffs[i] = diffOf(SPLITS[i], ch); ss += diffs[i] ** 2; mx = Math.max(mx, Math.abs(diffs[i])); }
-      sd = Math.sqrt(ss / SPLITS.length); lim = Math.ceil(Math.max(mx, Math.abs(obs) + 2) / 10) * 10;
-      order = Uint32Array.from({ length: SPLITS.length }, (_, i) => i);
-      for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
-      done = 0; last = null; draw();
-    };
-    let token = 0;
-    const add = (k) => {
-      if (done >= SPLITS.length) { done = 0; last = null; }
-      const target = Math.min(SPLITS.length, done + k), me = ++token, step = Math.max(1, Math.ceil((target - done) / 30));
-      const tick = () => {
-        if (me !== token) return;
-        done = Math.min(target, done + step); last = order[done - 1]; draw();
-        if (done < target) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-    const draw = () => {
-      const [W, H] = sizeSvg(ui.svg, 0.48, 260, 380);
-      const L = 52, R = 16, T = 20, B = H - 44;
-      const lo = -lim, hi = lim, nb = 60, bw = (hi - lo) / nb;
-      const sx = (v) => L + ((v - lo) / (hi - lo)) * (W - R - L);
-      const cnt = new Array(nb).fill(0), ext = new Array(nb).fill(0);
-      let k = 0;
-      for (let i = 0; i < done; i++) {
-        const d = diffs[order[i]], b = Math.min(nb - 1, Math.max(0, Math.floor((d - lo) / bw)));
-        if (Math.abs(d) >= Math.abs(obs) - 1e-9) { ext[b]++; k++; } else cnt[b]++;
-      }
-      const full = SPLITS.length * bw / (Math.sqrt(2 * Math.PI) * sd) * 1.15;
-      const ymax = Math.max(done > 300 ? full * done / SPLITS.length : 4, ...cnt.map((c, i) => c + ext[i]), 1);
-      const sy = (v) => B - (v / ymax) * (B - T);
-      for (let v = -lim; v <= lim; v += 10) txt(ui.svg, sx(v), B + 18, signed(v, 0).replace("±", ""), { class: "mlab-tick", "text-anchor": "middle" });
-      txt(ui.svg, (L + W - R) / 2, H - 6, TX.perm_x, { class: "mlab-axis", "text-anchor": "middle" });
-      txt(ui.svg, L + 6, T + 2, TX.splits_y, { class: "mlab-hint" });
-      el("line", { x1: L, x2: W - R, y1: B, y2: B, class: "mlab-grid" }, ui.svg);
-      for (let b = 0; b < nb; b++) {
-        const x = sx(lo + b * bw) + 0.5, w = Math.max(1, sx(lo + (b + 1) * bw) - sx(lo + b * bw) - 1);
-        if (cnt[b]) el("rect", { x, y: sy(cnt[b]), width: w, height: B - sy(cnt[b]), fill: "var(--c4)" }, ui.svg);
-        if (ext[b]) el("rect", { x, y: sy(cnt[b] + ext[b]), width: w, height: sy(cnt[b]) - sy(cnt[b] + ext[b]), fill: "var(--c2)" }, ui.svg);
-      }
-      for (const v of [obs, -obs]) {
-        el("line", { x1: sx(v), x2: sx(v), y1: T, y2: B, stroke: "var(--mist)", "stroke-width": v === obs ? 2.5 : 1.2, "stroke-dasharray": v === obs ? "" : "4 4" }, ui.svg);
-      }
-      const far = sx(obs) > (L + W - R) * 0.7;
-      txt(ui.svg, sx(obs) + (far ? -6 : 6), T + 14, fill(TX.real, { d: signed(obs) }), { class: "mlab-cat", "text-anchor": far ? "end" : "start" });
-      if (last !== null && done < SPLITS.length) {
-        const d = diffs[last];
-        el("circle", { cx: sx(d), cy: B - 7, r: 5, fill: "var(--mist)", stroke: "var(--understory)", "stroke-width": 2 }, ui.svg);
-      }
-      ui.rs.innerHTML = `<span>${esc(TX.observed)}: <strong>${signed(obs)} pp</strong></span>` +
-        `<span>${esc(TX.splits)}: <strong>${nf(done)} / ${nf(SPLITS.length)}</strong></span>` +
-        `<span>${esc(TX.share)}: <strong>${done ? lead0(nf(k / done, 3)) : "–"}</strong></span>`;
-      ui.status.innerHTML = !done ? esc(TX.perm_help)
-        : done < SPLITS.length && last !== null ? esc(fill(TX.this_split, { ae: PEOPLE.filter((_, i) => (SPLITS[last] >> i) & 1).map((p) => p.id).join(", "), d: signed(diffs[last]) }))
-        : esc(fill(TX.exact, { p: lead0(nf(k / done, 3)) }));
-    };
-    reset();
-    renders.push(draw);
-  };
-
-  const parts = { people, perm };
+  const parts = { people };
   document.querySelectorAll(".mdlab[data-part]").forEach((fig) => { const f = parts[fig.dataset.part]; if (f) f(fig); });
   renders.forEach((f) => f());
   let rt, lastW = window.innerWidth;
