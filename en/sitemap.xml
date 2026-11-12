@@ -94,6 +94,29 @@
                 href="https://mcanzi.github.io/demo/media/"
                 />
   </url><url>
+    <loc>https://mcanzi.github.io/demo/power/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.github.io/it/demo/power/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/demo/power/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.github.io/de/demo/power/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.github.io/demo/power/"
+                />
+  </url><url>
     <loc>https://mcanzi.github.io/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
     <xhtml:link

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poweranalyse durch Simulation · Massimiliano Canzi</title>
+  <meta name="description" content="Massimiliano Canzi, Data Scientist und LingLab-Manager am Fachbereich Linguistik der Universität Konstanz">
+  <link rel="canonical" href="https://mcanzi.github.io/de/demo/power/">
+  <link rel="alternate" hreflang="en" href="https://mcanzi.github.io/demo/power/">
+  <link rel="alternate" hreflang="it" href="https://mcanzi.github.io/it/demo/power/">
+  <link rel="alternate" hreflang="pt" href="https://mcanzi.github.io/pt/demo/power/">
+  <link rel="alternate" hreflang="de" href="https://mcanzi.github.io/de/demo/power/">
+  <meta name="generator" content="Hugo 0.160.1">
+
+  
+  <meta property="og:title" content="Poweranalyse durch Simulation · Massimiliano Canzi">
+  <meta property="og:description" content="Massimiliano Canzi, Data Scientist und LingLab-Manager am Fachbereich Linguistik der Universität Konstanz">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mcanzi.github.io/de/demo/power/">
+  <meta property="og:image" content="https://mcanzi.github.io/img/card.jpg">
+  <meta name="twitter:image" content="https://mcanzi.github.io/img/card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  
+  <link rel="icon" href="/favicon.ico?v=2" sizes="32x32">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0b110e">
+  <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light") { t = "glacier"; localStorage.setItem("theme", t); } if (t === "glacier" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+
+  
+  <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/css/site.css?v=55738c709c40">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=5f8df6713fe7">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
+</head>
+
+<body class="page-power">
+  <header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/de/" aria-label="home">
+      <span class="prompt">~/</span><span class="brand-name">mcanzi</span><span class="brand-doglord" hidden>doglord</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+    <nav aria-label="main">
+      <ul class="nav-links">
+        <li><a href="/de/demo/" class="active" aria-current="page">demo</a></li>
+        <li><a href="/de/output/">publikationen</a></li>
+        <li><a href="/de/teaching/">lehre</a></li>
+        <li><a href="/de/photo/">fotografie</a></li>
+      </ul>
+    </nav>
+    <ul class="nav-icons">
+      <li><a href="mailto:massimiliano.canzi@uni-konstanz.de" aria-label="email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+      <li><a href="https://github.com/mcanzi" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
+      <li><a href="https://scholar.google.com/citations?hl=en&amp;user=w03Fq8oAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2Zm-6.5 11.2V17c0 1.66 2.91 3.5 6.5 3.5s6.5-1.84 6.5-3.5v-3.8L12 17.4l-6.5-4.2Z"/></svg></a></li>
+      <li><button class="theme-toggle" type="button" aria-label="zwischen Wald- und Gletschermodus wechseln" title="zwischen Wald- und Gletschermodus wechseln" hidden><span class="to-dark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 12h4l-4 6h14l-4-6h4L12 2Z"/><path d="M12 18v4"/></svg><span class="theme-label">Waldmodus</span></span><span class="to-glacier"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(60 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(120 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(180 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(240 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(300 12 12)"/></svg><span class="theme-label">Gletschermodus</span></span></button></li>
+      <li class="lang-switch" role="group" aria-label="Sprache">
+        <span class="lang-current" aria-current="true" title="Deutsch">DE</span>
+        <a href="/demo/power/" hreflang="en" lang="en" title="English">EN</a>
+        <a href="/it/demo/power/" hreflang="it" lang="it" title="Italiano">IT</a>
+        <a href="/pt/demo/power/" hreflang="pt" lang="pt" title="Português">PT</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<script>
+(() => {
+  const btn = document.querySelector(".theme-toggle");
+  const root = document.documentElement;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[root.dataset.theme] || "#0b110e"; };
+  
+  const next = { dark: "glacier", glacier: "dark", purple: "glacier" };
+  sync();
+  btn.hidden = false;
+  btn.addEventListener("click", () => {
+    const t = next[root.dataset.theme || "dark"] || "dark";
+    if (t === "dark") delete root.dataset.theme; else root.dataset.theme = t;
+    try { localStorage.setItem("theme", t); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+<script>
+(() => {
+  
+  
+  
+  
+  
+  const KEY = "lang-scroll";
+  const SEL = "main :is(h1, h2, h3, h4, p, li, figure, pre, table, blockquote, dt, dd)";
+  const HEAD = "main :is(h1, h2, h3, h4)";
+  const line = () => {
+    const nav = document.querySelector(".site-nav");
+    return nav && /sticky|fixed/.test(getComputedStyle(nav).position) ? nav.getBoundingClientRect().bottom : 0;
+  };
+  document.querySelectorAll(".lang-switch a").forEach((a) => a.addEventListener("click", () => {
+    if (scrollY < 40) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    const i = blocks.findIndex((el) => { const r = el.getBoundingClientRect(); return r.height > 0 && r.bottom > top + 4; });
+    if (i < 0) return;
+    const r = blocks[i].getBoundingClientRect();
+    const h = heads.filter((el) => el.getBoundingClientRect().top <= top + 4).length - 1;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    try {
+      sessionStorage.setItem(KEY, JSON.stringify({
+        to: new URL(a.href).pathname, at: Date.now(),
+        i, n: blocks.length, off: Math.min(Math.max((top - r.top) / r.height, 0), 1),
+        h, hn: heads.length, share: max > 0 ? scrollY / max : 0
+      }));
+    } catch (e) {}
+  }));
+  let saved = null;
+  try { saved = JSON.parse(sessionStorage.getItem(KEY)); sessionStorage.removeItem(KEY); } catch (e) {}
+  if (!saved || saved.to !== location.pathname || Date.now() - saved.at > 15000 || location.hash) return;
+  let moved = false;
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach((ev) => addEventListener(ev, () => { moved = true; }, { once: true, passive: true }));
+  const go = () => {
+    if (moved) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    let y = null;
+    const el = blocks.length === saved.n ? blocks[saved.i] : null;
+    if (el && el.getBoundingClientRect().height > 0) {
+      const r = el.getBoundingClientRect();
+      y = scrollY + r.top + saved.off * r.height - top;
+    } else if (heads.length === saved.hn && saved.h >= 0) {
+      y = scrollY + heads[saved.h].getBoundingClientRect().top - top - 8;
+    } else {
+      y = saved.share * (document.documentElement.scrollHeight - innerHeight);
+    }
+    scrollTo({ top: Math.max(0, y), behavior: "instant" });
+  };
+  if (document.readyState === "loading") addEventListener("DOMContentLoaded", go, { once: true }); else go();
+  addEventListener("load", go, { once: true });
+  if (document.fonts) document.fonts.ready.then(go);
+})();
+</script>
+
+  <main id="main">
+    
+<article class="page page-wide demo-page">
+  <header class="page-header">
+    <p class="kicker mono">~/demo/power</p>
+    <h1>Poweranalyse durch Simulation</h1>
+    <p class="lead">Eine interaktive Ergänzung zur Sitzung über Poweranalyse in meinem Kurs Advanced Statistics. Alle Studien auf dieser Seite werden in Ihrem Browser simuliert.</p>
+  </header>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="Demos">
+      <p class="demo-nav-head mono">Demos</p>
+      <ul>
+        <li><a class="accent-kingfisher" href="/de/demo/masks/">
+          <span class="demo-nav-label mono">ICPhS · 2023</span>
+          <span class="demo-nav-title">Masken und die Wahrnehmung von Frikativen</span>
+          <span class="demo-nav-card">Machen Masken Sprache schwerer verständlich, weil sie den Klang dämpfen, oder weil sie die Lippen verdecken?</span>
+        </a></li>
+        <li><a class="accent-pandan" href="/de/demo/media/">
+          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+          <span class="demo-nav-title">Medien und Lautwandel</span>
+          <span class="demo-nav-card">Können zwei Wochen mit einer amerikanischen oder britischen Serie die englische Aussprache deutscher Lernender verändern?</span>
+        </a></li>
+        <li><a class="accent-hornbill on" href="/de/demo/power/" aria-current="page">
+          <span class="demo-nav-label mono">Lehre · Advanced Statistics</span>
+          <span class="demo-nav-title">Poweranalyse durch Simulation</span>
+          <span class="demo-nav-card">Wie viele Teilnehmende braucht eine Studie, und warum kann Post-hoc-Power nicht zeigen, ob eine Studie zu klein war?</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p>Statistische Power ist die Wahrscheinlichkeit, dass eine Studie einen Effekt einer bestimmten Größe entdeckt, wenn es diesen Effekt tatsächlich gibt. Sie hängt von der Größe des Effekts ab, davon, wie verrauscht die Daten sind, von der Zahl der Teilnehmenden und Items und vom Signifikanzniveau. Sind Design und interessierender Effekt festgelegt, bleibt nur noch die Stichprobengröße offen. Green und MacLeod (2016) weisen darauf hin, dass das übliche Ziel von 80 % eine Konvention ist, ohne tiefere Begründung.</p>
+<p>Für ein einfaches Design liefert eine Formel die Power. Für die in Linguistik und Psychologie üblichen Designs, mit Teilnehmenden und Items als gekreuzten Zufallseffekten, gibt es keine einfache Formel, und die Power wird durch Simulation geschätzt (Brysbaert &amp; Stevens, 2018): Man erfindet eine Welt, in der der Effekt existiert, simuliert darin eine Studie, analysiert die Daten wie geplant und wiederholt das viele Male. Weil der Effekt in jedem simulierten Datensatz echt ist, ist der Anteil signifikanter Ergebnisse die Power.</p>
+<div class="facts">
+  <div><strong>80 %</strong><span>die übliche Zielpower, eher eine Konvention als eine Regel</span></div>
+  <div><strong>64 pro Gruppe</strong><span>für 80 % Power, um mit einem t-Test einen Unterschied von einer halben Standardabweichung (d = 0,5) zu entdecken</span></div>
+  <div><strong>etwa 50 %</strong><span>die Post-hoc-Power jeder Studie mit p = .05, unabhängig von ihrer wahren Power</span></div>
+  <div><strong>1.000+</strong><span>Simulationen für eine Poweranalyse, die man berichtet; zum Erkunden von Designs reichen einige hundert</span></div>
+</div>
+<h2 id="kleine-studien-übertreiben">Kleine Studien übertreiben</h2>
+<p>Die Grafik unten führt 2.000 Studien durch, die jeweils zwei Gruppen vergleichen. Der wahre Unterschied zwischen den Gruppen wird mit dem ersten Schieberegler in Standardabweichungen (Cohens d) eingestellt, die Zahl der Teilnehmenden pro Gruppe mit dem zweiten. Jeder Balken zählt die Studien, deren Schätzung in diesen Bereich fiel, eingefärbt danach, ob die Schätzung signifikant war.</p>
+<figure class="mlab plab plab-sim" data-part="sim"><noscript><p>Diese Grafik benötigt JavaScript.</p></noscript></figure>
+<script type="application/json" id="plab-i18n">{"locale":"de-DE","t":{"again":"neu simulieren","ceiling":"bei {p} Teilnehmenden und unbegrenzt vielen Wörtern","curve_aria":"Power eines Zweigruppenvergleichs in Abhängigkeit von der Zahl der Teilnehmenden pro Gruppe","curve_help":"Ziehen Sie über die Grafik oder nutzen Sie die Schieberegler, um die Stichprobengröße zu ändern.","curve_now":"Power bei {n} pro Gruppe und d = {d}","curve_x":"Teilnehmende pro Gruppe →","design_aria":"Power für die Interaktion in Abhängigkeit von der Zahl der Teilnehmenden und der Wörter","design_help":"Analytische Power der zweistufigen Analyse. Die Simulation zieht für jede Studie neue Teilnehmende und neue Wörter.","design_now":"Power bei {p} Teilnehmenden und {w} Wörtern","design_x":"Zahl der Teilnehmenden oder Wörter →","effect":"wahrer Effekt (d)","formula":"Formel","interaction":"Interaktion","more_part":"mehr Teilnehmende (Wörter fest)","more_words":"mehr Wörter (Teilnehmende fest)","ms_unit":"{v} ms/Einheit","n80":"pro Gruppe für 80 % Power","nonsig":"p ≥ .05","one_study":"eine Studie","over":"mehr als {n}","participants":"Teilnehmende","per_group":"Teilnehmende pro Gruppe","ph_aria":"Streudiagramm von p-Wert und Post-hoc-Power aus 1.000 simulierten Studien","ph_at05":"Post-hoc-Power bei p = .05","ph_range":"Post-hoc-Power reicht von","ph_status":"{k} simulierte Studien mit {n} Teilnehmenden pro Gruppe und d = {d}; davon {sig} signifikant.","ph_x":"p-Wert →","ph_y":"↑ Post-hoc-Power","power":"Power","power_y":"↑ Power","pp":"Pp.","ref_d":"d = 0,2, 0,5, 0,8","sig":"p \u003c .05","sig_mean":"Mittel der signifikanten Schätzungen","sim_aria":"Histogramm der geschätzten Effekte aus 2.000 simulierten Studien, signifikant und nicht signifikant","sim_status":"{k} simulierte Studien mit je {n} Teilnehmenden pro Gruppe und einem wahren Effekt von d = {d}.","sim_x":"geschätzter Gruppenunterschied (in SD) →","simulate":"{k} Studien simulieren","simulated":"simuliert, {k} Studien","slope_sd":"SD der Steigungen","studies_y":"↑ Studien","target":"80 % Power","times":"{x} × der wahre Effekt","true_effect":"wahrer Effekt","true_power":"wahre Power","true_power_is":"wahre Power: {p}","type_m":"Überschätzung (Typ M)","type_s":"falsches Vorzeichen (Typ S)","words":"Wörter","your_d":"Ihr Effekt"}}</script>
+<script defer src="/js/power-demo.js?v=6270559aca17"></script>
+
+<p>Bei 20 Teilnehmenden pro Gruppe und d = 0,3 ist etwa jede siebte Studie signifikant, nahe an den 15 %, die die Formel vorhersagt. Nur große Schätzungen überschreiten die Signifikanzschwelle, deshalb überschätzen die signifikanten Studien den Effekt, im Mittel um das Doppelte oder mehr. Gelman und Carlin (2014) nennen das einen Typ-M-Fehler (magnitude, Größe). Einige signifikante Studien liegen sogar in der Richtung falsch, ein Typ-S-Fehler (sign, Vorzeichen). Mit größerer Stichprobe werden beide Fehler kleiner, bis sich die signifikanten Schätzungen um den wahren Effekt sammeln.</p>
+<p>Wenn Zeitschriften überwiegend signifikante Ergebnisse veröffentlichen, sind die publizierten Effekte kleiner Studien zu groß. Vasishth et al. (2018) haben das für einen psycholinguistischen Befund mit sieben direkten Replikationen gezeigt. Eine Poweranalyse, die ihre Effektgröße aus einer solchen Publikation übernimmt, verspricht dann mehr Power, als die nächste Studie haben wird. Eine bessere Grundlage ist der kleinste Effekt, der für die Theorie von Bedeutung wäre.</p>
+<h2 id="wie-viele-teilnehmende">Wie viele Teilnehmende?</h2>
+<p>Dieselbe Rechnung für jede Stichprobengröße ergibt eine Powerkurve. Die hervorgehobene Kurve folgt der Effektgröße aus der ersten Grafik, die grauen Kurven zeigen die konventionell kleinen, mittleren und großen Effekte von d = 0,2, 0,5 und 0,8.</p>
+<figure class="mlab plab plab-curve" data-part="curve"><noscript><p>Diese Grafik benötigt JavaScript.</p></noscript></figure>
+
+<p>Halbiert man den Effekt, braucht man ungefähr die vierfache Stichprobe: 64 pro Gruppe für d = 0,5, aber 394 für d = 0,2.</p>
+<h2 id="mehr-teilnehmende-oder-mehr-items">Mehr Teilnehmende oder mehr Items?</h2>
+<p>In der Sitzung planen wir die Replikation einer lexikalischen Entscheidungsstudie, in der L1- und L2-Sprechende auf Wörter unterschiedlicher Frequenz reagieren. Die Frage betrifft die Interaktion: Ist der Frequenzeffekt bei L2-Sprechenden größer? Teilnehmende unterscheiden sich darin, wie stark die Frequenz sie beeinflusst (die SD der Steigungen), und jede Antwort bringt Rauschen auf Trial-Ebene mit sich (eine SD von 70 ms). In R beantwortet das Paket <code>{simr}</code> (Green &amp; MacLeod, 2016) die Frage, indem es aus einem gemischten Modell simuliert, es viele Male neu schätzt und mit <code>extend()</code> und <code>powerCurve()</code> Teilnehmende oder Wörter hinzufügt.</p>
+<p>Ein Browser kann kein gemischtes Modell tausendmal neu schätzen, während Sie einen Schieberegler bewegen. Diese Grafik verwendet deshalb eine einfachere Analyse desselben Designs: eine Regressionssteigung pro Teilnehmer:in, dann einen t-Test, der die Steigungen der beiden Gruppen vergleicht (Lorch &amp; Myers, 1990). Die Zahlen weichen etwas von denen des gemischten Modells ab, das Muster ist aber dasselbe.</p>
+<figure class="mlab plab plab-design" data-part="design"><noscript><p>Diese Grafik benötigt JavaScript.</p></noscript></figure>
+
+<p>Mehr Teilnehmende erhöhen die Power stetig. Mehr Wörter helfen zuerst und flachen dann ab, weil zusätzliche Wörter nur die Steigung jeder einzelnen Person genauer machen: An den echten Unterschieden zwischen den Teilnehmenden ändern sie nichts. Die Obergrenze zeigt die Power bei unendlich vielen Wörtern. Setzt man die SD der Steigungen auf null, sind Wörter so nützlich wie Teilnehmende. Was man hinzufügen sollte, hängt davon ab, welche Variationsquelle den interessierenden Vergleich begrenzt.</p>
+<h2 id="post-hoc-power">Post-hoc-Power</h2>
+<p>Post-hoc-Power, auch beobachtete oder retrospektive Power genannt, wird nach einer Studie berechnet, mit der Effektgröße aus den eigenen Daten der Studie. Gutachter:innen verlangen sie manchmal, um zu zeigen, ob eine nicht signifikante Studie „zu wenig Power“ hatte. Heinsberg und Weeks (2022) simulierten dasselbe Mäuseexperiment an zwei Universitäten, mit je 100 Tieren und unterschiedlichen wahren Effekten:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Schätzung (95-%-KI)</th>
+          <th style="text-align: left">p</th>
+          <th style="text-align: left">Post-hoc-Power</th>
+          <th style="text-align: left">Wahrer Effekt</th>
+          <th style="text-align: left">Wahre Power</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">0,290 (−0,002; 0,582)</td>
+          <td style="text-align: left">.052</td>
+          <td style="text-align: left">0,584</td>
+          <td style="text-align: left">0,402</td>
+          <td style="text-align: left">0,841</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">0,275 (−0,002; 0,553)</td>
+          <td style="text-align: left">.052</td>
+          <td style="text-align: left">0,537</td>
+          <td style="text-align: left">0,201</td>
+          <td style="text-align: left">0,322</td>
+      </tr>
+  </tbody>
+</table>
+<p>Die beiden Studien sehen fast gleich aus, ebenso ihre Post-hoc-Power. Ihre wahre Power unterscheidet sich um mehr als das Doppelte, und nichts in den Daten zeigt das.</p>
+<p>Die Grafik unten wiederholt das in größerem Maßstab. Jeder Punkt ist eine simulierte Studie, alle mit demselben Design und derselben wahren Power.</p>
+<figure class="mlab plab plab-posthoc" data-part="posthoc"><noscript><p>Diese Grafik benötigt JavaScript.</p></noscript></figure>
+
+<p>Die Punkte streuen nicht um die wahre Power. Sie liegen auf einer einzigen Kurve des p-Werts: Die Post-hoc-Power beträgt etwa 50 % bei p = .05, weniger, wenn p größer ist, und mehr, wenn p kleiner ist (Hoenig &amp; Heisey, 2001). Ändert man den wahren Effekt, wandern die Punkte entlang derselben Kurve. Post-hoc-Power ist der p-Wert auf einer anderen Skala, deshalb geht ein nicht signifikantes Ergebnis immer mit niedriger Post-hoc-Power einher, ob die Studie einen echten Effekt verpasst hat oder der Effekt nicht existiert.</p>
+<h2 id="was-man-stattdessen-berichtet">Was man stattdessen berichtet</h2>
+<p>Damit Leser:innen ein nicht signifikantes Ergebnis einschätzen können, berichtet man die Schätzung mit ihrem Konfidenzintervall, das zeigt, mit welchen Effektgrößen die Daten vereinbar sind. Dazu die vor der Studie durchgeführte Poweranalyse, mit der gewählten Effektgröße und der Begründung dafür. Gab es keine, nennt eine Sensitivitätsanalyse den kleinsten Effekt, den das Design mit 80 % Power entdecken konnte, berechnet aus dem Design und den angenommenen Varianzen statt aus dem beobachteten Effekt.</p>
+<h2 id="literatur">Literatur</h2>
+<p>Brysbaert, M., &amp; Stevens, M. (2018). Power analysis and effect size in mixed effects models: A tutorial. <em>Journal of Cognition</em>, 1(1), 9. <a href="https://doi.org/10.5334/joc.10">https://doi.org/10.5334/joc.10</a></p>
+<p>Gelman, A., &amp; Carlin, J. (2014). Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. <em>Perspectives on Psychological Science</em>, 9(6), 641–651. <a href="https://doi.org/10.1177/1745691614551642">https://doi.org/10.1177/1745691614551642</a></p>
+<p>Green, P., &amp; MacLeod, C. J. (2016). SIMR: An R package for power analysis of generalized linear mixed models by simulation. <em>Methods in Ecology and Evolution</em>, 7(4), 493–498. <a href="https://doi.org/10.1111/2041-210X.12504">https://doi.org/10.1111/2041-210X.12504</a></p>
+<p>Heinsberg, L. W., &amp; Weeks, D. E. (2022). Post hoc power is not informative. <em>Genetic Epidemiology</em>, 46(7), 390–394. <a href="https://doi.org/10.1002/gepi.22464">https://doi.org/10.1002/gepi.22464</a></p>
+<p>Hoenig, J. M., &amp; Heisey, D. M. (2001). The abuse of power: The pervasive fallacy of power calculations for data analysis. <em>The American Statistician</em>, 55(1), 19–24. <a href="https://doi.org/10.1198/000313001300339897">https://doi.org/10.1198/000313001300339897</a></p>
+<p>Lorch, R. F., &amp; Myers, J. L. (1990). Regression analyses of repeated measures data in cognitive research. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, 16(1), 149–157. <a href="https://doi.org/10.1037/0278-7393.16.1.149">https://doi.org/10.1037/0278-7393.16.1.149</a></p>
+<p>Vasishth, S., Mertzen, D., Jäger, L. A., &amp; Gelman, A. (2018). The statistical significance filter leads to overoptimistic expectations of replicability. <em>Journal of Memory and Language</em>, 103, 151–175. <a href="https://doi.org/10.1016/j.jml.2018.07.004">https://doi.org/10.1016/j.jml.2018.07.004</a></p>
+<p>Alle Simulationen laufen in Ihrem Browser: Die Zweigruppenstudien verwenden t-Tests, die Powerkurven die exakte Power des zweiseitigen t-Tests. Die Folien der Sitzung und ihr R-Code stehen auf der <a href="/de/teaching/#advanced">Lehrseite</a>.</p>
+
+    </div>
+  </div>
+</article>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="mono">
+      © 2026 Massimiliano Canzi
+      <span class="sep" aria-hidden="true">·</span> erstellt mit R, blogdown und <a href="https://gohugo.io">Hugo</a>
+      <span class="sep" aria-hidden="true">·</span> ORCID 0000-0001-6124-0321
+      <span class="sep" aria-hidden="true">·</span> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br>Fachbereich Linguistik, Universität Konstanz, Universitätsstraße 10, 78464 Konstanz
+      <br>private, nicht kommerzielle Website, keine offizielle Seite der Universität Konstanz
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

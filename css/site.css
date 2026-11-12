@@ -1049,6 +1049,19 @@ main, .site-footer { position: relative; z-index: 1; }
 .mlab-bar.picked .mlab-ipa, .mlab-bar.picked .mono { color: var(--mist); font-weight: 700; }
 .mlab-bar-track { height: 12px; background: var(--raised); border-radius: 6px; overflow: hidden; }
 .mlab-bar-track span { display: block; height: 100%; border-radius: 6px; }
+
+/* power analysis demo (js/power-demo.js): the mlab figures, with sliders */
+.plab { --plab-ns: color-mix(in srgb, var(--muted) 45%, var(--understory)); }
+.plab-slider { display: grid; grid-template-columns: 12rem 1fr 6.5rem; gap: 12px; }
+.plab-slider .filter-label { width: auto; }
+.plab-slider output { font-size: 0.8rem; color: var(--mist); text-align: right; }
+.plab-slider input[type="range"] { width: 100%; margin: 0; accent-color: var(--pandan); cursor: pointer; }
+.plab-slider input[type="range"]:focus-visible { outline: 2px solid var(--pandan); outline-offset: 4px; }
+.plab-run { margin-top: 4px; }
+.plab-rs { margin-top: 8px; font-size: 0.8rem; }
+.plab-rs span { display: inline-block; }
+.plab-rs strong { color: var(--mist); }
+@media (max-width: 560px) { .plab-slider { grid-template-columns: 1fr auto; } .plab-slider input[type="range"] { grid-column: 1 / -1; grid-row: 2; } }
 .mlab-bar.picked .mlab-bar-track { outline: 2px solid var(--mist); outline-offset: 1px; }
 .mlab-search { width: 14rem; max-width: 100%; padding: 5px 10px; font-size: 0.8rem; color: var(--mist); background: var(--floor); border: 1px solid var(--vine); border-radius: 999px; }
 .mlab-search:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
