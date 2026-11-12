@@ -5,12 +5,15 @@
 // cleared, so only the new board and the reply are on screen. chess-lib.js (chess.js) checks the moves.
 import { Chess } from "./chess-lib.js";
 
-const DEPTH = 3;      // engine strength: search depth in half-moves (plus captures and checks)
-const TIME = 2000;    // and a time limit per move, in ms, for slow phones
+// engine strength: search depth in half-moves (plus captures and checks), and whether it picks among
+// close best moves like a human. The pangolin plays the easier level; the Doglord (purple theme, chosen
+// when the game starts) plays the original, stronger one
+const LEVELS = { pangolin: { depth: 3, human: true }, doglord: { depth: 4, human: false } };
+const TIME = 2000;    // time limit per move, in ms, for slow phones
 
 export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
   const S = T.t.chess;
-  let g = null;   // the game: { c, you, fens, busy }
+  let g = null;   // the game: { c, you, fens, busy, level }
   let worker = null;
 
   const colourName = (col) => (col === "w" ? S.white : S.black);
@@ -85,7 +88,7 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
   // the engine's reply wipes the terminal, so only the new board and the reply are left;
   // intro is the start message, shown after the engine's first move when the player has black
   const engineMove = (intro) => {
-    if (!worker) worker = new Worker(new URL("./engine.js", import.meta.url));
+    if (!worker) worker = new Worker(new URL("./engine.js" + new URL(import.meta.url).search, import.meta.url));   // same ?v= as this file, so a new engine is not cached
     g.busy = true;
     const game = g;
     worker.onmessage = (e) => {
@@ -104,12 +107,13 @@ export function setup({ T, pre, add, fill, finish, log, pangolinSays }) {
       bottom();
     };
     worker.onerror = () => { if (g === game) { g = null; const p = pre(); say(p, S.error); finish(p); } };
-    worker.postMessage({ fen: g.c.fen(), history: g.fens, depth: DEPTH, time: TIME });
+    worker.postMessage({ fen: g.c.fen(), history: g.fens, depth: g.level.depth, human: g.level.human, time: TIME });
   };
 
   // a new game clears the terminal: the board, then the start message
   const newGame = () => {
-    g = { c: new Chess(), you: Math.random() < 0.5 ? "w" : "b", fens: [], busy: false };
+    const level = document.documentElement.dataset.theme === "purple" ? LEVELS.doglord : LEVELS.pangolin;
+    g = { c: new Chess(), you: Math.random() < 0.5 ? "w" : "b", fens: [], busy: false, level };
     const intro = fill(S.start, { colour: colourName(g.you) });
     log.replaceChildren();
     if (g.you === "b") { engineMove(intro); return; }

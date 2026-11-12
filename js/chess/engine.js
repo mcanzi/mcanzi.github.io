@@ -8,8 +8,9 @@
  * Search: iterative deepening, alpha-beta with a transposition table, check extension, quiescence on
  * captures and promotions. Evaluation: material and piece-square tables (Michniewski's simplified
  * evaluation function), king tables blended by game phase, and a mop-up term for won endgames.
- * Strength is kept moderate by the depth limit, a small random bonus for each root move, and a
- * human-like choice among the best moves when they are close (within 40 centipawns).
+ * Strength is kept moderate by the depth limit and a small random bonus for each root move; the easier
+ * level (against the pangolin) also makes a human-like choice among the best moves when they are close
+ * (within 40 centipawns).
  */
 (function () {
   "use strict";
@@ -353,7 +354,7 @@
   }
 
   // root: every legal move gets a small random bonus, more in the opening, so games vary
-  function think(fen, history, maxDepth, timeMs) {
+  function think(fen, history, maxDepth, timeMs, human) {
     setFen(fen);
     seen = new Set();
     for (const h of history || []) { setFen(h); seen.add(posKey()); }
@@ -390,7 +391,7 @@
     }
     // a human-like choice: score every root move exactly, then pick among the moves within 40 centipawns
     // of the best (best 55%, second 30%, third 15%); skipped when a mate is found or time is up
-    if (done >= 1 && Math.abs(bestScore) < MATE - 100 && !stopped) {
+    if (human && done >= 1 && Math.abs(bestScore) < MATE - 100 && !stopped) {
       const scored = [];
       path.push(posKey());
       for (const r of root) {
@@ -418,8 +419,8 @@
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else if (typeof self !== "undefined" && typeof self.postMessage === "function") {
     self.onmessage = (e) => {
-      const { fen, history, depth, time } = e.data;
-      self.postMessage(think(fen, history, depth || 3, time || 1500));
+      const { fen, history, depth, time, human } = e.data;
+      self.postMessage(think(fen, history, depth || 3, time || 1500, !!human));
     };
   }
 })();

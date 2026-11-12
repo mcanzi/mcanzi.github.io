@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comunicações em congressos · Massimiliano Canzi</title>
+  <meta name="description" content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança">
+  <link rel="canonical" href="https://mcanzi.github.io/pt/output/presentations/">
+  <link rel="alternate" hreflang="en" href="https://mcanzi.github.io/output/presentations/">
+  <link rel="alternate" hreflang="it" href="https://mcanzi.github.io/it/output/presentations/">
+  <link rel="alternate" hreflang="pt" href="https://mcanzi.github.io/pt/output/presentations/">
+  <link rel="alternate" hreflang="de" href="https://mcanzi.github.io/de/output/presentations/">
+  <meta name="generator" content="Hugo 0.160.1">
+
+  
+  <meta property="og:title" content="Comunicações em congressos · Massimiliano Canzi">
+  <meta property="og:description" content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mcanzi.github.io/pt/output/presentations/">
+  <meta property="og:image" content="https://mcanzi.github.io/img/card.jpg">
+  <meta name="twitter:image" content="https://mcanzi.github.io/img/card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  
+  <link rel="icon" href="/favicon.ico?v=2" sizes="32x32">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <meta name="theme-color" content="#0b110e">
+  <script>try { let t = localStorage.getItem("theme"); if (t === "doglord") { t = "purple"; localStorage.setItem("theme", t); } if (t === "light") { t = "glacier"; localStorage.setItem("theme", t); } if (t === "glacier" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+
+  
+  <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/css/site.css?v=7b65ebe1f861">
+  <link rel="stylesheet" href="/css/theme-purple.css?v=28ad7080b732">
+  <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
+</head>
+
+<body class="page-presentations">
+  <header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/pt/" aria-label="home">
+      <span class="prompt">~/</span><span class="brand-name">mcanzi</span><span class="brand-doglord" hidden>doglord</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+    <nav aria-label="main">
+      <ul class="nav-links">
+        <li><a href="/pt/demo/">demo</a></li>
+        <li><a href="/pt/output/" class="active" aria-current="page">publicações</a></li>
+        <li><a href="/pt/teaching/">ensino</a></li>
+        <li><a href="/pt/photo/">fotografia</a></li>
+      </ul>
+    </nav>
+    <ul class="nav-icons">
+      <li><a href="mailto:massimiliano.canzi@uni-konstanz.de" aria-label="email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+      <li><a href="https://github.com/mcanzi" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
+      <li><a href="https://scholar.google.com/citations?hl=en&amp;user=w03Fq8oAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2Zm-6.5 11.2V17c0 1.66 2.91 3.5 6.5 3.5s6.5-1.84 6.5-3.5v-3.8L12 17.4l-6.5-4.2Z"/></svg></a></li>
+      <li><button class="theme-toggle" type="button" aria-label="alternar entre o modo floresta e o modo glaciar" title="alternar entre o modo floresta e o modo glaciar" hidden><span class="to-dark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 12h4l-4 6h14l-4-6h4L12 2Z"/><path d="M12 18v4"/></svg><span class="theme-label">modo floresta</span></span><span class="to-glacier"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(60 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(120 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(180 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(240 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(300 12 12)"/></svg><span class="theme-label">modo glaciar</span></span></button></li>
+      <li class="lang-switch" aria-label="Língua">
+        <a href="/de/output/presentations/" hreflang="de" lang="de" title="Deutsch">DE</a>
+        <a href="/output/presentations/" hreflang="en" lang="en" title="English">EN</a>
+        <a href="/it/output/presentations/" hreflang="it" lang="it" title="Italiano">IT</a>
+        <span class="lang-current" aria-current="true" title="Português">PT</span>
+      </li>
+    </ul>
+  </div>
+</header>
+<script>
+(() => {
+  const btn = document.querySelector(".theme-toggle");
+  const root = document.documentElement;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const sync = () => { if (meta) meta.content = ({ glacier: "#1e2830", purple: "#121310" })[root.dataset.theme] || "#0b110e"; };
+  
+  const next = { dark: "glacier", glacier: "dark", purple: "glacier" };
+  sync();
+  btn.hidden = false;
+  btn.addEventListener("click", () => {
+    const t = next[root.dataset.theme || "dark"] || "dark";
+    if (t === "dark") delete root.dataset.theme; else root.dataset.theme = t;
+    try { localStorage.setItem("theme", t); } catch (e) {}
+    sync();
+  });
+})();
+</script>
+<script>
+(() => {
+  
+  
+  
+  
+  
+  const KEY = "lang-scroll";
+  const SEL = "main :is(h1, h2, h3, h4, p, li, figure, pre, table, blockquote, dt, dd)";
+  const HEAD = "main :is(h1, h2, h3, h4)";
+  const line = () => {
+    const nav = document.querySelector(".site-nav");
+    return nav && /sticky|fixed/.test(getComputedStyle(nav).position) ? nav.getBoundingClientRect().bottom : 0;
+  };
+  document.querySelectorAll(".lang-switch a").forEach((a) => a.addEventListener("click", () => {
+    if (scrollY < 40) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    const i = blocks.findIndex((el) => { const r = el.getBoundingClientRect(); return r.height > 0 && r.bottom > top + 4; });
+    if (i < 0) return;
+    const r = blocks[i].getBoundingClientRect();
+    const h = heads.filter((el) => el.getBoundingClientRect().top <= top + 4).length - 1;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    try {
+      sessionStorage.setItem(KEY, JSON.stringify({
+        to: new URL(a.href).pathname, at: Date.now(),
+        i, n: blocks.length, off: Math.min(Math.max((top - r.top) / r.height, 0), 1),
+        h, hn: heads.length, share: max > 0 ? scrollY / max : 0
+      }));
+    } catch (e) {}
+  }));
+  let saved = null;
+  try { saved = JSON.parse(sessionStorage.getItem(KEY)); sessionStorage.removeItem(KEY); } catch (e) {}
+  if (!saved || saved.to !== location.pathname || Date.now() - saved.at > 15000 || location.hash) return;
+  let moved = false;
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach((ev) => addEventListener(ev, () => { moved = true; }, { once: true, passive: true }));
+  const go = () => {
+    if (moved) return;
+    const top = line();
+    const blocks = [...document.querySelectorAll(SEL)];
+    const heads = [...document.querySelectorAll(HEAD)];
+    let y = null;
+    const el = blocks.length === saved.n ? blocks[saved.i] : null;
+    if (el && el.getBoundingClientRect().height > 0) {
+      const r = el.getBoundingClientRect();
+      y = scrollY + r.top + saved.off * r.height - top;
+    } else if (heads.length === saved.hn && saved.h >= 0) {
+      y = scrollY + heads[saved.h].getBoundingClientRect().top - top - 8;
+    } else {
+      y = saved.share * (document.documentElement.scrollHeight - innerHeight);
+    }
+    scrollTo({ top: Math.max(0, y), behavior: "instant" });
+  };
+  if (document.readyState === "loading") addEventListener("DOMContentLoaded", go, { once: true }); else go();
+  addEventListener("load", go, { once: true });
+  if (document.fonts) document.fonts.ready.then(go);
+})();
+</script>
+
+  <main id="main">
+    
+<article class="page page-wide demo-page">
+  <header class="page-header">
+    <p class="kicker mono">~/output/presentations</p>
+    <h1>Comunicações em congressos</h1>
+    <p class="lead">Comunicações orais e pósteres apresentados em congressos, e os coautores com quem os apresentei.</p>
+  </header>
+  <div class="demo-layout">
+    <aside class="demo-nav" aria-label="publicações">
+      <p class="demo-nav-head mono">publicações</p>
+      <ul>
+        <li><a class="accent-pandan" href="/pt/output/papers/">
+          <span class="demo-nav-label mono">artigos</span>
+          <span class="demo-nav-title">Publicações</span>
+          <span class="demo-nav-card">Artigos e atas de congressos, com resumos, as minhas funções CRediT e a rede de coautores.</span>
+        </a></li>
+        <li><a class="accent-kingfisher on" href="/pt/output/presentations/" aria-current="page">
+          <span class="demo-nav-label mono">comunicações · pósteres</span>
+          <span class="demo-nav-title">Comunicações em congressos</span>
+          <span class="demo-nav-card">Comunicações orais e pósteres apresentados em congressos, com a rede de coautores.</span>
+        </a></li>
+      </ul>
+    </aside>
+    <div class="prose demo-main">
+      <p class="jump mono"><a href="#presentations">comunicações</a> · <a href="#co-authors">coautores</a></p>
+<div class="cv-box">
+<p>Tudo o que está nestas duas páginas, bem como a experiência profissional, a atividade docente e outros cargos, consta também do meu CV.</p>
+<a class="btn btn-cv" href="/files/Canzi_CV_pt.pdf" download><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> descarregar o cv (pdf)</a>
+</div>
+<h2 id="presentations">Comunicações</h2>
+<p>Os títulos estão em inglês, a língua em que os trabalhos foram apresentados. O asterisco indica quem apresentou.</p>
+<!-- A lista vem de data/presentations.yaml. Acrescentar aí as novas comunicações. -->
+<ul class="pubs">
+<li>
+<p>(2025) Wang, L., <strong>Canzi, M.</strong>, &amp; *Liu, F. Mental representations of pitch contours in speech and complex tones change with age in non-autistic individuals but remain stable in autistic individuals. Póster: Auditory Science Meeting [Nottingham Trent University, UK]</p>
+</li>
+<li>
+<p>(2025) *Ong, J., <strong>Canzi, M.</strong>, &amp; Liu, F. Mental representations of speech and song reveal language-specific and universal pitch and duration patterns in English and Mandarin listeners. Comunicação oral: Auditory Science Meeting [Nottingham Trent University, UK]</p>
+</li>
+<li>
+<p>(2024) *Rathcke, T., Smit, E., Yue, R., &amp; <strong>Canzi, M.</strong> Synchronised movement and individual rhythmic skill influence the perception of temporal structure in spoken language. Póster: AMLaP 2024 [University of Edinburgh, UK]</p>
+</li>
+<li>
+<p>(2024) *Link, P. M., <strong>Canzi, M.</strong>, &amp; Rathcke, T. Individual differences in sensorimotor synchronization and pupillometry. Póster: AMLaP 2024 [University of Edinburgh, UK]</p>
+</li>
+<li>
+<p>(2024) *Wang, L., Ong, J., <strong>Canzi, M.</strong>, Jiang, C., &amp; *Liu, F. Mental representations of speech and musical pitch contours show reduced pitch ranges in congenital amusia. Comunicação oral: 7th bi-annual meeting of the European Society for Cognitive and Affective Neuroscience (ESCAN) [University of Ghent, BE]</p>
+</li>
+<li>
+<p>(2023) *<strong>Canzi, M.</strong>, &amp; Rathcke, T. Unmasking the truth: Impact of community masks on the perception of voiceless fricatives in English. Comunicação oral: ICPhS 2023 [University of Prague, CZ]</p>
+</li>
+<li>
+<p>(2022) *Tsaroucha, A., Rathcke, T., &amp; <strong>Canzi, M.</strong> Effects of a face mask on the perception of English fricatives by native speakers of Greek. Comunicação oral: 15th International Conference on Greek Linguistics (ICGL15) [University of Belgrade, RS]</p>
+</li>
+<li>
+<p>(2021) *Mumtaz, B., <strong>Canzi, M.</strong>, &amp; Butt, M. Prosody of Case Markers in Urdu. Comunicação oral: Interspeech 2021 [University of Brno, CZ]</p>
+</li>
+<li>
+<p>(2018) *Coretta, S., &amp; *<strong>Canzi, M.</strong> The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling. Comunicação oral: Linguistic Association of Great Britain (LAGB) [University of Sheffield, UK]</p>
+</li>
+<li>
+<p>(2018) *<strong>Canzi, M.</strong> The forensic implications of comparing soft, neutral and loud speech. Comunicação oral: Manchester Forum in Linguistics [University of Manchester, UK]</p>
+</li>
+<li>
+<p>(2018) *<strong>Canzi, M.</strong> A quantitative analysis of inter- and intra-speaker variation of f-pattern and vowel duration in soft, neutral and loud speech in Italian. Póster: British Association of Academic Phoneticians (BAAP) [University of Kent, UK]</p>
+</li>
+</ul>
+
+<h2 id="co-authors">Coautores</h2>
+<figure class="coauth" id="coauth">
+  <svg class="coauth-svg" role="img" aria-label="Rede de coautores; os círculos maiores indicam mais trabalhos em conjunto"></svg>
+  <div class="coauth-info" aria-live="polite"></div>
+</figure>
+<script type="application/json" id="coauth-i18n">{"Me":"Eu","across":"em","and":"e","coauthors":"coautores","help":"O tamanho dos círculos indica o número de trabalhos em conjunto. Passe o rato sobre um nome ou toque nele para os ver; clique no fundo para voltar à vista completa.","joint_work":"trabalho em conjunto","joint_works":"trabalhos em conjunto","me":"eu","paper":"artigo","papers":"publicações","poster":"póster","presentations":"apresentações","talk":"comunicação oral","works":"trabalhos"}</script>
+<script type="application/json" id="coauth-data">{"set":"presentations","works":[{"authors":["Wang, L.","Canzi, M.","*Liu, F."],"event":"Auditory Science Meeting","place":"Nottingham Trent University, UK","title":"Mental representations of pitch contours in speech and complex tones change with age in non-autistic individuals but remain stable in autistic individuals","type":"Poster","year":2025},{"authors":["*Ong, J.","Canzi, M.","Liu, F."],"event":"Auditory Science Meeting","place":"Nottingham Trent University, UK","title":"Mental representations of speech and song reveal language-specific and universal pitch and duration patterns in English and Mandarin listeners","type":"Talk","year":2025},{"authors":["*Rathcke, T.","Smit, E.","Yue, R.","Canzi, M."],"event":"AMLaP 2024","place":"University of Edinburgh, UK","title":"Synchronised movement and individual rhythmic skill influence the perception of temporal structure in spoken language","type":"Poster","year":2024},{"authors":["*Link, P. M.","Canzi, M.","Rathcke, T."],"event":"AMLaP 2024","place":"University of Edinburgh, UK","title":"Individual differences in sensorimotor synchronization and pupillometry","type":"Poster","year":2024},{"authors":["*Wang, L.","Ong, J.","Canzi, M.","Jiang, C.","*Liu, F."],"event":"7th bi-annual meeting of the European Society for Cognitive and Affective Neuroscience (ESCAN)","place":"University of Ghent, BE","title":"Mental representations of speech and musical pitch contours show reduced pitch ranges in congenital amusia","type":"Talk","year":2024},{"authors":["*Canzi, M.","Rathcke, T."],"event":"ICPhS 2023","place":"University of Prague, CZ","title":"Unmasking the truth: Impact of community masks on the perception of voiceless fricatives in English","type":"Talk","year":2023},{"authors":["*Tsaroucha, A.","Rathcke, T.","Canzi, M."],"event":"15th International Conference on Greek Linguistics (ICGL15)","place":"University of Belgrade, RS","title":"Effects of a face mask on the perception of English fricatives by native speakers of Greek","type":"Talk","year":2022},{"authors":["*Mumtaz, B.","Canzi, M.","Butt, M."],"event":"Interspeech 2021","place":"University of Brno, CZ","title":"Prosody of Case Markers in Urdu","type":"Talk","year":2021},{"authors":["*Coretta, S.","*Canzi, M."],"event":"Linguistic Association of Great Britain (LAGB)","place":"University of Sheffield, UK","title":"The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling","type":"Talk","year":2018},{"authors":["*Canzi, M."],"event":"Manchester Forum in Linguistics","place":"University of Manchester, UK","title":"The forensic implications of comparing soft, neutral and loud speech","type":"Talk","year":2018},{"authors":["*Canzi, M."],"event":"British Association of Academic Phoneticians (BAAP)","place":"University of Kent, UK","title":"A quantitative analysis of inter- and intra-speaker variation of f-pattern and vowel duration in soft, neutral and loud speech in Italian","type":"Poster","year":2018}]}</script>
+<script>
+(() => {
+  const root = document.getElementById("coauth");
+  const svg = root.querySelector(".coauth-svg");
+  const info = root.querySelector(".coauth-info");
+  const raw = JSON.parse(document.getElementById("coauth-data").textContent);
+  const T = JSON.parse(document.getElementById("coauth-i18n").textContent);
+  const NS = "http://www.w3.org/2000/svg";
+  const ME = "Canzi, M.";
+  const clean = (a) => a.replace(/^\*/, "").trim();
+  const nice = (a) => { const [s, i] = a.split(",").map(x => x.trim()); return i ? `${i} ${s}` : s; };
+  const works = raw.works.map(p => ({ kind: raw.set === "papers" ? "paper" : String(p.type).toLowerCase(), year: p.year, title: p.title, authors: p.authors.map(clean) }));
+  let focus = null, nodes, links, W, H;
+
+  const el = (tag, attrs, parent = svg) => {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    parent.appendChild(e); return e;
+  };
+
+  const build = () => {
+    const ws = works;
+    const byName = new Map(), linkMap = new Map();
+    ws.forEach(w => {
+      w.authors.forEach(a => {
+        if (!byName.has(a)) byName.set(a, { id: a, label: nice(a), me: a === ME, works: [] });
+        byName.get(a).works.push(w);
+      });
+      for (let i = 0; i < w.authors.length; i++) for (let j = i + 1; j < w.authors.length; j++) {
+        const [a, b] = [w.authors[i], w.authors[j]].sort(), k = a + "|" + b;
+        if (!linkMap.has(k)) linkMap.set(k, { a, b, works: [] });
+        linkMap.get(k).works.push(w);
+      }
+    });
+    nodes = [...byName.values()].filter(n => n.me || n.works.length);
+    links = [...linkMap.values()];
+    nodes.forEach(n => { n.withMe = n.me ? n.works.length : (linkMap.get([n.id, ME].sort().join("|"))?.works.length || 0); });
+    layout();
+  };
+
+  
+  const layout = () => {
+    W = Math.max(300, Math.round(svg.parentElement.clientWidth));
+    H = Math.round(W < 520 ? W * 1.05 : Math.min(W * 0.62, 520));
+    const idx = new Map(nodes.map((n, i) => [n.id, i]));
+    const others = nodes.filter(n => !n.me).sort((a, b) => b.withMe - a.withMe || a.id.localeCompare(b.id));
+    others.forEach((n, i) => {
+      const ang = i / others.length * Math.PI * 2, r = 0.35 + 0.1 * (i % 3);
+      n.x = Math.cos(ang) * r; n.y = Math.sin(ang) * r;
+    });
+    const me = nodes.find(n => n.me); me.x = 0; me.y = 0;
+    for (let it = 0; it < 500; it++) {
+      const cool = 1 - it / 500;
+      nodes.forEach(n => { n.fx = 0; n.fy = 0; });
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        let dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + 1e-4;
+        const f = 0.012 / d2, d = Math.sqrt(d2);
+        a.fx += f * dx / d; a.fy += f * dy / d; b.fx -= f * dx / d; b.fy -= f * dy / d;
+      }
+      links.forEach(l => {
+        const a = nodes[idx.get(l.a)], b = nodes[idx.get(l.b)];
+        const dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) + 1e-6;
+        const rest = (a.me || b.me) ? 0.32 : 0.22, f = 0.06 * (d - rest) * Math.min(l.works.length, 3);
+        a.fx += f * dx / d; a.fy += f * dy / d; b.fx -= f * dx / d; b.fy -= f * dy / d;
+      });
+      nodes.forEach(n => {
+        if (n.me) return;
+        n.fx -= 0.01 * n.x; n.fy -= 0.01 * n.y;
+        const step = 0.08 * cool;
+        n.x += Math.max(-step, Math.min(step, n.fx)); n.y += Math.max(-step, Math.min(step, n.fy));
+      });
+    }
+    
+    const pad = W < 520 ? 44 : 80, xs = nodes.map(n => n.x), ys = nodes.map(n => n.y);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    let kx = (W - 2 * pad) / (x1 - x0 || 1), ky = (H - 2 * 30) / (y1 - y0 || 1);
+    kx = Math.min(kx, ky * 1.7); ky = Math.min(ky, kx * 1.7);
+    const cx = (W - kx * (x1 + x0)) / 2, cy = (H - ky * (y1 + y0)) / 2;
+    nodes.forEach(n => { n.px = cx + kx * n.x; n.py = cy + ky * n.y; n.r = n.me ? 14 : 5 + 3 * Math.sqrt(n.withMe || 1); });
+    
+    const boxes = nodes.map(n => ({ x0: n.px - n.r, x1: n.px + n.r, y0: n.py - n.r, y1: n.py + n.r }));
+    const hit = (b) => boxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
+    [...nodes].sort((a, b) => b.withMe - a.withMe).forEach(n => {
+      if (n.me) { n.side = "below"; n.showLabel = true; return; }
+      const w = n.label.length * 6.7 + 4, outer = n.px < W / 2 ? "left" : "right";
+      n.showLabel = false;
+      for (const side of [outer, outer === "left" ? "right" : "left"]) {
+        const x0 = side === "left" ? n.px - n.r - 5 - w : n.px + n.r + 5;
+        const b = { x0, x1: x0 + w, y0: n.py - 8, y1: n.py + 8 };
+        if (b.x0 < 0 || b.x1 > W) continue;
+        if (!hit(b)) { boxes.push(b); n.side = side; n.showLabel = true; break; }
+      }
+      if (!n.showLabel) n.side = outer;
+    });
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+    draw();
+  };
+
+  const draw = () => {
+    svg.textContent = "";
+    const byId = new Map(nodes.map(n => [n.id, n]));
+    links.forEach(l => {
+      const a = byId.get(l.a), b = byId.get(l.b);
+      el("line", { x1: a.px, y1: a.py, x2: b.px, y2: b.py, class: "coauth-link", "data-a": l.a, "data-b": l.b,
+        "stroke-width": Math.min(1 + l.works.length * 0.8, 5) });
+    });
+    [...nodes].sort((a, b) => a.me - b.me).forEach(n => {
+      const g = el("g", { class: "coauth-node" + (n.me ? " me" : "") + (n.showLabel ? "" : " lab-hidden"), "data-id": n.id, tabindex: 0 });
+      el("circle", { cx: n.px, cy: n.py, r: n.r }, g);
+      const left = n.side === "left";
+      const t = el("text", { x: n.px + (n.me ? 0 : left ? -(n.r + 5) : n.r + 5), y: n.me ? n.py + n.r + 16 : n.py + 4,
+        "text-anchor": n.me ? "middle" : left ? "end" : "start" }, g);
+      t.textContent = n.me ? T.me : n.label;
+      el("circle", { cx: n.px, cy: n.py, r: Math.max(n.r, 14), fill: "transparent" }, g);
+    });
+    highlight();
+  };
+
+  
+  const highlight = () => {
+    const near = new Set(focus ? [focus, ...links.filter(l => l.a === focus || l.b === focus).flatMap(l => [l.a, l.b])] : []);
+    svg.querySelectorAll(".coauth-link").forEach(e => {
+      const on = focus && (e.dataset.a === focus || e.dataset.b === focus);
+      e.classList.toggle("on", !!on); e.classList.toggle("dim", !!focus && !on);
+    });
+    svg.querySelectorAll(".coauth-node").forEach(e => {
+      e.classList.toggle("on", e.dataset.id === focus);
+      e.classList.toggle("dim", !!focus && !near.has(e.dataset.id));
+      e.classList.toggle("near", !!focus && near.has(e.dataset.id));
+    });
+    show();
+  };
+
+  const kindLabel = { paper: T.paper, talk: T.talk, poster: T.poster };
+  const show = () => {
+    const nP = works.length;
+    if (!focus) {
+      const n = nodes.filter(x => !x.me).length;
+      info.innerHTML = `<p class="coauth-sum"><strong>${n} ${T.coauthors}</strong> ${T.across} ${nP} ${raw.set === "papers" ? T.papers : T.presentations}. ${T.help}</p>`;
+      return;
+    }
+    const n = nodes.find(x => x.id === focus);
+    const list = (n.me ? n.works : n.works.filter(w => w.authors.includes(ME)))
+      .sort((a, b) => b.year - a.year)
+      .map(w => `<li><span class="mono">${w.year} · ${kindLabel[w.kind] || w.kind}</span> ${w.title}</li>`).join("");
+    const head = n.me ? `<strong>${T.Me}</strong>: ${n.works.length} ${T.works}` : `<strong>${n.label}</strong>: ${n.withMe} ${n.withMe === 1 ? T.joint_work : T.joint_works}`;
+    info.innerHTML = `<p class="coauth-sum">${head}</p><ul class="coauth-list">${list}</ul>`;
+  };
+
+  
+  let pinned = false;
+  svg.addEventListener("pointerover", (e) => {
+    if (e.pointerType !== "mouse" || pinned) return;
+    const g = e.target.closest(".coauth-node"), id = g ? g.dataset.id : null;
+    if (id !== focus) { focus = id; highlight(); }
+  });
+  svg.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse" && !pinned && focus) { focus = null; highlight(); } });
+  svg.addEventListener("click", (e) => {
+    const g = e.target.closest(".coauth-node");
+    if (g) { focus = g.dataset.id; pinned = true; } else { focus = null; pinned = false; }
+    highlight();
+  });
+  svg.addEventListener("focusin", (e) => { const g = e.target.closest(".coauth-node"); if (g && focus !== g.dataset.id) { focus = g.dataset.id; highlight(); } });
+  build();
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(layout, 120); });
+})();
+</script>
+
+
+    </div>
+  </div>
+</article>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="mono">
+      © 2026 Massimiliano Canzi
+      <span class="sep">·</span> feito com R, blogdown e <a href="https://gohugo.io">Hugo</a>
+      <span class="sep">·</span> ORCID 0000-0001-6124-0321
+      <span class="sep">·</span> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br>Departamento de Linguística, Universidade de Constança, Universitätsstraße 10, 78464 Konstanz, Alemanha
+      <br>sítio pessoal sem fins comerciais, não é uma página oficial da Universidade de Constança
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

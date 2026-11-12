@@ -2,6 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mcanzi.github.io/pt/output/papers/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.github.io/output/papers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.github.io/it/output/papers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.github.io/de/output/papers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/output/papers/"
+                />
+  </url><url>
     <loc>https://mcanzi.github.io/pt/demo/masks/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -23,6 +46,29 @@
                 rel="alternate"
                 hreflang="pt-PT"
                 href="https://mcanzi.github.io/pt/demo/masks/"
+                />
+  </url><url>
+    <loc>https://mcanzi.github.io/pt/output/presentations/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.github.io/output/presentations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.github.io/it/output/presentations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.github.io/de/output/presentations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.github.io/pt/output/presentations/"
                 />
   </url><url>
     <loc>https://mcanzi.github.io/pt/demo/media/</loc>
@@ -49,7 +95,7 @@
                 />
   </url><url>
     <loc>https://mcanzi.github.io/pt/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
