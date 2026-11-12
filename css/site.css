@@ -378,6 +378,8 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .page-wide .prose > :is(p, ul, ol, h2, h3, h4, blockquote, pre, table, details, hr, .jump, .pubs, .cv-box) { max-width: var(--w-text); }
 /* demo charts and fact cards: wider than the text, as wide as the interactive plot (.rtoy), so chart labels keep their size */
 .facts, .mchange { max-width: 52rem; }
+/* the list of taught courses uses the whole column, so on a computer each course fits on one line; narrower screens still wrap */
+.page-wide .prose > #modules + ul { max-width: none; }
 
 .page-header { margin-bottom: 30px; }
 .page-header h1 {
