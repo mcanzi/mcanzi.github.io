@@ -96,7 +96,7 @@
 .tr-n, .tr-time { font-size: 0.75rem; color: var(--muted); }
 .tr-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .track.playing .tr-n { color: var(--pandan); }
-.track:disabled .tr-time { font-style: italic; opacity: 0.8; }
+.track:disabled .tr-time { font-style: italic; }
 .album-note { margin: 14px 0 0; font-size: 0.92rem; color: var(--muted); }
 
 /* ---- credits (left, under the cover) --------------------------------------------------- */

@@ -143,6 +143,13 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 }
 @keyframes blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+/* keyboard focus: the same ring everywhere (links, buttons, cards, chart elements) */
+:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
+/* visitors who ask their system for less motion get no zooms, fades or slides */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 .site-nav nav { flex: 1; min-width: 0; }
 
@@ -332,7 +339,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .accent-kingfisher { --card-accent: var(--kingfisher); }
 
 .card-label { margin: 0 0 6px; font-size: 0.78rem; color: var(--card-accent, var(--hornbill)); text-transform: lowercase; }
-.card h3 { margin: 0 0 8px; font-size: 1.22rem; color: var(--mist); }
+.card h3, .card .card-title { margin: 0 0 8px; font-size: 1.22rem; color: var(--mist); }
 .card p { margin: 0 0 14px; color: var(--muted); font-size: 0.98rem; }
 .card-more { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--card-accent, var(--pandan)); }
 
@@ -639,7 +646,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .evals-grid { stroke: var(--vine); stroke-width: 1; }
 .evals-tick { fill: var(--muted); font-size: 13px; }
 .evals-best { fill: var(--muted); font-size: 11px; }
-.evals-n { fill: var(--muted); font-size: 11px; opacity: 0.75; }
+.evals-n { fill: var(--muted); font-size: 11px; }
 .evals-mark { stroke: var(--understory); stroke-width: 2; }
 .evals-hit { cursor: default; }
 .evals-hit.on { fill: var(--hit); }
@@ -682,7 +689,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .rtoy-zero { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.7; }
 .rtoy-tick { fill: var(--muted); font-size: 12px; }
 .rtoy-axis { fill: var(--muted); font-size: 12px; }
-.rtoy-hint { fill: var(--muted); font-size: 11px; opacity: 0.8; }
+.rtoy-hint { fill: var(--muted); font-size: 11px; }
 .rtoy-fit { opacity: 0.9; }
 .rtoy-pt { cursor: grab; }
 .rtoy-pt circle:not(.rtoy-hit), .rtoy-pt rect { stroke: var(--understory); stroke-width: 2; transition: stroke 0.12s; }
@@ -800,7 +807,9 @@ main, .site-footer { position: relative; z-index: 1; }
   font: inherit;
   caret-color: var(--pandan);
 }
-.term-input input::placeholder { color: var(--muted); opacity: 0.8; }
+.term-input input::placeholder { color: var(--muted); opacity: 1; }
+/* the input has no outline of its own, so keyboard focus is shown on the whole input line */
+.term-input:focus-within { box-shadow: inset 0 0 0 2px var(--pandan); }
 .term .say-next { position: static; flex: none; }
 @media (max-width: 760px) {
   .term .term-log { height: 22rem; }
@@ -902,7 +911,7 @@ main, .site-footer { position: relative; z-index: 1; }
   --raised:     #283844;
   --vine:       #34444f;
   --mist:       #dfe6ea;   /* ice white text */
-  --muted:      #8a9aa6;
+  --muted:      #98a8b3;   /* light enough for 4.5:1 contrast on the raised panels */
   --pandan:     #a9cbe0;   /* ice blue: headings, primary */
   --hornbill:   #f2917a;   /* salmon: accents, cv button, cursor */
   --kingfisher: #f6b8a4;   /* pale salmon: links */
@@ -984,7 +993,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .credit[data-r="M"]  { --c: #b39ddb; }
 .credit[data-r="S"]  { --c: #7fc8a9; }
 .credit[data-r="SU"] { --c: #a3abb3; }
-.credit[data-r="V"]  { --c: #e0675f; }
+.credit[data-r="V"]  { --c: #e4716a; }
 .credit[data-r="W"]  { --c: #e4e7d8; }
 .credit-legend { list-style: none; margin: 8px 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; color: var(--muted); }
 .credit-legend .credit { margin: 0 4px 0 0; }
@@ -999,7 +1008,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .mlab-grid { stroke: var(--vine); stroke-width: 1; }
 .mlab-zero { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.7; }
 .mlab-tick, .mlab-axis { fill: var(--muted); font-size: 12px; }
-.mlab-hint { fill: var(--muted); font-size: 11px; opacity: 0.85; }
+.mlab-hint { fill: var(--muted); font-size: 11px; }
 .mlab-cat { fill: var(--mist); font-size: 15px; font-family: var(--f-body); }
 .mlab-diff { font-size: 12px; font-weight: 600; }
 .mlab-label { fill: var(--mist); font-size: 12px; font-style: italic; pointer-events: none; }
@@ -1011,14 +1020,18 @@ main, .site-footer { position: relative; z-index: 1; }
 .mlab-pt:hover .mlab-dot, .mlab-pt.on .mlab-dot { stroke: var(--mist); stroke-width: 2; }
 .mlab-word:hover line:first-child { opacity: 1; stroke-width: 2.5; }
 .mlab-cell:hover .mlab-cell-fill, .mlab-cell.on .mlab-cell-fill { stroke: var(--mist); stroke-width: 2; }
+.mlab-cell-ring { pointer-events: none; }
 .mlab-cell-txt { fill: var(--mist); font-size: 13px; pointer-events: none; }
+.mlab-cell:focus-visible { outline: none; }
+.mlab-cell:focus-visible .mlab-cell-ring { stroke: var(--pandan); stroke-width: 3; }
+.mlab-svg rect[role="img"]:focus-visible { outline: none; stroke: var(--pandan); stroke-width: 2; }
 .mlab-words { margin: 6px 0 0; font-size: 0.85rem; color: var(--mist); min-height: 1.4em; }
 .mlab-words .mono { font-size: 0.75rem; color: var(--muted); }
 .mlab-q { margin: 0 0 12px; color: var(--mist); }
 .mlab-guess { display: flex; flex-wrap: wrap; gap: 8px; }
 .mlab-guess-btn { display: inline-flex; align-items: baseline; gap: 8px; padding: 8px 14px; }
 .mlab-guess-btn .mlab-ipa { font-size: 1.05rem; }
-.mlab-guess-btn .mlab-eg { font-size: 0.78rem; opacity: 0.85; }
+.mlab-guess-btn .mlab-eg { font-size: 0.78rem; }
 .mlab-guess-btn[aria-pressed="true"] { background: var(--c); border-color: var(--c); }
 .mlab-guess-out { margin-top: 16px; }
 .mlab-guess-out p { margin: 12px 0 0; font-size: 0.95rem; }

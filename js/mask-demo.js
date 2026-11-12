@@ -125,11 +125,18 @@
     ui.tip.style.left = x + "px"; ui.tip.style.top = y + "px";
   };
   const hideTip = (ui) => { ui.tip.hidden = true; };
-  const hover = (node, ui, html) => {
+  const plain = (html) => { const d = document.createElement("div"); d.innerHTML = html.replace(/<br>/g, ". "); return d.textContent; };
+  const atNode = (node) => { const b = node.getBoundingClientRect(); return { clientX: b.left + b.width / 2, clientY: b.top + Math.min(40, b.height / 2) }; };
+  const hover = (node, ui, html, keyboard = false) => {
     node.addEventListener("pointerenter", (e) => showTip(ui, e, html()));
     node.addEventListener("pointermove", (e) => showTip(ui, e, html()));
     node.addEventListener("pointerleave", () => hideTip(ui));
     node.addEventListener("click", (e) => showTip(ui, e, html()));
+    if (keyboard) {
+      node.setAttribute("tabindex", "0"); node.setAttribute("role", "img"); node.setAttribute("aria-label", plain(html()));
+      node.addEventListener("focus", () => showTip(ui, atNode(node), html()));
+      node.addEventListener("blur", () => hideTip(ui));
+    }
   };
   const legendCond = (colour = "var(--mist)") =>
     `<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="var(--understory)" stroke="${colour}" stroke-width="2"/></svg> ${esc(TX.nomask)}</span>` +
@@ -236,7 +243,7 @@
         const hit = el("rect", { x: L + cw * k, y: T, width: cw, height: PH, fill: "transparent" }, ui.svg);
         hover(hit, ui, () => `<strong>${IPA[r.f]}</strong> · ${fill(TX.n_words, { n: r.ii.length })}<br>` +
           `${esc(TX.nomask)}: ${fmt(r.s[0].m)}<br>${esc(TX.mask)}: ${fmt(r.s[1].m)}<br>` +
-          `${esc(TX.diff)}: ${signed(d, st.m === "acc" ? 1 : 0)} ${st.m === "acc" ? TX.pp : "ms"}`);
+          `${esc(TX.diff)}: ${signed(d, st.m === "acc" ? 1 : 0)} ${st.m === "acc" ? TX.pp : "ms"}`, true);
       });
       ui.status.textContent = fill(TX.acc_status, { n: ps.length, w: idxOf(pred).length });
     });
@@ -290,6 +297,7 @@
           const g = el("g", { class: "mlab-cell" + (st.sel && st.sel[0] === f && st.sel[1] === r ? " on" : "") }, ui.svg);
           el("rect", { x: x + 2, y: y + 2, width: cw - 4, height: ch - 4, rx: 6, fill: "var(--raised)" }, g);
           el("rect", { x: x + 2, y: y + 2, width: cw - 4, height: ch - 4, rx: 6, fill: colour, opacity: op.toFixed(3), class: "mlab-cell-fill" }, g);
+          el("rect", { x: x + 2, y: y + 2, width: cw - 4, height: ch - 4, rx: 6, fill: "none", class: "mlab-cell-ring" }, g);
           if (diag) el("rect", { x: x + 2.5, y: y + 2.5, width: cw - 5, height: ch - 5, rx: 6, fill: "none", stroke: COL[f], "stroke-width": 1.5 }, g);
           const label = st.view === "diff" ? signed(v * 100, 1) : Math.abs(v) < 0.1 && v > 0 ? pct1(v) : pct(v);
           txt(g, x + cw / 2, y + ch / 2 + 5, label, { class: "mlab-cell-txt", "text-anchor": "middle" });
@@ -300,6 +308,9 @@
             return fill(diag ? TX.conf_diag : TX.conf_cell, { ...o, cond: st.view === "nm" ? TX.nomask : TX.mask, p: pct1(v), k: m[r], n: m.n });
           };
           g.addEventListener("click", () => { st.sel = [f, r]; renderAll(); });
+          g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", msg());
+          g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); st.sel = [f, r]; renderAll(); const again = ui.svg.querySelector('[data-msg="1"]'); if (again) again.focus(); } });
+          g.addEventListener("focus", () => { ui.status.textContent = msg(); words.innerHTML = describe(ps, ii, f, r); });
           g.addEventListener("pointerenter", () => { ui.status.textContent = msg(); words.innerHTML = describe(ps, ii, f, r); });
           g.addEventListener("pointerleave", () => { if (st.sel) { ui.status.textContent = selMsg(); words.innerHTML = describe(ps, ii, st.sel[0], st.sel[1]); } });
           if (st.sel && st.sel[0] === f && st.sel[1] === r) g.dataset.msg = "1";

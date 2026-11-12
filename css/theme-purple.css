@@ -72,3 +72,4 @@
 :root[data-theme="purple"] .pangolinsay .say-art { color: var(--pandan); }
 
 :root[data-theme="purple"] ::selection { background: var(--pandan); color: var(--floor); }
+:root[data-theme="purple"] .nav-links a.active { color: var(--primary-hi); }   /* the cloak purple is just under 4.5:1 on the raised background */
