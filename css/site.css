@@ -870,6 +870,32 @@ main, .site-footer { position: relative; z-index: 1; }
 .lecture-planned .lecture-title, .lecture-planned .lecture-sub { opacity: 0.7; }
 .lecture-soon { margin-top: 2px; font-size: 0.68rem; color: var(--lec); letter-spacing: 0.02em; }
 
+/* tutorials: smaller cards below the lectures, with the look of the lecture cards (partials/course.html) */
+.tutorials { margin-top: 26px; }
+.tutorials-title { margin: 0 0 10px; font-size: 1.1rem; }
+.tutorial-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(9.5rem, 100%), 1fr)); gap: 8px;
+}
+.tutorial-list > li { display: flex; min-width: 0; }
+.tutorial {
+  position: relative; flex: 1; display: flex; gap: 8px; align-items: flex-start; min-width: 0;
+  padding: 8px 10px 8px 12px; border: 1px solid var(--lec-line, var(--vine)); border-radius: 6px;
+  background: var(--lec-bg); color: var(--lec-fg, var(--mist)); overflow: hidden;
+}
+.tutorial::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 3px; pointer-events: none;
+  background: linear-gradient(180deg, var(--lec-top, var(--lec)) 8%, var(--lec-bottom, var(--lec)) 92%);
+}
+.tutorial .lecture-n { font-size: 0.7rem; padding-top: 1px; }
+.tutorial-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.tutorial-title { font-family: var(--f-head); font-weight: 800; font-size: 0.84rem; line-height: 1.2; }
+.tutorial-title p { margin: 0; }
+.tutorial-links { font-size: 0.7rem; color: var(--lec-muted, var(--muted)); }
+.tutorial-links a { color: var(--lec); text-decoration: none; }
+.tutorial-links a:hover { text-decoration: underline; }
+.tutorial-planned .tutorial-title { opacity: 0.7; }
+
 /* ---- audio series ----------------------------------------------------- */
 /* one per course: a block below the lectures in each course's tab (partials/listen-block.html) and a page at
    /listen/<course>/ (layouts/listen/single.html). The covers keep the look of their course's slides in every
