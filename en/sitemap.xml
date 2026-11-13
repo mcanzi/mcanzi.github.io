@@ -117,8 +117,77 @@
                 href="https://mcanzi.de/demo/power/"
                 />
   </url><url>
+    <loc>https://mcanzi.de/listen/advanced/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.de/it/listen/advanced/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.de/pt/listen/advanced/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.de/de/listen/advanced/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.de/listen/advanced/"
+                />
+  </url><url>
+    <loc>https://mcanzi.de/listen/forensic/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.de/it/listen/forensic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.de/pt/listen/forensic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.de/de/listen/forensic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.de/listen/forensic/"
+                />
+  </url><url>
+    <loc>https://mcanzi.de/listen/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.de/it/listen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.de/pt/listen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.de/de/listen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.de/listen/"
+                />
+  </url><url>
     <loc>https://mcanzi.de/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it-IT"
@@ -138,6 +207,29 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://mcanzi.de/"
+                />
+  </url><url>
+    <loc>https://mcanzi.de/listen/statistics/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://mcanzi.de/it/listen/statistics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-PT"
+                href="https://mcanzi.de/pt/listen/statistics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://mcanzi.de/de/listen/statistics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://mcanzi.de/listen/statistics/"
                 />
   </url><url>
     <loc>https://mcanzi.de/demo/</loc>
