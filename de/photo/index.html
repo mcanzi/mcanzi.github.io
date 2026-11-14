@@ -38,7 +38,7 @@
   <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=51a3a5e182f9">
+  <link rel="stylesheet" href="/css/site.css?v=172f45fb105a">
   <link rel="stylesheet" href="/css/theme-purple.css?v=5f8df6713fe7">
   <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
 </head>
@@ -1065,16 +1065,17 @@
     <circle class="dot" cx="827.1" cy="183.5" r="2.2176470588235295"/>
   </g>
 </svg>
+<button type="button" class="map-clear mono" hidden>↺ alle Fotos anzeigen</button>
 <figcaption class="map-note mono" aria-hidden="true"></figcaption>
 </figure>
   <div class="gallery-filters" aria-label="Fotos filtern">
+    <p class="gallery-count mono" aria-live="polite"></p>
     <div class="filter-row" data-key="medium">
       <span class="filter-label mono">Medium</span>
       <button type="button" class="pill" data-value="" aria-pressed="true">alle</button>
       <button type="button" class="pill" data-value="digital" aria-pressed="false">digital</button>
       <button type="button" class="pill" data-value="film" aria-pressed="false">analog</button>
     </div>
-    <p class="gallery-count mono"><span aria-live="polite"></span> <button type="button" class="map-clear" hidden></button></p>
   </div>
 
   <div class="gallery">
@@ -3221,7 +3222,7 @@
   const figs = [...document.querySelectorAll(".gallery figure")];
   const rows = [...document.querySelectorAll(".filter-row")];
   const lands = [...document.querySelectorAll(".photo-map .land-visited")];
-  const count = document.querySelector(".gallery-count span");
+  const count = document.querySelector(".gallery-count");
   const clear = document.querySelector(".map-clear");
   const note = document.querySelector(".map-note");
   const want = {};
@@ -3246,7 +3247,6 @@
     });
     count.textContent = n === figs.length ? `${n} ${T.photos}` : `${n} ${T.of} ${figs.length} ${T.photos}`;
     clear.hidden = !places;
-    if (places) clear.textContent = `${places.join(", ")} ×`;
     sync();
   };
   const params = new URLSearchParams(location.search);

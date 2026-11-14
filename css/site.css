@@ -670,8 +670,10 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .evals-table th, .evals-table td { padding: 4px 8px; text-align: left; border-bottom: 1px solid var(--vine); }
 .evals-table th { color: var(--muted); font-weight: 400; }
 
-/* photo gallery filters: two rows of pills */
-.gallery-filters { display: grid; gap: 10px; margin: 0 0 26px; }
+/* photo gallery: photo count and the medium buttons, centred just above the photos */
+.gallery-filters { display: grid; justify-items: center; gap: 10px; margin: 0 0 22px; }
+.gallery-filters .filter-row { justify-content: center; }
+.gallery-filters .filter-label { width: auto; margin-right: 4px; }
 .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .filter-label { font-size: 0.72rem; color: var(--muted); width: 4.5rem; }
 .pill {
@@ -682,11 +684,11 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .pill:hover { color: var(--mist); border-color: var(--muted); }
 .pill[aria-pressed="true"] { color: var(--floor); background: var(--pandan); border-color: var(--pandan); }
 .pill:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
-.gallery-count { font-size: 0.75rem; color: var(--muted); margin-left: 4.5rem; }
+.gallery-count { margin: 0; font-size: 0.75rem; color: var(--muted); }
 .gallery figure[hidden] { display: none; }
 @media (max-width: 640px) {
   .filter-label { width: 100%; }
-  .gallery-count { margin-left: 0; }
+  .gallery-filters .filter-label { width: auto; }
 }
 
 /* interactive regression demo (shortcode: media-toy) */
@@ -1241,6 +1243,6 @@ main, .site-footer { position: relative; z-index: 1; }
 .land-visited.on .dot { fill: var(--hornbill); }
 .land-visited.on .halo { fill: var(--hornbill); opacity: 0.25; }
 .map-note { position: absolute; left: 12px; bottom: 8px; margin: 0; font-size: 0.8rem; color: var(--muted); pointer-events: none; }
-.map-clear { margin-left: 8px; padding: 1px 9px; border: 1px solid var(--vine); border-radius: 999px; background: none; color: var(--hornbill); font: inherit; cursor: pointer; }
-.map-clear:hover { border-color: var(--hornbill); }
+.map-clear { position: absolute; top: 10px; right: 10px; padding: 5px 11px; border: 1px solid var(--hornbill); border-radius: 999px; background: color-mix(in srgb, var(--floor) 85%, transparent); color: var(--hornbill); font-size: 0.78rem; cursor: pointer; }
+.map-clear:hover { background: var(--hornbill); color: var(--floor); }
 .map-clear[hidden] { display: none; }
