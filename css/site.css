@@ -884,6 +884,14 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* tutorials: smaller cards below the lectures, with the look of the lecture cards (partials/course.html) */
 .tutorials { margin-top: 26px; }
+/* {simling} box below the slides (partials/course.html) */
+.simling-box { display: flex; align-items: center; gap: 18px; margin-top: 26px; padding: 14px 18px; border: 1px solid var(--vine); border-radius: var(--radius); background: var(--understory); color: var(--mist); text-decoration: none; transition: border-color 0.15s; }
+.simling-box:hover { border-color: var(--pandan); }
+.simling-box img { flex: none; width: 72px; height: auto; }
+.simling-text { display: grid; gap: 6px; font-size: 0.92rem; line-height: 1.45; }
+.simling-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--kingfisher); }
+.simling-link svg { width: 12px; height: 12px; }
+.simling-box:hover .simling-link { color: var(--pandan); }
 .tutorials-title { margin: 0 0 10px; font-size: 1.1rem; }
 .tutorial-list {
   list-style: none; margin: 0; padding: 0;
