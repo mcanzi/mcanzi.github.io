@@ -1227,17 +1227,20 @@ main, .site-footer { position: relative; z-index: 1; }
 }
 
 /* map of the countries in the gallery (partials/photo-map.html) */
-.map-wrap { position: relative; margin: 0 0 24px; padding: 0; border: 1px solid var(--vine); border-radius: var(--radius); background: var(--floor); overflow: hidden; }
+.map-wrap { position: relative; max-width: calc(560px * var(--map-ratio, 1.6)); margin: 0 auto 24px; padding: 0; border: 1px solid var(--vine); border-radius: var(--radius); background: var(--floor); overflow: hidden; }
 .photo-map { display: block; width: 100%; height: auto; }
 .photo-map path { stroke: var(--vine); stroke-width: 0.7; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
 .photo-map .land { fill: var(--understory); }
 .land-visited { cursor: pointer; outline: none; }
 .land-visited path { fill: color-mix(in srgb, var(--pandan) 22%, var(--understory)); stroke: color-mix(in srgb, var(--pandan) 45%, var(--vine)); transition: fill 0.2s; }
 .land-visited .dot { fill: var(--pandan); stroke: var(--floor); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
-.land-visited .halo { fill: var(--pandan); opacity: 0.14; }
+.land-visited .halo { fill: var(--pandan); opacity: 0.16; }
 .land-visited:hover path, .land-visited:focus-visible path { fill: color-mix(in srgb, var(--pandan) 38%, var(--understory)); }
 .land-visited:hover .dot, .land-visited:focus-visible .dot { fill: var(--hornbill); }
 .land-visited.on path { fill: color-mix(in srgb, var(--hornbill) 35%, var(--understory)); stroke: color-mix(in srgb, var(--hornbill) 55%, var(--vine)); }
 .land-visited.on .dot { fill: var(--hornbill); }
 .land-visited.on .halo { fill: var(--hornbill); opacity: 0.25; }
 .map-note { position: absolute; left: 12px; bottom: 8px; margin: 0; font-size: 0.8rem; color: var(--muted); pointer-events: none; }
+.map-clear { margin-left: 8px; padding: 1px 9px; border: 1px solid var(--vine); border-radius: 999px; background: none; color: var(--hornbill); font: inherit; cursor: pointer; }
+.map-clear:hover { border-color: var(--hornbill); }
+.map-clear[hidden] { display: none; }
