@@ -583,7 +583,12 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
   background: var(--understory);
   cursor: zoom-in;
 }
-.gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.4s; }
+.gallery-item { position: relative; }
+.gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.4s; background-size: cover; background-position: center; }
+/* film photos sit in a print-like frame with the film stock on the lower edge */
+.gallery figure[data-medium="film"] .gallery-item { box-sizing: border-box; aspect-ratio: 3 / 2; padding: 6px 6px 20px; background: #ece7db; border-color: #d6cfbf; }
+.gallery figure[data-medium="film"] .gallery-item img { height: 100%; aspect-ratio: auto; border-radius: 2px; }
+.film-edge { position: absolute; left: 8px; right: 8px; bottom: 3px; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6253; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
 .gallery-item:hover img { transform: scale(1.03); }
 .gallery-item:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
 .gallery figcaption { padding: 6px 2px 0; font-size: 0.88rem; line-height: 1.35; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
@@ -602,7 +607,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 }
 .lightbox[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .lightbox::backdrop { background: rgba(10, 11, 13, 0.9); }
-.lightbox img { max-width: 100%; max-height: calc(100vh - 110px); object-fit: contain; border-radius: 6px; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 110px); object-fit: contain; border-radius: 6px; touch-action: pinch-zoom; }
 .lb-caption { margin: 14px 0 0; text-align: center; font-size: 0.95rem; }
 .lb-caption span { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
 .lightbox button {
