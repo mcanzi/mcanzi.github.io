@@ -1,79 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Análise de poder por simulação · Massimiliano Canzi</title>
-  <meta name="description" content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança">
-  <link rel="canonical" href="https://mcanzi.de/pt/demo/power/">
-  <link rel="alternate" hreflang="en" href="https://mcanzi.de/demo/power/">
-  <link rel="alternate" hreflang="it" href="https://mcanzi.de/it/demo/power/">
-  <link rel="alternate" hreflang="pt" href="https://mcanzi.de/pt/demo/power/">
-  <link rel="alternate" hreflang="de" href="https://mcanzi.de/de/demo/power/">
-  <meta name="generator" content="Hugo 0.160.1">
-
-  
-  <meta property="og:title" content="Análise de poder por simulação · Massimiliano Canzi">
-  <meta property="og:description" content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://mcanzi.de/pt/demo/power/">
-  <meta property="og:image" content="https://mcanzi.de/img/card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:image" content="https://mcanzi.de/img/card.png">
-  <meta property="og:image:alt" content="Massimiliano Canzi PhD: data scientist &amp; lab manager, linguistics, Universität Konstanz">
-  <meta name="twitter:image:alt" content="Massimiliano Canzi PhD: data scientist &amp; lab manager, linguistics, Universität Konstanz">
-  <meta name="twitter:card" content="summary_large_image">
-
-  
-  <link rel="icon" href="/favicon.ico?v=3" sizes="32x32">
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png?v=3">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png?v=3">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png?v=3">
-  <link rel="manifest" href="/img/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0b110e">
-  <script>try { const t = localStorage.getItem("theme"); if (t === "glacier" || t === "sunset" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script>
-
-  
-  <link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/fonts/fonts.css">
-  <link rel="stylesheet" href="/css/site.css?v=ddba22a86d6b">
-  <link rel="stylesheet" href="/css/theme-purple.css?v=5f8df6713fe7">
-  <link rel="stylesheet" href="/css/easter-egg.css?v=82b70655a7ff">
-</head>
-
-<body class="page-power">
-  <a class="skip-link" href="#main">saltar para o conteúdo</a>
-  <header class="site-nav">
-  <div class="nav-inner">
-    <a class="brand" href="/pt/" aria-label="home">
-      <span class="prompt">~/</span><span class="brand-name">mcanzi</span><span class="brand-doglord" hidden>doglord</span><span class="cursor" aria-hidden="true"></span>
-    </a>
-    <nav aria-label="main">
-      <ul class="nav-links">
-        <li><a href="/pt/demo/" class="active" aria-current="page">demo</a></li>
-        <li><a href="/pt/output/">publicações</a></li>
-        <li><a href="/simling/" target="_blank" rel="noopener">{simling}</a></li>
-        <li><a href="/pt/teaching/">ensino</a></li>
-        <li><a href="/pt/photo/">fotografia</a></li>
-      </ul>
-    </nav>
-    <ul class="nav-icons">
-      <li><a href="mailto:massimiliano.canzi@uni-konstanz.de" aria-label="email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
-      <li><a href="https://github.com/mcanzi" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
-      <li><a href="https://scholar.google.com/citations?hl=en&amp;user=w03Fq8oAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2Zm-6.5 11.2V17c0 1.66 2.91 3.5 6.5 3.5s6.5-1.84 6.5-3.5v-3.8L12 17.4l-6.5-4.2Z"/></svg></a></li>
-      <li><button class="theme-toggle" type="button" title="alternar entre o modo floresta, o modo glaciar e o modo pôr do sol" hidden><span class="to-dark"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 12h4l-4 6h14l-4-6h4L12 2Z"/><path d="M12 18v4"/></svg><span class="theme-label">modo floresta</span></span><span class="to-glacier"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(60 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(120 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(180 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(240 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(300 12 12)"/></svg><span class="theme-label">modo glaciar</span></span><span class="to-sunset"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v2.5M5.6 7.6l1.8 1.8M18.4 7.6l-1.8 1.8M2.5 15h3M18.5 15h3"/><path d="M7.5 15a4.5 4.5 0 0 1 9 0"/><path d="M2.5 19h19"/></svg><span class="theme-label">modo pôr do sol</span></span></button></li>
-      <li class="lang-switch" role="group" aria-label="Língua">
-        <a href="/de/demo/power/" hreflang="de" lang="de" title="Deutsch">DE</a>
-        <a href="/demo/power/" hreflang="en" lang="en" title="English">EN</a>
-        <a href="/it/demo/power/" hreflang="it" lang="it" title="Italiano">IT</a>
-        <span class="lang-current" aria-current="true" title="Português">PT</span>
-      </li>
-    </ul>
-  </div>
-</header>
-<script>
+<!doctype html><html lang=pt><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Análise de poder por simulação · Massimiliano Canzi</title><meta name=description content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança"><link rel=canonical href=https://mcanzi.de/pt/demo/power/><link rel=alternate hreflang=en href=https://mcanzi.de/demo/power/><link rel=alternate hreflang=it href=https://mcanzi.de/it/demo/power/><link rel=alternate hreflang=pt href=https://mcanzi.de/pt/demo/power/><link rel=alternate hreflang=de href=https://mcanzi.de/de/demo/power/><meta name=generator content="Hugo 0.160.1"><meta property="og:title" content="Análise de poder por simulação · Massimiliano Canzi"><meta property="og:description" content="Massimiliano Canzi, cientista de dados e gestor de laboratório no Departamento de Linguística da Universidade de Constança"><meta property="og:type" content="article"><meta property="og:url" content="https://mcanzi.de/pt/demo/power/"><meta property="og:image" content="https://mcanzi.de/img/card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:image content="https://mcanzi.de/img/card.jpg"><meta property="og:image:alt" content="Massimiliano Canzi PhD: data scientist & lab manager, linguistics, Universität Konstanz"><meta name=twitter:image:alt content="Massimiliano Canzi PhD: data scientist & lab manager, linguistics, Universität Konstanz"><meta name=twitter:card content="summary_large_image"><link rel=icon href="/favicon.ico?v=3" sizes=32x32><link rel=apple-touch-icon sizes=180x180 href="/img/favicon/apple-touch-icon.png?v=3"><link rel=icon type=image/png sizes=32x32 href="/img/favicon/favicon-32x32.png?v=3"><link rel=icon type=image/png sizes=16x16 href="/img/favicon/favicon-16x16.png?v=3"><link rel=manifest href=/img/favicon/site.webmanifest><meta name=theme-color content="#0b110e"><script>try { const t = localStorage.getItem("theme"); if (t === "glacier" || t === "sunset" || t === "purple") document.documentElement.dataset.theme = t; } catch (e) {}</script><link rel=preload href=/fonts/atkinson-regular.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/bricolage-grotesque.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/fonts/fonts.css><link rel=stylesheet href="/css/site.css?v=6cfb6ce27398"><link rel=stylesheet href="/css/theme-purple.css?v=5f8df6713fe7"><link rel=stylesheet href="/css/easter-egg.css?v=82b70655a7ff"></head><body class=page-power><a class=skip-link href=#main>saltar para o conteúdo</a><header class=site-nav><div class=nav-inner><a class=brand href=/pt/ aria-label=home><span class=prompt>~/</span><span class=brand-name>mcanzi</span><span class=brand-doglord hidden>doglord</span><span class=cursor aria-hidden=true></span></a><nav aria-label=main><ul class=nav-links><li><a href=/pt/demo/ class=active aria-current=page>demo</a></li><li><a href=/pt/output/>publicações</a></li><li><a href=/simling/ target=_blank rel=noopener>{simling}</a></li><li><a href=/pt/teaching/>ensino</a></li><li><a href=/pt/photo/>fotografia</a></li></ul></nav><ul class=nav-icons><li><a href=mailto:massimiliano.canzi@uni-konstanz.de aria-label=email><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li><li><a href=https://github.com/mcanzi aria-label=GitHub><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5.0 008.36 22.91c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69.0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05.0.0.97-.31 3.17 1.18a11 11 0 015.77.0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09.0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5.0 0012 .5z"/></svg></a></li><li><a href="https://scholar.google.com/citations?hl=en&amp;user=w03Fq8oAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2 1 9l11 7 9-5.73V17h2V9L12 2zM5.5 13.2V17c0 1.66 2.91 3.5 6.5 3.5s6.5-1.84 6.5-3.5v-3.8L12 17.4l-6.5-4.2z"/></svg></a></li><li><button class=theme-toggle type=button title="alternar entre o modo floresta, o modo glaciar e o modo pôr do sol" hidden><span class=to-dark><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 5 12h4l-4 6h14l-4-6h4L12 2z"/><path d="M12 18v4"/></svg><span class=theme-label>modo floresta</span></span><span class=to-glacier><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(60 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(120 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(180 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(240 12 12)"/><path d="M12 12V2.5M9.4 4.6 12 7.2l2.6-2.6" transform="rotate(300 12 12)"/></svg><span class=theme-label>modo glaciar</span></span><span class=to-sunset><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v2.5M5.6 7.6l1.8 1.8m11-1.8-1.8 1.8M2.5 15h3m13 0h3"/><path d="M7.5 15a4.5 4.5.0 019 0"/><path d="M2.5 19h19"/></svg><span class=theme-label>modo pôr do sol</span></span></button></li><li class=lang-switch role=group aria-label=Língua><a href=/de/demo/power/ hreflang=de lang=de title=Deutsch>DE</a>
+<a href=/demo/power/ hreflang=en lang=en title=English>EN</a>
+<a href=/it/demo/power/ hreflang=it lang=it title=Italiano>IT</a>
+<span class=lang-current aria-current=true title=Português>PT</span></li></ul></div></header><script>
 (() => {
   const btn = document.querySelector(".theme-toggle");
   const root = document.documentElement;
@@ -90,8 +18,7 @@
     sync();
   });
 })();
-</script>
-<script>
+</script><script>
 (() => {
   
   
@@ -149,132 +76,13 @@
   addEventListener("load", go, { once: true });
   if (document.fonts) document.fonts.ready.then(go);
 })();
-</script>
-
-  <main id="main">
-    
-<article class="page page-wide demo-page">
-  <header class="page-header">
-    <p class="kicker mono">~/demo/power</p>
-    <h1>Análise de poder por simulação</h1>
-    <p class="lead">Um complemento interativo à aula sobre análise de poder do meu curso de Advanced Statistics. Todos os estudos desta página são simulados no seu navegador.</p>
-  </header>
-  <div class="demo-layout">
-    <aside class="demo-nav" aria-label="demos">
-      <p class="demo-nav-head mono">demos</p>
-      <ul>
-        <li><a class="accent-kingfisher" href="/pt/demo/masks/">
-          <span class="demo-nav-label mono">ICPhS · 2023</span>
-          <span class="demo-nav-title">Máscaras e perceção das fricativas</span>
-          <span class="demo-nav-card">As máscaras tornam a fala mais difícil de compreender porque abafam o som ou porque escondem os lábios?</span>
-        </a></li>
-        <li><a class="accent-pandan" href="/pt/demo/media/">
-          <span class="demo-nav-label mono">Speech Dynamics · 2024</span>
-          <span class="demo-nav-title">Os media e a mudança fonética</span>
-          <span class="demo-nav-card">Duas semanas a ver uma série americana ou britânica podem mudar a pronúncia inglesa de estudantes alemães?</span>
-        </a></li>
-        <li><a class="accent-hornbill on" href="/pt/demo/power/" aria-current="page">
-          <span class="demo-nav-label mono">Ensino · Advanced Statistics</span>
-          <span class="demo-nav-title">Análise de poder por simulação</span>
-          <span class="demo-nav-card">De quantos participantes um estudo precisa, e por que o poder post hoc não pode dizer se um estudo era pequeno demais?</span>
-        </a></li>
-      </ul>
-    </aside>
-    <div class="prose demo-main">
-      <p>O poder estatístico é a probabilidade de um estudo detetar um efeito de determinado tamanho, se esse efeito for real. Ele depende do tamanho do efeito, do quanto os dados são ruidosos, do número de participantes e de itens e do nível de significância. Definidos o desenho e o efeito de interesse, só o tamanho da amostra continua em aberto. Green e MacLeod (2016) observam que a meta habitual de 80% é uma convenção, sem justificativa mais profunda.</p>
-<p>Para um desenho simples, uma fórmula dá o poder. Para os desenhos comuns em linguística e psicologia, com participantes e itens como efeitos aleatórios cruzados, não há fórmula simples, e o poder é estimado por simulação (Brysbaert &amp; Stevens, 2018): inventa-se um mundo em que o efeito existe, simula-se um estudo nesse mundo, analisam-se os dados como planeado e repete-se muitas vezes. Como o efeito é real em todos os conjuntos de dados simulados, a proporção de resultados significativos é o poder.</p>
-<div class="facts">
-  <div><strong>80%</strong><span>o poder que se costuma buscar, fixado por convenção</span></div>
-  <div><strong>64 por grupo</strong><span>para ter 80% de poder de detetar uma diferença de meio desvio padrão (d = 0,5) com um teste t</span></div>
-  <div><strong>cerca de 50%</strong><span>o poder post hoc de qualquer estudo com p = .05, qualquer que seja seu poder verdadeiro</span></div>
-  <div><strong>1.000+</strong><span>simulações para uma análise de poder que será relatada; para explorar desenhos, algumas centenas bastam</span></div>
-</div>
-<h2 id="estudos-pequenos-exageram">Estudos pequenos exageram</h2>
-<p>O gráfico abaixo corre 2.000 estudos, cada um comparando dois grupos. A diferença verdadeira entre os grupos é definida pelo primeiro cursor, em desvios padrão (d de Cohen), e o número de participantes por grupo pelo segundo. Cada barra conta os estudos cuja estimativa caiu naquele intervalo, colorida conforme a estimativa tenha sido significativa ou não.</p>
-<figure class="mlab plab plab-sim" data-part="sim"><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure>
-<script type="application/json" id="plab-i18n">{"locale":"pt-PT","t":{"again":"simular de novo","ceiling":"com {p} participantes e palavras ilimitadas","curve_aria":"Poder de uma comparação entre dois grupos em função do número de participantes por grupo","curve_help":"Arraste sobre o gráfico, ou use os cursores, para mudar o tamanho da amostra.","curve_now":"poder com {n} por grupo e d = {d}","curve_x":"participantes por grupo →","design_aria":"Poder para detetar a interação em função do número de participantes e de palavras","design_help":"Poder analítico da análise em duas etapas. A simulação sorteia novos participantes e novas palavras para cada estudo.","design_now":"poder com {p} participantes e {w} palavras","design_x":"número de participantes ou de palavras →","effect":"efeito verdadeiro (d)","formula":"fórmula","interaction":"interação","more_part":"mais participantes (palavras fixas)","more_words":"mais palavras (participantes fixos)","ms_unit":"{v} ms/unidade","n80":"por grupo para 80% de poder","nonsig":"p ≥ .05","one_study":"um estudo","over":"mais de {n}","participants":"participantes","per_group":"participantes por grupo","ph_aria":"Gráfico de dispersão do valor-p e do poder post hoc de 1.000 estudos simulados","ph_at05":"poder post hoc em p = .05","ph_range":"o poder post hoc vai de","ph_status":"{k} estudos simulados com {n} participantes por grupo e d = {d}; {sig} deles significativos.","ph_x":"valor-p →","ph_y":"↑ poder post hoc","power":"poder","power_y":"↑ poder","pp":"pp","ref_d":"d = 0,2, 0,5, 0,8","sig":"p \u003c .05","sig_mean":"média das estimativas significativas","sim_aria":"Histograma dos efeitos estimados em 2.000 estudos simulados, significativos e não significativos","sim_status":"{k} estudos simulados, cada um com {n} participantes por grupo e um efeito verdadeiro de d = {d}.","sim_x":"diferença estimada entre os grupos (em DP) →","simulate":"simular {k} estudos","simulated":"simulado, {k} estudos","slope_sd":"DP das inclinações","studies_y":"↑ estudos","target":"poder de 80%","times":"{x} × o efeito verdadeiro","true_effect":"efeito verdadeiro","true_power":"poder verdadeiro","true_power_is":"poder verdadeiro: {p}","type_m":"exagero (tipo M)","type_s":"sinal errado (tipo S)","words":"palavras","your_d":"o seu efeito"}}</script>
-<script defer src="/js/power-demo.js?v=6270559aca17"></script>
-
-<p>Com 20 participantes por grupo e d = 0,3, cerca de um estudo em sete é significativo, perto dos 15% previstos pela fórmula. Só as estimativas grandes passam o limiar de significância, então os estudos significativos superestimam o efeito, em média por um fator de dois ou mais. Gelman e Carlin (2014) chamam isso de erro do tipo M (magnitude). Alguns estudos significativos chegam a errar a direção, um erro do tipo S (sinal). Aumentando a amostra, os dois erros diminuem, até que as estimativas significativas se concentrem em torno do efeito verdadeiro.</p>
-<p>Se as revistas publicam sobretudo resultados significativos, os efeitos publicados por estudos pequenos são grandes demais. Vasishth et al. (2018) mostraram isso para um resultado psicolinguístico com sete replicações diretas. Uma análise de poder que tira o tamanho do efeito de uma publicação assim promete mais poder do que o próximo estudo terá. Uma base melhor é o menor efeito que importaria para a teoria.</p>
-<h2 id="quantos-participantes">Quantos participantes?</h2>
-<p>O mesmo cálculo para cada tamanho de amostra dá uma curva de poder. A curva destacada segue o tamanho do efeito do primeiro gráfico, e as curvas cinzentas mostram os efeitos convencionalmente pequeno, médio e grande de d = 0,2, 0,5 e 0,8.</p>
-<figure class="mlab plab plab-curve" data-part="curve"><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure>
-
-<p>Reduzir o efeito à metade multiplica por cerca de quatro a amostra necessária: 64 por grupo para d = 0,5, mas 394 para d = 0,2.</p>
-<h2 id="mais-participantes-ou-mais-itens">Mais participantes ou mais itens?</h2>
-<p>Na aula, planejamos a replicação de um estudo de decisão lexical em que falantes de L1 e de L2 respondem a palavras de frequências diferentes. A pergunta é sobre a interação: o efeito da frequência é maior para os falantes de L2? Os participantes diferem no quanto a frequência os afeta (o DP das inclinações), e cada resposta acrescenta ruído no nível da tentativa (um DP de 70 ms). Em R, o pacote <code>{simr}</code> (Green &amp; MacLeod, 2016) responde à pergunta simulando a partir de um modelo misto, reajustando-o muitas vezes e acrescentando participantes ou palavras com <code>extend()</code> e <code>powerCurve()</code>.</p>
-<p>Um navegador não consegue reajustar um modelo misto mil vezes enquanto se move um cursor. Por isso, este gráfico usa uma análise mais simples do mesmo desenho: uma inclinação de regressão para cada participante e, depois, um teste t que compara as inclinações dos dois grupos (Lorch &amp; Myers, 1990). Os seus números diferem um pouco dos do modelo misto, enquanto as curvas têm a mesma forma.</p>
-<figure class="mlab plab plab-design" data-part="design"><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure>
-
-<p>Acrescentar participantes aumenta o poder de forma constante. Acrescentar palavras ajuda no começo e depois se estabiliza, porque mais palavras só tornam mais precisa a inclinação de cada participante, enquanto as diferenças reais entre os participantes continuam as mesmas. O teto mostra o poder com infinitas palavras. Com o DP das inclinações em zero, as palavras passam a ser tão úteis quanto os participantes.</p>
-<h2 id="poder-post-hoc">Poder post hoc</h2>
-<p>O poder post hoc, também chamado de observado ou retrospectivo, é calculado depois de um estudo, com o tamanho do efeito estimado a partir dos próprios dados do estudo. Às vezes os revisores pedem-no para mostrar se um estudo não significativo tinha &ldquo;pouco poder&rdquo;. Heinsberg e Weeks (2022) simularam o mesmo experimento com ratinhos em duas universidades, com 100 animais cada e efeitos verdadeiros diferentes:</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left"></th>
-          <th style="text-align: left">Estimativa (IC 95%)</th>
-          <th style="text-align: left">p</th>
-          <th style="text-align: left">Poder post hoc</th>
-          <th style="text-align: left">Efeito verdadeiro</th>
-          <th style="text-align: left">Poder verdadeiro</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">A</td>
-          <td style="text-align: left">0,290 (−0,002; 0,582)</td>
-          <td style="text-align: left">.052</td>
-          <td style="text-align: left">0,584</td>
-          <td style="text-align: left">0,402</td>
-          <td style="text-align: left">0,841</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">B</td>
-          <td style="text-align: left">0,275 (−0,002; 0,553)</td>
-          <td style="text-align: left">.052</td>
-          <td style="text-align: left">0,537</td>
-          <td style="text-align: left">0,201</td>
-          <td style="text-align: left">0,322</td>
-      </tr>
-  </tbody>
-</table>
-<p>Os dois estudos parecem quase iguais, e o mesmo vale para o poder post hoc. O poder verdadeiro, 84% contra 32%, não pode ser lido em nenhum dos dois conjuntos de dados.</p>
-<p>O gráfico abaixo repete isso em escala maior. Cada ponto é um estudo simulado, todos com o mesmo desenho e o mesmo poder verdadeiro.</p>
-<figure class="mlab plab plab-posthoc" data-part="posthoc"><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure>
-
-<p>Onde quer que esteja o poder verdadeiro, os pontos caem sobre uma única curva do valor-p: o poder post hoc é de cerca de 50% em p = .05, menor sempre que p é maior e maior sempre que p é menor (Hoenig &amp; Heisey, 2001). Mudando o efeito verdadeiro, os pontos deslizam ao longo da mesma curva. Como o poder post hoc é uma transformação do valor-p, um resultado não significativo sempre vem com poder post hoc baixo, quer o estudo tenha perdido um efeito real, quer o efeito não exista.</p>
-<h2 id="o-que-relatar-em-vez-disso">O que relatar em vez disso</h2>
-<p>Para ajudar quem lê a avaliar um resultado não significativo, indique a estimativa com seu intervalo de confiança, que mostra com quais tamanhos de efeito os dados são compatíveis. Indique também a análise de poder feita antes do estudo, com o tamanho de efeito escolhido e o motivo da escolha. Se não houve nenhuma, uma análise de sensibilidade dá o menor efeito que o desenho tinha 80% de poder para detetar, calculado a partir do desenho e das variâncias supostas, sem usar o efeito observado.</p>
-<h2 id="referências">Referências</h2>
-<p>Brysbaert, M., &amp; Stevens, M. (2018). Power analysis and effect size in mixed effects models: A tutorial. <em>Journal of Cognition</em>, 1(1), 9. <a href="https://doi.org/10.5334/joc.10">https://doi.org/10.5334/joc.10</a></p>
-<p>Gelman, A., &amp; Carlin, J. (2014). Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. <em>Perspectives on Psychological Science</em>, 9(6), 641–651. <a href="https://doi.org/10.1177/1745691614551642">https://doi.org/10.1177/1745691614551642</a></p>
-<p>Green, P., &amp; MacLeod, C. J. (2016). SIMR: An R package for power analysis of generalized linear mixed models by simulation. <em>Methods in Ecology and Evolution</em>, 7(4), 493–498. <a href="https://doi.org/10.1111/2041-210X.12504">https://doi.org/10.1111/2041-210X.12504</a></p>
-<p>Heinsberg, L. W., &amp; Weeks, D. E. (2022). Post hoc power is not informative. <em>Genetic Epidemiology</em>, 46(7), 390–394. <a href="https://doi.org/10.1002/gepi.22464">https://doi.org/10.1002/gepi.22464</a></p>
-<p>Hoenig, J. M., &amp; Heisey, D. M. (2001). The abuse of power: The pervasive fallacy of power calculations for data analysis. <em>The American Statistician</em>, 55(1), 19–24. <a href="https://doi.org/10.1198/000313001300339897">https://doi.org/10.1198/000313001300339897</a></p>
-<p>Lorch, R. F., &amp; Myers, J. L. (1990). Regression analyses of repeated measures data in cognitive research. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, 16(1), 149–157. <a href="https://doi.org/10.1037/0278-7393.16.1.149">https://doi.org/10.1037/0278-7393.16.1.149</a></p>
-<p>Vasishth, S., Mertzen, D., Jäger, L. A., &amp; Gelman, A. (2018). The statistical significance filter leads to overoptimistic expectations of replicability. <em>Journal of Memory and Language</em>, 103, 151–175. <a href="https://doi.org/10.1016/j.jml.2018.07.004">https://doi.org/10.1016/j.jml.2018.07.004</a></p>
-<p>Todas as simulações correm no seu navegador: os estudos de dois grupos usam testes t, e as curvas de poder usam o poder exato do teste t bilateral. Os slides da aula e o código R estão na <a href="/pt/teaching/#advanced">página de ensino</a>.</p>
-
-    </div>
-  </div>
-</article>
-
-
-  </main>
-  <footer class="site-footer">
-  <div class="footer-inner">
-    <p class="mono">
-      © 2026 Massimiliano Canzi
-      <span class="sep" aria-hidden="true">·</span> feito com R, blogdown e <a href="https://gohugo.io">Hugo</a>
-      <span class="sep" aria-hidden="true">·</span> ORCID 0000-0001-6124-0321
-      <span class="sep" aria-hidden="true">·</span> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-      <br>Departamento de Linguística, Universidade de Constança, Universitätsstraße 10, 78464 Konstanz, Alemanha
-      <br>sítio pessoal sem fins comerciais, não é uma página oficial da Universidade de Constança
-    </p>
-  </div>
-</footer>
-
-</body>
-</html>
+</script><main id=main><article class="page page-wide demo-page"><header class=page-header><p class="kicker mono">~/demo/power</p><h1>Análise de poder por simulação</h1><p class=lead>Um complemento interativo à aula sobre análise de poder do meu curso de Advanced Statistics. Todos os estudos desta página são simulados no seu navegador.</p></header><div class=demo-layout><aside class=demo-nav aria-label=demos><p class="demo-nav-head mono">demos</p><ul><li><a class=accent-kingfisher href=/pt/demo/masks/><span class="demo-nav-label mono">ICPhS · 2023</span>
+<span class=demo-nav-title>Máscaras e perceção das fricativas</span>
+<span class=demo-nav-card>As máscaras tornam a fala mais difícil de compreender porque abafam o som ou porque escondem os lábios?</span></a></li><li><a class=accent-pandan href=/pt/demo/media/><span class="demo-nav-label mono">Speech Dynamics · 2024</span>
+<span class=demo-nav-title>Os media e a mudança fonética</span>
+<span class=demo-nav-card>Duas semanas a ver uma série americana ou britânica podem mudar a pronúncia inglesa de estudantes alemães?</span></a></li><li><a class="accent-hornbill on" href=/pt/demo/power/ aria-current=page><span class="demo-nav-label mono">Ensino · Advanced Statistics</span>
+<span class=demo-nav-title>Análise de poder por simulação</span>
+<span class=demo-nav-card>De quantos participantes um estudo precisa, e por que o poder post hoc não pode dizer se um estudo era pequeno demais?</span></a></li></ul></aside><div class="prose demo-main"><p>O poder estatístico é a probabilidade de um estudo detetar um efeito de determinado tamanho, se esse efeito for real. Ele depende do tamanho do efeito, do quanto os dados são ruidosos, do número de participantes e de itens e do nível de significância. Definidos o desenho e o efeito de interesse, só o tamanho da amostra continua em aberto. Green e MacLeod (2016) observam que a meta habitual de 80% é uma convenção, sem justificativa mais profunda.</p><p>Para um desenho simples, uma fórmula dá o poder. Para os desenhos comuns em linguística e psicologia, com participantes e itens como efeitos aleatórios cruzados, não há fórmula simples, e o poder é estimado por simulação (Brysbaert & Stevens, 2018): inventa-se um mundo em que o efeito existe, simula-se um estudo nesse mundo, analisam-se os dados como planeado e repete-se muitas vezes. Como o efeito é real em todos os conjuntos de dados simulados, a proporção de resultados significativos é o poder.</p><div class=facts><div><strong>80%</strong><span>o poder que se costuma buscar, fixado por convenção</span></div><div><strong>64 por grupo</strong><span>para ter 80% de poder de detetar uma diferença de meio desvio padrão (d = 0,5) com um teste t</span></div><div><strong>cerca de 50%</strong><span>o poder post hoc de qualquer estudo com p = .05, qualquer que seja seu poder verdadeiro</span></div><div><strong>1.000+</strong><span>simulações para uma análise de poder que será relatada; para explorar desenhos, algumas centenas bastam</span></div></div><h2 id=estudos-pequenos-exageram>Estudos pequenos exageram</h2><p>O gráfico abaixo corre 2.000 estudos, cada um comparando dois grupos. A diferença verdadeira entre os grupos é definida pelo primeiro cursor, em desvios padrão (d de Cohen), e o número de participantes por grupo pelo segundo. Cada barra conta os estudos cuja estimativa caiu naquele intervalo, colorida conforme a estimativa tenha sido significativa ou não.</p><figure class="mlab plab plab-sim" data-part=sim><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure><script type=application/json id=plab-i18n>{"locale":"pt-PT","t":{"again":"simular de novo","ceiling":"com {p} participantes e palavras ilimitadas","curve_aria":"Poder de uma comparação entre dois grupos em função do número de participantes por grupo","curve_help":"Arraste sobre o gráfico, ou use os cursores, para mudar o tamanho da amostra.","curve_now":"poder com {n} por grupo e d = {d}","curve_x":"participantes por grupo →","design_aria":"Poder para detetar a interação em função do número de participantes e de palavras","design_help":"Poder analítico da análise em duas etapas. A simulação sorteia novos participantes e novas palavras para cada estudo.","design_now":"poder com {p} participantes e {w} palavras","design_x":"número de participantes ou de palavras →","effect":"efeito verdadeiro (d)","formula":"fórmula","interaction":"interação","more_part":"mais participantes (palavras fixas)","more_words":"mais palavras (participantes fixos)","ms_unit":"{v} ms/unidade","n80":"por grupo para 80% de poder","nonsig":"p ≥ .05","one_study":"um estudo","over":"mais de {n}","participants":"participantes","per_group":"participantes por grupo","ph_aria":"Gráfico de dispersão do valor-p e do poder post hoc de 1.000 estudos simulados","ph_at05":"poder post hoc em p = .05","ph_range":"o poder post hoc vai de","ph_status":"{k} estudos simulados com {n} participantes por grupo e d = {d}; {sig} deles significativos.","ph_x":"valor-p →","ph_y":"↑ poder post hoc","power":"poder","power_y":"↑ poder","pp":"pp","ref_d":"d = 0,2, 0,5, 0,8","sig":"p \u003c .05","sig_mean":"média das estimativas significativas","sim_aria":"Histograma dos efeitos estimados em 2.000 estudos simulados, significativos e não significativos","sim_status":"{k} estudos simulados, cada um com {n} participantes por grupo e um efeito verdadeiro de d = {d}.","sim_x":"diferença estimada entre os grupos (em DP) →","simulate":"simular {k} estudos","simulated":"simulado, {k} estudos","slope_sd":"DP das inclinações","studies_y":"↑ estudos","target":"poder de 80%","times":"{x} × o efeito verdadeiro","true_effect":"efeito verdadeiro","true_power":"poder verdadeiro","true_power_is":"poder verdadeiro: {p}","type_m":"exagero (tipo M)","type_s":"sinal errado (tipo S)","words":"palavras","your_d":"o seu efeito"}}</script><script defer src="/js/power-demo.js?v=6270559aca17"></script><p>Com 20 participantes por grupo e d = 0,3, cerca de um estudo em sete é significativo, perto dos 15% previstos pela fórmula. Só as estimativas grandes passam o limiar de significância, então os estudos significativos superestimam o efeito, em média por um fator de dois ou mais. Gelman e Carlin (2014) chamam isso de erro do tipo M (magnitude). Alguns estudos significativos chegam a errar a direção, um erro do tipo S (sinal). Aumentando a amostra, os dois erros diminuem, até que as estimativas significativas se concentrem em torno do efeito verdadeiro.</p><p>Se as revistas publicam sobretudo resultados significativos, os efeitos publicados por estudos pequenos são grandes demais. Vasishth et al. (2018) mostraram isso para um resultado psicolinguístico com sete replicações diretas. Uma análise de poder que tira o tamanho do efeito de uma publicação assim promete mais poder do que o próximo estudo terá. Uma base melhor é o menor efeito que importaria para a teoria.</p><h2 id=quantos-participantes>Quantos participantes?</h2><p>O mesmo cálculo para cada tamanho de amostra dá uma curva de poder. A curva destacada segue o tamanho do efeito do primeiro gráfico, e as curvas cinzentas mostram os efeitos convencionalmente pequeno, médio e grande de d = 0,2, 0,5 e 0,8.</p><figure class="mlab plab plab-curve" data-part=curve><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure><p>Reduzir o efeito à metade multiplica por cerca de quatro a amostra necessária: 64 por grupo para d = 0,5, mas 394 para d = 0,2.</p><h2 id=mais-participantes-ou-mais-itens>Mais participantes ou mais itens?</h2><p>Na aula, planejamos a replicação de um estudo de decisão lexical em que falantes de L1 e de L2 respondem a palavras de frequências diferentes. A pergunta é sobre a interação: o efeito da frequência é maior para os falantes de L2? Os participantes diferem no quanto a frequência os afeta (o DP das inclinações), e cada resposta acrescenta ruído no nível da tentativa (um DP de 70 ms). Em R, o pacote <code>{simr}</code> (Green & MacLeod, 2016) responde à pergunta simulando a partir de um modelo misto, reajustando-o muitas vezes e acrescentando participantes ou palavras com <code>extend()</code> e <code>powerCurve()</code>.</p><p>Um navegador não consegue reajustar um modelo misto mil vezes enquanto se move um cursor. Por isso, este gráfico usa uma análise mais simples do mesmo desenho: uma inclinação de regressão para cada participante e, depois, um teste t que compara as inclinações dos dois grupos (Lorch & Myers, 1990). Os seus números diferem um pouco dos do modelo misto, enquanto as curvas têm a mesma forma.</p><figure class="mlab plab plab-design" data-part=design><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure><p>Acrescentar participantes aumenta o poder de forma constante. Acrescentar palavras ajuda no começo e depois se estabiliza, porque mais palavras só tornam mais precisa a inclinação de cada participante, enquanto as diferenças reais entre os participantes continuam as mesmas. O teto mostra o poder com infinitas palavras. Com o DP das inclinações em zero, as palavras passam a ser tão úteis quanto os participantes.</p><h2 id=poder-post-hoc>Poder post hoc</h2><p>O poder post hoc, também chamado de observado ou retrospectivo, é calculado depois de um estudo, com o tamanho do efeito estimado a partir dos próprios dados do estudo. Às vezes os revisores pedem-no para mostrar se um estudo não significativo tinha &ldquo;pouco poder&rdquo;. Heinsberg e Weeks (2022) simularam o mesmo experimento com ratinhos em duas universidades, com 100 animais cada e efeitos verdadeiros diferentes:</p><table><thead><tr><th style=text-align:left></th><th style=text-align:left>Estimativa (IC 95%)</th><th style=text-align:left>p</th><th style=text-align:left>Poder post hoc</th><th style=text-align:left>Efeito verdadeiro</th><th style=text-align:left>Poder verdadeiro</th></tr></thead><tbody><tr><td style=text-align:left>A</td><td style=text-align:left>0,290 (−0,002; 0,582)</td><td style=text-align:left>.052</td><td style=text-align:left>0,584</td><td style=text-align:left>0,402</td><td style=text-align:left>0,841</td></tr><tr><td style=text-align:left>B</td><td style=text-align:left>0,275 (−0,002; 0,553)</td><td style=text-align:left>.052</td><td style=text-align:left>0,537</td><td style=text-align:left>0,201</td><td style=text-align:left>0,322</td></tr></tbody></table><p>Os dois estudos parecem quase iguais, e o mesmo vale para o poder post hoc. O poder verdadeiro, 84% contra 32%, não pode ser lido em nenhum dos dois conjuntos de dados.</p><p>O gráfico abaixo repete isso em escala maior. Cada ponto é um estudo simulado, todos com o mesmo desenho e o mesmo poder verdadeiro.</p><figure class="mlab plab plab-posthoc" data-part=posthoc><noscript><p>Este gráfico precisa de JavaScript.</p></noscript></figure><p>Onde quer que esteja o poder verdadeiro, os pontos caem sobre uma única curva do valor-p: o poder post hoc é de cerca de 50% em p = .05, menor sempre que p é maior e maior sempre que p é menor (Hoenig & Heisey, 2001). Mudando o efeito verdadeiro, os pontos deslizam ao longo da mesma curva. Como o poder post hoc é uma transformação do valor-p, um resultado não significativo sempre vem com poder post hoc baixo, quer o estudo tenha perdido um efeito real, quer o efeito não exista.</p><h2 id=o-que-relatar-em-vez-disso>O que relatar em vez disso</h2><p>Para ajudar quem lê a avaliar um resultado não significativo, indique a estimativa com seu intervalo de confiança, que mostra com quais tamanhos de efeito os dados são compatíveis. Indique também a análise de poder feita antes do estudo, com o tamanho de efeito escolhido e o motivo da escolha. Se não houve nenhuma, uma análise de sensibilidade dá o menor efeito que o desenho tinha 80% de poder para detetar, calculado a partir do desenho e das variâncias supostas, sem usar o efeito observado.</p><h2 id=referências>Referências</h2><p>Brysbaert, M., & Stevens, M. (2018). Power analysis and effect size in mixed effects models: A tutorial. <em>Journal of Cognition</em>, 1(1), 9. <a href=https://doi.org/10.5334/joc.10>https://doi.org/10.5334/joc.10</a></p><p>Gelman, A., & Carlin, J. (2014). Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. <em>Perspectives on Psychological Science</em>, 9(6), 641–651. <a href=https://doi.org/10.1177/1745691614551642>https://doi.org/10.1177/1745691614551642</a></p><p>Green, P., & MacLeod, C. J. (2016). SIMR: An R package for power analysis of generalized linear mixed models by simulation. <em>Methods in Ecology and Evolution</em>, 7(4), 493–498. <a href=https://doi.org/10.1111/2041-210X.12504>https://doi.org/10.1111/2041-210X.12504</a></p><p>Heinsberg, L. W., & Weeks, D. E. (2022). Post hoc power is not informative. <em>Genetic Epidemiology</em>, 46(7), 390–394. <a href=https://doi.org/10.1002/gepi.22464>https://doi.org/10.1002/gepi.22464</a></p><p>Hoenig, J. M., & Heisey, D. M. (2001). The abuse of power: The pervasive fallacy of power calculations for data analysis. <em>The American Statistician</em>, 55(1), 19–24. <a href=https://doi.org/10.1198/000313001300339897>https://doi.org/10.1198/000313001300339897</a></p><p>Lorch, R. F., & Myers, J. L. (1990). Regression analyses of repeated measures data in cognitive research. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, 16(1), 149–157. <a href=https://doi.org/10.1037/0278-7393.16.1.149>https://doi.org/10.1037/0278-7393.16.1.149</a></p><p>Vasishth, S., Mertzen, D., Jäger, L. A., & Gelman, A. (2018). The statistical significance filter leads to overoptimistic expectations of replicability. <em>Journal of Memory and Language</em>, 103, 151–175. <a href=https://doi.org/10.1016/j.jml.2018.07.004>https://doi.org/10.1016/j.jml.2018.07.004</a></p><p>Todas as simulações correm no seu navegador: os estudos de dois grupos usam testes t, e as curvas de poder usam o poder exato do teste t bilateral. Os slides da aula e o código R estão na <a href=/pt/teaching/#advanced>página de ensino</a>.</p></div></div></article></main><footer class=site-footer><div class=footer-inner><p class=mono>© 2026 Massimiliano Canzi
+<span class=sep aria-hidden=true>·</span> feito com R, blogdown e <a href=https://gohugo.io>Hugo</a>
+<span class=sep aria-hidden=true>·</span> ORCID 0000-0001-6124-0321
+<span class=sep aria-hidden=true>·</span> <a rel=license href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a><br>Departamento de Linguística, Universidade de Constança, Universitätsstraße 10, 78464 Konstanz, Alemanha<br>sítio pessoal sem fins comerciais, não é uma página oficial da Universidade de Constança</p></div></footer></body></html>
