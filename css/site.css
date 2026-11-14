@@ -587,7 +587,7 @@ h1::selection, h1 ::selection { -webkit-text-fill-color: var(--floor); }
 .gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.4s; background-size: cover; background-position: center; }
 /* film photos carry a small film-strip mark in the top right corner (the film stock shows on hover) */
 .film-mark { position: absolute; top: 6px; right: 6px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: rgba(10, 11, 13, 0.55); color: #f1efe9; backdrop-filter: blur(3px); }
-.film-mark svg { width: 15px; height: 15px; }
+.film-mark svg { width: 16px; height: 16px; display: block; }
 .gallery-item:hover img { transform: scale(1.03); }
 .gallery-item:focus-visible { outline: 2px solid var(--pandan); outline-offset: 2px; }
 .gallery figcaption { padding: 6px 2px 0; font-size: 0.88rem; line-height: 1.35; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
